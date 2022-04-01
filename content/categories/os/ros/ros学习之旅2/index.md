@@ -2,7 +2,7 @@
 title= "Ros学习之旅2"
 description= "机器人种类及其框架"
 date= 2022-03-31T00:21:47+08:00
-author= "somebody"
+author= "chao"
 draft= false
 image= "" 
 categories= [

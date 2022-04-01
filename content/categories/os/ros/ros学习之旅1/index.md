@@ -2,7 +2,7 @@
 title= "Ros学习之旅1"
 description= "ros学习之旅(1)--ros学习网站收集"
 date= 2022-03-27T19:03:06+08:00
-author= "somebody"
+author= "chao"
 draft= false
 image= "" 
 categories= [
