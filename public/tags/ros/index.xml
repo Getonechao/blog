@@ -8,10 +8,10 @@
         <language>zh-cn</language>
         <lastBuildDate>Fri, 01 Apr 2022 13:25:02 +0800</lastBuildDate><atom:link href="https://getone_chao.gitee.io/tags/ros/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Ros学习之旅3</title>
-        <link>https://getone_chao.gitee.io/categories/os/ros/test-post/</link>
+        <link>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%853/</link>
         <pubDate>Fri, 01 Apr 2022 13:25:02 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/os/ros/test-post/</guid>
+        <guid>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%853/</guid>
         <description>&lt;h1 id=&#34;如何安装ros&#34;&gt;如何安装ros&lt;/h1&gt;
 &lt;h2 id=&#34;脚本安装&#34;&gt;脚本安装&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -28,39 +28,51 @@
         </item>
         <item>
         <title>Ros学习之旅2</title>
-        <link>https://getone_chao.gitee.io/categories/os/ros/test-post/</link>
+        <link>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/</link>
         <pubDate>Thu, 31 Mar 2022 00:21:47 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/os/ros/test-post/</guid>
+        <guid>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/</guid>
         <description>&lt;h1 id=&#34;ros学习之旅2&#34;&gt;ROS学习之旅2&lt;/h1&gt;
 &lt;h2 id=&#34;机器人种类&#34;&gt;机器人种类&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://getone_chao.gitee.io/image/robat.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/robat.png&#34;
+	width=&#34;649&#34;
+	height=&#34;570&#34;
+	srcset=&#34;https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/robat_hu92f36bf6e84dd61b750964e2aa15c198_90074_480x0_resize_box_3.png 480w, https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/robat_hu92f36bf6e84dd61b750964e2aa15c198_90074_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+		alt=&#34;1&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;113&#34;
+		data-flex-basis=&#34;273px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;agv的框架搬运机器人&#34;&gt;AGV的框架(搬运机器人)&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://getone_chao.gitee.io/image/AGV.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/AGV.png&#34;
+	width=&#34;1220&#34;
+	height=&#34;637&#34;
+	srcset=&#34;https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/AGV_hub1181f6fabf67e7b946d64bd02c619ab_39840_480x0_resize_box_3.png 480w, https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/AGV_hub1181f6fabf67e7b946d64bd02c619ab_39840_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+		alt=&#34;2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;191&#34;
+		data-flex-basis=&#34;459px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;穿梭车&#34;&gt;穿梭车&lt;/h2&gt;
 </description>
         </item>
         <item>
-        <title>Ros学习之旅(1)</title>
-        <link>https://getone_chao.gitee.io/categories/os/ros/test-post/</link>
+        <title>Ros学习之旅1</title>
+        <link>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</link>
         <pubDate>Sun, 27 Mar 2022 19:03:06 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/os/ros/test-post/</guid>
-        <description>&lt;h1 id=&#34;ros学习之旅1&#34;&gt;ros学习之旅(1)&lt;/h1&gt;
+        <guid>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</guid>
+        <description>&lt;h1 id=&#34;ros学习之旅1&#34;&gt;ros学习之旅1&lt;/h1&gt;
 &lt;h2 id=&#34;ros学习网站收集&#34;&gt;ros学习网站收集&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.ros.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

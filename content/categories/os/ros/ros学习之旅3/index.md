@@ -4,7 +4,6 @@ description= "如何安装ros"
 date= 2022-04-01T13:25:02+08:00
 author= "张超"
 draft= false
-slug= "test-post"
 image= "" 
 categories= [
     "os"

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='对linux(基于ubuntu18.04)网络的一些配置'><title>网络配置</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='ros学习之旅(1)--ros学习网站收集'><title>Ros学习之旅1</title>
 
-<link rel='canonical' href='https://getone_chao.gitee.io/categories/os/liunx/test-post/'>
+<link rel='canonical' href='https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/'>
 
-<link rel="stylesheet" href="/scss/style.min.d9e0562edde3d2bdf9d3d81365095a29d062ddaaa5d671f22168e57dfdb18b4f.css"><meta property='og:title' content='网络配置'>
-<meta property='og:description' content='对linux(基于ubuntu18.04)网络的一些配置'>
-<meta property='og:url' content='https://getone_chao.gitee.io/categories/os/liunx/test-post/'>
+<link rel="stylesheet" href="/scss/style.min.d9e0562edde3d2bdf9d3d81365095a29d062ddaaa5d671f22168e57dfdb18b4f.css"><meta property='og:title' content='Ros学习之旅1'>
+<meta property='og:description' content='ros学习之旅(1)--ros学习网站收集'>
+<meta property='og:url' content='https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/'>
 <meta property='og:site_name' content='Getone超'>
-<meta property='og:type' content='article'><meta property='article:section' content='Categories' /><meta property='article:tag' content='linux' /><meta property='article:tag' content='net' /><meta property='article:published_time' content='2022-04-01T13:11:10&#43;08:00'/><meta property='article:modified_time' content='2022-04-01T13:11:10&#43;08:00'/>
-<meta name="twitter:title" content="网络配置">
-<meta name="twitter:description" content="对linux(基于ubuntu18.04)网络的一些配置">
+<meta property='og:type' content='article'><meta property='article:section' content='Categories' /><meta property='article:tag' content='ros' /><meta property='article:published_time' content='2022-03-27T19:03:06&#43;08:00'/><meta property='article:modified_time' content='2022-03-27T19:03:06&#43;08:00'/>
+<meta name="twitter:title" content="Ros学习之旅1">
+<meta name="twitter:description" content="ros学习之旅(1)--ros学习网站收集">
     <link rel="shortcut icon" href="themes/hugo-theme-stack/assets/img/images.jpg" />
 
     </head>
@@ -285,12 +285,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/categories/os/liunx/test-post/">网络配置</a>
+            <a href="/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/">Ros学习之旅1</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            对linux(基于ubuntu18.04)网络的一些配置
+            ros学习之旅(1)--ros学习网站收集
         </h3>
         
     </div>
@@ -308,7 +308,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Apr 01, 2022</time>
+                <time class="article-time--published">Mar 27, 2022</time>
             </div>
         
 
@@ -337,65 +337,45 @@
     <section class="article-content">
     
     
-    <h1 id="网络配置">网络配置</h1>
-<h2 id="ubuntu1804配置ip">ubuntu18.04配置IP</h2>
-<h3 id="使用ip-addr">使用ip addr</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">只限于以太网配置(临时)
-</span></span><span class="line"><span class="cl">ip addr add 192.168.8.30 dev eth0
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="etcnetplan配置文件">/etc/netplan/*配置文件</h3>
-<p>服务器中是50-cloud-init.yaml,桌面版01-network-manager-all.yaml</p>
-<p>信息格式如下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">network:
-</span></span><span class="line"><span class="cl">  version: 2
-</span></span><span class="line"><span class="cl">  renderer: NetworkManager
-</span></span><span class="line"><span class="cl">    ethernets:
-</span></span><span class="line"><span class="cl">        eth0:
-</span></span><span class="line"><span class="cl">            addresses: [192.168.8.123/24]
-</span></span><span class="line"><span class="cl">            gateway4: 192.168.8.1
-</span></span><span class="line"><span class="cl">            dhcp4: true
-</span></span><span class="line"><span class="cl">            nameservers:
-</span></span><span class="line"><span class="cl">                addresses: [8.8.8.8,114.114.114.114]
-</span></span><span class="line"><span class="cl">            optional: true
-</span></span><span class="line"><span class="cl">    wifis:
-</span></span><span class="line"><span class="cl">        wlan0:
-</span></span><span class="line"><span class="cl">            access-points:
-</span></span><span class="line"><span class="cl">                chao:
-</span></span><span class="line"><span class="cl">                    password: &#39;88888888&#39;
-</span></span><span class="line"><span class="cl">            dhcp4: true
-</span></span><span class="line"><span class="cl">            optional: true
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <h1 id="ros学习之旅1">ros学习之旅1</h1>
+<h2 id="ros学习网站收集">ros学习网站收集</h2>
+<ul>
+<li><a class="link" href="https://www.ros.org/"  target="_blank" rel="noopener"
+    >Ros官网</a></li>
+<li><a class="link" href="http://wiki.ros.org/cn"  target="_blank" rel="noopener"
+    >wiki.ros.org</a></li>
+<li><a class="link" href="https://sychaichangkun.gitbooks.io/ros-tutorial-icourse163/content/"  target="_blank" rel="noopener"
+    >中国大学MOOC&mdash;《机器人操作系统入门》课程讲义</a></li>
+<li><a class="link" href="https://www.icourse163.org/course/NUDT-1205969803?from=searchPage"  target="_blank" rel="noopener"
+    >中国大学MOOC&mdash;《智能机器人系统》</a></li>
+<li><a class="link" href="https://www.ncnynl.com/"  target="_blank" rel="noopener"
+    >创客智造</a></li>
+<li><a class="link" href="https://blog.csdn.net/ZhangRelay/column/info/13113"  target="_blank" rel="noopener"
+    >zhangrelay的专栏</a></li>
+<li><a class="link" href="https://www.guyuehome.com/"  target="_blank" rel="noopener"
+    >古月居</a></li>
+<li><a class="link" href="http://exbot.net/"  target="_blank" rel="noopener"
+    >易科机器人实验室</a></li>
+<li><a class="link" href="https://emanual.robotis.com/"  target="_blank" rel="noopener"
+    >ROBOTIS</a></li>
+<li><a class="link" href="https://zhuanlan.zhihu.com/p/137761414?msclkid=efd6fcf8adc211ec9bbfab1ade5fd706"  target="_blank" rel="noopener"
+    >知乎&ndash;SLAM开发最强最全资源汇总</a></li>
+<li>ing&hellip;.</li>
+</ul>
+<h2 id="代码示例">代码示例</h2>
+<ul>
+<li><a class="link" href="https://github.com/sychaichangkun/ROS-Academy-for-Beginners"  target="_blank" rel="noopener"
+    >中国大学MOOC&mdash;《机器人操作系统入门》课程讲义&ndash;代码示例</a></li>
+<li><a class="link" href="https://github.com/tu-darmstadt-ros-pkg/hector_slam"  target="_blank" rel="noopener"
+    >hector slam</a></li>
+<li><a class="link" href="https://github.com/ros-perception/slam_gmapping/tree/melodic-devel/gmapping"  target="_blank" rel="noopener"
+    >gmapping</a></li>
+</ul>
+<h2 id="书籍">书籍</h2>
+<ul>
+<li>机器人导论</li>
+</ul>
+
 </section>
 
 
@@ -403,9 +383,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/linux/">Linux</a>
-        
-            <a href="/tags/net/">net</a>
+            <a href="/tags/ros/">ros</a>
         
     </section>
 
@@ -486,12 +464,12 @@
             
                 
 <article class="">
-    <a href="/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/">
+    <a href="/categories/os/liunx/test-post/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Ros学习之旅1</h2>
+            <h2 class="article-title">网络配置</h2>
         </div>
     </a>
 </article>
@@ -664,12 +642,9 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#ubuntu1804配置ip">ubuntu18.04配置IP</a>
-      <ol>
-        <li><a href="#使用ip-addr">使用ip addr</a></li>
-        <li><a href="#etcnetplan配置文件">/etc/netplan/*配置文件</a></li>
-      </ol>
-    </li>
+    <li><a href="#ros学习网站收集">ros学习网站收集</a></li>
+    <li><a href="#代码示例">代码示例</a></li>
+    <li><a href="#书籍">书籍</a></li>
   </ol>
 </nav>
         </div>
