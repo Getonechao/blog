@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>math on Getone超</title>
-        <link>https://getone_chao.gitee.io/categories/math/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/categories/math/</link>
         <description>Recent content in math on Getone超</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Fri, 01 Apr 2022 20:47:41 +0800</lastBuildDate><atom:link href="https://getone_chao.gitee.io/categories/math/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 01 Apr 2022 20:47:41 +0800</lastBuildDate><atom:link href="https://getonechao.github.io/ThisIsBlog/categories/math/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>概率论学习之旅1</title>
-        <link>https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</link>
         <pubDate>Fri, 01 Apr 2022 20:47:41 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</guid>
         <description>&lt;h1 id=&#34;概率论与数理统计&#34;&gt;概率论与数理统计&lt;/h1&gt;
 &lt;h2 id=&#34;古典概型&#34;&gt;古典概型&lt;/h2&gt;
 &lt;ol&gt;
@@ -46,10 +46,10 @@ $$
   也就是说，后验概率与先验概率和似然度的乘积成正比。&lt;br&gt;
   另外，比例Pr(B|A)/Pr(B)也有时被称作标准似然度（standardised likelihood），Bayes法则可表述为：
 后验概率 = 标准似然度 * 先验概率。 [1]&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F_%E4%BE%8B%E5%AD%90.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F_%E4%BE%8B%E5%AD%90.png&#34;
 	width=&#34;1452&#34;
 	height=&#34;457&#34;
-	srcset=&#34;https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F_%E4%BE%8B%E5%AD%90_hucad6dfd02af786e8d8428e31b5d5d74d_899774_480x0_resize_box_3.png 480w, https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F_%E4%BE%8B%E5%AD%90_hucad6dfd02af786e8d8428e31b5d5d74d_899774_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F_%E4%BE%8B%E5%AD%90_hucad6dfd02af786e8d8428e31b5d5d74d_899774_480x0_resize_box_3.png 480w, https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F_%E4%BE%8B%E5%AD%90_hucad6dfd02af786e8d8428e31b5d5d74d_899774_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;理解贝叶斯公式&#34;
@@ -62,10 +62,10 @@ $$
 &gt;&lt;br&gt;
 1.可测空间&lt;/p&gt;
 &lt;p&gt;2.常用的一维分布&lt;br&gt;
-&lt;img src=&#34;https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E6%A6%82%E7%8E%87%E8%AE%BA_%E4%B8%80%E7%BB%B4%E5%88%86%E5%B8%83.png&#34;
+&lt;img src=&#34;https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E6%A6%82%E7%8E%87%E8%AE%BA_%E4%B8%80%E7%BB%B4%E5%88%86%E5%B8%83.png&#34;
 	width=&#34;1321&#34;
 	height=&#34;468&#34;
-	srcset=&#34;https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E6%A6%82%E7%8E%87%E8%AE%BA_%E4%B8%80%E7%BB%B4%E5%88%86%E5%B8%83_huf48e702ad0417d3d1ce09f91ea4d62d1_183080_480x0_resize_box_3.png 480w, https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E6%A6%82%E7%8E%87%E8%AE%BA_%E4%B8%80%E7%BB%B4%E5%88%86%E5%B8%83_huf48e702ad0417d3d1ce09f91ea4d62d1_183080_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E6%A6%82%E7%8E%87%E8%AE%BA_%E4%B8%80%E7%BB%B4%E5%88%86%E5%B8%83_huf48e702ad0417d3d1ce09f91ea4d62d1_183080_480x0_resize_box_3.png 480w, https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E6%A6%82%E7%8E%87%E8%AE%BA_%E4%B8%80%E7%BB%B4%E5%88%86%E5%B8%83_huf48e702ad0417d3d1ce09f91ea4d62d1_183080_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -79,20 +79,20 @@ $$
         </item>
         <item>
         <title>矩阵论之二</title>
-        <link>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%BA%8C/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%BA%8C/</link>
         <pubDate>Tue, 22 Mar 2022 18:50:49 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%BA%8C/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%BA%8C/</guid>
         <description>&lt;h1 id=&#34;矩阵论之二&#34;&gt;矩阵论之二&lt;/h1&gt;
 </description>
         </item>
         <item>
         <title>矩阵论之一</title>
-        <link>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/</link>
         <pubDate>Tue, 22 Mar 2022 16:27:00 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/</guid>
-        <description>&lt;img src="https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/images.jpg" alt="Featured image of post 矩阵论之一" /&gt;&lt;h1 id=&#34;矩阵论之一&#34;&gt;矩阵论之一&lt;/h1&gt;
+        <guid>https://getonechao.github.io/ThisIsBlog/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/</guid>
+        <description>&lt;img src="https://getonechao.github.io/ThisIsBlog/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/images.jpg" alt="Featured image of post 矩阵论之一" /&gt;&lt;h1 id=&#34;矩阵论之一&#34;&gt;矩阵论之一&lt;/h1&gt;
 &lt;h2 id=&#34;线性空间&#34;&gt;线性空间&lt;/h2&gt;
 &lt;p&gt;  线性空间也称&amp;quot;向量空间&amp;quot;。\( \sqrt{x} \)&lt;/p&gt;
 &lt;p&gt;$$

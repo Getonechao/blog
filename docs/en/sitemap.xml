@@ -2,55 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://getone_chao.gitee.io/en/categories/</loc>
+    <loc>https://getonechao.github.io/ThisIsBlog/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://getone_chao.gitee.io/categories/"
+                href="https://getonechao.github.io/ThisIsBlog/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://getone_chao.gitee.io/ar/categories/"
+                href="https://getonechao.github.io/ThisIsBlog/ar/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://getone_chao.gitee.io/en/categories/"
+                href="https://getonechao.github.io/ThisIsBlog/en/categories/"
                 />
   </url><url>
-    <loc>https://getone_chao.gitee.io/en/</loc>
+    <loc>https://getonechao.github.io/ThisIsBlog/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://getone_chao.gitee.io/"
+                href="https://getonechao.github.io/ThisIsBlog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://getone_chao.gitee.io/ar/"
+                href="https://getonechao.github.io/ThisIsBlog/ar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://getone_chao.gitee.io/en/"
+                href="https://getonechao.github.io/ThisIsBlog/en/"
                 />
   </url><url>
-    <loc>https://getone_chao.gitee.io/en/tags/</loc>
+    <loc>https://getonechao.github.io/ThisIsBlog/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://getone_chao.gitee.io/tags/"
+                href="https://getonechao.github.io/ThisIsBlog/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://getone_chao.gitee.io/ar/tags/"
+                href="https://getonechao.github.io/ThisIsBlog/ar/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://getone_chao.gitee.io/en/tags/"
+                href="https://getonechao.github.io/ThisIsBlog/en/tags/"
                 />
   </url>
 </urlset>

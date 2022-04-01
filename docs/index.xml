@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Getone超</title>
-        <link>https://getone_chao.gitee.io/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/</link>
         <description>Recent content on Getone超</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Fri, 01 Apr 2022 20:47:41 +0800</lastBuildDate><atom:link href="https://getone_chao.gitee.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 01 Apr 2022 20:47:41 +0800</lastBuildDate><atom:link href="https://getonechao.github.io/ThisIsBlog/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>概率论学习之旅1</title>
-        <link>https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</link>
         <pubDate>Fri, 01 Apr 2022 20:47:41 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</guid>
         <description>&lt;h1 id=&#34;概率论与数理统计&#34;&gt;概率论与数理统计&lt;/h1&gt;
 &lt;h2 id=&#34;古典概型&#34;&gt;古典概型&lt;/h2&gt;
 &lt;ol&gt;
@@ -46,10 +46,10 @@ $$
   也就是说，后验概率与先验概率和似然度的乘积成正比。&lt;br&gt;
   另外，比例Pr(B|A)/Pr(B)也有时被称作标准似然度（standardised likelihood），Bayes法则可表述为：
 后验概率 = 标准似然度 * 先验概率。 [1]&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F_%E4%BE%8B%E5%AD%90.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F_%E4%BE%8B%E5%AD%90.png&#34;
 	width=&#34;1452&#34;
 	height=&#34;457&#34;
-	srcset=&#34;https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F_%E4%BE%8B%E5%AD%90_hucad6dfd02af786e8d8428e31b5d5d74d_899774_480x0_resize_box_3.png 480w, https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F_%E4%BE%8B%E5%AD%90_hucad6dfd02af786e8d8428e31b5d5d74d_899774_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F_%E4%BE%8B%E5%AD%90_hucad6dfd02af786e8d8428e31b5d5d74d_899774_480x0_resize_box_3.png 480w, https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F_%E4%BE%8B%E5%AD%90_hucad6dfd02af786e8d8428e31b5d5d74d_899774_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;理解贝叶斯公式&#34;
@@ -62,10 +62,10 @@ $$
 &gt;&lt;br&gt;
 1.可测空间&lt;/p&gt;
 &lt;p&gt;2.常用的一维分布&lt;br&gt;
-&lt;img src=&#34;https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E6%A6%82%E7%8E%87%E8%AE%BA_%E4%B8%80%E7%BB%B4%E5%88%86%E5%B8%83.png&#34;
+&lt;img src=&#34;https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E6%A6%82%E7%8E%87%E8%AE%BA_%E4%B8%80%E7%BB%B4%E5%88%86%E5%B8%83.png&#34;
 	width=&#34;1321&#34;
 	height=&#34;468&#34;
-	srcset=&#34;https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E6%A6%82%E7%8E%87%E8%AE%BA_%E4%B8%80%E7%BB%B4%E5%88%86%E5%B8%83_huf48e702ad0417d3d1ce09f91ea4d62d1_183080_480x0_resize_box_3.png 480w, https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E6%A6%82%E7%8E%87%E8%AE%BA_%E4%B8%80%E7%BB%B4%E5%88%86%E5%B8%83_huf48e702ad0417d3d1ce09f91ea4d62d1_183080_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E6%A6%82%E7%8E%87%E8%AE%BA_%E4%B8%80%E7%BB%B4%E5%88%86%E5%B8%83_huf48e702ad0417d3d1ce09f91ea4d62d1_183080_480x0_resize_box_3.png 480w, https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E6%A6%82%E7%8E%87%E8%AE%BA_%E4%B8%80%E7%BB%B4%E5%88%86%E5%B8%83_huf48e702ad0417d3d1ce09f91ea4d62d1_183080_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -79,10 +79,10 @@ $$
         </item>
         <item>
         <title>Ros学习之旅3</title>
-        <link>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%853/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%853/</link>
         <pubDate>Fri, 01 Apr 2022 13:25:02 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%853/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%853/</guid>
         <description>&lt;h1 id=&#34;如何安装ros&#34;&gt;如何安装ros&lt;/h1&gt;
 &lt;h2 id=&#34;脚本安装&#34;&gt;脚本安装&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -99,10 +99,10 @@ $$
         </item>
         <item>
         <title>网络配置</title>
-        <link>https://getone_chao.gitee.io/categories/os/liunx/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/categories/os/liunx/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Fri, 01 Apr 2022 13:11:10 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/os/liunx/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/categories/os/liunx/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</guid>
         <description>&lt;h1 id=&#34;网络配置&#34;&gt;网络配置&lt;/h1&gt;
 &lt;h2 id=&#34;ubuntu1804配置ip&#34;&gt;ubuntu18.04配置IP&lt;/h2&gt;
 &lt;h3 id=&#34;使用ip-addr&#34;&gt;使用ip addr&lt;/h3&gt;
@@ -165,27 +165,27 @@ $$
         </item>
         <item>
         <title>激光有反</title>
-        <link>https://getone_chao.gitee.io/categories/robat/%E6%BF%80%E5%85%89%E6%9C%89%E5%8F%8D/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/categories/robat/%E6%BF%80%E5%85%89%E6%9C%89%E5%8F%8D/</link>
         <pubDate>Thu, 31 Mar 2022 01:09:25 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/robat/%E6%BF%80%E5%85%89%E6%9C%89%E5%8F%8D/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/categories/robat/%E6%BF%80%E5%85%89%E6%9C%89%E5%8F%8D/</guid>
         <description>&lt;h1 id=&#34;激光有反&#34;&gt;激光有反&lt;/h1&gt;
 </description>
         </item>
         <item>
         <title>纯追踪</title>
-        <link>https://getone_chao.gitee.io/categories/robat/carcontrol/%E5%AF%BB%E8%BF%B9/%E7%BA%AF%E8%BF%BD%E8%B8%AA/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/categories/robat/carcontrol/%E5%AF%BB%E8%BF%B9/%E7%BA%AF%E8%BF%BD%E8%B8%AA/</link>
         <pubDate>Thu, 31 Mar 2022 01:07:34 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/robat/carcontrol/%E5%AF%BB%E8%BF%B9/%E7%BA%AF%E8%BF%BD%E8%B8%AA/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/categories/robat/carcontrol/%E5%AF%BB%E8%BF%B9/%E7%BA%AF%E8%BF%BD%E8%B8%AA/</guid>
         <description></description>
         </item>
         <item>
         <title>概率机器人</title>
-        <link>https://getone_chao.gitee.io/categories/robat/slam/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/categories/robat/slam/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/</link>
         <pubDate>Thu, 31 Mar 2022 01:05:24 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/robat/slam/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/categories/robat/slam/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
         <description>&lt;h1 id=&#34;slam&#34;&gt;slam&lt;/h1&gt;
 &lt;h2 id=&#34;贝叶斯滤波&#34;&gt;贝叶斯滤波&lt;/h2&gt;
 &lt;p&gt;  贝叶斯滤波是卡尔曼滤波、粒子滤波的基础，应用到汽车、金融、航空航天、机器学习等行业。&lt;/p&gt;
@@ -203,16 +203,16 @@ $$
         </item>
         <item>
         <title>Ros学习之旅2</title>
-        <link>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/</link>
         <pubDate>Thu, 31 Mar 2022 00:21:47 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/</guid>
         <description>&lt;h1 id=&#34;ros学习之旅2&#34;&gt;ROS学习之旅2&lt;/h1&gt;
 &lt;h2 id=&#34;机器人种类&#34;&gt;机器人种类&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/robat.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/robat.png&#34;
 	width=&#34;649&#34;
 	height=&#34;570&#34;
-	srcset=&#34;https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/robat_hu92f36bf6e84dd61b750964e2aa15c198_90074_480x0_resize_box_3.png 480w, https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/robat_hu92f36bf6e84dd61b750964e2aa15c198_90074_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/robat_hu92f36bf6e84dd61b750964e2aa15c198_90074_480x0_resize_box_3.png 480w, https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/robat_hu92f36bf6e84dd61b750964e2aa15c198_90074_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;1&#34;
@@ -224,10 +224,10 @@ $$
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;agv的框架搬运机器人&#34;&gt;AGV的框架(搬运机器人)&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/AGV.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/AGV.png&#34;
 	width=&#34;1220&#34;
 	height=&#34;637&#34;
-	srcset=&#34;https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/AGV_hub1181f6fabf67e7b946d64bd02c619ab_39840_480x0_resize_box_3.png 480w, https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/AGV_hub1181f6fabf67e7b946d64bd02c619ab_39840_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/AGV_hub1181f6fabf67e7b946d64bd02c619ab_39840_480x0_resize_box_3.png 480w, https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/AGV_hub1181f6fabf67e7b946d64bd02c619ab_39840_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;2&#34;
@@ -243,10 +243,10 @@ $$
         </item>
         <item>
         <title>Ros学习之旅1</title>
-        <link>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</link>
         <pubDate>Sun, 27 Mar 2022 19:03:06 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</guid>
         <description>&lt;h1 id=&#34;ros学习之旅1&#34;&gt;ros学习之旅1&lt;/h1&gt;
 &lt;h2 id=&#34;ros学习网站收集&#34;&gt;ros学习网站收集&lt;/h2&gt;
 &lt;ul&gt;
@@ -289,11 +289,11 @@ $$
         </item>
         <item>
         <title>如何在wsl1中使用网络代理？</title>
-        <link>https://getone_chao.gitee.io/categories/net/wsl1/test-post/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/categories/net/wsl1/test-post/</link>
         <pubDate>Wed, 23 Mar 2022 20:09:16 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/net/wsl1/test-post/</guid>
-        <description>&lt;img src="https://getone_chao.gitee.io/categories/net/wsl1/test-post/face.jpg" alt="Featured image of post 如何在wsl1中使用网络代理？" /&gt;&lt;h1 id=&#34;如何在wsl1中使用网络代理&#34;&gt;如何在wsl1中使用网络代理？&lt;/h1&gt;
+        <guid>https://getonechao.github.io/ThisIsBlog/categories/net/wsl1/test-post/</guid>
+        <description>&lt;img src="https://getonechao.github.io/ThisIsBlog/categories/net/wsl1/test-post/face.jpg" alt="Featured image of post 如何在wsl1中使用网络代理？" /&gt;&lt;h1 id=&#34;如何在wsl1中使用网络代理&#34;&gt;如何在wsl1中使用网络代理？&lt;/h1&gt;
 &lt;h2 id=&#34;代理工具&#34;&gt;代理工具&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -305,10 +305,10 @@ $$
 &lt;/ol&gt;
 &lt;h2 id=&#34;前提条件&#34;&gt;前提条件&lt;/h2&gt;
 &lt;p&gt;v2ray中开启允许局域网连接&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://getone_chao.gitee.io/categories/net/wsl1/test-post/index.assets/image-20220323201609014.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/net/wsl1/test-post/index.assets/image-20220323201609014.png&#34;
 	width=&#34;711&#34;
 	height=&#34;406&#34;
-	srcset=&#34;https://getone_chao.gitee.io/categories/net/wsl1/test-post/index.assets/image-20220323201609014_hue8c8b1346f392aff13ca4975c3095ec2_28827_480x0_resize_box_3.png 480w, https://getone_chao.gitee.io/categories/net/wsl1/test-post/index.assets/image-20220323201609014_hue8c8b1346f392aff13ca4975c3095ec2_28827_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/net/wsl1/test-post/index.assets/image-20220323201609014_hue8c8b1346f392aff13ca4975c3095ec2_28827_480x0_resize_box_3.png 480w, https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/net/wsl1/test-post/index.assets/image-20220323201609014_hue8c8b1346f392aff13ca4975c3095ec2_28827_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20220323201609014&#34;
@@ -320,10 +320,10 @@ $$
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;记住以下ip:port&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://getone_chao.gitee.io/categories/net/wsl1/test-post/index.assets/image-20220323201749350.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/net/wsl1/test-post/index.assets/image-20220323201749350.png&#34;
 	width=&#34;852&#34;
 	height=&#34;42&#34;
-	srcset=&#34;https://getone_chao.gitee.io/categories/net/wsl1/test-post/index.assets/image-20220323201749350_hu40b5e263c3d3fb90f81a3e78a0e6917c_2297_480x0_resize_box_3.png 480w, https://getone_chao.gitee.io/categories/net/wsl1/test-post/index.assets/image-20220323201749350_hu40b5e263c3d3fb90f81a3e78a0e6917c_2297_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/net/wsl1/test-post/index.assets/image-20220323201749350_hu40b5e263c3d3fb90f81a3e78a0e6917c_2297_480x0_resize_box_3.png 480w, https://getonechao.github.io/ThisIsBlog/ThisIsBlog/categories/net/wsl1/test-post/index.assets/image-20220323201749350_hu40b5e263c3d3fb90f81a3e78a0e6917c_2297_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20220323201749350&#34;
@@ -396,20 +396,20 @@ $$
         </item>
         <item>
         <title>矩阵论之二</title>
-        <link>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%BA%8C/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%BA%8C/</link>
         <pubDate>Tue, 22 Mar 2022 18:50:49 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%BA%8C/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%BA%8C/</guid>
         <description>&lt;h1 id=&#34;矩阵论之二&#34;&gt;矩阵论之二&lt;/h1&gt;
 </description>
         </item>
         <item>
         <title>矩阵论之一</title>
-        <link>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/</link>
         <pubDate>Tue, 22 Mar 2022 16:27:00 +0800</pubDate>
         
-        <guid>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/</guid>
-        <description>&lt;img src="https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/images.jpg" alt="Featured image of post 矩阵论之一" /&gt;&lt;h1 id=&#34;矩阵论之一&#34;&gt;矩阵论之一&lt;/h1&gt;
+        <guid>https://getonechao.github.io/ThisIsBlog/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/</guid>
+        <description>&lt;img src="https://getonechao.github.io/ThisIsBlog/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/images.jpg" alt="Featured image of post 矩阵论之一" /&gt;&lt;h1 id=&#34;矩阵论之一&#34;&gt;矩阵论之一&lt;/h1&gt;
 &lt;h2 id=&#34;线性空间&#34;&gt;线性空间&lt;/h2&gt;
 &lt;p&gt;  线性空间也称&amp;quot;向量空间&amp;quot;。\( \sqrt{x} \)&lt;/p&gt;
 &lt;p&gt;$$
@@ -419,18 +419,18 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>Archives</title>
-        <link>https://getone_chao.gitee.io/archives/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://getone_chao.gitee.io/archives/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>Rich Content</title>
-        <link>https://getone_chao.gitee.io/p/rich-content/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/p/rich-content/</link>
         <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://getone_chao.gitee.io/p/rich-content/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/p/rich-content/</guid>
         <description>&lt;p&gt;Hugo ships with several &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
@@ -510,11 +510,11 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>Placeholder Text</title>
-        <link>https://getone_chao.gitee.io/p/placeholder-text/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/p/placeholder-text/</link>
         <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://getone_chao.gitee.io/p/placeholder-text/</guid>
-        <description>&lt;img src="https://getone_chao.gitee.io/p/placeholder-text/matt-le-SJSpo9hQf7s-unsplash.jpg" alt="Featured image of post Placeholder Text" /&gt;&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;
+        <guid>https://getonechao.github.io/ThisIsBlog/p/placeholder-text/</guid>
+        <description>&lt;img src="https://getonechao.github.io/ThisIsBlog/p/placeholder-text/matt-le-SJSpo9hQf7s-unsplash.jpg" alt="Featured image of post Placeholder Text" /&gt;&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;
 &lt;p&gt;Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Exierant elisi ambit vivere dedere&lt;/li&gt;
@@ -541,10 +541,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>Math Typesetting</title>
-        <link>https://getone_chao.gitee.io/p/math-typesetting/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/p/math-typesetting/</link>
         <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://getone_chao.gitee.io/p/math-typesetting/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/p/math-typesetting/</guid>
         <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;
 &lt;p&gt;In this example we will be using &lt;a class=&#34;link&#34; href=&#34;https://katex.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;KaTeX&lt;/a&gt;&lt;/p&gt;
@@ -584,11 +584,11 @@ $$&lt;/p&gt;</description>
         </item>
         <item>
         <title>Emoji Support</title>
-        <link>https://getone_chao.gitee.io/p/emoji-support/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/p/emoji-support/</link>
         <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://getone_chao.gitee.io/p/emoji-support/</guid>
-        <description>&lt;img src="https://getone_chao.gitee.io/p/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash.jpg" alt="Featured image of post Emoji Support" /&gt;&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
+        <guid>https://getonechao.github.io/ThisIsBlog/p/emoji-support/</guid>
+        <description>&lt;img src="https://getonechao.github.io/ThisIsBlog/p/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash.jpg" alt="Featured image of post Emoji Support" /&gt;&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
 &lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/functions/emojify/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;emojify&lt;/code&gt;&lt;/a&gt; function can be called directly in templates or &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/templates/shortcode-templates/#inline-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Inline Shortcodes&lt;/a&gt;.&lt;/p&gt;
@@ -614,10 +614,10 @@ $$&lt;/p&gt;</description>
         </item>
         <item>
         <title>About</title>
-        <link>https://getone_chao.gitee.io/about/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/about/</link>
         <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://getone_chao.gitee.io/about/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/about/</guid>
         <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Apache Licence 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
 &lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;
@@ -642,10 +642,10 @@ $$&lt;/p&gt;</description>
         </item>
         <item>
         <title>Links</title>
-        <link>https://getone_chao.gitee.io/links/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://getone_chao.gitee.io/links/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/links/</guid>
         <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
 &lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -677,10 +677,10 @@ $$&lt;/p&gt;</description>
         </item>
         <item>
         <title>Search</title>
-        <link>https://getone_chao.gitee.io/search/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://getone_chao.gitee.io/search/</guid>
+        <guid>https://getonechao.github.io/ThisIsBlog/search/</guid>
         <description></description>
         </item>
         

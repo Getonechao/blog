@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Example Site</title>
-        <link>https://getone_chao.gitee.io/en/</link>
+        <link>https://getonechao.github.io/ThisIsBlog/en/</link>
         <description>Recent content on Example Site</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language><atom:link href="https://getone_chao.gitee.io/en/index.xml" rel="self" type="application/rss+xml" />
+        <language>zh-cn</language><atom:link href="https://getonechao.github.io/ThisIsBlog/en/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
