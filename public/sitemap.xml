@@ -1,23 +1,221 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-  <sitemap>
-    <loc>https://getone_chao.gitee.io/en/sitemap.xml</loc>
-    
-  </sitemap>
+  <url>
+    <loc>https://getone_chao.gitee.io/about/</loc>
+    <lastmod>2022-04-01T23:59:49+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
   
-  <sitemap>
-    <loc>https://getone_chao.gitee.io/zh-cn/sitemap.xml</loc>
-    
-      <lastmod>2022-04-01T20:47:41+08:00</lastmod>
-    
-  </sitemap>
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/</loc>
+    <lastmod>2022-04-01T20:47:41+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
   
-  <sitemap>
-    <loc>https://getone_chao.gitee.io/ar/sitemap.xml</loc>
-    
-      <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-    
-  </sitemap>
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/</loc>
+    <lastmod>2022-04-01T20:47:41+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
   
-</sitemapindex>
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/math/</loc>
+    <lastmod>2022-04-01T20:47:41+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/</loc>
+    <lastmod>2022-04-01T20:47:41+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/tags/</loc>
+    <lastmod>2022-04-01T20:47:41+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/</loc>
+    <lastmod>2022-04-01T20:47:41+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</loc>
+    <lastmod>2022-04-01T20:47:41+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/os/</loc>
+    <lastmod>2022-04-01T13:25:02+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/tags/ros/</loc>
+    <lastmod>2022-04-01T13:25:02+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%853/</loc>
+    <lastmod>2022-04-01T13:25:02+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/tags/linux/</loc>
+    <lastmod>2022-04-01T13:11:10+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/tags/net/</loc>
+    <lastmod>2022-04-01T13:11:10+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/os/liunx/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2022-04-01T13:11:10+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/robat/</loc>
+    <lastmod>2022-03-31T01:09:25+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/tags/%E5%AF%BC%E8%88%AA/</loc>
+    <lastmod>2022-03-31T01:09:25+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/robat/%E6%BF%80%E5%85%89%E6%9C%89%E5%8F%8D/</loc>
+    <lastmod>2022-03-31T01:09:25+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/boke/</loc>
+    <lastmod>2022-03-31T01:07:34+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/robat/carcontrol/%E5%AF%BB%E8%BF%B9/%E7%BA%AF%E8%BF%BD%E8%B8%AA/</loc>
+    <lastmod>2022-03-31T01:07:34+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/tags/slam/</loc>
+    <lastmod>2022-03-31T01:05:24+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/robat/slam/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/</loc>
+    <lastmod>2022-03-31T01:05:24+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/</loc>
+    <lastmod>2022-03-31T00:21:47+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</loc>
+    <lastmod>2022-03-27T19:03:06+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/tags/wsl1/</loc>
+    <lastmod>2022-03-23T20:09:16+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/net/</loc>
+    <lastmod>2022-03-23T20:09:16+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/net/wsl1/test-post/</loc>
+    <lastmod>2022-03-23T20:09:16+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/tags/%E7%9F%A9%E9%98%B5/</loc>
+    <lastmod>2022-03-22T18:50:49+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%BA%8C/</loc>
+    <lastmod>2022-03-22T18:50:49+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</loc>
+    <lastmod>2022-03-22T18:50:49+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/</loc>
+    <lastmod>2022-03-22T16:27:00+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/series/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>

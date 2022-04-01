@@ -1,688 +1,123 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Getone超</title>
-        <link>https://getone_chao.gitee.io/</link>
-        <description>Recent content on Getone超</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <lastBuildDate>Fri, 01 Apr 2022 20:47:41 +0800</lastBuildDate><atom:link href="https://getone_chao.gitee.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>概率论学习之旅1</title>
-        <link>https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</link>
-        <pubDate>Fri, 01 Apr 2022 20:47:41 +0800</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</guid>
-        <description>&lt;h1 id=&#34;概率论与数理统计&#34;&gt;概率论与数理统计&lt;/h1&gt;
-&lt;h2 id=&#34;古典概型&#34;&gt;古典概型&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;试验中所有可能出现的基本事件只有有限个&lt;/li&gt;
-&lt;li&gt;试验中每个基本事件出现的可能性相等。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;具有以上两个特点的概率模型是大量存在的，这种概率模型称为古典概率模型，简称古典概型，也叫&lt;strong&gt;等可能概型&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;几何概型&#34;&gt;几何概型：&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;无限性：试验中所有可能出现的基本事件（结果）有无限多个.&lt;/li&gt;
-&lt;li&gt;等可能性：每个基本事件出现的可能性相等.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;  如果每个事件发生的概率只与构成该事件区域的长度(面积或体积或度数)成比例，则称这样的概率模型为几何概率模型，简称为几何概型。&lt;strong&gt;古典概型与几何概型的主要区别在于：几何概型是另一类等可能概型，它与古典概型的区别在于试验的结果是无限个&lt;/strong&gt;。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;全概率公式&#34;&gt;全概率公式&lt;/h2&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;贝叶斯公式&#34;&gt;贝叶斯公式&lt;/h2&gt;
-&lt;p&gt;$$
-P(A|B)=\frac{P(B|A)P(A)}{P(B)} 
-$$
-贝叶斯公式用来描述两个条件概率之间的关系。即通常，事件A在事件B(发生)的条件下的概率，与事件B在事件A的条件下的概率是不一样的；然而，这两者是有确定的关系,贝叶斯法则就是这种关系的陈述。&lt;/p&gt;
-&lt;p&gt;在贝叶斯法则中，每个名词都有约定俗成的名称：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;P(A)是A的先验概率或边缘概率。之所以称为&amp;quot;先验&amp;quot;是因为它不考虑任何B方面的因素。&lt;/li&gt;
-&lt;li&gt;P(A|B)是已知B发生后A的条件概率，也由于得自B的取值而被称作A的后验概率。&lt;/li&gt;
-&lt;li&gt;P(B|A)是已知A发生后B的条件概率，也由于得自A的取值而被称作B的后验概率。&lt;/li&gt;
-&lt;li&gt;P(B)是B的先验概率或边缘概率，也作标准化常量（normalized constant）。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;按这些术语，Bayes法则可表述为：&lt;br&gt;
-  &lt;strong&gt;后验概率 = (似然度 * 先验概率)/标准化常量&lt;/strong&gt;&lt;br&gt;
-  也就是说，后验概率与先验概率和似然度的乘积成正比。&lt;br&gt;
-  另外，比例Pr(B|A)/Pr(B)也有时被称作标准似然度（standardised likelihood），Bayes法则可表述为：
-后验概率 = 标准似然度 * 先验概率。 [1]&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F_%E4%BE%8B%E5%AD%90.png&#34;
-	width=&#34;1452&#34;
-	height=&#34;457&#34;
-	srcset=&#34;https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F_%E4%BE%8B%E5%AD%90_hucad6dfd02af786e8d8428e31b5d5d74d_899774_480x0_resize_box_3.png 480w, https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F_%E4%BE%8B%E5%AD%90_hucad6dfd02af786e8d8428e31b5d5d74d_899774_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;理解贝叶斯公式&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;317&#34;
-		data-flex-basis=&#34;762px&#34;
-	
-&gt;&lt;br&gt;
-1.可测空间&lt;/p&gt;
-&lt;p&gt;2.常用的一维分布&lt;br&gt;
-&lt;img src=&#34;https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E6%A6%82%E7%8E%87%E8%AE%BA_%E4%B8%80%E7%BB%B4%E5%88%86%E5%B8%83.png&#34;
-	width=&#34;1321&#34;
-	height=&#34;468&#34;
-	srcset=&#34;https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E6%A6%82%E7%8E%87%E8%AE%BA_%E4%B8%80%E7%BB%B4%E5%88%86%E5%B8%83_huf48e702ad0417d3d1ce09f91ea4d62d1_183080_480x0_resize_box_3.png 480w, https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/%E6%A6%82%E7%8E%87%E8%AE%BA_%E4%B8%80%E7%BB%B4%E5%88%86%E5%B8%83_huf48e702ad0417d3d1ce09f91ea4d62d1_183080_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;282&#34;
-		data-flex-basis=&#34;677px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;../../%e6%bf%80%e5%85%89%e6%9c%89%e5%8f%8d/index.html&#34; &gt;链接&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Ros学习之旅3</title>
-        <link>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%853/</link>
-        <pubDate>Fri, 01 Apr 2022 13:25:02 +0800</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%853/</guid>
-        <description>&lt;h1 id=&#34;如何安装ros&#34;&gt;如何安装ros&lt;/h1&gt;
-&lt;h2 id=&#34;脚本安装&#34;&gt;脚本安装&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget http://fishros.com/install -O fishros &amp;amp;&amp;amp; sudo bash fishros
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/s/8hTrKL0N5y9i6s9ujhp0UA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;原文章链接&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>网络配置</title>
-        <link>https://getone_chao.gitee.io/categories/os/liunx/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</link>
-        <pubDate>Fri, 01 Apr 2022 13:11:10 +0800</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/categories/os/liunx/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</guid>
-        <description>&lt;h1 id=&#34;网络配置&#34;&gt;网络配置&lt;/h1&gt;
-&lt;h2 id=&#34;ubuntu1804配置ip&#34;&gt;ubuntu18.04配置IP&lt;/h2&gt;
-&lt;h3 id=&#34;使用ip-addr&#34;&gt;使用ip addr&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;只限于以太网配置(临时)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ip addr add 192.168.8.30 dev eth0
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;etcnetplan配置文件&#34;&gt;/etc/netplan/*配置文件&lt;/h3&gt;
-&lt;p&gt;服务器中是50-cloud-init.yaml,桌面版01-network-manager-all.yaml&lt;/p&gt;
-&lt;p&gt;信息格式如下：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;network:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  version: 2
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  renderer: NetworkManager
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ethernets:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        eth0:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            addresses: [192.168.8.123/24]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            gateway4: 192.168.8.1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            dhcp4: true
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            nameservers:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                addresses: [8.8.8.8,114.114.114.114]
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            optional: true
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    wifis:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        wlan0:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            access-points:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                chao:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    password: &amp;#39;88888888&amp;#39;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            dhcp4: true
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            optional: true
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>激光有反</title>
-        <link>https://getone_chao.gitee.io/categories/robat/%E6%BF%80%E5%85%89%E6%9C%89%E5%8F%8D/</link>
-        <pubDate>Thu, 31 Mar 2022 01:09:25 +0800</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/categories/robat/%E6%BF%80%E5%85%89%E6%9C%89%E5%8F%8D/</guid>
-        <description>&lt;h1 id=&#34;激光有反&#34;&gt;激光有反&lt;/h1&gt;
-</description>
-        </item>
-        <item>
-        <title>纯追踪</title>
-        <link>https://getone_chao.gitee.io/categories/robat/carcontrol/%E5%AF%BB%E8%BF%B9/%E7%BA%AF%E8%BF%BD%E8%B8%AA/</link>
-        <pubDate>Thu, 31 Mar 2022 01:07:34 +0800</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/categories/robat/carcontrol/%E5%AF%BB%E8%BF%B9/%E7%BA%AF%E8%BF%BD%E8%B8%AA/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>概率机器人</title>
-        <link>https://getone_chao.gitee.io/categories/robat/slam/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/</link>
-        <pubDate>Thu, 31 Mar 2022 01:05:24 +0800</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/categories/robat/slam/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
-        <description>&lt;h1 id=&#34;slam&#34;&gt;slam&lt;/h1&gt;
-&lt;h2 id=&#34;贝叶斯滤波&#34;&gt;贝叶斯滤波&lt;/h2&gt;
-&lt;p&gt;  贝叶斯滤波是卡尔曼滤波、粒子滤波的基础，应用到汽车、金融、航空航天、机器学习等行业。&lt;/p&gt;
-&lt;h3 id=&#34;随机过程&#34;&gt;随机过程&lt;/h3&gt;
-&lt;p&gt;   随机过程可依其在任一时刻的状态是连续型随机变量或离散型随机变量而分成连续型随机过程和离散型随机过程.&lt;br&gt;
-   定义：就是一个随&amp;quot;时间&amp;quot;演化的随机系统&lt;/p&gt;
-&lt;h4 id=&#34;学习参考课程和教材&#34;&gt;学习参考课程和教材&lt;/h4&gt;
-&lt;p&gt;-&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1g7411b7r2?spm_id_from=333.337.search-card.all.click&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;随机过程-华中科技大学&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;概率论基础&#34;&gt;概率论基础&lt;/h4&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;../../../math/probability/%e6%a6%82%e7%8e%87%e8%ae%ba%e5%ad%a6%e4%b9%a0%e4%b9%8b%e6%97%851/index.html&#34; &gt;概率论与数理统计基本概念&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;大数定律&#34;&gt;大数定律&lt;/h3&gt;
-&lt;p&gt;  &lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Ros学习之旅2</title>
-        <link>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/</link>
-        <pubDate>Thu, 31 Mar 2022 00:21:47 +0800</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/</guid>
-        <description>&lt;h1 id=&#34;ros学习之旅2&#34;&gt;ROS学习之旅2&lt;/h1&gt;
-&lt;h2 id=&#34;机器人种类&#34;&gt;机器人种类&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/robat.png&#34;
-	width=&#34;649&#34;
-	height=&#34;570&#34;
-	srcset=&#34;https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/robat_hu92f36bf6e84dd61b750964e2aa15c198_90074_480x0_resize_box_3.png 480w, https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/robat_hu92f36bf6e84dd61b750964e2aa15c198_90074_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;1&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;113&#34;
-		data-flex-basis=&#34;273px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;h2 id=&#34;agv的框架搬运机器人&#34;&gt;AGV的框架(搬运机器人)&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/AGV.png&#34;
-	width=&#34;1220&#34;
-	height=&#34;637&#34;
-	srcset=&#34;https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/AGV_hub1181f6fabf67e7b946d64bd02c619ab_39840_480x0_resize_box_3.png 480w, https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/AGV_hub1181f6fabf67e7b946d64bd02c619ab_39840_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;2&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;191&#34;
-		data-flex-basis=&#34;459px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;h2 id=&#34;穿梭车&#34;&gt;穿梭车&lt;/h2&gt;
-</description>
-        </item>
-        <item>
-        <title>Ros学习之旅1</title>
-        <link>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</link>
-        <pubDate>Sun, 27 Mar 2022 19:03:06 +0800</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</guid>
-        <description>&lt;h1 id=&#34;ros学习之旅1&#34;&gt;ros学习之旅1&lt;/h1&gt;
-&lt;h2 id=&#34;ros学习网站收集&#34;&gt;ros学习网站收集&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.ros.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Ros官网&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://wiki.ros.org/cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;wiki.ros.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://sychaichangkun.gitbooks.io/ros-tutorial-icourse163/content/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;中国大学MOOC&amp;mdash;《机器人操作系统入门》课程讲义&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.icourse163.org/course/NUDT-1205969803?from=searchPage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;中国大学MOOC&amp;mdash;《智能机器人系统》&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.ncnynl.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;创客智造&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/ZhangRelay/column/info/13113&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;zhangrelay的专栏&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.guyuehome.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;古月居&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://exbot.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;易科机器人实验室&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://emanual.robotis.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;ROBOTIS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/137761414?msclkid=efd6fcf8adc211ec9bbfab1ade5fd706&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;知乎&amp;ndash;SLAM开发最强最全资源汇总&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;ing&amp;hellip;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;代码示例&#34;&gt;代码示例&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/sychaichangkun/ROS-Academy-for-Beginners&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;中国大学MOOC&amp;mdash;《机器人操作系统入门》课程讲义&amp;ndash;代码示例&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/tu-darmstadt-ros-pkg/hector_slam&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;hector slam&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ros-perception/slam_gmapping/tree/melodic-devel/gmapping&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;gmapping&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;书籍&#34;&gt;书籍&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;机器人导论&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        <item>
-        <title>如何在wsl1中使用网络代理？</title>
-        <link>https://getone_chao.gitee.io/categories/net/wsl1/test-post/</link>
-        <pubDate>Wed, 23 Mar 2022 20:09:16 +0800</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/categories/net/wsl1/test-post/</guid>
-        <description>&lt;img src="https://getone_chao.gitee.io/categories/net/wsl1/test-post/face.jpg" alt="Featured image of post 如何在wsl1中使用网络代理？" /&gt;&lt;h1 id=&#34;如何在wsl1中使用网络代理&#34;&gt;如何在wsl1中使用网络代理？&lt;/h1&gt;
-&lt;h2 id=&#34;代理工具&#34;&gt;代理工具&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;polipo&#34;&gt;polipo&lt;/h3&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;proxychain&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;前提条件&#34;&gt;前提条件&lt;/h2&gt;
-&lt;p&gt;v2ray中开启允许局域网连接&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://getone_chao.gitee.io/categories/net/wsl1/test-post/index.assets/image-20220323201609014.png&#34;
-	width=&#34;711&#34;
-	height=&#34;406&#34;
-	srcset=&#34;https://getone_chao.gitee.io/categories/net/wsl1/test-post/index.assets/image-20220323201609014_hue8c8b1346f392aff13ca4975c3095ec2_28827_480x0_resize_box_3.png 480w, https://getone_chao.gitee.io/categories/net/wsl1/test-post/index.assets/image-20220323201609014_hue8c8b1346f392aff13ca4975c3095ec2_28827_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20220323201609014&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;175&#34;
-		data-flex-basis=&#34;420px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;记住以下ip:port&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://getone_chao.gitee.io/categories/net/wsl1/test-post/index.assets/image-20220323201749350.png&#34;
-	width=&#34;852&#34;
-	height=&#34;42&#34;
-	srcset=&#34;https://getone_chao.gitee.io/categories/net/wsl1/test-post/index.assets/image-20220323201749350_hu40b5e263c3d3fb90f81a3e78a0e6917c_2297_480x0_resize_box_3.png 480w, https://getone_chao.gitee.io/categories/net/wsl1/test-post/index.assets/image-20220323201749350_hu40b5e263c3d3fb90f81a3e78a0e6917c_2297_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20220323201749350&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;2028&#34;
-		data-flex-basis=&#34;4868px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;h2 id=&#34;开始代理&#34;&gt;开始代理&lt;/h2&gt;
-&lt;h3 id=&#34;polipo-1&#34;&gt;polipo&lt;/h3&gt;
-&lt;p&gt;参考博客：&lt;a class=&#34;link&#34; href=&#34;https://gist.github.com/moenn/2db47589724cf6c06ad9316ac57e2144&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;为 windows wsl 配置 socks5 代理 (github.com)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;步骤总结：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;下载
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install polipo
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;打开配置文件
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo nano /etc/polipo/config
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;写入
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;socksParentProxy = &amp;#34;localhost:10808&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;socksProxyType = socks5
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;proxyPort = 8123
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;环境设置
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nano ~/.bashrc
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;写入
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;export https_proxy=http://127.0.0.1:8123
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;export http_proxy=http://127.0.0.1:8123 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;export all_proxy=socks5://127.0.0.1:8123
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;启动
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo service polipo stop 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo service polipo start 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;测试
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl www.google.com
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;proxychain&#34;&gt;proxychain&lt;/h3&gt;
-&lt;p&gt;参考博客：&lt;a class=&#34;link&#34; href=&#34;https://monkeywie.cn/2020/07/06/linux-global-proxy-tool-proxychain/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;linux下的全局代理工具proxychain | MonkeyWie&amp;rsquo;s Blog&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>矩阵论之二</title>
-        <link>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%BA%8C/</link>
-        <pubDate>Tue, 22 Mar 2022 18:50:49 +0800</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%BA%8C/</guid>
-        <description>&lt;h1 id=&#34;矩阵论之二&#34;&gt;矩阵论之二&lt;/h1&gt;
-</description>
-        </item>
-        <item>
-        <title>矩阵论之一</title>
-        <link>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/</link>
-        <pubDate>Tue, 22 Mar 2022 16:27:00 +0800</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/</guid>
-        <description>&lt;img src="https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/images.jpg" alt="Featured image of post 矩阵论之一" /&gt;&lt;h1 id=&#34;矩阵论之一&#34;&gt;矩阵论之一&lt;/h1&gt;
-&lt;h2 id=&#34;线性空间&#34;&gt;线性空间&lt;/h2&gt;
-&lt;p&gt;  线性空间也称&amp;quot;向量空间&amp;quot;。\( \sqrt{x} \)&lt;/p&gt;
-&lt;p&gt;$$
-\sqrt{x}
-$$&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Archives</title>
-        <link>https://getone_chao.gitee.io/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Rich Content</title>
-        <link>https://getone_chao.gitee.io/p/rich-content/</link>
-        <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/p/rich-content/</guid>
-        <description>&lt;p&gt;Hugo ships with several &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;youtube-privacy-enhanced-shortcode&#34;&gt;YouTube Privacy Enhanced Shortcode&lt;/h2&gt;
-&lt;div class=&#34;video-wrapper&#34;&gt;
-    &lt;iframe loading=&#34;lazy&#34; 
-            src=&#34;https://www.youtube.com/embed/ZJthWmvUzzc&#34; 
-            allowfullscreen 
-            title=&#34;YouTube Video&#34;
-    &gt;
-    &lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;!-- raw HTML omitted --&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;twitter-simple-shortcode&#34;&gt;Twitter Simple Shortcode&lt;/h2&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;vimeo-simple-shortcode&#34;&gt;Vimeo Simple Shortcode&lt;/h2&gt;
-
-
-
-
-
-
-&lt;style&gt;
-.__h_video {
-   position: relative;
-   padding-bottom: 56.23%;
-   height: 0;
-   overflow: hidden;
-   width: 100%;
-   background: #000;
-}
-.__h_video img {
-   width: 100%;
-   height: auto;
-   color: #000;
-}
-.__h_video .play {
-   height: 72px;
-   width: 72px;
-   left: 50%;
-   top: 50%;
-   margin-left: -36px;
-   margin-top: -36px;
-   position: absolute;
-   cursor: pointer;
-}
-&lt;/style&gt;
-
-
-&lt;div class=&#34;s_video_simple __h_video&#34;&gt;
-&lt;h2 id=&#34;bilibilibi-shortcode&#34;&gt;bilibilibi Shortcode&lt;/h2&gt;
-
-
-
-
-
-
+  <channel>
+    <title>Pure theme for Hugo</title>
+    <link>https://getone_chao.gitee.io/</link>
+    <description>Recent content on Pure theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>CC BY 4.0 CN</copyright>
+    <lastBuildDate>Fri, 01 Apr 2022 20:47:41 +0800</lastBuildDate>
     
-
-
-&lt;div class=&#34;video-wrapper&#34;&gt;
-    &lt;iframe src=&#34;https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;aid=498363026&#34;
-            scrolling=&#34;no&#34;
-            frameborder=&#34;no&#34;
-            framespacing=&#34;0&#34;
-            allowfullscreen=&#34;true&#34;
-    &gt;
-    &lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;gist-shortcode&#34;&gt;Gist Shortcode&lt;/h2&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/spf13/7896402.js&#34;&gt;&lt;/script&gt;</description>
-        </item>
-        <item>
-        <title>Placeholder Text</title>
-        <link>https://getone_chao.gitee.io/p/placeholder-text/</link>
-        <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/p/placeholder-text/</guid>
-        <description>&lt;img src="https://getone_chao.gitee.io/p/placeholder-text/matt-le-SJSpo9hQf7s-unsplash.jpg" alt="Featured image of post Placeholder Text" /&gt;&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;
-&lt;p&gt;Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Exierant elisi ambit vivere dedere&lt;/li&gt;
-&lt;li&gt;Duce pollice&lt;/li&gt;
-&lt;li&gt;Eris modo&lt;/li&gt;
-&lt;li&gt;Spargitque ferrea quos palude&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Rursus nulli murmur; hastile inridet ut ab gravi sententia! Nomine potitus silentia flumen, sustinet placuit petis in dilapsa erat sunt. Atria tractus malis.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Comas hunc haec pietate fetum procerum dixit&lt;/li&gt;
-&lt;li&gt;Post torum vates letum Tiresia&lt;/li&gt;
-&lt;li&gt;Flumen querellas&lt;/li&gt;
-&lt;li&gt;Arcanaque montibus omnes&lt;/li&gt;
-&lt;li&gt;Quidem et&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;vagus-elidunt&#34;&gt;Vagus elidunt&lt;/h1&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Canons_of_page_construction#Van_de_Graaf_canon&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;The Van de Graaf Canon&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;mane-refeci-capiebant-unda-mulcebat&#34;&gt;Mane refeci capiebant unda mulcebat&lt;/h2&gt;
-&lt;p&gt;Victa caducifer, malo vulnere contra dicere aurato, ludit regale, voca! Retorsit colit est profanae esse virescere furit nec; iaculi matertera et visa est, viribus. Divesque creatis, tecta novat collumque vulnus est, parvas. &lt;strong&gt;Faces illo pepulere&lt;/strong&gt; tempus adest. Tendit flamma, ab opes virum sustinet, sidus sequendo urbis.&lt;/p&gt;
-&lt;p&gt;Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli Lelegas tu lux. Verbis obstitit intus oblectamina fixis linguisque ausus sperare Echionides cornuaque tenent clausit possit. Omnia putatur. Praeteritae refert ausus; ferebant e primus lora nutat, vici quae mea ipse. Et iter nil spectatae vulnus haerentia iuste et exercebat, sui et.&lt;/p&gt;
-&lt;p&gt;Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel &lt;strong&gt;mitis temploque&lt;/strong&gt; vocatus, inque alis, &lt;em&gt;oculos nomen&lt;/em&gt; non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides &lt;strong&gt;parte&lt;/strong&gt;.&lt;/p&gt;</description>
-        </item>
-        <item>
-        <title>Math Typesetting</title>
-        <link>https://getone_chao.gitee.io/p/math-typesetting/</link>
-        <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/p/math-typesetting/</guid>
-        <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;
-&lt;p&gt;In this example we will be using &lt;a class=&#34;link&#34; href=&#34;https://katex.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;KaTeX&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Create a partial under &lt;code&gt;/layouts/partials/math.html&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Within this partial reference the &lt;a class=&#34;link&#34; href=&#34;https://katex.org/docs/autorender.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Auto-render Extension&lt;/a&gt; or host these scripts locally.&lt;/li&gt;
-&lt;li&gt;Include the partial in your templates like so:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; or .Params.math .Site.Params.math &lt;span class=&#34;o&#34;&gt;}}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;{{&lt;/span&gt; partial &lt;span class=&#34;s2&#34;&gt;&amp;#34;math.html&amp;#34;&lt;/span&gt; . &lt;span class=&#34;o&#34;&gt;}}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;{{&lt;/span&gt; end &lt;span class=&#34;o&#34;&gt;}}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;To enable KaTex globally set the parameter &lt;code&gt;math&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in a project&amp;rsquo;s configuration&lt;/li&gt;
-&lt;li&gt;To enable KaTex on a per page basis include the parameter &lt;code&gt;math: true&lt;/code&gt; in content files&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Use the online reference of &lt;a class=&#34;link&#34; href=&#34;https://katex.org/docs/supported.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Supported TeX Functions&lt;/a&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;Block math:
-$$
-\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
-$$&lt;/p&gt;</description>
-        </item>
-        <item>
-        <title>Emoji Support</title>
-        <link>https://getone_chao.gitee.io/p/emoji-support/</link>
-        <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/p/emoji-support/</guid>
-        <description>&lt;img src="https://getone_chao.gitee.io/p/emoji-support/the-creative-exchange-d2zvqp3fpro-unsplash.jpg" alt="Featured image of post Emoji Support" /&gt;&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
-&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/functions/emojify/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;&lt;code&gt;emojify&lt;/code&gt;&lt;/a&gt; function can be called directly in templates or &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/templates/shortcode-templates/#inline-shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Inline Shortcodes&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;To enable emoji globally, set &lt;code&gt;enableEmoji&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in your site&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/getting-started/configuration/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;configuration&lt;/a&gt; and then you can type emoji shorthand codes directly in content files; e.g.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;http://www.emoji-cheat-sheet.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Emoji cheat sheet&lt;/a&gt; is a useful reference for emoji shorthand codes.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;N.B.&lt;/strong&gt; The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.emoji {
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>About</title>
-        <link>https://getone_chao.gitee.io/about/</link>
-        <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/about/</guid>
-        <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Apache Licence 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
-&lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/yuin/goldmark&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/yuin/goldmark&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/alecthomas/chroma&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/alecthomas/chroma&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/muesli/smartcrop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/muesli/smartcrop&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/spf13/cobra&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/spf13/cobra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/spf13/viper&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/spf13/viper&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.&lt;/p&gt;
-&lt;p&gt;Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.&lt;/p&gt;
-&lt;p&gt;Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.&lt;/p&gt;
-&lt;p&gt;Learn more and contribute on &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Links</title>
-        <link>https://getone_chao.gitee.io/links/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/links/</guid>
-        <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
-&lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;links&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub is the world&amp;#39;s largest software development platform.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.com&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://www.typescriptlang.org&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ts-logo-128.jpg&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;code&gt;image&lt;/code&gt; field accepts both local and external images.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Search</title>
-        <link>https://getone_chao.gitee.io/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://getone_chao.gitee.io/search/</guid>
-        <description></description>
-        </item>
-        
-    </channel>
+        <atom:link href="https://getone_chao.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://getone_chao.gitee.io/about/</link>
+      <pubDate>Fri, 01 Apr 2022 23:59:49 +0800</pubDate>
+      
+      <guid>https://getone_chao.gitee.io/about/</guid>
+      <description>hello word </description>
+    </item>
+    
+    <item>
+      <title>概率论学习之旅1</title>
+      <link>https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</link>
+      <pubDate>Fri, 01 Apr 2022 20:47:41 +0800</pubDate>
+      
+      <guid>https://getone_chao.gitee.io/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</guid>
+      <description>概率论与数理统计 古典概型 试验中所有可能出现的基本事件只有有限个 试验中每个基本事件出现的可能性相等。 具有以上两个特点的概率模型是大量存在的，这</description>
+    </item>
+    
+    <item>
+      <title>Ros学习之旅3</title>
+      <link>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%853/</link>
+      <pubDate>Fri, 01 Apr 2022 13:25:02 +0800</pubDate>
+      
+      <guid>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%853/</guid>
+      <description>如何安装ros 脚本安装 wget http://fishros.com/install -O fishros &amp;amp;&amp;amp; sudo bash fishros 原文章链接</description>
+    </item>
+    
+    <item>
+      <title>网络配置</title>
+      <link>https://getone_chao.gitee.io/categories/os/liunx/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 01 Apr 2022 13:11:10 +0800</pubDate>
+      
+      <guid>https://getone_chao.gitee.io/categories/os/liunx/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</guid>
+      <description>网络配置 ubuntu18.04配置IP 使用ip addr 只限于以太网配置(临时) ip addr add 192.168.8.30 dev eth0 /etc/netplan/*配置文件 服务器中是50-cl</description>
+    </item>
+    
+    <item>
+      <title>激光有反</title>
+      <link>https://getone_chao.gitee.io/categories/robat/%E6%BF%80%E5%85%89%E6%9C%89%E5%8F%8D/</link>
+      <pubDate>Thu, 31 Mar 2022 01:09:25 +0800</pubDate>
+      
+      <guid>https://getone_chao.gitee.io/categories/robat/%E6%BF%80%E5%85%89%E6%9C%89%E5%8F%8D/</guid>
+      <description>激光有反</description>
+    </item>
+    
+    <item>
+      <title>纯追踪</title>
+      <link>https://getone_chao.gitee.io/categories/robat/carcontrol/%E5%AF%BB%E8%BF%B9/%E7%BA%AF%E8%BF%BD%E8%B8%AA/</link>
+      <pubDate>Thu, 31 Mar 2022 01:07:34 +0800</pubDate>
+      
+      <guid>https://getone_chao.gitee.io/categories/robat/carcontrol/%E5%AF%BB%E8%BF%B9/%E7%BA%AF%E8%BF%BD%E8%B8%AA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>概率机器人</title>
+      <link>https://getone_chao.gitee.io/categories/robat/slam/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/</link>
+      <pubDate>Thu, 31 Mar 2022 01:05:24 +0800</pubDate>
+      
+      <guid>https://getone_chao.gitee.io/categories/robat/slam/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
+      <description>slam 贝叶斯滤波 贝叶斯滤波是卡尔曼滤波、粒子滤波的基础，应用到汽车、金融、航空航天、机器学习等行业。 随机过程 随机过程可依其在任一时刻的状态是连续</description>
+    </item>
+    
+    <item>
+      <title>Ros学习之旅2</title>
+      <link>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/</link>
+      <pubDate>Thu, 31 Mar 2022 00:21:47 +0800</pubDate>
+      
+      <guid>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%852/</guid>
+      <description>ROS学习之旅2 机器人种类 AGV的框架(搬运机器人) 穿梭车</description>
+    </item>
+    
+    <item>
+      <title>Ros学习之旅1</title>
+      <link>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</link>
+      <pubDate>Sun, 27 Mar 2022 19:03:06 +0800</pubDate>
+      
+      <guid>https://getone_chao.gitee.io/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</guid>
+      <description>ros学习之旅1 ros学习网站收集 Ros官网 wiki.ros.org 中国大学MOOC&amp;mdash;《机器人操作系统入门》课程讲义 中国大学MOOC&amp;mdash;《智</description>
+    </item>
+    
+    <item>
+      <title>如何在wsl1中使用网络代理？</title>
+      <link>https://getone_chao.gitee.io/categories/net/wsl1/test-post/</link>
+      <pubDate>Wed, 23 Mar 2022 20:09:16 +0800</pubDate>
+      
+      <guid>https://getone_chao.gitee.io/categories/net/wsl1/test-post/</guid>
+      <description>如何在wsl1中使用网络代理？ 代理工具 polipo proxychain 前提条件 v2ray中开启允许局域网连接 记住以下ip:port 开始代理 polipo 参考博客：为 windows wsl 配置 socks5 代理 (github.com)</description>
+    </item>
+    
+    <item>
+      <title>矩阵论之二</title>
+      <link>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%BA%8C/</link>
+      <pubDate>Tue, 22 Mar 2022 18:50:49 +0800</pubDate>
+      
+      <guid>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%BA%8C/</guid>
+      <description>矩阵论之二</description>
+    </item>
+    
+    <item>
+      <title>矩阵论之一</title>
+      <link>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/</link>
+      <pubDate>Tue, 22 Mar 2022 16:27:00 +0800</pubDate>
+      
+      <guid>https://getone_chao.gitee.io/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/</guid>
+      <description>矩阵论之一 线性空间 线性空间也称&amp;quot;向量空间&amp;quot;。\( \sqrt{x} \) $$ \sqrt{x} $$</description>
+    </item>
+    
+  </channel>
 </rss>

@@ -1,253 +1,205 @@
-baseurl: https://getone_chao.gitee.io
-publishDir: docs
-languageCode: zh-cn
-theme: hugo-theme-stack
-paginate: 5
-title: Example Site
-
-languages:
-    en:
-        languageName: English
-        title: Example Site
-        weight: 1
-    zh-cn:
-        languageName: 中文
-        title: Getone超
-        weight: 2
-    ar:
-        languageName: عربي
-        languagedirection: rtl
-        title: موقع تجريبي
-        weight: 3
-
-# Change it to your Disqus shortname before using
-disqusShortname: hugo-theme-stack
-
-# GA Tracking ID
-googleAnalytics:
-
-# Theme i18n support
-# Available values: ar, ca, de, el, en, es, fr, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
-DefaultContentLanguage: zh-cn
-
-# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
-# This will make .Summary and .WordCount behave correctly for CJK languages.
-hasCJKLanguage: false
-
+baseURL: https://getone_chao.gitee.io
+theme: pure
+title: Pure theme for Hugo
+copyright: CC BY 4.0 CN
+defaultContentLanguage: zh  # en/zh/...
+footnoteReturnLinkContents: ↩
+hasCJKLanguage: true
+paginate: 7
+enableEmoji: true
+PygmentsCodeFences: false
+googleAnalytics: ""      # UA-XXXXXXXX-X 
 permalinks:
-    post: /p/:slug/
-    page: /:slug/
+  posts: /:year/:month/:filename/
+ignoreErrors: ["error-remote-getjson"]
+taxonomies:
+    category : categories
+    tag : tags
+    series : series
+outputFormats:          # use for search. recommend not to modify 
+  SearchIndex:
+    mediaType: "application/json"
+    baseName: "searchindex"
+    isPlainText: true
+    notAlternative: true
+
+outputs:
+    home: ["HTML","RSS","SearchIndex"]  # recommend not to modify
+# sitemap
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      title: 家
+      url: /
+      weight: 1
+
+    - identifier: archives
+      name: Archives
+      title: 记录
+      url: /series/
+      weight: 2
+
+    - identifier: categories
+      name: Categories
+      title: 分类
+      url: /categories/
+      weight: 3
+
+    - identifier: tags
+      name: Tags
+      title: 标签
+      url: /tags/
+      weight: 4
+
+    - identifier: about
+      name: About
+      title: 关于
+      url: /about/
+      weight: 5
+
 
 params:
-    #在首页和归档页面输出来自指定 section 的文章。默认会输出放在 content/post 文件夹下的页面。
-    mainSections:
-        - post
-        - categories
-    featuredImageField: image
-    rssFullContent: true
-    #站点的图标
-    favicon: themes/hugo-theme-stack/assets/img/images.jpg
+  since: 2017
+  dateFormatToUse: "2006-01-02"
+  enablePostCopyright: true
+  copyright_link: http://creativecommons.org/licenses/by/4.0/deed.zh
+  # the directory under content folder that you want to render
+  mainSections: ["posts","categories"]
+  # Enable/Disable menu icons
+  # Icon Reference: http://blog.cofess.com/hexo-theme-pure/iconfont/demo_fontclass.html
+  enableMathJax: true #Enable mathjax support, to use mathematical notations
+  highlightjs:
+    langs: ["python", "javascript"] # refer to http://staticfile.org/, search highlight.js, already have highlight.min.js
 
-    footer:
-        since: 2020
-        customText:
+  tag_cloud:
+    min: 8
+    max: 30
+  # Allows you to specify an override stylesheet
+  # put custom.css in $hugo_root_dir/static/
+  # customCSS: css/custom.css
 
-    #日期格式设置。Go 的时间格式相比其他语言有很大的不同，请参考官方文档：dateFormat
-    dateFormat:
-        published: Jan 02, 2006
-        lastUpdated: Jan 02, 2006 15:04 MST
+  menuIcons:
+    enable: true  # 是否启用导航菜单图标
+    home: icon-home-fill
+    archives: icon-archives-fill
+    categories: icon-folder
+    tags: icon-tags
+    repository: icon-project
+    books: icon-book-fill
+    links: icon-friendship
+    about: icon-cup-fill
 
-    sidebar:
-        emoji: 🍥
-        subtitle: 感知世界,丰润心灵
-        # 博主头像
-        avatar:
-            enabled: true
-            local: true
-            src: img/images.jpg
-
-    # 文章页面相关的设置
-    article:
-        # 在所有文章启用 KaTeX
-        math: true
-        # 在所有文章启用目录
-        toc: true
-        # 在所有文章启用阅读时间
-        readingTime: true
-        # 文章协议设置,显示在页面底部
-        license:
-            enabled: true
-            default: Licensed under CC BY-NC-SA 4.0
-    
-    # 留言系统设置
-    comments:
-        enabled: true
-        provider: disqus
-
-        disqusjs:
-            shortname:
-            apiUrl:
-            apiKey:
-            admin:
-            adminLabel:
-
-        utterances:
-            repo:
-            issueTerm: pathname
-            label:
-
-        remark42:
-            host:
-            site:
-            locale:
-
-        vssue:
-            platform:
-            owner:
-            repo:
-            clientId:
-            clientSecret:
-            autoCreateIssue: false
-
-        # Waline client configuration see: https://waline.js.org/en/reference/client.html
-        waline:
-            serverURL:
-            lang:
-            visitor:
-            avatar:
-            emoji:
-                - https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo
-            requiredMeta:
-                - name
-                - email
-                - url
-            placeholder:
-            locale:
-                admin: Admin
-
-        twikoo:
-            envId:
-            region:
-            path:
-            lang:
-
-        # See https://cactus.chat/docs/reference/web-client/#configuration for description of the various options
-        cactus:
-            defaultHomeserverUrl: "https://matrix.cactus.chat:8448"
-            serverName: "cactus.chat"
-            siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
-
-        giscus:
-            repo:
-            repoID:
-            category:
-            categoryID:
-            mapping:
-            lightTheme:
-            darkTheme:
-            reactionsEnabled: 1
-            emitMetadata: 0
-
-        gitalk:
-            owner:
-            admin:
-            repo:
-            clientID:
-            clientSecret:
-
-        cusdis:
-            host:
-            id:
-    #主页右侧边栏小部件设置
-    widgets:
-        homepage:
-            - type: search
-            - type: archives
-              params:
-                  limit: 10
-            - type: categories
-              params:
-                  limit: 15
-            - type: tag-cloud
-              params:
-                  limit: 15
-        page:
-            - type: toc
-
-    opengraph:
-        twitter:
-            # Your Twitter username
-            site:
-
-            # Available values: summary, summary_large_image
-            card: summary_large_image
-
-    defaultImage:
-        opengraph:
-            enabled: false
-            local: false
-            src:
-
-    colorScheme:
-        # Display toggle
-        toggle: true
-
-        # Available values: auto, light, dark
-        default: auto
-
-    imageProcessing:
-        cover:
-            enabled: true
-        content:
-            enabled: true
-
-### Custom menu
-### See https://docs.stack.jimmycai.com/configuration/custom-menu.html
-### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
-menu:
-    main: []
-
+  # profile
+  profile:
+    enabled: true # Whether to show profile bar
+    avatar: images.jpg
+    gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
+    author: 张超
+    author_title: 乐此不疲
+    author_description: 突然有一天，少年发现，世间的真理就是人们对同一片时空的人生感悟。
+    location: Shanghai, China
+    follow: https://getone_chao.gitee.io
+    # Social Links
     social:
-        - identifier: github
-          name: GitHub
-          url: https://github.com/CaiJimmy/hugo-theme-stack
-          params:
-              icon: brand-github
+      links:
+        github:  https://getone_chao.gitee.io
+        # weibo: http://weibo.com/{yourid}
+        # twitter: https://twitter.com/
+        # facebook: /
+        rss: /index.xml
+      link_tooltip: false # enable the social link tooltip, options: true, false
+  # Site
+  site:
+    logo:
+      enabled: false
+      width: 40
+      height: 40
+      url: images.jpg
+    title: Hugo # 页面title
+    favicon: images.jpg
+    board: <p>突然有一天，少年发现，世间的真理就是人们对同一片时空的人生感悟。</p> # 公告牌
 
-        - identifier: twitter
-          name: Twitter
-          url: https://twitter.com
-          params:
-              icon: brand-twitter
+  # Share
+  # weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin
+  share:
+    enable: true # 是否启用分享
+    sites: weibo,qq,wechat,facebook,twitter # PC端显示的分享图标
+    mobile_sites: weibo,qq,qzone # 移动端显示的分享图标
 
-related:
-    includeNewer: true
-    threshold: 60
-    toLower: false
-    indices:
-        - name: tags
-          weight: 100
+  # Comment
+  comment:
+    type: # type disqus/gitalk/valine 启用哪种评论系统
+    disqus: your_disqus_name # enter disqus shortname here
+    gitalk: # gitalk. https://gitalk.github.io/
+      owner: #必须. GitHub repository 所有者，可以是个人或者组织。
+      admin: #必须. GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
+      repo:  #必须. GitHub repository.
+      ClientID: #必须. GitHub Application Client ID.
+      ClientSecret: #必须. GitHub Application Client Secret.
+    valine: # Valine. https://valine.js.org
+      appid: # your leancloud application appid
+      appkey: # your leancloud application appkey
+      notify: # mail notifier , https://github.com/xCss/Valine/wiki
+      verify: # Verification code
+      placeholder: enjoy~ # comment box placeholder
+      avatar: mm # gravatar style
+      meta: nick,mail # custom comment header
+      pageSize: 10 # pagination size
+      visitor: false # Article reading statistic https://valine.js.org/visitor.html
 
-        - name: categories
-          weight: 200
+  # Donate
+  donate:
+    enable: false
+    # 微信打赏
+    wechatpay:
+      qrcode: donate/wechatpayimg.png1
+      title: 微信支付
+    # 支付宝打赏
+    alipay:
+      qrcode: 
+      title: 支付宝
 
-markup:
-    goldmark:
-        renderer:
-            ## Set to true if you have HTML content inside Markdown
-            unsafe: false
-    tableOfContents:
-        endLevel: 4
-        ordered: true
-        startLevel: 2
-    highlight:
-        noClasses: false
-        codeFences: true
-        guessSyntax: true
-        lineNoStart: 1
-        lineNos: true
-        lineNumbersInTable: true
-        tabWidth: 4
+  # PV
+  pv:
+    busuanzi:
+      enable: true # 不蒜子统计
+    leancloud:
+      enable: false # leancloud统计
+      app_id: # leancloud <AppID>
+      app_key: # leancloud <AppKey>
 
-ignoreErrors: "error-remote-getjson"
-   
+  # wordcount
+  postCount:
+    enable: true
+    wordcount: true # 文章字数统计
+    min2read: true # read time 阅读时长预计
+
+  # config
+  config:
+    skin: theme-black # theme color default is white. other type [theme-black,theme-blue,theme-green,theme-purple]
+    layout: main-center # main-left main-center main-right
+    excerpt_link: Read More
+    toc: true
+
+  # Sidebar
+  sidebar: right
+
+  # Search
+  search:
+    enable: true # enable search. thanks for https://raw.githubusercontent.com/ppoffice/hexo-theme-icarus/master/source/js/insight.js
+
+  # Sidebar only the following widgets. you can remove any you don't like it.
+  widgets:
+    - board
+    - recent_posts
+    - category
+    - tag
+    - tag_cloud
+  
+
