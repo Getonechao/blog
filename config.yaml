@@ -1,4 +1,4 @@
-baseurl: https://getonechao.github.io/ThisIsBlog/
+baseurl: https://getone_chao.gitee.io
 publishDir: docs
 languageCode: zh-cn
 theme: hugo-theme-stack
