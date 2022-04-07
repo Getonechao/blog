@@ -27,13 +27,6 @@ tags=  [
 -[随机过程-华中科技大学](https://www.bilibili.com/video/BV1g7411b7r2?spm_id_from=333.337.search-card.all.click)
 #### 概率论基础
  [概率论与数理统计基本概念](../../../math/probability/概率论学习之旅1/index.html)
+ 
 
-
-
-
-
-
-
-
-### 大数定律
-&emsp;&emsp;
+[理解贝叶斯滤波](https://zhuanlan.zhihu.com/p/139215491?msclkid=b2901ec8b5a211ec855d661246651d6d)

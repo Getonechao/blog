@@ -1,6 +1,6 @@
 baseURL: https://getone_chao.gitee.io
 theme: pure
-title: Pure theme for Hugo
+title: Getone超
 copyright: CC BY 4.0 CN
 defaultContentLanguage: zh  # en/zh/...
 footnoteReturnLinkContents: ↩
@@ -35,7 +35,7 @@ menu:
   main:
     - identifier: home
       name: Home
-      title: 家
+      title: 首页
       url: /
       weight: 1
 
@@ -62,6 +62,12 @@ menu:
       title: 关于
       url: /about/
       weight: 5
+
+    # - identifier: life
+    #   name: life
+    #   title: life
+    #   url: /about/
+    #   weight: 6
 
 
 params:
@@ -94,6 +100,7 @@ params:
     books: icon-book-fill
     links: icon-friendship
     about: icon-cup-fill
+    # life: icon-cup-fill
 
   # profile
   profile:
@@ -117,12 +124,12 @@ params:
   # Site
   site:
     logo:
-      enabled: false
+      enabled: true
       width: 40
       height: 40
-      url: images.jpg
+      url: static
     title: Hugo # 页面title
-    favicon: images.jpg
+    favicon: images.ico
     board: <p>突然有一天，少年发现，世间的真理就是人们对同一片时空的人生感悟。</p> # 公告牌
 
   # Share
@@ -201,5 +208,16 @@ params:
     - category
     - tag
     - tag_cloud
+
+  ## 后来添加的
+  # markup:
+  #   # defaultMarkdownHandler: blackfriday
+  #   goldmark:
+  #     renderer:
+  #       unsafe: true
   
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

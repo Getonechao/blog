@@ -15,5 +15,6 @@ tags=  [
 +++
 
 # 激光有反
+<p style="color:red;">激光有反..............</p>
 
-
+[引用]({{< ref "categories/robat/slam/概率机器人/index.md">}})
