@@ -30,16 +30,16 @@ ip addr add 192.168.8.30 dev eth0
 信息格式如下：
 ~~~
 network:
-  version: 2
-  renderer: NetworkManager
     ethernets:
         eth0:
-            addresses: [192.168.8.123/24]
-            gateway4: 192.168.8.1
-            dhcp4: true
-            nameservers:
-                addresses: [8.8.8.8,114.114.114.114]
+            dhcp4: no
+            addresses: [192.168.30.201/24]
             optional: true
+        eth1:
+            dhcp4: no
+            addresses: [192.168.30.202/24]
+            optional: true
+    version: 2
     wifis:
         wlan0:
             access-points:
@@ -48,4 +48,3 @@ network:
             dhcp4: true
             optional: true
 ~~~
-
