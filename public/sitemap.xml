@@ -3,35 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://getone_chao.gitee.io/categories/</loc>
-    <lastmod>2022-04-12T23:56:53+08:00</lastmod>
+    <loc>https://getone_chao.gitee.io/tags/math/</loc>
+    <lastmod>2022-04-14T21:39:10+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://getone_chao.gitee.io/categories/</loc>
-    <lastmod>2022-04-12T23:56:53+08:00</lastmod>
+    <lastmod>2022-04-14T21:39:10+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/</loc>
+    <lastmod>2022-04-14T21:39:10+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://getone_chao.gitee.io/</loc>
-    <lastmod>2022-04-12T23:56:53+08:00</lastmod>
+    <lastmod>2022-04-14T21:39:10+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://getone_chao.gitee.io/categories/net/</loc>
-    <lastmod>2022-04-12T23:56:53+08:00</lastmod>
+    <loc>https://getone_chao.gitee.io/categories/math/</loc>
+    <lastmod>2022-04-14T21:39:10+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://getone_chao.gitee.io/tags/</loc>
+    <lastmod>2022-04-14T21:39:10+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/math/other/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D/</loc>
+    <lastmod>2022-04-14T21:39:10+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://getone_chao.gitee.io/categories/net/</loc>
     <lastmod>2022-04-12T23:56:53+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -54,13 +75,6 @@
   <url>
     <loc>https://getone_chao.gitee.io/about/</loc>
     <lastmod>2022-04-01T23:59:49+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://getone_chao.gitee.io/categories/math/</loc>
-    <lastmod>2022-04-01T20:47:41+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
