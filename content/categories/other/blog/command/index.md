@@ -11,7 +11,7 @@ categories= [
 ]
 
 tags=  [
-    " blog"
+    "blog"
 ]
 
 +++
@@ -39,6 +39,9 @@ hugo new categories/robat/
 
 other类
 hugo new categories/other/
+
+lang类
+hugo new categories/lang/
 ~~~
 
 
@@ -56,6 +59,24 @@ git push gitee
 
 cloudbase hosting deploy ./public  -e  blog-0g8860131649bb29
 ~~~
+
+### 1.3 markdown技巧
+
+- 打开调试，获取bilibili的pid
+
+~~~
+
+console.log(playerInfo.aid)
+
+{{< bilibili h7YWxY9lmrY >}}
+~~~
+
+- 跳转
+~~~
+[]({{< ref "blog/neat.md" >}})
+~~~
+
+
 
 ## 2. 腾讯云部署
 
