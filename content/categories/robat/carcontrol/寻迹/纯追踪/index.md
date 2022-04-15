@@ -6,10 +6,11 @@ author= "somebody"
 draft= true
 image= "" 
 categories= [
-    "boke"
+    "robat"
 ]
 
 tags=  [
-    " "," "
+    "project"
 ]
+
 +++

@@ -23,20 +23,6 @@ https://blog.iyu.icu/posts/shortcode_bilibili/?msclkid=f85a7316b29211ecb1be8ce0a
 
 
 
-## 上传命令
-
-~~~
-hugo -D
-
-git add .
-
-git commit -m ""
-
-git push gitee
-
-cloudbase hosting deploy ./public  -e  blog-0g8860131649bb29
-~~~
-
 
 
 
