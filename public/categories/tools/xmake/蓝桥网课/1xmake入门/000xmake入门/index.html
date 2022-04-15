@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>
+        000xmake入门 - Getone超
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="蓝桥网课xmake笔记" />
+    <meta name="generator" content="Hugo 0.95.0 with theme pure" />
+    <title>000xmake入门 - Getone超</title>
+    
+    
+    <link rel="stylesheet" href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/css/style.min.a85959a41e7abcc0db1f81f44bd264649303417f91b536e87dcde644340fea6d.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="000xmake入门" />
+<meta property="og:description" content="蓝桥网课xmake笔记" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/000xmake%E5%85%A5%E9%97%A8/" /><meta property="article:section" content="categories" />
+<meta property="article:published_time" content="2021-07-15T10:36:38+08:00" />
+<meta property="article:modified_time" content="2021-07-15T10:36:38+08:00" />
+
+<meta itemprop="name" content="000xmake入门">
+<meta itemprop="description" content="蓝桥网课xmake笔记"><meta itemprop="datePublished" content="2021-07-15T10:36:38+08:00" />
+<meta itemprop="dateModified" content="2021-07-15T10:36:38+08:00" />
+<meta itemprop="wordCount" content="2774">
+<meta itemprop="keywords" content="xmake," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="000xmake入门"/>
+<meta name="twitter:description" content="蓝桥网课xmake笔记"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  
+  
+
+  <body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/" target="_blank">
+            <img class="img-circle img-rotate" src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/images.jpg" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">张超</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">I think therefore I am.</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>Shanghai, China</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="想要查找什么..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">首页</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/series/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">记录</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">分类</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">标签</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about/">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">关于</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content"><p>我是我与世界的桥梁。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+      
+<div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/blog/command/" class="title">Command</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-04-15 10:36:38 &#43;0800 CST" itemprop="datePublished">2022-04-15</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/other/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D/" class="title">希腊字母</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-04-14 21:39:10 &#43;0800 CST" itemprop="datePublished">2022-04-14</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/net/win/%E5%AE%89%E8%A3%85clash/" class="title">安装clash</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-04-12 23:56:53 &#43;0800 CST" itemprop="datePublished">2022-04-12</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/" class="title">概率论学习之旅1</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-04-01 20:47:41 &#43;0800 CST" itemprop="datePublished">2022-04-01</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%853/" class="title">Ros学习之旅3</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-04-01 13:25:02 &#43;0800 CST" itemprop="datePublished">2022-04-01</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 分类</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/" class="category-list-link">lang</a><span class="category-list-count">5</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/" class="category-list-link">math</a><span class="category-list-count">4</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/net/" class="category-list-link">net</a><span class="category-list-count">2</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/" class="category-list-link">os</a><span class="category-list-count">4</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/" class="category-list-link">other</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/" class="category-list-link">robat</a><span class="category-list-count">3</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/" class="category-list-link">tools</a><span class="category-list-count">20</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 标签</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/blog/" class="tag-list-link">blog</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/book/" class="tag-list-link">book</a><span
+                    class="tag-list-count">6</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/cpp/" class="tag-list-link">cpp</a><span
+                    class="tag-list-count">5</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/linux/" class="tag-list-link">linux</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/math/" class="tag-list-link">math</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/net/" class="tag-list-link">net</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/project/" class="tag-list-link">project</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/ros/" class="tag-list-link">ros</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/slam/" class="tag-list-link">slam</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/win10/" class="tag-list-link">win10</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/wsl1/" class="tag-list-link">wsl1</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/xmake/" class="tag-list-link">xmake</a><span
+                    class="tag-list-count">20</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E5%AF%BC%E8%88%AA/" class="tag-list-link">导航</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" class="tag-list-link">概率论</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E7%9F%A9%E9%98%B5/" class="tag-list-link">矩阵</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" class="tag-list-link">线性代数</a><span
+                    class="tag-list-count">2</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 标签</h3>
+    <div id="tag-cloud-list" class="widget-body">
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/blog/" class="tag-list-link" rel="1">blog<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/book/" class="tag-list-link" rel="6">book<span
+               class="tag-list-count">6</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/cpp/" class="tag-list-link" rel="5">cpp<span
+               class="tag-list-count">5</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/linux/" class="tag-list-link" rel="2">linux<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/math/" class="tag-list-link" rel="1">math<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/net/" class="tag-list-link" rel="1">net<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/project/" class="tag-list-link" rel="1">project<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/ros/" class="tag-list-link" rel="3">ros<span
+               class="tag-list-count">3</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/slam/" class="tag-list-link" rel="1">slam<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/win10/" class="tag-list-link" rel="1">win10<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/wsl1/" class="tag-list-link" rel="1">wsl1<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/xmake/" class="tag-list-link" rel="20">xmake<span
+               class="tag-list-count">20</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E5%AF%BC%E8%88%AA/" class="tag-list-link" rel="2">导航<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" class="tag-list-link" rel="1">概率论<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E7%9F%A9%E9%98%B5/" class="tag-list-link" rel="2">矩阵<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" class="tag-list-link" rel="2">线性代数<span
+               class="tag-list-count">2</span></a>
+            
+    </div>
+<script>
+document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+    tagCloud('#tag-cloud-list a',  8 ,  30 );
+  }
+};
+
+function tagCloud(where, min, max) {
+  let iMax = 0;
+  let iMin = 0;
+  $(where).each(function() {
+    let weight = Number($(this).attr("rel"));
+    if(iMax < weight) iMax = weight;
+    if(iMin > weight || iMin == 0) iMin = weight;
+  });
+  let step = (max - min)/(iMax - iMin);
+  $(where).each(function() {
+    let weight = $(this).attr("rel") - iMin;
+    $(this).css({"font-size": min + (weight * step) + 'px'});
+  });
+};
+</script>
+</div>
+
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">文章目录</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/000xmake%E5%85%A5%E9%97%A8/"
+    >000xmake入门</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/000xmake%E5%85%A5%E9%97%A8/" class="article-date">
+  <time datetime="2021-07-15 10:36:38 &#43;0800 CST" itemprop="datePublished">2021-07-15</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/tools/"> tools </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/xmake/"> xmake </a>
+  </span>
+
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 2774字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 6分 </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h1 id="xmake-入门">xmake 入门</h1>
+<h4 id="知识点">知识点</h4>
+<ul>
+<li>xmake 子命令介绍和使用</li>
+<li>xmake 的帮助菜单介绍</li>
+<li>如何配置编译，编译器工具链的切换</li>
+<li>xmake 的自我更新升级</li>
+</ul>
+<h2 id="一">一</h2>
+<p>​	在介绍 xmake 命令行程序的各种子命令前，我们先介绍下 xmake 的 help 菜单，所有 xmake 命令参数都是可以从这个菜单中找到，并且有相应的描述和参数值说明。</p>
+<p>因此，在还不熟悉怎么使用某个子命令的时候，都可以通过查看对应的帮助菜单里面的参数说明，来快速找到想要的某个设置参数的使用方式。</p>
+<h4 id="主菜单">主菜单</h4>
+<p>xmake 的整个命令行格式如下。</p>
+<pre><code class="language-shell">xmake [task] [options] [target]
+</code></pre>
+<p>主要由 <code>[task]</code>、<code>[options]</code> 还有 <code>[target]</code> 组成，其中 <code>[]</code> 部分表示可选输入，里面的 task 就是子命令任务名，xmake 提供了很多的内置子命令以及插件任务子命令，可以通过执行 <code>xmake --help</code> 在主菜单里面查看具体有哪些子命令，整个主菜单的列表内容如下。</p>
+<p><img src="000xmake%E5%85%A5%E9%97%A8.assets/b6f381f56119c1430a0f2d7cc8393e3c-0" alt="img"></p>
+<p>而 <code>options</code> 就是指的上图中的参数选项，除了主菜单的参数选项，每个子命令也有对应的参数选项，比如 <code>xmake build --help</code> 就是 build 子命令的帮助菜单。</p>
+<p>最后面的 <code>target</code> 指的是当前的命令是针对哪个目标程序的，这个也是可选的参数，并不是所有命令都有，主要是 build、install 等这些基础命令才提供，用于指定编译、安装对应的目标程序，而默认不指定，则会编译安装所有程序。</p>
+<p>在上图中的 <code>Actions</code> 区域的子命令，就是用于跟构建相关的所有内置命令，而 <code>Plugins</code> 区域的子命令，是扩展的插件命令。这里我们主要简单介绍下 Actions 命令，其实很多在实验 1 《xmake 的基本使用》中都已经使用过。</p>
+<ul>
+<li><code>config</code>：配置编译需要的参数，比如平台、架构等。</li>
+<li><code>global</code>：全局配置编译参数。</li>
+<li><code>build</code>：构建程序。</li>
+<li><code>run</code>：运行目标程序。</li>
+<li><code>install</code>：安装编译后的目标程序。</li>
+<li><code>uninstall</code>：卸载之前安装的程序文件。</li>
+<li><code>package</code>：打包编译生成的库和头文件。</li>
+<li><code>clean</code>：清理编译过程中生成的临时文件。</li>
+<li><code>require</code>：手动拉取第三方依赖库。</li>
+<li><code>update</code>：xmake 程序自更新。</li>
+</ul>
+<h4 id="build-子命令">build 子命令</h4>
+<p>build 子命令也就是默认的构建命令，由于这个命令最常用，因此即使用户不完整运行 <code>xmake build</code>，仅仅执行 <code>xmake</code> 就可以编译项目，两者是完全等价的。</p>
+<p>如果我们要查看构建命令具体有哪些参数选项，可以执行下面的命令来查看，参数列表如下：</p>
+<pre><code class="language-shell">xmake build --help
+</code></pre>
+<p><img src="000xmake%E5%85%A5%E9%97%A8.assets/9639360f239e19335e571f4c76e88777-0" alt="img"></p>
+<p>我们可以看到，它主要分了两大类，上半段 <code>Common options</code> 部分是通用选项，所有子命令都会存在这些选项，下半段 <code>Command options (build)</code> 就是 build 子命令特有的选项列表。</p>
+<p>这里仅仅介绍比较常用的几个选项。</p>
+<ul>
+<li><code>-v/--verbose</code>：查看详细完整的编译命令。</li>
+<li><code>-r/--rebuild</code>：强制重新编译所有代码。</li>
+<li><code>-j/--jobs</code>：指定多任务编译的并行任务数。</li>
+<li><code>-w/--warning</code>：编译过程中显示编译警告信息。</li>
+</ul>
+<h4 id="查看详细编译选项">查看详细编译选项</h4>
+<p>通过添加 <code>-v</code> 参数，在编译过程中，查看完整的编译选项，这是非常有用的，可以排查和确认设置的编译选项是否生效，我们可以进入之前的 hello 项目中执行下面的命令。</p>
+<pre><code class="language-shell">xmake -rv
+</code></pre>
+<p>这里我们还同时追加 <code>-r</code> 选项，<code>-r</code> 和 <code>-v</code> 可以组合在一起变成 <code>-rv</code> 同时生效（这是由于 xmake 采用的是 unix 的命令参数风格），也就是重新编译并且显示详细命令输出，具体效果如图。</p>
+<p><img src="000xmake%E5%85%A5%E9%97%A8.assets/d80872b76f245cce8f96f66f7d1c1162-0" alt="2"></p>
+<h2 id="config子命令">config子命令</h2>
+<p>config 子命令主要用于在编译前，对项目进行一些参数配置，比如切换平台、架构以及编译模式等，可用于修改编译过程中的各种行为，当然里面很多配置是可以直接在 xmake.lua 中配置来永久生效的，不过这里通过配置命令，也可以针对当前编译临时生效，配置结果也会被缓存。</p>
+<p>需要注意的是，每次的配置都是完整配置，会完全覆盖上一次的配置结果。</p>
+<h4 id="切换到调试编译模式">切换到调试编译模式</h4>
+<p>编译模式的切换，在实验 1 《xmake 的基本使用》中已经讲解过，只需要执行。</p>
+<pre><code class="language-shell">xmake f -m debug
+</code></pre>
+<p>需要提示的一点是，<code>xmake f</code> 是 <code>xmake config</code> 的简写，用来简化输入提高效率，其它子命令也都是有简写的，大家可以在帮助菜单中查看。</p>
+<h4 id="切换编译输出目录">切换编译输出目录</h4>
+<p>默认编译 xmake 会在当前项目根目录下生成 build 子目录作为编译输出目录，如果不想生成到当前目录下，我们可以通过下面的配置命令切换到其它输出目录下。</p>
+<p><img src="000xmake%E5%85%A5%E9%97%A8.assets/1e7e7c7534cb9ab50d40a98b97f94428-0" alt="3"></p>
+<p>如果配置成功，通过下面的命令查看当前的配置信息，确认是否生效。</p>
+<p><img src="000xmake%E5%85%A5%E9%97%A8.assets/d46f9748e7e05d94207e8480fb83b94a-0" alt="4"></p>
+<h4 id="添加-cc-编译选项">添加 C/C++ 编译选项</h4>
+<p>通过配置命令，我们可以在命令行中快速添加一些自定义的 C/C++ 编译选项，其中主要涉及这三个选项。</p>
+<ul>
+<li><code>--cflags</code>：仅仅添加 C 编译选项。</li>
+<li><code>--cxxflags</code>：仅仅添加 C++ 编译选项。</li>
+<li><code>--cxflags</code>：同时添加 C/C++ 编译选项。</li>
+</ul>
+<p>如果你的项目中既有 C 代码，也有 C++ 代码，那么使用 <code>--cxflags</code> 来同时设置会更加方便，使用方式如下。</p>
+<pre><code class="language-shell">xmake f --cxflags=&quot;-DTEST&quot;
+xmake -rv
+</code></pre>
+<p>我们通过执行 <code>xmake -rv</code> 强制重新编译并且显示详细输出，来确认是否添加生效，下图红框部分中的 <code>-DTEST</code> 说明我们添加的 TEST 宏定义确实传入了 gcc 编译器。</p>
+<p><img src="000xmake%E5%85%A5%E9%97%A8.assets/114cd8e58f1a67790f25cd9e89d4762e-0" alt="img"></p>
+<h4 id="添加链接库和搜索路径">添加链接库和搜索路径</h4>
+<p>同样，除了 C/C++ 代码编译，最后的链接器阶段的选项，我们也可以通过 <code>--ldflags</code> 命令参数添加设置，例如</p>
+<pre><code class="language-shell">xmake f --ldflags=&quot;-L/tmp -lpthread&quot;
+xmake -rv
+</code></pre>
+<p>我们通过添加额外的 pthread 链接库，同时新增了 <code>/tmp</code> 的库搜索目录，最后生效的效果如下。</p>
+<p><img src="000xmake%E5%85%A5%E9%97%A8.assets/8647383fe6b0a23ea56d6cdc96754f18-0" alt="6"></p>
+<p>另外，我们也可以通过 <code>--links</code> 和 <code>--linkdirs</code> 达到同样的效果。</p>
+<pre><code class="language-shell">xmake f --links=&quot;pthread&quot; --linkdirs=&quot;/tmp&quot;
+xmake -rv
+</code></pre>
+<h4 id="切换到-clang-编译器">切换到 clang 编译器</h4>
+<p>默认情况下，在 Linux 环境中，xmake 会优先使用 gcc 编译器，不过我们也可以很方便地切换使用其它的编译器，比如 clang，不过在使用 clang 编译器之前，需要执行下面的命令安装它。</p>
+<pre><code class="language-shell">sudo apt update
+sudo apt install -y clang
+</code></pre>
+<p>安装完成后，执行 <code>clang --version</code> 命令来确认 clang 是否安装成功。</p>
+<p><img src="000xmake%E5%85%A5%E9%97%A8.assets/1588453fe00f11e14241770599428df7-0" alt="img"></p>
+<p>如果安装成功，执行下面的命令切换到 clang 编译工具链，然后执行编译。</p>
+<pre><code class="language-shell">xmake f --toolchain=clang
+xmake -rv
+</code></pre>
+<p>我们可以看下执行的详细输出，红框部分显示的 <code>/usr/bin/clang</code> 说明当前的编译确实使用了 clang 编译器而不是 gcc 了</p>
+<p><img src="000xmake%E5%85%A5%E9%97%A8.assets/8f95dc074b6c7f1b31619ceb403e580d-0" alt="8"></p>
+<p>我们再通过 <code>xmake run</code> 运行下编译好的目标程序。</p>
+<p><img src="000xmake%E5%85%A5%E9%97%A8.assets/0731de94c117d2d3e9ba186d8369a46a-0" alt="img"></p>
+<p>正常显示 <code>hello world!</code>，一切运行正常。</p>
+<h4 id="重置所有配置">重置所有配置</h4>
+<p>经过之前的一些配置，我们缓存了不少编译配置，如果想重置所有配置到最初的默认状态，那么可以添加 <code>-c</code> 选项来重置所有。默认配置下，也就是 release 编译模式，会忽略本地的配置缓存，像之前的编译输出路径、新增的编译选项配置都会被忽略。</p>
+<pre><code class="language-shell">xmake f -c
+xmake -rv
+</code></pre>
+<p>重置配置后，我们重新编译当前工程，可以看下里面的详细编译选项，已经完全还原回去了，刚刚设置的 clang 编译器重新变成了 gcc 编译器。</p>
+<p><img src="000xmake%E5%85%A5%E9%97%A8.assets/8b6ec57c1136119e03e00d287f6095fa-0" alt="img"></p>
+<h2 id="show-子命令">show 子命令</h2>
+<p>我们可以使用此命令，查看当前工程的基本信息，以及 xmake 自身的一些基本信息，这通常是非常有用的，比如可以知道当前项目有哪些目标程序，当前的编译架构和模式是什么，以及 xmake 的临时目录、缓存目录和安装路径在哪里等等。</p>
+<pre><code class="language-bash">xmake show
+</code></pre>
+<p>显示的一些信息如下图。</p>
+<p><img src="000xmake%E5%85%A5%E9%97%A8.assets/492aa8ceff3c260dfa2c601e09b314b9-0" alt="img"></p>
+<p>除了项目和 xmake 自身基本信息，show 命令还可以显示指定 target 目标的基本信息，比如我们执行下面的命令查看下在 xmake.lua 文件中定义的 <code>target(&quot;hello&quot;)</code> 目标程序的基本信息。</p>
+<pre><code class="language-bash">xmake show -t hello
+</code></pre>
+<p><img src="000xmake%E5%85%A5%E9%97%A8.assets/1ec9403b3508fc08a553b8960a806833-0" alt="img"></p>
+<p>通过上图，我们能大致了解这个 hello 程序的可执行文件的实际生成路径在哪里，编译过程中的 <code>.o</code> 文件在哪里，以及是在 <code>xmake.lua</code> 哪个位置定义的。</p>
+<h2 id="update子命令">update子命令</h2>
+<p>如果 xmake 有新版本发布，我们也可以使用自更新命令快速更新版本，只需要执行下面的命令。</p>
+<pre><code class="language-bash">xmake update -f
+</code></pre>
+<p>这里我们额外加上了 <code>-f/--force</code> 参数，这是因为我们当前环境的 xmake 已经是最新版本，通常不需要更新，为了演示这个更新操作，我们通过这个参数来强制重新更新一遍当前的最新版本。</p>
+<p><img src="000xmake%E5%85%A5%E9%97%A8.assets/8db7976f3471413699e58716b4cd2be4-0" alt="13"></p>
+<p>更新完成后，我们可以继续执行 <code>xmake --version</code> 确认下版本是否为最新版本，实际的版本号由于时间关系，会有所变动，毕竟 xmake 的版本迭代还是挺频繁的。</p>
+<p><img src="000xmake%E5%85%A5%E9%97%A8.assets/9d0a23946bd58efd83931f78335d309b-0" alt="14"></p>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接: </strong>
+      <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/000xmake%E5%85%A5%E9%97%A8/" title="000xmake入门" target="_blank" rel="external">https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/000xmake%E5%85%A5%E9%97%A8/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License: </strong>
+        <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/images.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/" target="_blank"><span class="text-dark">张超</span><small class="ml-1x">I think therefore I am.</small></a></h3>
+        <div>我是我与世界的桥梁。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+    </div>
+  </article>
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/5/" title="《C&#43;&#43; Effective》-读书笔记5"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            <li class="next">
+                <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/001c_c&#43;&#43;%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0/"
+                    title="001C_C&#43;&#43;项目常用配置描述"><span>上一篇&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="文章目录" role="button">
+                    <span>[&nbsp;</span><span>文章目录</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://getone_chao.gitee.io" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2017  -
+    2022
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+    
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/js/application.min.e720b935330b2a176cfb4b8bd9a6cc632caf6b752f94e87c62152a9557ff6d15.js"></script>
+<script src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/js/plugin.min.334875d4d4a72afb866e446df61b5f4bf1f0a516d1303166f52f7804d17ef3ab.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(未命名)',
+            },
+            ROOT_URL: 'https:\/\/blog-0g8860131649bb29-1304987963.tcloudbaseapp.com\/',
+            CONTENT_URL: 'https:\/\/blog-0g8860131649bb29-1304987963.tcloudbaseapp.com\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/js/insight.min.759e5002714e12761afcd512f103d39c86573165db51972dd3b24df6eddf238ed3e3e85c1988e96cba09419d1deccdeb68c15284f2c3d03049fad53c11774524.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </body>
+</html>

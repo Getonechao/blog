@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> math on Getone超</title>
+    <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/math/</link>
+    <description>Recent content in  math on Getone超</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>CC BY 4.0 CN</copyright>
+    <lastBuildDate>Thu, 14 Apr 2022 21:39:10 +0800</lastBuildDate>
+    
+        <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>实验16脚本运行插件使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C16%E8%84%9A%E6%9C%AC%E8%BF%90%E8%A1%8C%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 15 Jul 2021 10:37:01 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C16%E8%84%9A%E6%9C%AC%E8%BF%90%E8%A1%8C%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/</guid>
+      <description>脚本运行插件使用 在本节实验中，我们会学习如何使用 xmake lua 插件来更快速地运行 lua 脚本和模块接口，使我们能够更高效的调试自定义配置脚本。 知识点 交互式运</description>
+    </item>
+    
+    <item>
+      <title>实验15扩展模块导入和使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C15%E6%89%A9%E5%B1%95%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%85%A5%E5%92%8C%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:57 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C15%E6%89%A9%E5%B1%95%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%85%A5%E5%92%8C%E4%BD%BF%E7%94%A8/</guid>
+      <description>扩展模块导入和使用 在本节实验中，我们将会学习到 xmake 中模块的基本概念和种类，并且还会学到如何在项目配置中通过 import 去导入和使用内部扩展模块，以及用户</description>
+    </item>
+    
+    <item>
+      <title>实验14io读写</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C14io%E8%AF%BB%E5%86%99/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:55 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C14io%E8%AF%BB%E5%86%99/</guid>
+      <description>io读写 在本节实验中，我们可以学习到 xmake 内置的 io 模块的基本操作，例如文件数据的快速读写和序列化，还能更深入地学习如何使用 print 接口来实现打印输出，</description>
+    </item>
+    
+    <item>
+      <title>实验13系统操作详解</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C13%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:54 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C13%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C%E8%AF%A6%E8%A7%A3/</guid>
+      <description>实验13系统操作详解 在本节实验中，我们可以学习到如何在自定义脚本中对文件系统操作，以及如何去执行外部 shell 命令程序并获取运行后的输出内容。 知识点</description>
+    </item>
+    
+    <item>
+      <title>实验12自定义脚本和规则</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C12%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC%E5%92%8C%E8%A7%84%E5%88%99/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:51 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C12%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC%E5%92%8C%E8%A7%84%E5%88%99/</guid>
+      <description>自定义脚本和规则 在本节实验中，我们会更加深入地了解什么是自定义脚本，以及如何去拦截 C/C++ 构建的整个处理流程，并且还能学习到如何通过 rule() 去自定义构建</description>
+    </item>
+    
+    <item>
+      <title>实验11C/C&#43;&#43; 库接口和编译器特性检测</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C11cc&#43;&#43;%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:50 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C11cc&#43;&#43;%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B/</guid>
+      <description>C/C++ 库接口和编译器特性检测 在本节实验中，我们会学习到 C/C++ 跨平台开发中一些基础知识和注意点，以及如何使用 xmake 去检测不同编译环境中的 C/C++ 库头文件、库接口</description>
+    </item>
+    
+    <item>
+      <title>实验10C_C&#43;&#43;预编译头文件配置</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C10c_c&#43;&#43;%E9%A2%84%E7%BC%96%E8%AF%91%E5%A4%B4%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:46 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C10c_c&#43;&#43;%E9%A2%84%E7%BC%96%E8%AF%91%E5%A4%B4%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/</guid>
+      <description>C_C++预编译头文件配置 在本节实验中，我们会学习到 C/C++ 预编译头文件的一些基本概念，了解如何在 xmake 中配置开启头文件预编译，以及会做一些对比测试来</description>
+    </item>
+    
+    <item>
+      <title>实验9C/C&#43;&#43; 子工程和目录结构</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C9c_c&#43;&#43;%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:45 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C9c_c&#43;&#43;%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</guid>
+      <description>C/C++ 子工程和目录结构 在本节实验中，我们会学到如何使用 xmake 去实现对更加复杂的大型 C/C++ 项目的构建维护，以及如何使用 includes 接口，并且还能了解和掌握子工程之间</description>
+    </item>
+    
+    <item>
+      <title>实验8内置变量</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C8%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:44 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C8%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F/</guid>
+      <description>内置变量 在本节实验中，我们可以学习到 xmake 内置变量的基础使用，以及如何跟环境变量、shell、自定义选项配置交互来动态配置项目工程。 知识点 了解 xmake</description>
+    </item>
+    
+    <item>
+      <title>实验6条件判断</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C7%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:43 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C7%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/</guid>
+      <description>条件判断 在本节实验中，我们会学习到 xmake 条件判断语句的基础用法，以及常用的平台、架构等判断接口，另外还会学习如何判断自定义选项的值来控制编译。 知</description>
+    </item>
+    
+    <item>
+      <title>实验6目标依赖</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C6%E7%9B%AE%E6%A0%87%E4%BE%9D%E8%B5%96/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:42 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C6%E7%9B%AE%E6%A0%87%E4%BE%9D%E8%B5%96/</guid>
+      <description>实验6目标依赖 在本节实验中，我们会学习到如何控制多个程序的编译顺序，如何设置依赖来继承编译配置，以及动态库和静态库的编译使用。 知识点 多个 C++ 程</description>
+    </item>
+    
+    <item>
+      <title>005配置语法简介</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C5%E9%85%8D%E7%BD%AE%E8%AF%AD%E6%B3%95%E7%AE%80%E4%BB%8B/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:41 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C5%E9%85%8D%E7%BD%AE%E8%AF%AD%E6%B3%95%E7%AE%80%E4%BB%8B/</guid>
+      <description>配置语法简介 在本节实验中，我们可以大概了解 xmake.lua 的语法设计理念，以及一些基本配置的写法，通过本节实验，基本上能掌握如何去编写合理的 xmake.lua 配置来简化工</description>
+    </item>
+    
+    <item>
+      <title>002C/C&#43;&#43; 依赖包的集成和使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/002cc&#43;&#43;%E4%BE%9D%E8%B5%96%E5%8C%85%E7%9A%84%E9%9B%86%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:40 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/002cc&#43;&#43;%E4%BE%9D%E8%B5%96%E5%8C%85%E7%9A%84%E9%9B%86%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8/</guid>
+      <description>C/C++ 依赖包的集成和使用 在本节实验中，我们可以学习到如何快速集成第三方的 C/C++ 依赖包，以及与第三方包仓库的接入集成。 知识点 xmake 包管理的整体架构流程 系统</description>
+    </item>
+    
+    <item>
+      <title>001C_C&#43;&#43;项目常用配置描述</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/001c_c&#43;&#43;%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:39 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/001c_c&#43;&#43;%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0/</guid>
+      <description>C_C++项目 在本节实验中，我们可以学习到一些编译器和链接器相关的基本概念，并且掌握 xmake.lua 中的一些基础配置，比如：C/C++ 头文件、链接库的配置</description>
+    </item>
+    
+    <item>
+      <title>000xmake入门</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/000xmake%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:38 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/000xmake%E5%85%A5%E9%97%A8/</guid>
+      <description>xmake 入门 知识点 xmake 子命令介绍和使用 xmake 的帮助菜单介绍 如何配置编译，编译器工具链的切换 xmake 的自我更新升级 一 ​ 在介绍 xmake 命令行程序的各种子命令前，我们先介</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记5</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/5/</link>
+      <pubDate>Thu, 15 Apr 2021 12:51:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/5/</guid>
+      <description>继承与面向对象设计 条款32：确定你的public继承塑模出“is-a”（是一种）关系 结论 “public继承关系”意味is-a。适用于base</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记4</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/4/</link>
+      <pubDate>Thu, 15 Apr 2021 12:50:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/4/</guid>
+      <description>实现 大多情况下，适当提出你的class（和class templates）定义以及functions(和 function templates)声明，是花费最多</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记2</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/2/</link>
+      <pubDate>Thu, 15 Apr 2021 12:47:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/2/</guid>
+      <description>资源管理 资源：一旦用了它，将来必须还给系统。 譬如：动态分配内存、文件描述器、互斥锁、图形界面中的字型和笔刷、数据库连接、网络sockets。</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记3</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/3/</link>
+      <pubDate>Thu, 15 Apr 2021 12:47:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/3/</guid>
+      <description>接口的设计与声明 接口设计的准则： 让接口容易被正确使用，不容易被误用。 什么是接口？ ​ 内部实现细节封装起来，外部用户用过预留的接口可以使用接口的</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记1</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/1/</link>
+      <pubDate>Thu, 15 Apr 2021 12:46:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/1/</guid>
+      <description>条款05： C++默认编写并调用那些函数 默认创建 class Base { public： defualt构造函数 copy构造函数 copy assignment操作符 析构函数</description>
+    </item>
+    
+  </channel>
+</rss>

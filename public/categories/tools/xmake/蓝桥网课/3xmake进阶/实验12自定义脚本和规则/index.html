@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>
+        实验12自定义脚本和规则 - Getone超
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="蓝桥网课xmake笔记" />
+    <meta name="generator" content="Hugo 0.95.0 with theme pure" />
+    <title>实验12自定义脚本和规则 - Getone超</title>
+    
+    
+    <link rel="stylesheet" href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/css/style.min.a85959a41e7abcc0db1f81f44bd264649303417f91b536e87dcde644340fea6d.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="实验12自定义脚本和规则" />
+<meta property="og:description" content="蓝桥网课xmake笔记" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C12%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC%E5%92%8C%E8%A7%84%E5%88%99/" /><meta property="article:section" content="categories" />
+<meta property="article:published_time" content="2021-07-15T10:36:51+08:00" />
+<meta property="article:modified_time" content="2021-07-15T10:36:51+08:00" />
+
+<meta itemprop="name" content="实验12自定义脚本和规则">
+<meta itemprop="description" content="蓝桥网课xmake笔记"><meta itemprop="datePublished" content="2021-07-15T10:36:51+08:00" />
+<meta itemprop="dateModified" content="2021-07-15T10:36:51+08:00" />
+<meta itemprop="wordCount" content="4053">
+<meta itemprop="keywords" content="xmake," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="实验12自定义脚本和规则"/>
+<meta name="twitter:description" content="蓝桥网课xmake笔记"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  
+  
+
+  <body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/" target="_blank">
+            <img class="img-circle img-rotate" src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/images.jpg" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">张超</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">I think therefore I am.</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>Shanghai, China</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="想要查找什么..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">首页</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/series/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">记录</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">分类</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">标签</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about/">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">关于</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content"><p>我是我与世界的桥梁。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+      
+<div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/blog/command/" class="title">Command</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-04-15 10:36:38 &#43;0800 CST" itemprop="datePublished">2022-04-15</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/other/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D/" class="title">希腊字母</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-04-14 21:39:10 &#43;0800 CST" itemprop="datePublished">2022-04-14</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/net/win/%E5%AE%89%E8%A3%85clash/" class="title">安装clash</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-04-12 23:56:53 &#43;0800 CST" itemprop="datePublished">2022-04-12</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/" class="title">概率论学习之旅1</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-04-01 20:47:41 &#43;0800 CST" itemprop="datePublished">2022-04-01</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%853/" class="title">Ros学习之旅3</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-04-01 13:25:02 &#43;0800 CST" itemprop="datePublished">2022-04-01</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 分类</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/" class="category-list-link">lang</a><span class="category-list-count">5</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/" class="category-list-link">math</a><span class="category-list-count">4</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/net/" class="category-list-link">net</a><span class="category-list-count">2</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/" class="category-list-link">os</a><span class="category-list-count">4</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/" class="category-list-link">other</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/" class="category-list-link">robat</a><span class="category-list-count">3</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/" class="category-list-link">tools</a><span class="category-list-count">20</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 标签</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/blog/" class="tag-list-link">blog</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/book/" class="tag-list-link">book</a><span
+                    class="tag-list-count">6</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/cpp/" class="tag-list-link">cpp</a><span
+                    class="tag-list-count">5</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/linux/" class="tag-list-link">linux</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/math/" class="tag-list-link">math</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/net/" class="tag-list-link">net</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/project/" class="tag-list-link">project</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/ros/" class="tag-list-link">ros</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/slam/" class="tag-list-link">slam</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/win10/" class="tag-list-link">win10</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/wsl1/" class="tag-list-link">wsl1</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/xmake/" class="tag-list-link">xmake</a><span
+                    class="tag-list-count">20</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E5%AF%BC%E8%88%AA/" class="tag-list-link">导航</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" class="tag-list-link">概率论</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E7%9F%A9%E9%98%B5/" class="tag-list-link">矩阵</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" class="tag-list-link">线性代数</a><span
+                    class="tag-list-count">2</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 标签</h3>
+    <div id="tag-cloud-list" class="widget-body">
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/blog/" class="tag-list-link" rel="1">blog<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/book/" class="tag-list-link" rel="6">book<span
+               class="tag-list-count">6</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/cpp/" class="tag-list-link" rel="5">cpp<span
+               class="tag-list-count">5</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/linux/" class="tag-list-link" rel="2">linux<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/math/" class="tag-list-link" rel="1">math<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/net/" class="tag-list-link" rel="1">net<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/project/" class="tag-list-link" rel="1">project<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/ros/" class="tag-list-link" rel="3">ros<span
+               class="tag-list-count">3</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/slam/" class="tag-list-link" rel="1">slam<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/win10/" class="tag-list-link" rel="1">win10<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/wsl1/" class="tag-list-link" rel="1">wsl1<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/xmake/" class="tag-list-link" rel="20">xmake<span
+               class="tag-list-count">20</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E5%AF%BC%E8%88%AA/" class="tag-list-link" rel="2">导航<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" class="tag-list-link" rel="1">概率论<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E7%9F%A9%E9%98%B5/" class="tag-list-link" rel="2">矩阵<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" class="tag-list-link" rel="2">线性代数<span
+               class="tag-list-count">2</span></a>
+            
+    </div>
+<script>
+document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+    tagCloud('#tag-cloud-list a',  8 ,  30 );
+  }
+};
+
+function tagCloud(where, min, max) {
+  let iMax = 0;
+  let iMin = 0;
+  $(where).each(function() {
+    let weight = Number($(this).attr("rel"));
+    if(iMax < weight) iMax = weight;
+    if(iMin > weight || iMin == 0) iMin = weight;
+  });
+  let step = (max - min)/(iMax - iMin);
+  $(where).each(function() {
+    let weight = $(this).attr("rel") - iMin;
+    $(this).css({"font-size": min + (weight * step) + 'px'});
+  });
+};
+</script>
+</div>
+
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">文章目录</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C12%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC%E5%92%8C%E8%A7%84%E5%88%99/"
+    >实验12自定义脚本和规则</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C12%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC%E5%92%8C%E8%A7%84%E5%88%99/" class="article-date">
+  <time datetime="2021-07-15 10:36:51 &#43;0800 CST" itemprop="datePublished">2021-07-15</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/tools/"> tools </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/xmake/"> xmake </a>
+  </span>
+
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 4053字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 9分 </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h1 id="自定义脚本和规则">自定义脚本和规则</h1>
+<p>在本节实验中，我们会更加深入地了解什么是自定义脚本，以及如何去拦截 C/C++ 构建的整个处理流程，并且还能学习到如何通过 <code>rule()</code> 去自定义构建规则来处理未知的文件。</p>
+<h4 id="知识点">知识点</h4>
+<ul>
+<li>什么是自定义脚本</li>
+<li>构建过程的几个基本处理阶段</li>
+<li>构建过程每个阶段的拦截和处理</li>
+<li>自定义构建规则的基本使用</li>
+</ul>
+<h2 id="自定义脚本介绍">自定义脚本介绍</h2>
+<p>在之前的实验中，我们一直都是在 xmake.lua 的描述域中进行配置，这对于大部分项目而言，已经足够满足需求，但是对于一些更加复杂的项目，仅仅通过描述域的配置逻辑是不够用的。我们需要更加灵活复杂的配置逻辑，能够处理一切的用户定制化配置需求，这个时候就得在 xmake 的自定义脚本域中进行配置了。</p>
+<p>关于什么是描述域，什么是自定义脚本域，我们在实验五《xmake 基础之配置语法简介》中，已经详细介绍过了，这里再来简单的复习下：</p>
+<ul>
+<li>描述域：<code>set_xxx</code>、<code>add_xxx</code> 相关的配置接口所在的作用域。</li>
+<li>脚本域：<code>on_xxx</code>、<code>after_xxx</code> 和 <code>before_xxx</code> 接口函数内部的作用域</li>
+</ul>
+<p>我们可以从下面的配置注释中，大概了解下。</p>
+<pre><code class="language-lua">-- 描述域
+target(&quot;test&quot;)
+    set_kind(&quot;binary&quot;)
+    add_files(&quot;src/*.cpp&quot;) -- 描述域
+    on_load(function (target)
+        -- 脚本域
+    end)
+    after_build(function (target)
+        -- 脚本域
+    end)
+</code></pre>
+<h4 id="在构建阶段执行特定脚本">在构建阶段执行特定脚本</h4>
+<p>xmake 的 <code>target()</code> 目标配置块中，我们可以设置一些自定义的脚本域，在 xmake 构建的各个阶段中处理一些用户的自定义逻辑。我们可以把它们理解为类似 C/C++ 中的 Hook (钩子)。相当于在 xmake 的整个构建中，注入一些自定义的 lua 脚本代码。</p>
+<p>例如，我们可以在指定 target 目标程序编译前后执行一些自定义的脚本操作。在开始本实验前，我们先执行下面的命令创建一个新的空工程。</p>
+<pre><code class="language-bash">cd Code
+xmake create script_test
+</code></pre>
+<p>然后进入 script_test 文件夹，开始编辑里面的 xmake.lua 文件，在构建的前后阶段加上自己的一些自定义脚本逻辑，例如。</p>
+<pre><code class="language-lua">target(&quot;test&quot;)
+    set_kind(&quot;binary&quot;)
+    add_files(&quot;src/*.cpp&quot;)
+
+    before_build(function (target)
+        print(&quot;start building %s&quot;, target:targetfile())
+    end)
+
+    after_build(function (target)
+        print(&quot;finish building %s&quot;, target:targetfile())
+    end)
+</code></pre>
+<p>上面的配置中，我们额外配置了 <code>before_build</code> 和 <code>after_build</code> 两个自定义的 lua 脚本域，用于在当前目标程序的构建开始和结束两个阶段，打印一些信息。</p>
+<p>执行 <code>xmake</code> 编译信息，会看到下图的结果，红线位置部分就是我们在脚本中自定义显示的输出信息。</p>
+<p><img src="%E5%AE%9E%E9%AA%8C12%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC%E5%92%8C%E8%A7%84%E5%88%99.assets/266bbc62c52bb9359e6662dcd8ebb337-0" alt="1"></p>
+<p>这里，出于演示目的，我们仅仅只是简单的显示了目标程序的实际生成路径，而在真正的项目中，大家可以在里面做更加复杂的事情。</p>
+<p>另外，在每个自定义脚本的配置入口，我们可以设置额外的平台、架构匹配模式，使得仅仅在特定平台触发脚本，例如将 xmake.lua 文件改成下面的配置。</p>
+<pre><code class="language-lua">target(&quot;test&quot;)
+    set_kind(&quot;binary&quot;)
+    add_files(&quot;src/*.cpp&quot;)
+
+    on_build(function (target)
+        print(&quot;build %s&quot;, target:targetfile())
+    end)
+
+    on_build(&quot;linux&quot;, function (target)
+        print(&quot;build %s on $(plat)&quot;, target:targetfile())
+    end)
+
+    on_build(&quot;windows&quot;, function (target)
+        print(&quot;build %s on $(plat)&quot;, target:targetfile())
+    end)
+
+    on_build(&quot;macosx&quot;, function (target)
+        print(&quot;build %s on $(plat)&quot;, target:targetfile())
+    end)
+</code></pre>
+<p>上面的配置，我们通过自定义 <code>on_build</code> 配置接口，完全替换内置的构建规则，也就是说，当前这个目标程序如果不去实现 <code>on_build</code>，那么整个编译过程就是空操作，因为 xmake 完全将如何去编译它的任务托管给了我们设置的 <code>on_build</code> 来实现。</p>
+<p>这对于一些并不想采用内置编译逻辑的特殊目标程序，或者一些压根不是 C/C++ 程序但是也需要处理一些编译、预处理逻辑的其它程序而言，就非常有用了。</p>
+<p>这里还有一个需要注意的地方是，我们定义了四个 <code>on_build</code>，而不是一个，下面的三个传递了额外的平台参数，用来告诉 xmake，只有匹配到实际的编译平台才会被执行到，也就是说，如果我们现在的需要编译的是 Linux 程序，实际上仅仅只会执行到 <code>on_build(&quot;linux&quot;, ...)</code> 的入口脚本，另外三个是不会被执行到的。</p>
+<p>而最上面不带平台参数的 <code>on_build()</code> 则是默认的通用设置，仅仅只有当前的平台完全不是下面配置的 <code>linux</code>，<code>windows</code> 以及 <code>macosx</code> 三者之一，那么才会进入默认的通用入口脚本。</p>
+<p>其实我们也可以用在通用的入口脚本中，使用 <code>if is_plat() then</code> 的方式来实现相同的目的，但这样看上去不是很精简，具体如何配置还是得看大家实际的需求来决定。</p>
+<p>接下来，继续执行一遍 <code>xmake</code> 查看实际的编译输出。</p>
+<p><img src="%E5%AE%9E%E9%AA%8C12%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC%E5%92%8C%E8%A7%84%E5%88%99.assets/f5e59d7b0560becb6b12c86401cb4081-0" alt="2"></p>
+<p>由于我们通过 <code>on_build</code> 重写了内部构建逻辑，并且仅仅只是显示一行输出，因此这回的编译其实除了那一行打印输出外没有做任何事情。</p>
+<p>但是，从这行输出信息中，我们可以看到，当前其实执行的是 <code>on_build(&quot;linux&quot;, ...)</code> 里面配置的自定义脚本，因为实验默认平台是 Linux 系统。</p>
+<h4 id="在源文件编译阶段执行特定脚本">在源文件编译阶段执行特定脚本</h4>
+<p>虽然，<code>on_build</code>、<code>before_build</code> 等阶段配置可以自定义构建逻辑，但是粒度相对还是太粗了，其实我们可以更加细粒度的在每个源文件的编译阶段，添加自定义的脚本逻辑。</p>
+<p>例如，我们想在每个 C/C++ 源文件编译之前的阶段，做一些自定义的预处理操作，比如替换代码里面的特定文本等等。继续修改之前的 xmake.lua 改成下面的配置内容。</p>
+<pre><code class="language-lua">target(&quot;test&quot;)
+    set_kind(&quot;binary&quot;)
+    add_files(&quot;src/*.cpp&quot;)
+    before_build_file(function (target, sourcefile)
+        io.gsub(sourcefile, &quot;hello world&quot;, &quot;hello xmake&quot;)
+    end)
+</code></pre>
+<p>这次我们做了一件稍微有点实际意义的事情，就是在编译每个 C/C++ 代码之前，通过 <code>io.gsub</code> 接口预先将里面的代码中包含有 <code>hello world</code> 的文本替换成了 <code>hello xmake</code>，然后继续参与编译。</p>
+<p>由于我们是通过 <code>xmake create</code> 创建的空工程，默认生成的 <code>src/main.cpp</code> 里面会打印 <code>hello world</code> 字符串，可以执行 <code>cat ./src/main.cpp</code> 确认下。</p>
+<p><img src="%E5%AE%9E%E9%AA%8C12%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC%E5%92%8C%E8%A7%84%E5%88%99.assets/92c7b9424872566180f022f262c3aeba-0" alt="3"></p>
+<p>而当我们执行完 <code>xmake</code> 编译任务后，再执行 <code>xmake run</code> 命令查看实际的运行结果，会发现里面的输出字符串已经了变成 <code>hello xmake</code>，如下图所示。</p>
+<p><img src="%E5%AE%9E%E9%AA%8C12%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC%E5%92%8C%E8%A7%84%E5%88%99.assets/383b716ffcefb86eef29beee1159e995-0" alt="4"></p>
+<p>除了上面配置中的 <code>before_build_file</code>，其实跟 <code>on_build</code> 类似，我们还有对应的 <code>on_build_file</code> 配置来重写对单个源文件的编译逻辑，以及在编译后执行 <code>after_build_file</code> 中配置的自定义脚本，用法完全相同，因此这里就不重复讲解了。</p>
+<h4 id="其它自定义脚本配置阶段">其它自定义脚本配置阶段</h4>
+<p>除了在构建阶段，我们可以插入一些自己的脚本逻辑外，还可以通过配置注入到其它的操作阶段。因为 xmake 除了构建，还有清理、安装、卸载、打包等其它的基本操作。</p>
+<p>这里可以简单列举下，目前我们可以注入和修改的一些基本操作阶段。</p>
+<table>
+<thead>
+<tr>
+<th>自定义脚本配置接口</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>on_load</td>
+<td>自定义目标加载脚本</td>
+</tr>
+<tr>
+<td>on_link</td>
+<td>自定义链接脚本</td>
+</tr>
+<tr>
+<td>on_build</td>
+<td>自定义编译脚本</td>
+</tr>
+<tr>
+<td>on_build_file</td>
+<td>自定义编译脚本, 实现单文件构建</td>
+</tr>
+<tr>
+<td>on_build_files</td>
+<td>自定义编译脚本, 实现多文件构建</td>
+</tr>
+<tr>
+<td>on_clean</td>
+<td>自定义清理脚本</td>
+</tr>
+<tr>
+<td>on_package</td>
+<td>自定义打包脚本</td>
+</tr>
+<tr>
+<td>on_install</td>
+<td>自定义安装脚本</td>
+</tr>
+<tr>
+<td>on_uninstall</td>
+<td>自定义卸载脚本</td>
+</tr>
+<tr>
+<td>on_run</td>
+<td>自定义运行脚本</td>
+</tr>
+</tbody>
+</table>
+<p>其中，除了 <code>on_load</code> 以外，其它的所有 <code>on_xxx</code> 阶段配置接口，都有对应的 <code>before_xxx</code> 和 <code>after_xxx</code> 版本，在前后阶段配置执行自定义脚本。</p>
+<p>为了了解 xmake 是在哪些阶段实际执行了这些配置脚本，我们修改之前的 xmake.lua，把上面的不同阶段脚本都配置上，例如。</p>
+<pre><code class="language-lua">target(&quot;test&quot;)
+    set_kind(&quot;binary&quot;)
+    add_files(&quot;src/*.cpp&quot;)
+
+    before_build(function (target)
+        print(&quot;before_build&quot;)
+    end)
+    after_build(function (target)
+        print(&quot;after_build&quot;)
+    end)
+
+    before_build_file(function (target, sourcefile)
+        print(&quot;before_build_file: %s&quot;, sourcefile)
+    end)
+    on_build_file(function (target, sourcefile)
+        print(&quot;on_build_file: %s&quot;, sourcefile)
+    end)
+    after_build_file(function (target, sourcefile)
+        print(&quot;after_build_file: %s&quot;, sourcefile)
+    end)
+
+    before_link(function (target)
+        print(&quot;before_link&quot;)
+    end)
+    on_link(function (target)
+        print(&quot;on_link&quot;)
+    end)
+    after_link(function (target)
+        print(&quot;after_link&quot;)
+    end)
+</code></pre>
+<p>上面的配置代码，我们配置注入了大部分阶段的脚本处理，而 <code>on_run</code>、<code>on_install</code> 这种，很明显就是对应 <code>xmake run</code> 和 <code>xmake install</code> 等基本操作的处理，这里就不列举上去，不然配置太长了，大家可以自己再做一些相关尝试。</p>
+<p>这里我们主要是通过配置，拦截整个构建流程中会执行到的一些步骤，比如文件编译、链接阶段等等，配置完成后，执行 <code>xmake</code> 查看整个编译输出。</p>
+<p><img src="%E5%AE%9E%E9%AA%8C12%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC%E5%92%8C%E8%A7%84%E5%88%99.assets/e60b699cd1632efe269640747e1e75a8-0" alt="5"></p>
+<p>通过上图的输出，我们可以大概看出整个构建的执行流程。这里会优先执行 <code>before_build</code>，然后会执行每个源文件的编译，接着执行链接过程，最后是 <code>after_build</code>。这里我们没有设置 <code>on_build</code>，是因为如果设置了这个接口，就会重写内部的所有构建过程，也就不会执行 <code>on_build_file</code> 和 <code>on_link</code> 了，一切构建操作都需要大家自己去完成。</p>
+<p>下图描述了整个构建过程中每个阶段的执行时机。</p>
+<p><img src="%E5%AE%9E%E9%AA%8C12%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC%E5%92%8C%E8%A7%84%E5%88%99.assets/6d21c9b63e00679ed04110c2d4931c92-0" alt="6"></p>
+<h2 id="通过定义规则处理其它文件">通过定义规则处理其它文件</h2>
+<p>虽然我们可以在 target 中通过 <code>on_build_file</code> 等自定义脚本来定制化处理编译逻辑，但是如果每个 target 都要配置相同的处理逻辑，或者要处理多个不同种类的逻辑，并且全在 target 中去定义实现它们，那么整个配置会非常臃肿并且难以维护。</p>
+<p>因此，xmake 提供了一种模块化的方式，也就是通过 <code>rule()</code> 自定义规则，然后使用 <code>add_rules()</code> 接口实现对单个 target 目标同时配置生效多个不同的编译规则。这些规则可以复用、对多个 target 生效。</p>
+<p>而之前我们在 target 中的那些自定义脚本阶段的配置接口，例如 <code>on_build</code> 等，都可以在 <code>rule()</code> 中定义和实现。其实 xmake 内部的 C/C++ 代码编译本身也是使用 <code>rule(&quot;c++&quot;)</code> 规则来实现的，只不过默认就已经对 C/C++ 代码生效了，而用户在 xmake.lua 中自己定义配置的规则，就需要手动添加 <code>add_rules</code> 到对应的 target 才能生效。</p>
+<p>直接这么说，也许还不太能很清晰理解什么是自定义规则，我们先来改造下之前的配置文件 xmake.lua，通过定义 <code>rule()</code> 的方式，来实现相同的目的，例如。</p>
+<pre><code class="language-lua">rule(&quot;myrule&quot;)
+    before_build(function (target)
+        print(&quot;before_build&quot;)
+    end)
+    after_build(function (target)
+        print(&quot;after_build&quot;)
+    end)
+
+    before_build_file(function (target, sourcefile)
+        print(&quot;before_build_file: %s&quot;, sourcefile)
+    end)
+    on_build_file(function (target, sourcefile)
+        print(&quot;on_build_file: %s&quot;, sourcefile)
+    end)
+    after_build_file(function (target, sourcefile)
+        print(&quot;after_build_file: %s&quot;, sourcefile)
+    end)
+
+    before_link(function (target)
+        print(&quot;before_link&quot;)
+    end)
+    on_link(function (target)
+        print(&quot;on_link&quot;)
+    end)
+    after_link(function (target)
+        print(&quot;after_link&quot;)
+    end)
+rule_end()
+
+target(&quot;test&quot;)
+    set_kind(&quot;binary&quot;)
+    add_files(&quot;src/*.cpp&quot;)
+    add_rules(&quot;myrule&quot;)
+</code></pre>
+<p>我们通过抽离 target 中的所有自定义脚本到 <code>rule(&quot;myrule&quot;)</code> 中，然后通过 <code>add_rules(&quot;myrule&quot;)</code> 的方式对指定的 target 生效。</p>
+<p>执行 <code>xmake -r</code> 重新编译看看，能输出哪些信息。</p>
+<p><img src="%E5%AE%9E%E9%AA%8C12%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC%E5%92%8C%E8%A7%84%E5%88%99.assets/8e98a13fe9250ae8f59c2a47282181b7-0" alt="7"></p>
+<p>我们看到 <code>before_build</code> 还有 <code>on_link</code> 等相关的阶段都正常输出了，跟之前完全一样，但是 <code>on_build_file</code> 等阶段，还是没有输出。这是因为通过 <code>add_rules()</code> 的方式应用的规则，默认是不会去覆盖内部的 <code>rule(&quot;c++&quot;)</code> 规则中的 cpp 文件编译，只是额外附加了一些自定义脚本。</p>
+<p>但是，如果是处理一些其它的未知文件，比如：<code>*.md</code> 等，由于 xmake 内部没有相关的规则可以识别处理，那么 <code>rule(&quot;myrule&quot;)</code> 中的 <code>on_build_file</code> 也就会被执行到。</p>
+<p>因此，我们先执行下面的命令，创建一个 <code>src/test.md</code> 文件用于定制化处理。</p>
+<pre><code class="language-bash">touch src/test.md
+</code></pre>
+<p>然后修改 xmake.lua 配置，通过添加 <code>set_extensions(&quot;.md&quot;)</code> 到 <code>rule(&quot;myrule&quot;)</code> 使得 myrule 规则可以识别到新创建的 <code>src/test.md</code> 文件。</p>
+<pre><code class="language-lua">rule(&quot;myrule&quot;)
+    set_extensions(&quot;.md&quot;) -- 指定这个规则仅对 md 文件生效
+    before_build(function (target)
+        print(&quot;before_build&quot;)
+    end)
+    after_build(function (target)
+        print(&quot;after_build&quot;)
+    end)
+
+    before_build_file(function (target, sourcefile)
+        print(&quot;before_build_file: %s&quot;, sourcefile)
+    end)
+    on_build_file(function (target, sourcefile)
+        print(&quot;on_build_file: %s&quot;, sourcefile)
+    end)
+    after_build_file(function (target, sourcefile)
+        print(&quot;after_build_file: %s&quot;, sourcefile)
+    end)
+
+    before_link(function (target)
+        print(&quot;before_link&quot;)
+    end)
+    on_link(function (target)
+        print(&quot;on_link&quot;)
+    end)
+    after_link(function (target)
+        print(&quot;after_link&quot;)
+    end)
+rule_end()
+
+target(&quot;test&quot;)
+    set_kind(&quot;binary&quot;)
+    add_files(&quot;src/*.cpp&quot;, &quot;src/*.md&quot;) -- 添加上 md 文件
+    add_rules(&quot;myrule&quot;)
+</code></pre>
+<p>正如上面的配置中看到，我们也需要在 xmake.lua 中将 <code>src/test.md</code> 通过 <code>add_files</code> 添加进来，这样 myrule 规则才能识别到它。</p>
+<p>接着执行 <code>xmake -r</code> 查看输出，如果一切顺利，这回我们会看到 <code>on_build_file</code> 也被执行到了，用于 <code>.md</code> 文件的定制化处理，而 c++ 文件不受任何影响。</p>
+<p><img src="%E5%AE%9E%E9%AA%8C12%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC%E5%92%8C%E8%A7%84%E5%88%99.assets/02a0db9845f32816142b8e7bfcf4bc18-0" alt="8"></p>
+<p>这里，我们仅仅只是简单的调用了 <code>print</code> 接口，实际的项目配置过程中，可以通过自定义的 <code>rule()</code> 规则配置，实现除了 c++ 代码外的其它任何未知文件的处理和编译，甚至可以扩展编译其它的编译语言的代码文件。</p>
+<h4 id="在自定义规则中配置目标编译选项">在自定义规则中配置目标编译选项</h4>
+<p>在实验五《xmake 基础之配置语法简介》中，我们知道可以通过 <code>on_load</code> 自定义脚本在 target 中更加灵活的配置各种编译选项，不会再受到描述域的一些限制。而在自定义规则中，我们也可以通过定义 <code>on_load</code>，在里面动态添加一些编译选项给个 target 程序。</p>
+<p>我们还是拿刚才的工程项目中 myrule 为例，修改下 xmake.lua。</p>
+<pre><code class="language-lua">rule(&quot;myrule&quot;)
+    on_load(function (target)
+        target:add(&quot;defines&quot;, &quot;MYRULE&quot;)
+        target:add(&quot;syslinks&quot;, &quot;pthread&quot;)
+        if is_plat(&quot;linux&quot;) then
+            target:add(&quot;defines&quot;, &quot;LINUX&quot;)
+        end
+    end)
+rule_end()
+
+target(&quot;test&quot;)
+    set_kind(&quot;binary&quot;)
+    add_files(&quot;src/*.cpp&quot;)
+    add_rules(&quot;myrule&quot;)
+</code></pre>
+<p>这里，我们仅仅对 <code>myrule</code> 规则添加了 <code>on_load</code> 自定义脚本，并在里面动态的设置了一些宏定义和链接库，例如 <code>-DMYRULE</code>、<code>-DLINUX</code> 等等。</p>
+<p>然后只需要通过 <code>add_rules(&quot;myrule&quot;)</code> 将其生效到指定的 target 上去就行了。</p>
+<p>执行 <code>xmake -rv</code> 编译，可以看到输出结果中，已经加上了在 <code>on_load</code> 中新加的一些额外编译选项。</p>
+<p><img src="%E5%AE%9E%E9%AA%8C12%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC%E5%92%8C%E8%A7%84%E5%88%99.assets/414c11bb460769cce0b17bc0e9418b2b-0" alt="9"></p>
+<h2 id="实验总结">实验总结</h2>
+<p>在本节实验中，我们学习了如何配置自定义脚本在拦截目标程序的整个构建过程，实现一些定制化的处理逻辑，并且大概了解了构建的几个基本执行阶段，也学会了如何通过自定义编译规则去处理其它未知文件。</p>
+<p>本实验的参考代码可以使用如下命令下载：</p>
+<pre><code class="language-bash">wget https://labfile.oss.aliyuncs.com/courses/2764/code12.zip
+</code></pre>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接: </strong>
+      <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C12%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC%E5%92%8C%E8%A7%84%E5%88%99/" title="实验12自定义脚本和规则" target="_blank" rel="external">https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C12%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%9A%E6%9C%AC%E5%92%8C%E8%A7%84%E5%88%99/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License: </strong>
+        <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/images.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/" target="_blank"><span class="text-dark">张超</span><small class="ml-1x">I think therefore I am.</small></a></h3>
+        <div>我是我与世界的桥梁。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+    </div>
+  </article>
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C11cc&#43;&#43;%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B/" title="实验11C/C&#43;&#43; 库接口和编译器特性检测"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            <li class="next">
+                <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C13%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C%E8%AF%A6%E8%A7%A3/"
+                    title="实验13系统操作详解"><span>上一篇&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="文章目录" role="button">
+                    <span>[&nbsp;</span><span>文章目录</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://getone_chao.gitee.io" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2017  -
+    2022
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+    
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/js/application.min.e720b935330b2a176cfb4b8bd9a6cc632caf6b752f94e87c62152a9557ff6d15.js"></script>
+<script src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/js/plugin.min.334875d4d4a72afb866e446df61b5f4bf1f0a516d1303166f52f7804d17ef3ab.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(未命名)',
+            },
+            ROOT_URL: 'https:\/\/blog-0g8860131649bb29-1304987963.tcloudbaseapp.com\/',
+            CONTENT_URL: 'https:\/\/blog-0g8860131649bb29-1304987963.tcloudbaseapp.com\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/js/insight.min.759e5002714e12761afcd512f103d39c86573165db51972dd3b24df6eddf238ed3e3e85c1988e96cba09419d1deccdeb68c15284f2c3d03049fad53c11774524.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </body>
+</html>
