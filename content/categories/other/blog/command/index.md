@@ -49,13 +49,9 @@ hugo new categories/lang/
 ### 1.2 上传命令
 
 ~~~
-hugo -D
+hugo -D && git add .&&git commit -m ""
 
-git add .
-
-git commit -m ""
-
-git push gitee
+git push github && git push gitee
 
 cloudbase hosting deploy ./public  -e  blog-0g8860131649bb29
 ~~~
