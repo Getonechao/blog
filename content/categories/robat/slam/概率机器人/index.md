@@ -32,7 +32,7 @@ tags=  [
 
 - [随机过程-华中科技大学](https://www.bilibili.com/video/BV1g7411b7r2?spm_id_from=333.337.search-card.all.click)
 
-
+*********************************
 
 
 ## 2. 贝叶斯滤波
@@ -70,7 +70,7 @@ tags=  [
 
 <img src="./bayesfilter.png" alt="bayesfilter" style="zoom:50%;vertical-align: middle；" />
 
-
+***********************
 
 ## 3.高斯滤波
 
@@ -103,7 +103,7 @@ tags=  [
 
 ![](index.assets/v2-d2fe3befccb6232c41b8af9059f59a2c_r.jpg)
 
-
+****************
 
 ## 4.非参数滤波
 
@@ -115,7 +115,7 @@ tags=  [
 
 
 
-### &emsp;4.3  粒子滤波(pf)
+### &emsp; 4.3  粒子滤波(pf)
 
 - 粒子滤波(particle filter)是贝叶斯滤波的另一种非参数实现。
 
