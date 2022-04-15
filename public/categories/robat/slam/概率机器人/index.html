@@ -39,7 +39,7 @@
 <meta itemprop="name" content="《概率机器人》-读书笔记">
 <meta itemprop="description" content="slam学习笔记"><meta itemprop="datePublished" content="2022-03-31T01:05:24+08:00" />
 <meta itemprop="dateModified" content="2022-03-31T01:05:24+08:00" />
-<meta itemprop="wordCount" content="941">
+<meta itemprop="wordCount" content="1182">
 <meta itemprop="keywords" content="slam,导航,book," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="《概率机器人》-读书笔记"/>
 <meta name="twitter:description" content="slam学习笔记"/>
@@ -429,8 +429,8 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 941字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2分 </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1182字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -521,11 +521,29 @@ function tagCloud(where, min, max) {
 <h3 id="emsp42-静态二值贝叶斯滤波">  4.2 静态二值贝叶斯滤波</h3>
 <h3 id="emsp43--粒子滤波pf"> 4.3  粒子滤波(pf)</h3>
 <ul>
-<li>粒子滤波(particle filter)是贝叶斯滤波的另一种非参数实现。</li>
-<li>粒子滤波以有限个参数来近似后验</li>
-<li>主要思想：用一系列从后验得到的随机状态采样表示$bel(x_{t})$</li>
-<li>一个粒子就是根据真实世界状态在时刻t的一个可能假设。</li>
+<li>
+<p>粒子滤波(particle filter)是贝叶斯滤波的另一种非参数实现。</p>
+</li>
+<li>
+<p>粒子滤波以有限个参数来近似后验</p>
+</li>
+<li>
+<p>主要思想：用一系列从后验得到的随机状态采样表示$bel(x_{t})$</p>
+</li>
+<li>
+<p>一个粒子就是根据真实世界状态在时刻t的一个可能假设。</p>
+</li>
+<li>
+<p>粒子滤波的直观感觉就是用粒子群$X_{t}$来近似置信度$bel(x_{t})$</p>
+<blockquote>
+<p>理想情况下，状态假设$x_{t}$包含在粒子集$X_{t}$中的可能性与其贝叶斯滤波的后验$bel(x_{t})$成比例：</p>
+<p>$$x_{t}^{m}\sim p(x_{t}|z_{1:t},u_{1:t}) $$</p>
+<p>状态空间的一个子区域被样本填充得越密集，真实状态落入该区域的可能性越大</p>
+</blockquote>
+</li>
 </ul>
+<p><img src="index.assets/2.png" alt="概率机器人：粒子滤波算法"></p>
+<p>  <font color="red"><em><strong>粒子滤波算法由上一个时间步长的置信度$bel(x_{t-1})$递归地构建置信度$bel(x_{t})$,因为置信度由粒子集表示，这就意味粒子滤波可由粒子集$X_{t-1}$递归地构建粒子集$X_{t}$</strong></em></font></p>
 
     </div>
     <div class="article-footer">
