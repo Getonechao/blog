@@ -98,3 +98,7 @@ tags=  [
 3. 初始置信度$bel(x_{0})$必须是正态分布的。
 
    $$bel(x_{0})=p(x_{0})----x_{0}\sim N(\mu ,\Sigma _{0})$$
+
+***卡尔曼滤波过程如下***：
+
+![](index.assets/v2-d2fe3befccb6232c41b8af9059f59a2c_r.jpg)
