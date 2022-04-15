@@ -69,12 +69,12 @@ cloudbase hosting deploy ./public  -e  blog-0g8860131649bb29
 console.log(playerInfo.aid)
 
 note：去除'\'
-{{< bilibili aid >}\}
+{\{< bilibili aid >}\}
 ~~~
 
 - 跳转
 ~~~shell
-[]({{< ref "blog/neat.md" >}\})
+[]({\{< ref "blog/neat.md" >}\})
 ~~~
 
 
