@@ -1,5 +1,5 @@
 +++
-title= "《C++ Effective》-读书笔记3"
+title= "《C++ Effective》-读书笔记5"
 description= "55具体做法-5(6继承与面向对象的设计)"
 date= 2021-04-15T12:51:11+08:00
 author= "chao"
