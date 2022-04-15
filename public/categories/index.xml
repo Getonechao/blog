@@ -6,10 +6,55 @@
     <description>Recent content in Categories on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Fri, 15 Apr 2022 10:36:38 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 15 Apr 2022 12:51:11 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记3</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/5/</link>
+      <pubDate>Fri, 15 Apr 2022 12:51:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/5/</guid>
+      <description>继承与面向对象设计 条款32：确定你的public继承塑模出“is-a”（是一种）关系 结论 “public继承关系”意味is-a。适用于base</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记3</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/4/</link>
+      <pubDate>Fri, 15 Apr 2022 12:50:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/4/</guid>
+      <description>实现 大多情况下，适当提出你的class（和class templates）定义以及functions(和 function templates)声明，是花费最多</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记2</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/2/</link>
+      <pubDate>Fri, 15 Apr 2022 12:47:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/2/</guid>
+      <description>资源管理 资源：一旦用了它，将来必须还给系统。 譬如：动态分配内存、文件描述器、互斥锁、图形界面中的字型和笔刷、数据库连接、网络sockets。</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记3</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/3/</link>
+      <pubDate>Fri, 15 Apr 2022 12:47:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/3/</guid>
+      <description>接口的设计与声明 接口设计的准则： 让接口容易被正确使用，不容易被误用。 什么是接口？ ​ 内部实现细节封装起来，外部用户用过预留的接口可以使用接口的</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记1</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/1/</link>
+      <pubDate>Fri, 15 Apr 2022 12:46:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/1/</guid>
+      <description>条款05： C++默认编写并调用那些函数 默认创建 class Base { public： defualt构造函数 copy构造函数 copy assignment操作符 析构函数</description>
+    </item>
     
     <item>
       <title>Command</title>

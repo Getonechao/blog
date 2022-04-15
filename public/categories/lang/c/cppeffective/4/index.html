@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>
+        《C&#43;&#43; Effective》-读书笔记3 - Getone超
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="55具体做法-4(5实现)" />
+    <meta name="generator" content="Hugo 0.95.0 with theme pure" />
+    <title>《C&#43;&#43; Effective》-读书笔记3 - Getone超</title>
+    
+    
+    <link rel="stylesheet" href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/css/style.min.a85959a41e7abcc0db1f81f44bd264649303417f91b536e87dcde644340fea6d.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="《C&#43;&#43; Effective》-读书笔记3" />
+<meta property="og:description" content="55具体做法-4(5实现)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/4/" /><meta property="article:section" content="categories" />
+<meta property="article:published_time" content="2022-04-15T12:50:11+08:00" />
+<meta property="article:modified_time" content="2022-04-15T12:50:11+08:00" />
+
+<meta itemprop="name" content="《C&#43;&#43; Effective》-读书笔记3">
+<meta itemprop="description" content="55具体做法-4(5实现)"><meta itemprop="datePublished" content="2022-04-15T12:50:11+08:00" />
+<meta itemprop="dateModified" content="2022-04-15T12:50:11+08:00" />
+<meta itemprop="wordCount" content="2817">
+<meta itemprop="keywords" content="C&#43;&#43;," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="《C&#43;&#43; Effective》-读书笔记3"/>
+<meta name="twitter:description" content="55具体做法-4(5实现)"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  
+  
+
+  <body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/" target="_blank">
+            <img class="img-circle img-rotate" src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/images.jpg" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">张超</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">I think therefore I am.</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>Shanghai, China</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="想要查找什么..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">首页</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/series/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">记录</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">分类</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">标签</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about/">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">关于</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content"><p>我是我与世界的桥梁。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+      
+<div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/5/" class="title">《C&#43;&#43; Effective》-读书笔记3</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-04-15 12:51:11 &#43;0800 CST" itemprop="datePublished">2022-04-15</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/4/" class="title">《C&#43;&#43; Effective》-读书笔记3</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-04-15 12:50:11 &#43;0800 CST" itemprop="datePublished">2022-04-15</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/2/" class="title">《C&#43;&#43; Effective》-读书笔记2</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-04-15 12:47:11 &#43;0800 CST" itemprop="datePublished">2022-04-15</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/3/" class="title">《C&#43;&#43; Effective》-读书笔记3</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-04-15 12:47:11 &#43;0800 CST" itemprop="datePublished">2022-04-15</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/1/" class="title">《C&#43;&#43; Effective》-读书笔记1</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-04-15 12:46:11 &#43;0800 CST" itemprop="datePublished">2022-04-15</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 分类</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/" class="category-list-link">lang</a><span class="category-list-count">5</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/" class="category-list-link">math</a><span class="category-list-count">4</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/net/" class="category-list-link">net</a><span class="category-list-count">2</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/" class="category-list-link">os</a><span class="category-list-count">4</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/" class="category-list-link">other</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/" class="category-list-link">robat</a><span class="category-list-count">3</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 标签</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/blog/" class="tag-list-link">blog</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/c&#43;&#43;/" class="tag-list-link">c&#43;&#43;</a><span
+                    class="tag-list-count">5</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/linux/" class="tag-list-link">linux</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/math/" class="tag-list-link">math</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/net/" class="tag-list-link">net</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/project/" class="tag-list-link">project</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/ros/" class="tag-list-link">ros</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/slam/" class="tag-list-link">slam</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/win10/" class="tag-list-link">win10</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/wsl1/" class="tag-list-link">wsl1</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E5%AF%BC%E8%88%AA/" class="tag-list-link">导航</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" class="tag-list-link">概率论</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E7%9F%A9%E9%98%B5/" class="tag-list-link">矩阵</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" class="tag-list-link">线性代数</a><span
+                    class="tag-list-count">2</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 标签</h3>
+    <div id="tag-cloud-list" class="widget-body">
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/blog/" class="tag-list-link" rel="1">blog<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/c&#43;&#43;/" class="tag-list-link" rel="5">c&#43;&#43;<span
+               class="tag-list-count">5</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/linux/" class="tag-list-link" rel="2">linux<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/math/" class="tag-list-link" rel="1">math<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/net/" class="tag-list-link" rel="1">net<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/project/" class="tag-list-link" rel="1">project<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/ros/" class="tag-list-link" rel="3">ros<span
+               class="tag-list-count">3</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/slam/" class="tag-list-link" rel="1">slam<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/win10/" class="tag-list-link" rel="1">win10<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/wsl1/" class="tag-list-link" rel="1">wsl1<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E5%AF%BC%E8%88%AA/" class="tag-list-link" rel="2">导航<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" class="tag-list-link" rel="1">概率论<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E7%9F%A9%E9%98%B5/" class="tag-list-link" rel="2">矩阵<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" class="tag-list-link" rel="2">线性代数<span
+               class="tag-list-count">2</span></a>
+            
+    </div>
+<script>
+document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+    tagCloud('#tag-cloud-list a',  8 ,  30 );
+  }
+};
+
+function tagCloud(where, min, max) {
+  let iMax = 0;
+  let iMin = 0;
+  $(where).each(function() {
+    let weight = Number($(this).attr("rel"));
+    if(iMax < weight) iMax = weight;
+    if(iMin > weight || iMin == 0) iMin = weight;
+  });
+  let step = (max - min)/(iMax - iMin);
+  $(where).each(function() {
+    let weight = $(this).attr("rel") - iMin;
+    $(this).css({"font-size": min + (weight * step) + 'px'});
+  });
+};
+</script>
+</div>
+
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">文章目录</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/categories/lang/c/cppeffective/4/"
+    >《C&#43;&#43; Effective》-读书笔记3</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/4/" class="article-date">
+  <time datetime="2022-04-15 12:50:11 &#43;0800 CST" itemprop="datePublished">2022-04-15</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/lang/"> lang </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/c&#43;&#43;/"> C&#43;&#43; </a>
+  </span>
+
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 2817字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 6分 </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h1 id="实现">实现</h1>
+<p>大多情况下，适当提出你的class（和class templates）定义以及functions(和 function templates)声明，是花费最多心力的两件事。</p>
+<p>实现大多直截了当，但实现仍然有一些东西要小心。</p>
+<h2 id="条款26尽可能延后变量定义式的出现时间">条款26：尽可能延后变量定义式的出现时间</h2>
+<h3 id="结论">结论</h3>
+<p>尽可能延后变量定义式的出现。这样做可增加程序的清晰度并改善程序的效率。</p>
+<h3 id="原因">原因</h3>
+<p>只要你定义了一个变量而其类型带有一个构造函数或析构函数，</p>
+<p>那么<strong>当程序的控制流到达这个变量定义式时，你便得承受构造成本；</strong></p>
+<p><strong>当这个变量离开其作用域时，你便要承受析构成本。</strong></p>
+<p>即使这个变量最终并未被使用，仍需消耗这些成本。</p>
+<pre><code class="language-C++">std::string encrytPassword(const std::string&amp;　password)
+{
+    using namespace std;
+    string encrypted;
+    if(password.length()&lt;MinimumPasswordLength){
+        throw logic_error(&quot;Password is too short&quot;);
+    }
+    ...	//必要动作，将一个加密后的密码置入变量encrypted内
+   return encrypted;
+}
+</code></pre>
+<p>如果密码长度不够，丢出异常，那么string encrypted被构造了，也被析构了，但没有被使用。</p>
+<h3 id="p116重要关于循环体内的定义">P116重要，关于循环体内的定义</h3>
+<h2 id="条款27尽量少做转型动作">条款27：尽量少做转型动作</h2>
+<h2 id="结论-1">结论</h2>
+<ol>
+<li>如果可以，尽量避免转型，特别是注重效率的代码中避免dynamic_casts。如果有个设计需要转型设计，试着发展无需转型的替代设计</li>
+<li>如果转型是必要的，试着将它隐藏于某个函数背后。客户随后可以调用该函数，而不需要转型放进它们自己的代码内。</li>
+<li>宁可使用C++style（新式）转型，不要使用旧式转型。</li>
+</ol>
+<h2 id="条款28避免返回handles指向对象内部成分即它的成员变量">条款28：避免返回handles指向对象内部成分（即它的成员变量）</h2>
+<h2 id="结论-2">结论</h2>
+<p>避免返回handles（包括references、指针、迭代器）指向对象内部。遵守这个条约可增加封装性，帮助cosnt成员函数的行为更像const，并将发生内存对象被销毁的可能性降到最低。</p>
+<h3 id="原因-1">原因</h3>
+<p>假设你的程序涉及矩形，每一个矩形由其左上角和右下角表示。</p>
+<pre><code class="language-C++">
+class Point{	//这个class用来表述“点”
+    public：
+        point（int x,int y）;
+    ...
+        void setX（int newVal）;
+    	  void setY(int newval);
+    ...
+}
+
+struct RectData{	//这些点数据用来表现一个矩形
+    Point ulhc;	//ulhc=&quot;右下角&quot;
+    Point lrhc;//lrhc=&quot;右上角&quot;
+};
+
+class Rectangle{
+    ....
+        private:
+    std::trl::shared_ptr&lt;RectData&gt; pData;
+};
+</code></pre>
+<p>by reference 方式传递用户自定义类型往往比by value方式更高效</p>
+<pre><code class="language-C++">class Rectangle{
+    public：
+        ....
+        Point&amp; upperLeft() const { return pData-&gt;ulhc;}
+    	  Point&amp; upperRight() const { return pData-&gt;lrhc;}
+}
+</code></pre>
+<p><strong>const成员函数：若将成员成员函数声明为const，则该函数不允许修改类的数据成员，但若数据成员是指针，则还是可以修改指针指向的内容</strong></p>
+<p>upperLeft和upperRight被声明为const成员函数，是为了提供客户一个得知Rectangle相关坐标点的方法，而不是让客户修改Rectangle（客户是可以通过by reference修改内部数据）。</p>
+<h3 id="解决方法">解决方法</h3>
+<p>它们的返回类型加上const</p>
+<pre><code class="language-C++">class Rectangle
+{
+    public：
+        ...
+        const Point&amp; upperLeft() const{ return pData-&gt;ulhc;}
+    	const Point&amp; lowerRight() const {return pData-&gt;lrhc;}
+    ...
+}
+</code></pre>
+<h2 id="条款29为异常安全而努力是值得的">条款29：为“异常安全”而努力是值得的</h2>
+<h2 id="结论-3">结论</h2>
+<ol>
+<li>异常安全函数即使发生异常也不会泄漏资源或允许任何数据结构败坏。这样的函数区分为三种可能的保证：基本型、强烈型、不抛异常型</li>
+<li>“强烈保证”往往能够以copy-and-swap实现出来，但“强烈保证”并非对所有函数都可实现或具备现实意义。</li>
+<li>函数提供的“异常安全保证”通常最高只等于其所调用之各个函数的“异常安全保证”中的最弱者。</li>
+</ol>
+<h2 id="copy-and-swap技术">&ldquo;COPY-AND-SWAP&quot;技术</h2>
+<p>按照C++ primer的理解，赋值运算符（A=B）应该实现两个方面的工作：</p>
+<p>1.析构函数（<strong>删除A原有的内容</strong>）</p>
+<p>2.拷贝构造函数（<strong>将B的值赋值给A）</strong></p>
+<hr>
+<p>ClassA&amp; ClassA::operator= (&hellip;.): 首先把&rdquo;=&ldquo;右边的值复制到&rdquo;=&ldquo;左边, 然后析构&rdquo;=&ldquo;左边的值;</p>
+<p>为了保证可以自赋值(self-assignment), 需要使用****临时变量****存储, 再删除对象;</p>
+<pre><code class="language-C++">
+class A {
+private:
+    int *b;
+    int a;
+public:
+    A():a(0),b(nullptr){};
+    A(const A&amp;rhs):a(rhs.a),b(rhs.b==nullptr?nullptr:new int(*rhs.b)){};
+    ~A(){
+        delete b;
+        b = nullptr;
+    };
+};
+
+
+A&amp; operator=(const A&amp; rhs) {
+    if(this!=&amp;rhs) { // 防止自赋值
+        delete b;
+        this-&gt;b = new int(*rhs.b);// 可能失败
+        this-&gt;a = rhs.a;
+    }
+    return *this; // 返回this对象的引用
+}
+</code></pre>
+<p>可以看到我们的代码几乎是对<strong>拷贝构造函数和析构函数的完全复制</strong>，此外，上述代码虽然完成了自赋值的验证，但并未保障异常安全。<strong>一旦new失败，原this对象的b已经被删除，因此会引发异常</strong>。</p>
+<h4 id="异常不安全主要在于b对应的对象可能在异常到来之前被删除因此我们首先保存该对象的副本从而保证了异常安全特性无论new是否成功this对象中的b指针都会指向已知对象">异常不安全主要在于，b对应的对象可能在异常到来之前被删除。因此我们首先保存该对象的副本，从而保证了异常安全特性，无论new是否成功，this对象中的b指针都会指向已知对象</h4>
+<pre><code class="language-C++">A&amp; operator=(const A&amp; rhs) {
+    auto orign = this-&gt;b;		//使b指针所指向的内存有orgin指针指向
+    this-&gt;b = new int(*rhs.b);
+    delete orign;
+    this-&gt;a = rhs.a;
+    return *this;
+}
+</code></pre>
+<h4 id="copy-and-swap">copy and swap</h4>
+<p>为了使用copy-swap，我们需要三件事：</p>
+<ul>
+<li>一个有效的拷贝构造函数</li>
+<li>一个有效的析构函数</li>
+<li>一个自定义的交换函数，不能用std::swap,因为该函数实现中调用了拷贝构造和复制函数，且交换函数不抛异常</li>
+</ul>
+<p>该技术的核心就是<strong>不再使用引用作为赋值运算符参数</strong>，形参将直接是对象，这样的写法将会使编译器自动调用拷贝构造函数，由于拷贝构造函数的调用，异常安全将在进入函数体之前被避免（若拷贝失败则什么都不会发生）。经过swap后的对象在离开函数体后会自动销毁，因此也就自动调用了析构函数，具体写法如下：
+————————————————
+版权声明：本文为CSDN博主「feifeiiong」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/feifeiiong/article/details/77866579</p>
+<pre><code class="language-C++">
+void swap(A&amp; rhs) {
+    using std::swap;
+    swap(this-&gt;a,rhs.a);
+    swap(this-&gt;b,rhs.b);
+}
+
+A&amp; operator=(A rhs) {
+    swap(rhs);
+    return *this;
+}
+</code></pre>
+<p>网络资源：</p>
+<ol>
+<li><a href="https://blog.csdn.net/hiwubihe/article/details/116667884?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162631218716780264010481%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162631218716780264010481&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-10-116667884.first_rank_v2_pc_rank_v29&amp;utm_term=copy+and+swap&amp;spm=1018.2226.3001.4187">https://blog.csdn.net/hiwubihe/article/details/116667884?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162631218716780264010481%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162631218716780264010481&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-10-116667884.first_rank_v2_pc_rank_v29&amp;utm_term=copy+and+swap&amp;spm=1018.2226.3001.4187</a></li>
+</ol>
+<h2 id="条款30透彻了解inlining的里里外外">条款30：透彻了解inlining的里里外外</h2>
+<h3 id="结论-4">结论</h3>
+<ol>
+<li>将大多数inlining限制在小型、被频繁调用的函数身上。这可使日后的调试过程和二进制升级更为容易，也可使潜在的代码膨胀问题最小化，使程序的速度提升机会最大化。</li>
+<li>不要只因为function templates出现在头文件，就将它们声明为inline。</li>
+</ol>
+<h3 id="原因-2">原因</h3>
+<p><strong>一开始先不要将任何函数声明为inline</strong>，或者至少将inline施行范围局限在那些“一定成为inline（条款46）”或“十分平淡无奇”的函数身上，可以使程序达到优化。</p>
+<p>（28法则）平均而言一个程序往往将80%的执行时间花费在20%的代码上头，<strong>作为软件开发者，我们的目标是找出这可以有效增进程序整体效率的20%的代码</strong></p>
+<p>inline缺点：</p>
+<p>以代码膨胀为代价 空间换时间</p>
+<p>inline对于编译器而言，只是建议。</p>
+<p>建议：</p>
+<ol>
+<li>开栈的开销 &gt; 执行的开销 建议设为inline</li>
+<li>开栈的开销 &lt; 执行的开销 不建议</li>
+</ol>
+<h3 id="为什么使用inline关键字">为什么使用inline关键字？</h3>
+<h6 id="11为了解决一些频繁调用的小函数大量消耗栈空间栈内存">1.1为了解决一些频繁调用的小函数大量消耗栈空间（栈内存）。</h6>
+<p>在预编译的时候，编译器将程序中出现的内联函数的调用表达式的地方直接插入用内联函数的代码。</p>
+<h2 id="条款31将文件间的编译依存关系降到最低">条款31：将文件间的编译依存关系降到最低</h2>
+<h3 id="结论-5">结论</h3>
+<ol>
+<li>支持“编译依存性最小化”的一般构想是：相依于声明式，不要相依于定义式。基于此构想的两个手段是Handle classes和interface classes</li>
+<li>程序库头文件应该以“完全且仅有声明式”的形式存在。这种做法不论是否涉及templates都适合。</li>
+</ol>
+<h3 id="方法">方法</h3>
+<p>pimpl idiom技术</p>
+<p><img src="index.assets/20170728172522266" alt="img"></p>
+<p><a href="https://blog.csdn.net/qq_33775402/article/details/76274678?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162632039416780261938712%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162632039416780261938712&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-4-76274678.first_rank_v2_pc_rank_v29&amp;utm_term=%E9%99%8D%E4%BD%8E%E6%96%87%E4%BB%B6%E9%97%B4%E7%9A%84%E7%BC%96%E8%AF%91%E4%BE%9D%E5%AD%98%E5%85%B3%E7%B3%BB&amp;spm=1018.2226.3001.4187">https://blog.csdn.net/qq_33775402/article/details/76274678?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162632039416780261938712%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162632039416780261938712&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-4-76274678.first_rank_v2_pc_rank_v29&amp;utm_term=%E9%99%8D%E4%BD%8E%E6%96%87%E4%BB%B6%E9%97%B4%E7%9A%84%E7%BC%96%E8%AF%91%E4%BE%9D%E5%AD%98%E5%85%B3%E7%B3%BB&amp;spm=1018.2226.3001.4187</a></p>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接: </strong>
+      <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/4/" title="《C&#43;&#43; Effective》-读书笔记3" target="_blank" rel="external">https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/4/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License: </strong>
+        <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/images.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/" target="_blank"><span class="text-dark">张超</span><small class="ml-1x">I think therefore I am.</small></a></h3>
+        <div>我是我与世界的桥梁。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+    </div>
+  </article>
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/2/" title="《C&#43;&#43; Effective》-读书笔记2"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            <li class="next">
+                <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/5/"
+                    title="《C&#43;&#43; Effective》-读书笔记3"><span>上一篇&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="文章目录" role="button">
+                    <span>[&nbsp;</span><span>文章目录</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://getone_chao.gitee.io" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2017  -
+    2022
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+    
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/js/application.min.e720b935330b2a176cfb4b8bd9a6cc632caf6b752f94e87c62152a9557ff6d15.js"></script>
+<script src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/js/plugin.min.334875d4d4a72afb866e446df61b5f4bf1f0a516d1303166f52f7804d17ef3ab.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(未命名)',
+            },
+            ROOT_URL: 'https:\/\/blog-0g8860131649bb29-1304987963.tcloudbaseapp.com\/',
+            CONTENT_URL: 'https:\/\/blog-0g8860131649bb29-1304987963.tcloudbaseapp.com\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/js/insight.min.759e5002714e12761afcd512f103d39c86573165db51972dd3b24df6eddf238ed3e3e85c1988e96cba09419d1deccdeb68c15284f2c3d03049fad53c11774524.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </body>
+</html>
