@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Command</title>
+      <link>https://getone_chao.gitee.io/categories/other/blog/command/</link>
+      <pubDate>Fri, 15 Apr 2022 10:36:38 +0800</pubDate>
+      
+      <guid>https://getone_chao.gitee.io/categories/other/blog/command/</guid>
+      <description>command 1. 常用命令 1.1 新建文档 math类 hugo new categories/math/ net类 hugo new categories/net/ os类 hugo new categories/os/ robat类 hugo new categories/robat/ other类 hugo new categories/other/ 1.2 上传命令 hugo -D git add . git commit -m &amp;quot;&amp;quot; git push gitee cloudbase hosting deploy</description>
+    </item>
+    
+    <item>
       <title>希腊字母</title>
       <link>https://getone_chao.gitee.io/categories/math/other/%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D/</link>
       <pubDate>Thu, 14 Apr 2022 21:39:10 +0800</pubDate>
