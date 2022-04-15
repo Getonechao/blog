@@ -10,7 +10,7 @@ categories= [
 ]
 
 tags=  [
-    "slam","导航"
+    "slam","导航","book"
 ]
 
 +++

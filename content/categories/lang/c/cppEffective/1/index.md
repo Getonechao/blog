@@ -11,7 +11,7 @@ categories= [
 ]
 
 tags=  [
-    "cpp"
+    "cpp","book"
 ]
 
 +++
