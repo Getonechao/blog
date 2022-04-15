@@ -57,6 +57,6 @@ git push gitee
 cloudbase hosting deploy ./public  -e  blog-0g8860131649bb29
 ~~~
 
-## 腾讯云部署
+## 2. 腾讯云部署
 
 [静态网站托管 部署 Hugo - 最佳实践 - 文档中心 - 腾讯云 (tencent.com)](https://cloud.tencent.com/document/product/1210/43389)
