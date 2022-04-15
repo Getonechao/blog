@@ -64,7 +64,7 @@ cloudbase hosting deploy ./public  -e  blog-0g8860131649bb29
 
 - 打开调试，获取bilibili的pid
 
-~~~
+~~~shell
 
 console.log(playerInfo.aid)
 
@@ -72,7 +72,7 @@ console.log(playerInfo.aid)
 ~~~
 
 - 跳转
-~~~
+~~~shell
 []({{< ref "blog/neat.md" >}})
 ~~~
 
