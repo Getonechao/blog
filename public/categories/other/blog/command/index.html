@@ -39,7 +39,7 @@
 <meta itemprop="name" content="Command">
 <meta itemprop="description" content="一些部署博客的常用指令"><meta itemprop="datePublished" content="2022-04-15T10:36:38+08:00" />
 <meta itemprop="dateModified" content="2022-04-15T10:36:38+08:00" />
-<meta itemprop="wordCount" content="177">
+<meta itemprop="wordCount" content="152">
 <meta itemprop="keywords" content="blog," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Command"/>
 <meta name="twitter:description" content="一些部署博客的常用指令"/>
@@ -427,7 +427,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 177字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 152字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
       </div>
     </div>
@@ -471,38 +471,12 @@ cloudbase hosting deploy ./public  -e  blog-0g8860131649bb29
 <pre><code class="language-shell">
 console.log(playerInfo.aid)
 
-‘<style>
-    .aspect-ratio {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 75%;
-        }
-          
-    .aspect-ratio iframe {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        }
-    </style>
-          
-    
-    <div align=center class="aspect-ratio">
-        <iframe src="https://player.bilibili.com/player.html?aid=aid&&page=1&as_wide=1&high_quality=1&danmaku=1" 
-        scrolling="no" 
-        border="0" 
-        frameborder="no" 
-        framespacing="0" 
-        allowfullscreen="true"> 
-        </iframe>
-    </div>’
+{\{&lt; bilibili aid &gt;}\}
 </code></pre>
 <ul>
 <li>跳转</li>
 </ul>
-<pre><code class="language-shell">‘[]()’
+<pre><code class="language-shell">[]({\{&lt; ref &quot;blog/neat.md&quot; &gt;}\})
 </code></pre>
 <h2 id="2-腾讯云部署">2. 腾讯云部署</h2>
 <p><a href="https://cloud.tencent.com/document/product/1210/43389">静态网站托管 部署 Hugo - 最佳实践 - 文档中心 - 腾讯云 (tencent.com)</a></p>
