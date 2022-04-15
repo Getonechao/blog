@@ -1,8 +1,8 @@
 +++
 title= "《C++ Effective》-读书笔记3"
 description= "55具体做法-3(4接口的设计与声明)"
-date= 2022-04-15T12:47:11+08:00
-author= ""
+date= 2021-04-15T12:47:11+08:00
+author= "chao"
 draft= true
 image= "" 
 math= true
@@ -11,7 +11,7 @@ categories= [
 ]
 
 tags=  [
-    "C++"
+    "cpp"
 ]
 
 +++

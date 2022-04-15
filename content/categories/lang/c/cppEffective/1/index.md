@@ -1,7 +1,7 @@
 +++
 title= "《C++ Effective》-读书笔记1"
 description= "55具体做法-1（1-2构造、析构、赋值运算）"
-date= 2022-04-15T12:46:11+08:00
+date= 2021-04-15T12:46:11+08:00
 author= ""
 draft= true
 image= "" 
@@ -11,7 +11,7 @@ categories= [
 ]
 
 tags=  [
-    "C++"
+    "cpp"
 ]
 
 +++

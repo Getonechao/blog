@@ -1,7 +1,7 @@
 +++
 title= "《C++ Effective》-读书笔记3"
 description= "55具体做法-4(5实现)"
-date= 2022-04-15T12:50:11+08:00
+date= 2021-04-15T12:50:11+08:00
 author= "chao"
 draft= true
 image= "" 
@@ -11,7 +11,7 @@ categories= [
 ]
 
 tags=  [
-    "C++"
+    "cpp"
 ]
 
 +++
