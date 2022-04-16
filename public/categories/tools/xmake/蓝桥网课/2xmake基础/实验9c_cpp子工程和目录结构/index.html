@@ -473,7 +473,7 @@ cp src/* tests
 └── xmake.lua
 </code></pre>
 <p>通过上面的项目接口，我们大概可以看出来，这里面有两个模块，一个是 src 目录下的主程序，一个是 tests 目录下的测试程序，它们分别有自己的 xmake.lua 来维护构建，然后通过项目根目录的 xmake.lua 将这两个模块关联起来，构成一个项目树，大概的结构如下图。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C9C_C++%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.assets/ca435d943a281fae38078d6065bc2dd6-0" alt="1"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C9C_Cpp%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.assets/ca435d943a281fae38078d6065bc2dd6-0" alt="1"></p>
 <p>参照上图的结构，我们开始编写对应的 xmake.lua 配置内容，首先是根目录下的 xmake.lua。</p>
 <pre><code class="language-lua">includes(&quot;src&quot;, &quot;tests&quot;)
 </code></pre>
@@ -490,7 +490,7 @@ cp src/* tests
 </code></pre>
 <p>到这里为止，我们已经基本完成了一个带有两个子工程的 C++ 项目，相比之前的单级 xmake.lua 维护，现在的结构更加容易扩展，通过子工程拆分后，每个子 xmake.lua 维护会更加的清晰和精简。不同子工程的 target 目标之间也可以独立维护，互不干扰了。</p>
 <p>最后执行 <code>xmake</code> 编译这个工程，看看能否正常编译引入的 hello 和 test 这两个子目标程序，如果一切顺利，会看到下图的输出结果。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C9C_C++%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.assets/5617560a92e8846c19f3b2f308288ba1-0" alt="2"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C9C_Cpp%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.assets/5617560a92e8846c19f3b2f308288ba1-0" alt="2"></p>
 <p>通过 includes 关联子工程的好处就是，我们不需要再手动进入每个子工程目录下执行 xmake 编译，所有的 xmake 命令操作还是可以在项目根目录下统一完成，因为通过 includes 引入后，整个项目不管结构多复杂，都是一个整体，因此即使用户进入子目录执行 xmake 命令，实际的操作对象还是针对当前的整个项目而言的。</p>
 <h2 id="模式匹配实现批量-includes">模式匹配实现批量 includes</h2>
 <p>默认情况下通过 <code>includes(&quot;tests&quot;)</code> 引用子目录，就可以直接导入子目录下 xmake.lua 配置，如果要导入其它文件名的配置文件，可以指定文件全名到 includes，例如 <code>includes(&quot;tests/xmake.lua&quot;)</code>。</p>
@@ -518,13 +518,13 @@ includes(&quot;*/xmake.lua&quot;)
 <p>我们在上述的根配置中，加了很多的常用配置，比如添加了 debug、release 的编译规则，设置工程名和版本（可选的），设置 C++ 语言标准到 c++11，设置编译警告为严格检测和报错，另外添加了一个额外的宏定义开关：<code>-DROOT</code>。</p>
 <p>这些根配置会对 includes 里面的所有子 target 目标都生效，属于全局项目配置。这也是我们推荐的做法，就是在根 xmake.lua 中仅仅配置一些对所有 target 都通用的设置，而 target 相关的特定配置就单独放到子工程 xmake.lua 去配置它们。</p>
 <p>执行 <code>xmake -v</code> 查看当前的编译输出效果，如下图。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C9C_C++%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.assets/80f3b4d2a7fbda9e2772bc124490dd96-0" alt="3"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C9C_Cpp%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.assets/80f3b4d2a7fbda9e2772bc124490dd96-0" alt="3"></p>
 <p>这回，我们看到 src 和 tests 目录下的两个目标程序的 C++ 源文件在编译的时候，都被加上了 <code>-DROOT -std=c++</code> 和 <code>-Wall -Werror</code> 等编译选项，说明根目录下的配置对所有子 target 目标程序都生效了。</p>
 <h2 id="子-xmakelua-配置">子 xmake.lua 配置</h2>
 <p>全局根配置完成了，接下来需要开始对每个子 target 进行一些特定的配置，这些配置可以分别放置在 target 所在的子 xmake.lua 文件中。</p>
 <p>我们在每个子工程目录中单独配置的 xmake.lua，里面的所有配置不会干扰父 xmake.lua，只对它下面的更细粒度的子工程生效，就这样一层层按 tree 状生效下去。</p>
 <p>整个继承结构可以参考下图所示。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C9C_C++%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.assets/0371ee1ae8a578b86f608a0591bb9a43-0" alt="4"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C9C_Cpp%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.assets/0371ee1ae8a578b86f608a0591bb9a43-0" alt="4"></p>
 <p>为了完成上图的子工程结构，能够更加直观的感受如何去配置子工程，我们需要再对之前的配置文件做一些调整，在 src 目录下额外新增两个子工程：foo 和 bar 目标程序。</p>
 <p>为此先执行如下命令，创建这两个子工程。</p>
 <pre><code class="language-bash">cd ~/Code/includes_test
@@ -577,12 +577,12 @@ target(&quot;test&quot;)
     add_files(&quot;*.cpp&quot;)
 </code></pre>
 <p>整个配置继承效果，我们可以重新看下之前的图。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C9C_C++%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.assets/90300f801111f390a97b279abe82afb4-0" alt="5"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C9C_Cpp%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.assets/90300f801111f390a97b279abe82afb4-0" alt="5"></p>
 <p>执行 <code>xmake -rv</code> 来验证刚刚的配置结果。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C9C_C++%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.assets/81086db108775488d9b3f47383dc7f4a-0" alt="6"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C9C_Cpp%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.assets/81086db108775488d9b3f47383dc7f4a-0" alt="6"></p>
 <p>从上图的实际编译输出看到，foo 程序继承了根文件配置的 <code>-DROOT</code>，父文件配置中的 <code>-DHELLO</code>，以及自身配置文件中的全局设置 <code>-DFOO</code>，因此最终结果是 <code>-DROOT -DHELLO -DFOO</code>，而 bar 也就是 <code>-DROOT -DHELLO -DBAR</code>，另外 test 目标跟它们完全不在一个继承路径上，因此互不干扰，只有 <code>-DROOT -DTEST</code>。</p>
 <p>然后，我们再执行 <code>xmake run</code> 命令看看运行效果。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C9C_C++%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.assets/5ef851f3fdabfd3e5e44268f1d65577b-0" alt="7"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C9C_Cpp%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.assets/5ef851f3fdabfd3e5e44268f1d65577b-0" alt="7"></p>
 <p>默认情况下，xmake 会运行当前项目里面定义的所有可执行目标程序。</p>
 <h2 id="跨-xmakelua-间目标依赖">跨 xmake.lua 间目标依赖</h2>
 <p>只要是通过 includes 引用的所有 xmake.lua，其中的 target 定义即使在不同的子 xmake.lua 中，xmake 也会将它们全部加载进来，因此这些 target 之间的依赖关系还是可以正常配置，哪怕是跨 xmake.lua 也不会有任何影响。</p>
@@ -595,7 +595,7 @@ target(&quot;test&quot;)
     add_deps(&quot;foo&quot;, &quot;bar&quot;)
 </code></pre>
 <p>然后执行 <code>xmake -r</code> 去重新编译，如果依赖已经生效，那么在链接 test 程序之前，foo 和 bar 会优先编译和完成链接，如下图。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C9C_C++%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.assets/242d96c9b1721a5f2b937ceeaf5cf7bd-0" alt="8"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C9C_Cpp%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.assets/242d96c9b1721a5f2b937ceeaf5cf7bd-0" alt="8"></p>
 <h2 id="实验总结">实验总结</h2>
 <p>在本节实验中，我们学习了如何使用 includes 接口去组织编译带有多级子工程的 C/C++ 项目工程，并学习了 includes 的基本用法，也了解 xmake 在多级 xmake.lua 中的配置继承关系。</p>
 <p>本实验的参考代码可以使用如下命令下载：</p>
@@ -645,7 +645,7 @@ target(&quot;test&quot;)
             </li>
             <li class="next">
                 <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C10c_cpp%E9%A2%84%E7%BC%96%E8%AF%91%E5%A4%B4%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/"
-                    title="实验10C_C&#43;&#43;预编译头文件配置"><span>上一篇&nbsp;&nbsp;</span><i
+                    title="实验10C_Cpp预编译头文件配置"><span>上一篇&nbsp;&nbsp;</span><i
                         class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             

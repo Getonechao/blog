@@ -115,11 +115,11 @@ int main(int argc, char** argv)
 
 一切准备就绪后，执行 `xmake` 去编译这个工程，xmake 会在编译的前期自动检测 `pthread.h` 是否存在，如果存在，就会看到下图红线位置的检测结果，并且正常通过编译。
 
-![1](实验11CC++库接口和编译器特性检测.assets/066c69d7e77884a8d6afea2fff22f0e0-0)
+![1](实验11CCpp库接口和编译器特性检测.assets/066c69d7e77884a8d6afea2fff22f0e0-0)
 
 只要编译没报错，就说明检测通过并且 `HAS_PTHREAD_H` 已经被定义上了，我们也可以再执行 `xmake -rv` 重新编译查看完整的编译输出，继续确认下 `-DHAS_PTHREAD_H` 是否真的被传递到了 gcc 编译器，如图所示。
 
-![2](实验11CC++库接口和编译器特性检测.assets/7e93c1b0ddee79d82822177ffeb2a34c-0)
+![2](实验11CCpp库接口和编译器特性检测.assets/7e93c1b0ddee79d82822177ffeb2a34c-0)
 
 #### 配置自动生成 config.h
 
@@ -186,15 +186,15 @@ int main(int argc, char** argv)
 
 编译结果如下图。
 
-![3](实验11CC++库接口和编译器特性检测.assets/7188588f22b0266c32400e7e8b4eb477-0)
+![3](实验11CCpp库接口和编译器特性检测.assets/7188588f22b0266c32400e7e8b4eb477-0)
 
 上面红线部分提示检测正常通过，并且还自动生成了 config.h 文件，至于它的输出位置，就是之前 xmake.lua 配置中指定的 build 目录，如下图所示。
 
-![4](实验11CC++库接口和编译器特性检测.assets/0db8d8c0a2616978363b1e1f2b3c3203-0)
+![4](实验11CCpp库接口和编译器特性检测.assets/0db8d8c0a2616978363b1e1f2b3c3203-0)
 
 执行 `cat ./build/config.h` 命令，查看实际生成到 config.h 文件里面的内容，说明 `HAS_PTHREAD_H` 确实被定义进去了。
 
-![5](实验11CC++库接口和编译器特性检测.assets/a1ccf23930a7c68b8df97101ce2dab6e-0)
+![5](实验11CCpp库接口和编译器特性检测.assets/a1ccf23930a7c68b8df97101ce2dab6e-0)
 
 注：xmake 会严格按照配置在 config.h.in 里面的内容格式生成和替换模板变量，不会自己额外添加不存在的配置，关于这个配置模板，我们还可以参考下 tbox 库里面的 [tbox.config.h.in](https://github.com/tboox/tbox/blob/master/src/tbox/tbox.config.h.in) 文件，来更直观地了解。
 
@@ -263,11 +263,11 @@ int main(int argc, char** argv)
 
 然后执行 `xmake` 命令编译，查看是否能够检测通过、完成编译，因为在 Linux 下通常都是存在这个 setjmp 接口的，因此通常是可以编译通过的，如下图。
 
-![6](实验11CC++库接口和编译器特性检测.assets/d530f9ac5f1324b2ea099ceeb9797afd-0)
+![6](实验11CCpp库接口和编译器特性检测.assets/d530f9ac5f1324b2ea099ceeb9797afd-0)
 
 编译通过后，我们再来看下 `build/config.h` 里面的内容，这时 `${define HAS_SETJMP}` 模板变量已经自动变成了 `#define HAS_SETJMP 1`，说明检测顺利通过。
 
-![7](实验11CC++库接口和编译器特性检测.assets/b4088d819d6c7a3a5d4007a66e705d80-0)
+![7](实验11CCpp库接口和编译器特性检测.assets/b4088d819d6c7a3a5d4007a66e705d80-0)
 
 
 
@@ -308,7 +308,7 @@ int main(int argc, char** argv)
 
 这个时候，如果我们执行 `xmake` 编译后，会发现 constexpr 的特性并没有检测通过，编译也是失败的，如下图。
 
-![8](实验11CC++库接口和编译器特性检测.assets/6a7103828e959f4360c585ac3943ca1a-0)
+![8](实验11CCpp库接口和编译器特性检测.assets/6a7103828e959f4360c585ac3943ca1a-0)
 
 那是因为这个关键字仅仅只在 c++11 标准之后才生效，因此需要对 target 启用 c++11 标准，并且对于 `check_features` 检测接口，也需要传递 c++11 的语言标准给它才能通过检测。
 
@@ -326,7 +326,7 @@ target("check")
 
 设置上 c++11 语言标准后，再来执行 `xmake` 命令就能顺利通过检测和编译了。
 
-![9](实验11CC++库接口和编译器特性检测.assets/735bed4af388bfcab65b23b24c2f446a-0)
+![9](实验11CCpp库接口和编译器特性检测.assets/735bed4af388bfcab65b23b24c2f446a-0)
 
 #### 配置自定义 C/C++ 代码片段检测
 
@@ -374,7 +374,7 @@ int main(int argc, char** argv)
 
 然后执行 `xmake` 编译，如果一切顺利，就会看到下图编译通过的输出信息。
 
-![10](实验11CC++库接口和编译器特性检测.assets/da380ae16193c8b0fe07f94c0517a002-0)
+![10](实验11CCpp库接口和编译器特性检测.assets/da380ae16193c8b0fe07f94c0517a002-0)
 
 
 

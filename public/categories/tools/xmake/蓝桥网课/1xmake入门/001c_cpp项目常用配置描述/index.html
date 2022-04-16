@@ -514,15 +514,15 @@ function tagCloud(where, min, max) {
 xmake create -t static hello_static
 </code></pre>
 <p><code>-t static</code> 参数用于指定当前工程类型为静态库，后面是工程项目名，生成后的项目结构如下。</p>
-<p><img src="001C_C++%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/26ce1f0bc2d4ab2c3e64991386dfb579-0" alt="图片描述"></p>
+<p><img src="001C_Cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/26ce1f0bc2d4ab2c3e64991386dfb579-0" alt="图片描述"></p>
 <p>其中，项目根目录下还是会自动生成一个 xmake.lua 用于维护整个项目构建，而 src 源码目录下 <code>interface.cpp</code> 就是用来参与静态库编译，<code>main.cpp</code> 用来生成可执行程序，在里面调用静态库的接口。</p>
 <p>我们可以进入 hello_static 项目根目录后，执行 <code>gvim ./xmake.lua</code> 查看下里面的内容，大致如下。</p>
-<p><img src="001C_C++%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/50281287c151a7b38d0d7ecf585a28d2-0" alt="4"></p>
+<p><img src="001C_Cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/50281287c151a7b38d0d7ecf585a28d2-0" alt="4"></p>
 <p>里面有两个编译目标，通过 <code>target()</code> 定义维护，一个是 static 静态库类型，一个是 binary 可执行程序类型，它们之间通过 <code>add_deps(&quot;hello_static&quot;)</code> 进行依赖关联，这样 xmake 在编译的时候，会优先编译依赖的静态库，并且把静态库自动集成到对应的可执行程序上去。</p>
 <p>执行 <code>xmake</code> 对这个工程进行编译，如果输出结果跟下图基本一致，说明我们成功生成了一个链接静态库的目标程序。</p>
-<p><img src="001C_C++%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/4de8234eedd78b4da1331687d4b5a336-0" alt="5"></p>
+<p><img src="001C_Cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/4de8234eedd78b4da1331687d4b5a336-0" alt="5"></p>
 <p>然后我们执行 <code>xmake run</code> 运行下这个程序。</p>
-<p><img src="001C_C++%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/3af8597a38cce093c496ea1084e04e5a-0" alt="6"></p>
+<p><img src="001C_Cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/3af8597a38cce093c496ea1084e04e5a-0" alt="6"></p>
 <h4 id="动态库程序类型">动态库程序类型</h4>
 <p>动态库的创建跟静态库类似，只需要把类型名改成 <code>shared</code> 就行了，例如。</p>
 <pre><code class="language-bash">cd ~/Code
@@ -546,7 +546,7 @@ xmake
 xmake run
 </code></pre>
 <p>编译运行结果也跟静态库基本一致。</p>
-<p><img src="001C_C++%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/5e07dc323beadec5332bff84c2dc2584-0" alt="7"></p>
+<p><img src="001C_Cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/5e07dc323beadec5332bff84c2dc2584-0" alt="7"></p>
 <h4 id="phony-目标类型">Phony 目标类型</h4>
 <p>其中，phony 是一个特殊的目标程序类型，使用它定义的 target 目标不会生成任何实际的程序文件，也不会执行任何编译操作，通常用于组合其它目标程序的依赖关系，实现关联编译。</p>
 <p>为了更好的理解 phony 类型，我们这回手工创建个带有 phony 目标的工程进行测试，首先创建个空目录。</p>
@@ -559,7 +559,7 @@ cd phony_test
     set_kind(&quot;phony&quot;)
 </code></pre>
 <p>可以看到，这边我们没有添加任何源文件，这个 foo 目标仅仅只是个空目标程序，执行编译也是空执行，不会有任何源文件参与编译。</p>
-<p><img src="001C_C++%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/6eb55fd3da9f7044dcb1ca8cf2c4593a-0" alt="8"></p>
+<p><img src="001C_Cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/6eb55fd3da9f7044dcb1ca8cf2c4593a-0" alt="8"></p>
 <p>而关于使用 phony 目标跟其它目标程序的关联编译，我们会在实验 6 《xmake 基础之目标依赖》中详细讲解。</p>
 <h2 id="添加-cc-编译选项">添加 C/C++ 编译选项</h2>
 <p>在实验 2 《xmake 的基本命令使用》中，我们介绍了通过命令行的方式快速添加 C/C++ 编译选项，不过这种方式不适合永久保存和对外发布，仅仅用于本地编译。如果我们想将自己的项目发布后提供给其他用户编译，那么就需要在 xmake.lua 中去设置这些编译选项。</p>
@@ -572,7 +572,7 @@ target(&quot;hello&quot;)
     add_cxflags(&quot;-DTEST1&quot;)
 </code></pre>
 <p>通过 <code>add_cxflags(&quot;-DTEST1&quot;)</code> 设置就能对所有的 C/C++ 代码定义上 <code>TEST1</code> 宏开关，然后通过执行 <code>xmake -v</code> 查看完整编译命令中，是否真的生效了。</p>
-<p><img src="001C_C++%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/e8cce8f2cdf89db44a61e712fbd9d9db-0" alt="9"></p>
+<p><img src="001C_Cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/e8cce8f2cdf89db44a61e712fbd9d9db-0" alt="9"></p>
 <p>上图中，我们确实可以看到 <code>-DTEST1</code> 被传递到了 gcc 编译器进行宏定义。</p>
 <p>另外在上图中，我们还看到了一些编译选项的自动检测，这是由于通过 <code>add_cxflags()</code> 等设置接口添加的选项都是特定某些编译器的，并不一定是完全跨编译通用的，因此 xmake 会去检测用户的设置，如果不支持的选项被设置进去，xmake 会检测失败并提示警告信息然后忽略它。</p>
 <h4 id="添加宏定义">添加宏定义</h4>
@@ -587,7 +587,7 @@ target(&quot;hello&quot;)
     add_defines(&quot;TEST2&quot;)
 </code></pre>
 <p>然后，我们重新执行 <code>xmake -v</code> 去编译查看新增的宏定义是否生效，如图。</p>
-<p><img src="001C_C++%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/7c5bb8721171913ac459409760248b40-0" alt="10"></p>
+<p><img src="001C_Cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/7c5bb8721171913ac459409760248b40-0" alt="10"></p>
 <p>从图中，我们可以看出，相比之前的输出，新增加了一个 <code>-DTEST2</code> 宏定义参数选项传入了 gcc，说明我们的配置确实生效了。</p>
 <h4 id="头文件路径和链接库配置">头文件路径和链接库配置</h4>
 <p>xmake 也提供了方便的配置接口去配置头文件搜索路径、链接库、库搜索路径，分别是如下几个接口。</p>
@@ -618,7 +618,7 @@ target(&quot;hello&quot;)
 <li><code>-L/tmp</code>：添加链接库搜索路径。</li>
 <li><code>-lz -lpthread</code>：添加的链接库，由于我们是通过 <code>add_links</code> 添加的 zlib 库，而 pthread 库是作为系统库添加的，所以被放置在 pthread 的左边优先链接。</li>
 </ul>
-<p><img src="001C_C++%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/e39af17e83f3a839cf7aadc012ad0f70-0" alt="11"></p>
+<p><img src="001C_Cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/e39af17e83f3a839cf7aadc012ad0f70-0" alt="11"></p>
 <h4 id="设置语言标准">设置语言标准</h4>
 <p>我们可以使用 <code>set_languages</code> 接口设置目标代码编译时候的语言标准，比如是基于 c99 标准，还是 c++11、c++14 标准等。</p>
 <p>目前 xmake 支持的语言标准主要有以下几个：</p>
@@ -697,11 +697,11 @@ target(&quot;hello&quot;)
 set_languages(&quot;c99&quot;, &quot;c++11&quot;)
 </code></pre>
 <p>将这个配置添加到刚刚修改的 xmake.lua 文件中去，就跟上一节的配置方式一样，放置到 <code>target(&quot;hello&quot;)</code> 配置域下面，然后执行 <code>xmake -v</code> 看下编译输出结果。</p>
-<p><img src="001C_C++%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/35f4b7d3a34c05ccc62c7c86159b000a-0" alt="12"></p>
+<p><img src="001C_Cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/35f4b7d3a34c05ccc62c7c86159b000a-0" alt="12"></p>
 <p>由于当前没 C 代码，所以实际只有 C++11 的标准设置生效了，也就是上图红框位置的编译选项 <code>-std=c++11</code>。</p>
 <h4 id="设置编译优化">设置编译优化</h4>
 <p>其实，xmake 默认创建的工程 xmake.lua 文件中，已经设置了 <code>add_rules(&quot;mode.debug&quot;, &quot;mode.release&quot;)</code> 这两个编译规则，而默认 xmake 编译就是 release 模式编译，它会开启所有内置的编译优化选项，并不需要用户设置什么。</p>
-<p><img src="001C_C++%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/9ce81350b7740ae9abd6509ee2d8da3c-0" alt="13"></p>
+<p><img src="001C_Cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/9ce81350b7740ae9abd6509ee2d8da3c-0" alt="13"></p>
 <p>上图红框的部分都是编译优化相关的一些选项，比如最直接的 <code>-O3</code> 优化，还有 <code>-fvisibility=hidden -fvisibility-inlines-hidden</code> 用于去重一些符号字符串数据，使得编译后的程序更小。</p>
 <p>当然，我们也可以不使用 xmake 提供的内置编译规则，自己控制应该如何优化编译，比如继续改成下面配置。</p>
 <pre><code class="language-lua">target(&quot;hello&quot;)
@@ -743,7 +743,7 @@ mkdir -p src/test
 touch src/test/stub.cpp
 </code></pre>
 <p>创建好后执行 <code>xmake</code> 编译工程，如果顺利就可以看到新添加的 stub.cpp 文件也参与了编译，如下图。</p>
-<p><img src="001C_C++%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/7826a1a02f632ddfc65a68cb5012b57c-0" alt="14"></p>
+<p><img src="001C_Cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/7826a1a02f632ddfc65a68cb5012b57c-0" alt="14"></p>
 <h4 id="过滤源文件">过滤源文件</h4>
 <p>模式匹配的方式虽然很方便，但如果源码目录层级结构复杂，在添加过程中，需要排除一些不需要的文件时，就不是那么灵活了，不过 xmake 也提供了在模式匹配过程中排除一批文件的方式，同样还是这个配置接口，我们只需要通过 <code>|</code> 符号指定后面的排除匹配模式即可，例如。</p>
 <pre><code class="language-lua">target(&quot;hello&quot;)
@@ -752,7 +752,7 @@ touch src/test/stub.cpp
 </code></pre>
 <p>其中分隔符 <code>|</code> 之后的都是需要排除的文件，这些文件也同样支持匹配模式，并且可以同时添加多个过滤模式，只要中间用 <code>|</code> 分割就行了，而这里的配置就是在 <code>src/**.cpp</code> 基础上，忽略掉其中 <code>test</code> 子目录下所有的 C++ 源文件，最终的结果也就是仅仅编译 <code>src/main.cpp</code>。</p>
 <p>我们再来执行下 <code>xmake -r</code> 重新编译验证下结果，如下图。</p>
-<p><img src="001C_C++%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/1fffc429e83c688a883f3512419d9666-0" alt="15"></p>
+<p><img src="001C_Cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0.assets/1fffc429e83c688a883f3512419d9666-0" alt="15"></p>
 <p>上图中，可以看到我们成功过滤掉了 <code>src/test/stub.cpp</code> 仅仅编译 <code>src/main.cpp</code>。</p>
 <p>还有需要注意的一点是，为了使得描述上更加的精简，<code>|</code> 之后的过滤描述都是基于前一个模式：<code>src/**.cpp</code> 中 <code>*</code> 所在的目录作为根目录，也就是 <code>src</code> 目录的基础上来过滤匹配的，所以后面的过滤子模式只需要设置 <code>test/*.cpp</code> 而不是 <code>src/test/*.cpp</code>。</p>
 <h2 id="实验总结">实验总结</h2>

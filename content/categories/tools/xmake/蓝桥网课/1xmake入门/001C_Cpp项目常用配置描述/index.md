@@ -98,23 +98,23 @@ xmake create -t static hello_static
 
 `-t static` 参数用于指定当前工程类型为静态库，后面是工程项目名，生成后的项目结构如下。
 
-![图片描述](001C_C++项目常用配置描述.assets/26ce1f0bc2d4ab2c3e64991386dfb579-0)
+![图片描述](001C_Cpp项目常用配置描述.assets/26ce1f0bc2d4ab2c3e64991386dfb579-0)
 
 其中，项目根目录下还是会自动生成一个 xmake.lua 用于维护整个项目构建，而 src 源码目录下 `interface.cpp` 就是用来参与静态库编译，`main.cpp` 用来生成可执行程序，在里面调用静态库的接口。
 
 我们可以进入 hello_static 项目根目录后，执行 `gvim ./xmake.lua` 查看下里面的内容，大致如下。
 
-![4](001C_C++项目常用配置描述.assets/50281287c151a7b38d0d7ecf585a28d2-0)
+![4](001C_Cpp项目常用配置描述.assets/50281287c151a7b38d0d7ecf585a28d2-0)
 
 里面有两个编译目标，通过 `target()` 定义维护，一个是 static 静态库类型，一个是 binary 可执行程序类型，它们之间通过 `add_deps("hello_static")` 进行依赖关联，这样 xmake 在编译的时候，会优先编译依赖的静态库，并且把静态库自动集成到对应的可执行程序上去。
 
 执行 `xmake` 对这个工程进行编译，如果输出结果跟下图基本一致，说明我们成功生成了一个链接静态库的目标程序。
 
-![5](001C_C++项目常用配置描述.assets/4de8234eedd78b4da1331687d4b5a336-0)
+![5](001C_Cpp项目常用配置描述.assets/4de8234eedd78b4da1331687d4b5a336-0)
 
 然后我们执行 `xmake run` 运行下这个程序。
 
-![6](001C_C++项目常用配置描述.assets/3af8597a38cce093c496ea1084e04e5a-0)
+![6](001C_Cpp项目常用配置描述.assets/3af8597a38cce093c496ea1084e04e5a-0)
 
 #### 动态库程序类型
 
@@ -150,7 +150,7 @@ xmake run
 
 编译运行结果也跟静态库基本一致。
 
-![7](001C_C++项目常用配置描述.assets/5e07dc323beadec5332bff84c2dc2584-0)
+![7](001C_Cpp项目常用配置描述.assets/5e07dc323beadec5332bff84c2dc2584-0)
 
 #### Phony 目标类型
 
@@ -173,7 +173,7 @@ target("foo")
 
 可以看到，这边我们没有添加任何源文件，这个 foo 目标仅仅只是个空目标程序，执行编译也是空执行，不会有任何源文件参与编译。
 
-![8](001C_C++项目常用配置描述.assets/6eb55fd3da9f7044dcb1ca8cf2c4593a-0)
+![8](001C_Cpp项目常用配置描述.assets/6eb55fd3da9f7044dcb1ca8cf2c4593a-0)
 
 而关于使用 phony 目标跟其它目标程序的关联编译，我们会在实验 6 《xmake 基础之目标依赖》中详细讲解。
 
@@ -196,7 +196,7 @@ target("hello")
 
 通过 `add_cxflags("-DTEST1")` 设置就能对所有的 C/C++ 代码定义上 `TEST1` 宏开关，然后通过执行 `xmake -v` 查看完整编译命令中，是否真的生效了。
 
-![9](001C_C++项目常用配置描述.assets/e8cce8f2cdf89db44a61e712fbd9d9db-0)
+![9](001C_Cpp项目常用配置描述.assets/e8cce8f2cdf89db44a61e712fbd9d9db-0)
 
 上图中，我们确实可以看到 `-DTEST1` 被传递到了 gcc 编译器进行宏定义。
 
@@ -220,7 +220,7 @@ target("hello")
 
 然后，我们重新执行 `xmake -v` 去编译查看新增的宏定义是否生效，如图。
 
-![10](001C_C++项目常用配置描述.assets/7c5bb8721171913ac459409760248b40-0)
+![10](001C_Cpp项目常用配置描述.assets/7c5bb8721171913ac459409760248b40-0)
 
 从图中，我们可以看出，相比之前的输出，新增加了一个 `-DTEST2` 宏定义参数选项传入了 gcc，说明我们的配置确实生效了。
 
@@ -259,7 +259,7 @@ target("hello")
 - `-L/tmp`：添加链接库搜索路径。
 - `-lz -lpthread`：添加的链接库，由于我们是通过 `add_links` 添加的 zlib 库，而 pthread 库是作为系统库添加的，所以被放置在 pthread 的左边优先链接。
 
-![11](001C_C++项目常用配置描述.assets/e39af17e83f3a839cf7aadc012ad0f70-0)
+![11](001C_Cpp项目常用配置描述.assets/e39af17e83f3a839cf7aadc012ad0f70-0)
 
 #### 设置语言标准
 
@@ -294,7 +294,7 @@ set_languages("c99", "c++11")
 
 将这个配置添加到刚刚修改的 xmake.lua 文件中去，就跟上一节的配置方式一样，放置到 `target("hello")` 配置域下面，然后执行 `xmake -v` 看下编译输出结果。
 
-![12](001C_C++项目常用配置描述.assets/35f4b7d3a34c05ccc62c7c86159b000a-0)
+![12](001C_Cpp项目常用配置描述.assets/35f4b7d3a34c05ccc62c7c86159b000a-0)
 
 由于当前没 C 代码，所以实际只有 C++11 的标准设置生效了，也就是上图红框位置的编译选项 `-std=c++11`。
 
@@ -302,7 +302,7 @@ set_languages("c99", "c++11")
 
 其实，xmake 默认创建的工程 xmake.lua 文件中，已经设置了 `add_rules("mode.debug", "mode.release")` 这两个编译规则，而默认 xmake 编译就是 release 模式编译，它会开启所有内置的编译优化选项，并不需要用户设置什么。
 
-![13](001C_C++项目常用配置描述.assets/9ce81350b7740ae9abd6509ee2d8da3c-0)
+![13](001C_Cpp项目常用配置描述.assets/9ce81350b7740ae9abd6509ee2d8da3c-0)
 
 上图红框的部分都是编译优化相关的一些选项，比如最直接的 `-O3` 优化，还有 `-fvisibility=hidden -fvisibility-inlines-hidden` 用于去重一些符号字符串数据，使得编译后的程序更小。
 
@@ -366,7 +366,7 @@ touch src/test/stub.cpp
 
 创建好后执行 `xmake` 编译工程，如果顺利就可以看到新添加的 stub.cpp 文件也参与了编译，如下图。
 
-![14](001C_C++项目常用配置描述.assets/7826a1a02f632ddfc65a68cb5012b57c-0)
+![14](001C_Cpp项目常用配置描述.assets/7826a1a02f632ddfc65a68cb5012b57c-0)
 
 #### 过滤源文件
 
@@ -382,7 +382,7 @@ target("hello")
 
 我们再来执行下 `xmake -r` 重新编译验证下结果，如下图。
 
-![15](001C_C++项目常用配置描述.assets/1fffc429e83c688a883f3512419d9666-0)
+![15](001C_Cpp项目常用配置描述.assets/1fffc429e83c688a883f3512419d9666-0)
 
 上图中，可以看到我们成功过滤掉了 `src/test/stub.cpp` 仅仅编译 `src/main.cpp`。
 

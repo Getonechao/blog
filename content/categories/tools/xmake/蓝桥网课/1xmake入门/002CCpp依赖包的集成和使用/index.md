@@ -55,7 +55,7 @@ xmake create -l c crc32
 
 `-l c` 参数指定当前创建的 crc32 工程是基于 C 语言的，其目录结构如下，跟之前的 hello 项目很相似，仅仅只是 `main.cpp` 源文件变成了 `main.c`。
 
-![1](002CC++依赖包的集成和使用.assets/a05183d1a967b3542ce02f42dde97ec9-0)
+![1](002CCpp依赖包的集成和使用.assets/a05183d1a967b3542ce02f42dde97ec9-0)
 
 进入 `crc32` 目录中，执行 `vim src/main.c` 编辑源文件，编写一个简单实用、使用 zlib 库中 `crc32()` 接口去计算 crc32 的例子，代码如下。
 
@@ -72,7 +72,7 @@ int main(int argc, char** argv)
 
 上述代码通过计算输入字符串内容的 crc32 值，然后回显输出到终端上，我们先尝试下直接执行 `xmake` 命令去编译它。
 
-![2](002CC++依赖包的集成和使用.assets/c54ce38d76f600527b21fc69b7aa6b7f-0)
+![2](002CCpp依赖包的集成和使用.assets/c54ce38d76f600527b21fc69b7aa6b7f-0)
 
 通过上图，我们看到编译链接阶段报错了，缺少 `crc32` 符号，这是因为我们还没集成链接 zlib 库，继续修改 xmake.lua 文件手动加上 zlib 库以及它系统库搜索路径。
 

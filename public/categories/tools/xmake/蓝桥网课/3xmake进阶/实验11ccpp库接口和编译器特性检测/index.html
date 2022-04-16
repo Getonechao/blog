@@ -508,9 +508,9 @@ int main(int argc, char** argv)
 </code></pre>
 <p>这里仅仅判断 <code>pthread.h</code> 是否存在，不存在就直接报错。当然如果要真正的支持跨平台，我们应该处理的更完善些，比如判断 <code>pthread.h</code> 不存在，那就继续尝试其它的线程接口，比如 Windows 下的线程 API 等等。</p>
 <p>一切准备就绪后，执行 <code>xmake</code> 去编译这个工程，xmake 会在编译的前期自动检测 <code>pthread.h</code> 是否存在，如果存在，就会看到下图红线位置的检测结果，并且正常通过编译。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C11CC++%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/066c69d7e77884a8d6afea2fff22f0e0-0" alt="1"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C11CCpp%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/066c69d7e77884a8d6afea2fff22f0e0-0" alt="1"></p>
 <p>只要编译没报错，就说明检测通过并且 <code>HAS_PTHREAD_H</code> 已经被定义上了，我们也可以再执行 <code>xmake -rv</code> 重新编译查看完整的编译输出，继续确认下 <code>-DHAS_PTHREAD_H</code> 是否真的被传递到了 gcc 编译器，如图所示。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C11CC++%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/7e93c1b0ddee79d82822177ffeb2a34c-0" alt="2"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C11CCpp%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/7e93c1b0ddee79d82822177ffeb2a34c-0" alt="2"></p>
 <h4 id="配置自动生成-configh">配置自动生成 config.h</h4>
 <p>也可以将检测结果永久保存下来，并将对应检测后的宏定义放置在特定的 config.h 头文件中，这便于我们将自己项目的库头文件导出给其它独立工程使用，只需要附带提供这个 config.h 就行了。</p>
 <p>为了支持自动生成 config.h 文件，只需要修改 xmake.lua，例如。</p>
@@ -553,11 +553,11 @@ int main(int argc, char** argv)
 <p>相比之前的代码，这里还多了一行 <code>#include &quot;config.h&quot;</code> 来引入 <code>config.h</code> 头文件获取检测结果，也就是 <code>HAS_PTHREAD_H</code>。</p>
 <p>到这里为止，我们整个配置过程就算完成了。现在执行 <code>xmake</code> 命令，确认是否能够通过编译，如果编译通过，说明检测到了 pthread.h 文件，并且获取到了 <code>HAS_PTHREAD_H</code> 定义，因此也就不会报 <code>pthread.h not found!</code> 的编译错误。</p>
 <p>编译结果如下图。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C11CC++%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/7188588f22b0266c32400e7e8b4eb477-0" alt="3"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C11CCpp%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/7188588f22b0266c32400e7e8b4eb477-0" alt="3"></p>
 <p>上面红线部分提示检测正常通过，并且还自动生成了 config.h 文件，至于它的输出位置，就是之前 xmake.lua 配置中指定的 build 目录，如下图所示。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C11CC++%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/0db8d8c0a2616978363b1e1f2b3c3203-0" alt="4"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C11CCpp%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/0db8d8c0a2616978363b1e1f2b3c3203-0" alt="4"></p>
 <p>执行 <code>cat ./build/config.h</code> 命令，查看实际生成到 config.h 文件里面的内容，说明 <code>HAS_PTHREAD_H</code> 确实被定义进去了。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C11CC++%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/a1ccf23930a7c68b8df97101ce2dab6e-0" alt="5"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C11CCpp%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/a1ccf23930a7c68b8df97101ce2dab6e-0" alt="5"></p>
 <p>注：xmake 会严格按照配置在 config.h.in 里面的内容格式生成和替换模板变量，不会自己额外添加不存在的配置，关于这个配置模板，我们还可以参考下 tbox 库里面的 <a href="https://github.com/tboox/tbox/blob/master/src/tbox/tbox.config.h.in">tbox.config.h.in</a> 文件，来更直观地了解。</p>
 <h4 id="配置库接口检测">配置库接口检测</h4>
 <p>虽然刚刚完成了头文件的自动检测，但是即使检测通过，也不代表这个头文件里面有我们需要的接口，毕竟随着平台和编译环境的差异，即使相同的头文件，也会随着一些宏定义的不同，接口也会随之变动。</p>
@@ -625,9 +625,9 @@ int main(int argc, char** argv)
 }
 </code></pre>
 <p>然后执行 <code>xmake</code> 命令编译，查看是否能够检测通过、完成编译，因为在 Linux 下通常都是存在这个 setjmp 接口的，因此通常是可以编译通过的，如下图。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C11CC++%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/d530f9ac5f1324b2ea099ceeb9797afd-0" alt="6"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C11CCpp%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/d530f9ac5f1324b2ea099ceeb9797afd-0" alt="6"></p>
 <p>编译通过后，我们再来看下 <code>build/config.h</code> 里面的内容，这时 <code>${define HAS_SETJMP}</code> 模板变量已经自动变成了 <code>#define HAS_SETJMP 1</code>，说明检测顺利通过。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C11CC++%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/b4088d819d6c7a3a5d4007a66e705d80-0" alt="7"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C11CCpp%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/b4088d819d6c7a3a5d4007a66e705d80-0" alt="7"></p>
 <h2 id="配置编译器特性检测">配置编译器特性检测</h2>
 <p>由于不同的编译器对 C++ 标准的支持力度都是不同的，有些编译器可能并不支持 C++ 的一些高版本标准中的特性，这时我们就可以通过 xmake 提供的编译器特性检测接口去检测它们。</p>
 <p>这里以 C++11 的 constexpr 为例，在编译代码时，检测判断是否支持 constexpr，如果不支持，我们就不使用这个关键字。</p>
@@ -654,7 +654,7 @@ int main(int argc, char** argv)
 }
 </code></pre>
 <p>这个时候，如果我们执行 <code>xmake</code> 编译后，会发现 constexpr 的特性并没有检测通过，编译也是失败的，如下图。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C11CC++%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/6a7103828e959f4360c585ac3943ca1a-0" alt="8"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C11CCpp%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/6a7103828e959f4360c585ac3943ca1a-0" alt="8"></p>
 <p>那是因为这个关键字仅仅只在 c++11 标准之后才生效，因此需要对 target 启用 c++11 标准，并且对于 <code>check_features</code> 检测接口，也需要传递 c++11 的语言标准给它才能通过检测。</p>
 <p>因此继续修改完善 xmake.lua 配置，修改如下。</p>
 <pre><code class="language-lua">includes(&quot;check_features.lua&quot;)
@@ -666,7 +666,7 @@ target(&quot;check&quot;)
     check_features(&quot;HAS_CONSTEXPR&quot;, &quot;cxx_constexpr&quot;, {languages = &quot;c++11&quot;})
 </code></pre>
 <p>设置上 c++11 语言标准后，再来执行 <code>xmake</code> 命令就能顺利通过检测和编译了。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C11CC++%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/735bed4af388bfcab65b23b24c2f446a-0" alt="9"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C11CCpp%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/735bed4af388bfcab65b23b24c2f446a-0" alt="9"></p>
 <h4 id="配置自定义-cc-代码片段检测">配置自定义 C/C++ 代码片段检测</h4>
 <p>虽然，xmake 提供了很多内置的辅助检测接口，可以方便的检测头文件、库接口、类型定义、编译器特性等等，但是对于一些比较复杂的检测，单纯靠这些是无法满足的，这时我们还可以通过 xmake 提供的通用检测接口，也就是 C/C++ 代码片段检测，来实现任意的用户检测需求。</p>
 <p>可以在检测接口中，传入一小段 C/C++ 代码片段，来实现我们所希望的检测逻辑，其中 <code>check_csnippets</code> 用于检测 C 代码片段，而 <code>check_cxxsnippets</code> 用于检测 C++ 代码片段。</p>
@@ -701,7 +701,7 @@ int main(int argc, char** argv)
 }
 </code></pre>
 <p>然后执行 <code>xmake</code> 编译，如果一切顺利，就会看到下图编译通过的输出信息。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C11CC++%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/da380ae16193c8b0fe07f94c0517a002-0" alt="10"></p>
+<p><img src="%E5%AE%9E%E9%AA%8C11CCpp%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B.assets/da380ae16193c8b0fe07f94c0517a002-0" alt="10"></p>
 <h2 id="实验总结">实验总结</h2>
 <p>在本节实验中，我们了解了怎样才能实现跨平台开发和编译，并且主要学习了如何去使用 xmake 提供的辅助接口来配置检测 C/C++ 的头文件、库接口是否存在，以及检测指定的编译器特性和 C/C++ 代码片段是否能够支持并使用。</p>
 <p>本实验的参考代码可以使用如下命令下载：</p>
@@ -745,7 +745,7 @@ int main(int argc, char** argv)
     <div class="bar-inner">
         <ul class="pager pull-left">
             <li class="prev">
-                <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C10c_cpp%E9%A2%84%E7%BC%96%E8%AF%91%E5%A4%B4%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/" title="实验10C_C&#43;&#43;预编译头文件配置"><i
+                <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C10c_cpp%E9%A2%84%E7%BC%96%E8%AF%91%E5%A4%B4%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/" title="实验10C_Cpp预编译头文件配置"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
             </li>

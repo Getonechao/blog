@@ -463,7 +463,7 @@ function tagCloud(where, min, max) {
 xmake create -l c crc32
 </code></pre>
 <p><code>-l c</code> 参数指定当前创建的 crc32 工程是基于 C 语言的，其目录结构如下，跟之前的 hello 项目很相似，仅仅只是 <code>main.cpp</code> 源文件变成了 <code>main.c</code>。</p>
-<p><img src="002CC++%E4%BE%9D%E8%B5%96%E5%8C%85%E7%9A%84%E9%9B%86%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8.assets/a05183d1a967b3542ce02f42dde97ec9-0" alt="1"></p>
+<p><img src="002CCpp%E4%BE%9D%E8%B5%96%E5%8C%85%E7%9A%84%E9%9B%86%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8.assets/a05183d1a967b3542ce02f42dde97ec9-0" alt="1"></p>
 <p>进入 <code>crc32</code> 目录中，执行 <code>vim src/main.c</code> 编辑源文件，编写一个简单实用、使用 zlib 库中 <code>crc32()</code> 接口去计算 crc32 的例子，代码如下。</p>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 #include &lt;zlib.h&gt;
@@ -475,7 +475,7 @@ int main(int argc, char** argv)
 }
 </code></pre>
 <p>上述代码通过计算输入字符串内容的 crc32 值，然后回显输出到终端上，我们先尝试下直接执行 <code>xmake</code> 命令去编译它。</p>
-<p><img src="002CC++%E4%BE%9D%E8%B5%96%E5%8C%85%E7%9A%84%E9%9B%86%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8.assets/c54ce38d76f600527b21fc69b7aa6b7f-0" alt="2"></p>
+<p><img src="002CCpp%E4%BE%9D%E8%B5%96%E5%8C%85%E7%9A%84%E9%9B%86%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8.assets/c54ce38d76f600527b21fc69b7aa6b7f-0" alt="2"></p>
 <p>通过上图，我们看到编译链接阶段报错了，缺少 <code>crc32</code> 符号，这是因为我们还没集成链接 zlib 库，继续修改 xmake.lua 文件手动加上 zlib 库以及它系统库搜索路径。</p>
 <pre><code class="language-lua">target(&quot;crc32&quot;)
     set_kind(&quot;binary&quot;)
