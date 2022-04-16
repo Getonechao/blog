@@ -57,28 +57,28 @@
     
     <item>
       <title>实验11C/C&#43;&#43; 库接口和编译器特性检测</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C11cc&#43;&#43;%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B/</link>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C11ccpp%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B/</link>
       <pubDate>Thu, 15 Jul 2021 10:36:50 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C11cc&#43;&#43;%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C11ccpp%E5%BA%93%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%B9%E6%80%A7%E6%A3%80%E6%B5%8B/</guid>
       <description>C/C++ 库接口和编译器特性检测 在本节实验中，我们会学习到 C/C++ 跨平台开发中一些基础知识和注意点，以及如何使用 xmake 去检测不同编译环境中的 C/C++ 库头文件、库接口</description>
     </item>
     
     <item>
       <title>实验10C_C&#43;&#43;预编译头文件配置</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C10c_c&#43;&#43;%E9%A2%84%E7%BC%96%E8%AF%91%E5%A4%B4%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/</link>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C10c_cpp%E9%A2%84%E7%BC%96%E8%AF%91%E5%A4%B4%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Thu, 15 Jul 2021 10:36:46 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C10c_c&#43;&#43;%E9%A2%84%E7%BC%96%E8%AF%91%E5%A4%B4%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C10c_cpp%E9%A2%84%E7%BC%96%E8%AF%91%E5%A4%B4%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/</guid>
       <description>C_C++预编译头文件配置 在本节实验中，我们会学习到 C/C++ 预编译头文件的一些基本概念，了解如何在 xmake 中配置开启头文件预编译，以及会做一些对比测试来</description>
     </item>
     
     <item>
       <title>实验9C/C&#43;&#43; 子工程和目录结构</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C9c_c&#43;&#43;%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</link>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C9c_cpp%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</link>
       <pubDate>Thu, 15 Jul 2021 10:36:45 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C9c_c&#43;&#43;%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C9c_cpp%E5%AD%90%E5%B7%A5%E7%A8%8B%E5%92%8C%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</guid>
       <description>C/C++ 子工程和目录结构 在本节实验中，我们会学到如何使用 xmake 去实现对更加复杂的大型 C/C++ 项目的构建维护，以及如何使用 includes 接口，并且还能了解和掌握子工程之间</description>
     </item>
     
@@ -120,19 +120,19 @@
     
     <item>
       <title>002C/C&#43;&#43; 依赖包的集成和使用</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/002cc&#43;&#43;%E4%BE%9D%E8%B5%96%E5%8C%85%E7%9A%84%E9%9B%86%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8/</link>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/002ccpp%E4%BE%9D%E8%B5%96%E5%8C%85%E7%9A%84%E9%9B%86%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Thu, 15 Jul 2021 10:36:40 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/002cc&#43;&#43;%E4%BE%9D%E8%B5%96%E5%8C%85%E7%9A%84%E9%9B%86%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/002ccpp%E4%BE%9D%E8%B5%96%E5%8C%85%E7%9A%84%E9%9B%86%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8/</guid>
       <description>C/C++ 依赖包的集成和使用 在本节实验中，我们可以学习到如何快速集成第三方的 C/C++ 依赖包，以及与第三方包仓库的接入集成。 知识点 xmake 包管理的整体架构流程 系统</description>
     </item>
     
     <item>
       <title>001C_C&#43;&#43;项目常用配置描述</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/001c_c&#43;&#43;%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0/</link>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/001c_cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0/</link>
       <pubDate>Thu, 15 Jul 2021 10:36:39 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/001c_c&#43;&#43;%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/001c_cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0/</guid>
       <description>C_C++项目 在本节实验中，我们可以学习到一些编译器和链接器相关的基本概念，并且掌握 xmake.lua 中的一些基础配置，比如：C/C++ 头文件、链接库的配置</description>
     </item>
     
