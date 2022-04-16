@@ -1,5 +1,4 @@
 +++
-
 title= "实验10C_C++预编译头文件配置"
 description= "蓝桥网课xmake笔记"
 date= 2021-07-15T10:36:46+08:00
@@ -10,11 +9,9 @@ math= true
 categories= [
     "tools"
 ]
-
 tags=  [
     "xmake"
 ]
-
 +++
 
 # C_C++预编译头文件配置

@@ -1,5 +1,4 @@
 +++
-
 title= "001C_C++项目常用配置描述"
 description= "蓝桥网课xmake笔记"
 date= 2021-07-15T10:36:39+08:00
@@ -7,11 +6,9 @@ author= "chao"
 draft= false
 image= "" 
 math= true
-
 categories= [
     "tools"
 ]
-
 tags=  [
     "xmake"
 ]

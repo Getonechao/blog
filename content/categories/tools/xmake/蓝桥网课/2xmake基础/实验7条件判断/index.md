@@ -1,6 +1,6 @@
 +++
 
-title= "实验6条件判断"
+title= "实验7条件判断"
 description= "蓝桥网课xmake笔记"
 date= 2021-07-15T10:36:43+08:00
 author= "chao"

@@ -1,5 +1,4 @@
 +++
-
 title= "实验9C/C++ 子工程和目录结构"
 description= "蓝桥网课xmake笔记"
 date= 2021-07-15T10:36:45+08:00
@@ -7,7 +6,6 @@ author= "chao"
 draft= false
 image= "" 
 math= true
-
 categories= [
     "tools"
 ]
@@ -15,7 +13,6 @@ categories= [
 tags=  [
     "xmake"
 ]
-
 +++
 
 # C/C++ 子工程和目录结构
