@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>os on Getone超</title>
+    <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/</link>
+    <description>Recent content in os on Getone超</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>CC BY 4.0 CN</copyright>
+    <lastBuildDate>Fri, 01 Apr 2022 13:25:02 +0800</lastBuildDate>
+    
+        <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记1</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/1/</link>
+      <pubDate>Thu, 15 Apr 2021 12:46:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/1/</guid>
+      <description>条款05： C++默认编写并调用那些函数 默认创建 class Base { public： defualt构造函数 copy构造函数 copy assignment操作符 析构函数</description>
+    </item>
+    
+  </channel>
+</rss>

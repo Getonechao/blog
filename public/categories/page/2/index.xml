@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Fri, 15 Apr 2022 10:36:38 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 17 Apr 2022 15:40:32 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>实验17工程生成插件使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C17%E5%B7%A5%E7%A8%8B%E7%94%9F%E6%88%90%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 15 Jul 2021 10:37:05 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C17%E5%B7%A5%E7%A8%8B%E7%94%9F%E6%88%90%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/</guid>
+      <description>工程生成插件使用 在本节实验中，我们主要学习如何使用 xmake project 工程生成插件去生成各种第三方的工程文件，例如：Makefile、CMakeLists.</description>
+    </item>
     
     <item>
       <title>实验16脚本运行插件使用</title>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/3/</guid>
       <description>接口的设计与声明 接口设计的准则： 让接口容易被正确使用，不容易被误用。 什么是接口？ ​ 内部实现细节封装起来，外部用户用过预留的接口可以使用接口的</description>
-    </item>
-    
-    <item>
-      <title>《C&#43;&#43; Effective》-读书笔记1</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/1/</link>
-      <pubDate>Thu, 15 Apr 2021 12:46:11 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/1/</guid>
-      <description>条款05： C++默认编写并调用那些函数 默认创建 class Base { public： defualt构造函数 copy构造函数 copy assignment操作符 析构函数</description>
     </item>
     
   </channel>

@@ -27,6 +27,7 @@ tags=  [
 ~~~shell
 math类
 hugo new categories/math/
+--> hugo new categories/math/signalsAndSystems/
 
 net类
 hugo new categories/net/
