@@ -17,7 +17,7 @@
       <pubDate>Sun, 17 Apr 2022 15:40:32 +0800</pubDate>
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/signalsandsystems/bookmark1/</guid>
-      <description>LTS</description>
+      <description>LTS 卷积的概念 连续系统: $$(f * g)(n)=\int_{-\infty}^{\infty} f(\tau) g(n-\tau) d \tau$$ 离散系统: $$(f * g)(n)=\sum_{\tau=-\infty}^{\infty} f(\tau) g(n-\tau)$$ 卷积这个名词的理解：**所谓两个函数的卷积，本质上就是先将一个函数翻转，然后进行滑动</description>
     </item>
     
     <item>

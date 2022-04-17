@@ -39,7 +39,7 @@
 <meta itemprop="name" content="《信号与系统》读书笔记1--LTS">
 <meta itemprop="description" content="《信号与系统》奥本海默--线性时不变系统(LTS)"><meta itemprop="datePublished" content="2022-04-17T15:40:32+08:00" />
 <meta itemprop="dateModified" content="2022-04-17T15:40:32+08:00" />
-<meta itemprop="wordCount" content="1">
+<meta itemprop="wordCount" content="292">
 <meta itemprop="keywords" content="book ,project," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="《信号与系统》读书笔记1--LTS"/>
 <meta name="twitter:description" content="《信号与系统》奥本海默--线性时不变系统(LTS)"/>
@@ -437,12 +437,53 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 292字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
       <h1 id="lts">LTS</h1>
+<h2 id="卷积的概念">卷积的概念</h2>
+<blockquote>
+<p>连续系统:</p>
+<p>$$(f * g)(n)=\int_{-\infty}^{\infty} f(\tau) g(n-\tau) d \tau$$</p>
+<p>离散系统:</p>
+<p>$$(f * g)(n)=\sum_{\tau=-\infty}^{\infty} f(\tau) g(n-\tau)$$</p>
+</blockquote>
+<p>  卷积这个名词的理解：**所谓两个函数的卷积，本质上就是先将一个函数翻转，然后进行滑动叠加。**在连续情况下，叠加指的是对两个函数的乘积求积分。在离散情况下就是加权求和，为简单起见就统一称为叠加。</p>
+<style>
+    .aspect-ratio {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 75%;
+        }
+          
+    .aspect-ratio iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        }
+    </style>
+          
+    
+    <div align=center class="aspect-ratio">
+        <iframe src="https://player.bilibili.com/player.html?aid=713651125&&page=1&as_wide=1&high_quality=1&danmaku=1" 
+        scrolling="no" 
+        border="0" 
+        frameborder="no" 
+        framespacing="0" 
+        allowfullscreen="true"> 
+        </iframe>
+    </div>
+<h2 id="离散时间线性时不变lts系统卷积和">离散时间线性时不变(LTS)系统：卷积和</h2>
+<ul>
+<li>$x[n]=\sum_{k=-\infty}^{+\infty}x[k]\delta [n-k]$&mdash;&mdash;$x[k]$是线性组合式中的权因子</li>
+<li>$y[n]=\sum_{k=-\infty}^{+\infty}x[k]h_{k} [n]$，令<font color="red">$h_{k}[n]$(即$h_{0}[n-k]$)为线性系统对移动单位脉冲$\delta[n-k]$的响应</font></li>
+<li>LTS系统的单位脉冲响应可以完全刻画系统的特征。</li>
+</ul>
 
     </div>
     <div class="article-footer">
