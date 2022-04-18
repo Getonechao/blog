@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> matlab on Getone超</title>
+    <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/matlab/</link>
+    <description>Recent content in  matlab on Getone超</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>CC BY 4.0 CN</copyright>
+    <lastBuildDate>Mon, 18 Apr 2022 21:17:05 +0800</lastBuildDate>
+    
+        <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/matlab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记2</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/2/</link>
+      <pubDate>Thu, 15 Apr 2021 12:47:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/2/</guid>
+      <description>资源管理 资源：一旦用了它，将来必须还给系统。 譬如：动态分配内存、文件描述器、互斥锁、图形界面中的字型和笔刷、数据库连接、网络sockets。</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记3</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/3/</link>
+      <pubDate>Thu, 15 Apr 2021 12:47:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/3/</guid>
+      <description>接口的设计与声明 接口设计的准则： 让接口容易被正确使用，不容易被误用。 什么是接口？ ​ 内部实现细节封装起来，外部用户用过预留的接口可以使用接口的</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记1</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/1/</link>
+      <pubDate>Thu, 15 Apr 2021 12:46:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/1/</guid>
+      <description>条款05： C++默认编写并调用那些函数 默认创建 class Base { public： defualt构造函数 copy构造函数 copy assignment操作符 析构函数</description>
+    </item>
+    
+  </channel>
+</rss>

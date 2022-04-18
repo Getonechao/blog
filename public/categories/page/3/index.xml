@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Mon, 18 Apr 2022 09:19:39 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 18 Apr 2022 21:17:05 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记2</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/2/</link>
+      <pubDate>Thu, 15 Apr 2021 12:47:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/2/</guid>
+      <description>资源管理 资源：一旦用了它，将来必须还给系统。 譬如：动态分配内存、文件描述器、互斥锁、图形界面中的字型和笔刷、数据库连接、网络sockets。</description>
+    </item>
     
     <item>
       <title>《C&#43;&#43; Effective》-读书笔记3</title>

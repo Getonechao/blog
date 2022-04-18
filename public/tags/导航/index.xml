@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>画图</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/matlab/%E7%94%BB%E5%9B%BE/</link>
+      <pubDate>Mon, 18 Apr 2022 21:17:05 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/matlab/%E7%94%BB%E5%9B%BE/</guid>
+      <description>Matlab中一些画图方式 符号表达式画图 fimplicit 隐函数 fimplicit3 Plot 3-D implicit equation or function fmesh Plot 3-D mesh fplot 一般式、参数方程 fplot3 Plot 3-D parametric curve fsurf Plot 3-D surface ezpolar 极坐标 fcontour 3维，等高线 例子 figure(1); syms f(t); f=5*exp(-0.8*t)*sin(pi*t);</description>
+    </item>
+    
+    <item>
       <title>Bookmark2</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/signalsandsystems/bookmark2/</link>
       <pubDate>Mon, 18 Apr 2022 09:19:39 +0800</pubDate>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/4xmake%E5%AE%9E%E6%88%98/%E5%AE%9E%E9%AA%8C20xmake-%E4%B8%8E-vscode-%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83%E4%BD%BF%E7%94%A8/</guid>
       <description>在本节实验中，我们将学习如何在 vscode 中使用 xmake 编译开发 C/C++ 程序，如何进行断点调试以及 xmake-vscode 插件的一些基本操作和使用。 知识点 xmake-vscode 插件基本使用 使用插件进行断点</description>
-    </item>
-    
-    <item>
-      <title>实验19libjpeg 开源库移植</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/4xmake%E5%AE%9E%E6%88%98/%E5%AE%9E%E9%AA%8C19libjpeg%E5%BC%80%E6%BA%90%E5%BA%93%E7%A7%BB%E6%A4%8D/</link>
-      <pubDate>Thu, 15 Jul 2021 10:37:10 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/4xmake%E5%AE%9E%E6%88%98/%E5%AE%9E%E9%AA%8C19libjpeg%E5%BC%80%E6%BA%90%E5%BA%93%E7%A7%BB%E6%A4%8D/</guid>
-      <description>libjpeg 开源库移植 在本节实验中，我们会学习到如何使用 xmake 去移植编译第三方库 libjpeg 源码，以及如何将移植好的库快速集成进自己的 C/C++ 工程中去使用。 知识点 autotools 介绍和</description>
     </item>
     
   </channel>
