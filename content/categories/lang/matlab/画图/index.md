@@ -40,6 +40,8 @@ tags=  [
  fplot(f,[0,5]);
 ~~~
 
+<img src="index.assets/image-20220418214044251.png" alt="image-20220418214044251" style="zoom:67%;" />
+
 ## 符号表达式-动画
 
 |                                                              |                                                              |
