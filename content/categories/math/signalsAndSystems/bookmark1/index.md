@@ -32,6 +32,8 @@ tags=  [
 
 {{< bilibili 713651125>}}
 
+![](index.assets/OIP.JmUpfqJNtTPGMzVgTXGggwHaBZ)
+
  ## 离散时间线性时不变(LTS)系统：卷积和
 
 - $x[n]=\sum_{k=-\infty}^{+\infty}x[k]\delta [n-k]$------$x[k]$是线性组合式中的权因子

@@ -6,10 +6,19 @@
     <description>Recent content on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Sun, 17 Apr 2022 15:40:32 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 18 Apr 2022 09:19:39 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bookmark2</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/signalsandsystems/bookmark2/</link>
+      <pubDate>Mon, 18 Apr 2022 09:19:39 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/signalsandsystems/bookmark2/</guid>
+      <description>周期信号的傅里叶级数表示 知识回顾 欧拉公式 复分析的欧拉公式特例 假设$z=r(cos(\theta )+ isin(\theta))$ 复数的乘除公式 $$Z_{1}Z_{2}=(r_{1}r_{2})(cos(ArgZ_{1}+Arg Z_{2})+isin(ArgZ_{1}+ArgZ_{2}))$$ $$\frac{Z_{1}}{Z_{2}}=(\frac{r_{1}}{r_{2}} )(cos(ArgZ_{1}-Arg Z_{2})+isin(ArgZ_{1}-ArgZ_{2}))$$ 复数的乘幂公式</description>
+    </item>
     
     <item>
       <title>《信号与系统》读书笔记1--LTS</title>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/4xmake%E5%AE%9E%E6%88%98/%E5%AE%9E%E9%AA%8C19libjpeg%E5%BC%80%E6%BA%90%E5%BA%93%E7%A7%BB%E6%A4%8D/</guid>
       <description>libjpeg 开源库移植 在本节实验中，我们会学习到如何使用 xmake 去移植编译第三方库 libjpeg 源码，以及如何将移植好的库快速集成进自己的 C/C++ 工程中去使用。 知识点 autotools 介绍和</description>
-    </item>
-    
-    <item>
-      <title>实验18插件开发详解</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C18%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E8%AF%A6%E8%A7%A3/</link>
-      <pubDate>Thu, 15 Jul 2021 10:37:08 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C18%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E8%AF%A6%E8%A7%A3/</guid>
-      <description>插件开发详解 在本节实验中，我们会学习到如何去编写和运行一个基于 xmake 的扩展插件，另外我们还会学习到如何在 xmake.lua 中去配置定义内部任务，以及如何去直接调</description>
     </item>
     
   </channel>
