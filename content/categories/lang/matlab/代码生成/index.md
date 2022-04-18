@@ -32,6 +32,12 @@ ans= 'f\left(t\right)=5\,{\mathrm{e}}^{-\frac{4\,t}{5}}\,\sin\left(\pi \,t\right
 
 ## Mathml
 
+~~~matlab
+syms f(t);
+ y=f==5*exp(-0.8*t)*sin(pi*t);
+ mathml(y)
+~~~
+
 <math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
        <mrow>
          <mrow>
@@ -81,3 +87,27 @@ ans= 'f\left(t\right)=5\,{\mathrm{e}}^{-\frac{4\,t}{5}}\,\sin\left(\pi \,t\right
        </mrow>
      </math>
 
+# C
+
+~~~matlab
+ 1. 得到一个函数表达式
+ syms f(t);
+ f=5*exp(-0.8*t)*sin(pi*t);
+ ccode(f)
+ 
+ 2. 矩阵
+ I3 = sym(eye(3));
+ I3code = ccode(I3)
+ 
+~~~
+
+结果
+
+    ans ='  t0 = exp(t*(-4.0/5.0))*sin(t*3.141592653589793)*5.0;'
+
+```
+I3code =
+    '  I3[0][0] = 1.0;
+       I3[1][1] = 1.0;
+       I3[2][2] = 1.0;'
+```
