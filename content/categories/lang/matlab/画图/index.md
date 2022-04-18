@@ -65,3 +65,4 @@ writeAnimation('wheel.gif')%保存为GIF
 ~~~
 
 ![wheel](index.assets/wheel.gif)
+

@@ -3,28 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/matlab/</loc>
-    <lastmod>2022-04-18T21:17:05+08:00</lastmod>
+    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/boke/</loc>
+    <lastmod>2022-04-18T21:58:01+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/</loc>
-    <lastmod>2022-04-18T21:17:05+08:00</lastmod>
+    <lastmod>2022-04-18T21:58:01+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/</loc>
-    <lastmod>2022-04-18T21:17:05+08:00</lastmod>
+    <lastmod>2022-04-18T21:58:01+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/</loc>
+    <lastmod>2022-04-18T21:58:01+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/matlab/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/</loc>
+    <lastmod>2022-04-18T21:58:01+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/matlab/</loc>
     <lastmod>2022-04-18T21:17:05+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -47,13 +61,6 @@
   <url>
     <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/</loc>
     <lastmod>2022-04-18T21:17:05+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/boke/</loc>
-    <lastmod>2022-04-18T09:19:39+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
