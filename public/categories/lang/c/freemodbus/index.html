@@ -39,7 +39,7 @@
 <meta itemprop="name" content="Freemodbus">
 <meta itemprop="description" content="freemodbus的使用"><meta itemprop="datePublished" content="2022-04-19T09:01:21+08:00" />
 <meta itemprop="dateModified" content="2022-04-19T09:01:21+08:00" />
-<meta itemprop="wordCount" content="597">
+<meta itemprop="wordCount" content="1032">
 <meta itemprop="keywords" content="project," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Freemodbus"/>
 <meta name="twitter:description" content="freemodbus的使用"/>
@@ -446,8 +446,8 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 597字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2分 </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1032字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -535,6 +535,94 @@ function tagCloud(where, min, max) {
  * }
 </code></pre>
 <h3 id="rtu">RTU</h3>
+<pre><code>#include &lt;iostream&gt;
+
+#include &quot;mb.h&quot;
+#include &quot;mbport.h&quot;
+#define REG_INPUT_START 1000    /* 输入寄存器开始地址 */
+#define REG_INPUT_NREGS 4     /* usRegInputBuf数组大小 */
+#define REG_HOLDING_START 2000  /* 保持寄存器开始地址 */
+#define REG_HOLDING_NREGS 130  /* usRegHoldingBuf数组大小 */
+
+int main()
+{
+    /*RTUm模式 从机地址 uart 波特率 奇偶无校验 */
+    eMBInit( MB_RTU, 0x05,0,115200, MB_PAR_NONE );
+
+    if(eMBEnable( )== MB_ENOERR)
+    {  
+        for( ;; )
+        {
+            // Call the main polling loop of the Modbus protocol stack.
+            if( eMBPoll(  ) != MB_ENOERR )
+            break;
+        }
+        std::cerr&lt;&lt;&quot;err: eMBPoll failed!&quot;;
+    }
+    else
+    {
+        std::cerr&lt;&lt;&quot;err: eMBEnable failed!&quot;;
+    }
+    return 0;
+}
+
+/* ----------------------- Static variables ---------------------------------*/
+static USHORT   usRegInputStart = REG_INPUT_START;
+static USHORT   usRegInputBuf[REG_INPUT_NREGS]={0x1,0x2,0x3,0x4}; //输入寄存器数组
+static USHORT   usRegHoldingStart = REG_HOLDING_START;
+static USHORT   usRegHoldingBuf[REG_HOLDING_NREGS];//保持寄存器数组
+
+
+/* 输入寄存器 */
+eMBErrorCode  eMBRegInputCB( UCHAR * pucRegBuffer, USHORT usAddress,USHORT usNRegs )
+{
+    
+    eMBErrorCode    eStatus = MB_ENOERR;
+    int             iRegIndex;
+    std::cout&lt;&lt;&quot;enter\n&quot;;
+
+    /**
+     * 满足条件：
+     *  1. 主机请求地址大于REG_INPUT_START
+     *  2. 主机请求数据量不超过 usRegInputBuf数组大小
+     */
+    if( ( usAddress &gt;= REG_INPUT_START )
+    &amp;&amp; ( usAddress + usNRegs &lt;= REG_INPUT_START + REG_INPUT_NREGS ) )
+    {
+        iRegIndex = ( int )( usAddress - usRegInputStart );
+        while( usNRegs &gt; 0 )
+        {
+            *pucRegBuffer++ = ( unsigned char )( usRegInputBuf[iRegIndex] &gt;&gt; 8 );
+            *pucRegBuffer++ = ( unsigned char )( usRegInputBuf[iRegIndex] &amp; 0xFF );
+            iRegIndex++;
+            usNRegs--;
+        }
+    }
+    else
+    {
+        eStatus = MB_ENOREG;
+    }
+
+    return eStatus;
+}
+
+/* 保持寄存器 */
+eMBErrorCode   eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress,USHORT usNRegs, eMBRegisterMode eMode )
+{
+
+}
+/* 线圈寄存器 */
+eMBErrorCode   eMBRegCoilsCB( UCHAR * pucRegBuffer, USHORT usAddress,USHORT usNCoils, eMBRegisterMode eMode )
+{
+
+}
+/* 离散输入寄存器 */
+eMBErrorCode    eMBRegDiscreteCB( UCHAR * pucRegBuffer, USHORT usAddress,USHORT usNDiscrete )
+{
+
+}
+
+</code></pre>
 
     </div>
     <div class="article-footer">
