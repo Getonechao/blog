@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Mon, 18 Apr 2022 21:17:05 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 19 Apr 2022 15:57:41 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>000xmake入门</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/000xmake%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:38 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/000xmake%E5%85%A5%E9%97%A8/</guid>
+      <description>xmake 入门 知识点 xmake 子命令介绍和使用 xmake 的帮助菜单介绍 如何配置编译，编译器工具链的切换 xmake 的自我更新升级 一 ​ 在介绍 xmake 命令行程序的各种子命令前，我们先介</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记5</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/5/</link>
+      <pubDate>Thu, 15 Apr 2021 12:51:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/5/</guid>
+      <description>继承与面向对象设计 条款32：确定你的public继承塑模出“is-a”（是一种）关系 结论 “public继承关系”意味is-a。适用于base</description>
+    </item>
     
     <item>
       <title>《C&#43;&#43; Effective》-读书笔记4</title>

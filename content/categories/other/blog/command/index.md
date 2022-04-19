@@ -38,11 +38,14 @@ hugo new categories/os/
 robat类
 hugo new categories/robat/
 
-other类
-hugo new categories/other/
-
 lang类
 hugo new categories/lang/
+
+tools类
+hugo new categories/tools/
+
+other类
+hugo new categories/other/
 ~~~
 
 
