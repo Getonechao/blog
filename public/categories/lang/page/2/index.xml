@@ -6,10 +6,19 @@
     <description>Recent content in lang on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Mon, 18 Apr 2022 21:17:05 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 Apr 2022 00:18:44 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>矩阵论之二</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%BA%8C/</link>
+      <pubDate>Tue, 22 Mar 2022 18:50:49 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%BA%8C/</guid>
+      <description>矩阵论之二</description>
+    </item>
     
     <item>
       <title>矩阵论之一</title>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/002ccpp%E4%BE%9D%E8%B5%96%E5%8C%85%E7%9A%84%E9%9B%86%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8/</guid>
       <description>C/C++ 依赖包的集成和使用 在本节实验中，我们可以学习到如何快速集成第三方的 C/C++ 依赖包，以及与第三方包仓库的接入集成。 知识点 xmake 包管理的整体架构流程 系统</description>
-    </item>
-    
-    <item>
-      <title>001C_C&#43;&#43;项目常用配置描述</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/001c_cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0/</link>
-      <pubDate>Thu, 15 Jul 2021 10:36:39 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/1xmake%E5%85%A5%E9%97%A8/001c_cpp%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8F%8F%E8%BF%B0/</guid>
-      <description>C_C++项目 在本节实验中，我们可以学习到一些编译器和链接器相关的基本概念，并且掌握 xmake.lua 中的一些基础配置，比如：C/C++ 头文件、链接库的配置</description>
     </item>
     
   </channel>

@@ -7,11 +7,11 @@ draft= true
 image= "" 
 math= true
 categories= [
-    "c"
+    "lang"
 ]
 
 tags=  [
-    "project"
+    "project","c"
 ]
 
 +++
