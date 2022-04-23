@@ -27,7 +27,7 @@ sudo nano /etc/apt/sources.list
 
 ~~~
 
-### 清华源
+###### 清华源
 
 ~~~
  # 清华源
@@ -55,7 +55,7 @@ deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restric
 
 ~~~
 
-### 阿里源
+###### 阿里源
 
 ~~~
 18.04
@@ -83,7 +83,7 @@ deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe m
 deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
 ~~~
 
-### 更新源
+###### 更新源
 ~~~
 sudo apt-get update
 ~~~
