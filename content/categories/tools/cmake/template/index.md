@@ -20,12 +20,15 @@ tags=  [
 # Cmake模板
 
 ~~~cmake
+
 cmake_minimum_required(VERSION 3.1)
+
 project(PROJECT_XXX VERSION 0.0.0.0 )
 
 #C/C++标准
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_C_STANDARD 11)
+
 #设置编译器
 set (CMAKE_C_COMPILER "/usr/bin/gcc")
 set (CMAKE_CXX_COMPILER "/usr/bin/g++")
