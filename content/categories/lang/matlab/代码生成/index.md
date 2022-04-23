@@ -7,11 +7,11 @@ draft= true
 image= "" 
 math= true
 categories= [
-    "boke"
+    "lang"
 ]
 
 tags=  [
-    " "," "
+    " matlab"
 ]
 
 +++

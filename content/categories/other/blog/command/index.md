@@ -1,6 +1,6 @@
 +++
-title= "Command"
-description= "一些部署博客的常用指令"
+title= "一些部署博客的常用指令"
+description= "command"
 date= 2022-04-15T10:36:38+08:00
 author= "somebody"
 draft= false
@@ -11,7 +11,7 @@ categories= [
 ]
 
 tags=  [
-    "blog"
+    "blog","command"
 ]
 
 +++

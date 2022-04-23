@@ -6,10 +6,19 @@
     <description>Recent content in Linux on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Fri, 01 Apr 2022 13:11:10 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 23 Apr 2022 15:19:00 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ubuntu系统初始化常用一些指令</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/linux/command/</link>
+      <pubDate>Sat, 23 Apr 2022 15:19:00 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/linux/command/</guid>
+      <description>ubuntu系统初始化常用一些指令 换源 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak sudo nano /etc/apt/sources.list 清华源 # 清华源 18.04 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse deb-src</description>
+    </item>
     
     <item>
       <title>Libmodbus</title>
@@ -75,7 +84,7 @@
     </item>
     
     <item>
-      <title>Command</title>
+      <title>一些部署博客的常用指令</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/blog/command/</link>
       <pubDate>Fri, 15 Apr 2022 10:36:38 +0800</pubDate>
       
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</guid>
       <description>ros学习之旅1 ros学习网站收集 Ros官网 wiki.ros.org 中国大学MOOC&amp;mdash;《机器人操作系统入门》课程讲义 中国大学MOOC&amp;mdash;《智</description>
-    </item>
-    
-    <item>
-      <title>如何在wsl1中使用网络代理？</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/net/wsl1/test-post/</link>
-      <pubDate>Wed, 23 Mar 2022 20:09:16 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/net/wsl1/test-post/</guid>
-      <description>如何在wsl1中使用网络代理？ 代理工具 polipo proxychain 前提条件 v2ray中开启允许局域网连接 记住以下ip:port 开始代理 polipo 参考博客：为 windows wsl 配置 socks5 代理 (github.com)</description>
     </item>
     
   </channel>

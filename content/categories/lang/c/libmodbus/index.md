@@ -46,3 +46,4 @@ sudo make install
 - [【嵌入式】Libmodbus源码分析(四)-RTU相关函数分析_沧海一笑-dj的博客-CSDN博客](https://dengjin.blog.csdn.net/article/details/116752863)
 - [【嵌入式】Libmodbus源码分析(五)-TCP相关函数分析_沧海一笑-dj的博客-CSDN博客](https://dengjin.blog.csdn.net/article/details/116753916)
 - [【嵌入式】嵌入式天地博客汇总_沧海一笑-dj的博客-CSDN博客](https://dengjin.blog.csdn.net/article/details/116999754)
+- [libmodbus官方手册中文翻译_跃动的风的博客-CSDN博客_libmodbus使用说明](https://blog.csdn.net/qq_23670601/article/details/82155378?ops_request_misc=&request_id=&biz_id=102&utm_term=libmodbus debug&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-82155378.142^v9^pc_search_result_control_group,157^v4^new_style&spm=1018.2226.3001.4187)
