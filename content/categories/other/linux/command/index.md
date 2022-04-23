@@ -91,7 +91,7 @@ sudo apt-get update
 ## 安装工具
 
 ~~~sh
-sudo apt install g++ cmake openssh-server libtool autoconf
+sudo apt install g++ cmake openssh-server libtool autoconf git
 ~~~
 
 ## SSH-公钥生成
