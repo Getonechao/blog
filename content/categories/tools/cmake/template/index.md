@@ -39,19 +39,8 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
 
 #release debug
 set(CMAKE_BUILD_TYPE #[[Release | Debug| RelWithDebInfo |MinSizeRel]])
-if(CMAKE_BUILD_TYPE MATCHES "Release")
-    #set(CMAKE_C_FLAGS_RELEASE     "   ")
-    set(CMAKE_CXX_FLAGS_RELEASE     "  " )
-    # add_compile_options()#等同CMAKE_CXXFLAGS_RELESE,前者可以对所有的编译器设置，后者只能是C++编译器
-elseif(CMAKE_BUILD_TYPE MATCHES "Debug")
-     #set(CMAKE_C_FLAGS_DEBUG   "  ")
-    set(CMAKE_CXX_FLAGS_DEBUG   "  ") 
-    # add_compile_options()
-elseif(CMAKE_BUILD_TYPE MATCHES "RelWithDebInfo")
-    set(CMAKE_CXX_FLAGS_RELWITHDEBINFO " ")
-elseif(CMAKE_BUILD_TYPE MATCHES "MinSizeRel")
-    set(CMAKE_CXX_FLAGS_MINSIZEREL " ")
-endif()
+add_compile_options()#等同CMAKE_CXXFLAGS_RELESE,前者可以对所有的编译器设置，后者只能是C++编译器
+
 
 include_directories(
 目录

@@ -39,7 +39,7 @@
 <meta itemprop="name" content="cmake 模板">
 <meta itemprop="description" content="cmake模板"><meta itemprop="datePublished" content="2022-04-19T15:57:41+08:00" />
 <meta itemprop="dateModified" content="2022-04-19T15:57:41+08:00" />
-<meta itemprop="wordCount" content="211">
+<meta itemprop="wordCount" content="176">
 <meta itemprop="keywords" content=" project,cmake," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="cmake 模板"/>
 <meta name="twitter:description" content="cmake模板"/>
@@ -470,7 +470,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 211字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 176字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
       </div>
     </div>
@@ -495,19 +495,8 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
 
 #release debug
 set(CMAKE_BUILD_TYPE #[[Release | Debug| RelWithDebInfo |MinSizeRel]])
-if(CMAKE_BUILD_TYPE MATCHES &quot;Release&quot;)
-    #set(CMAKE_C_FLAGS_RELEASE     &quot;   &quot;)
-    set(CMAKE_CXX_FLAGS_RELEASE     &quot;  &quot; )
-    # add_compile_options()#等同CMAKE_CXXFLAGS_RELESE,前者可以对所有的编译器设置，后者只能是C++编译器
-elseif(CMAKE_BUILD_TYPE MATCHES &quot;Debug&quot;)
-     #set(CMAKE_C_FLAGS_DEBUG   &quot;  &quot;)
-    set(CMAKE_CXX_FLAGS_DEBUG   &quot;  &quot;) 
-    # add_compile_options()
-elseif(CMAKE_BUILD_TYPE MATCHES &quot;RelWithDebInfo&quot;)
-    set(CMAKE_CXX_FLAGS_RELWITHDEBINFO &quot; &quot;)
-elseif(CMAKE_BUILD_TYPE MATCHES &quot;MinSizeRel&quot;)
-    set(CMAKE_CXX_FLAGS_MINSIZEREL &quot; &quot;)
-endif()
+add_compile_options()#等同CMAKE_CXXFLAGS_RELESE,前者可以对所有的编译器设置，后者只能是C++编译器
+
 
 include_directories(
 目录
