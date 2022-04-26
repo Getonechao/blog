@@ -87,6 +87,12 @@ extern __pid_t tcgetsid (int __fd) __THROW;
 #endif
 ~~~
 
+###### open()函数
+
+~~~
+int open (const char *__path, int __oflag, ...)
+~~~
+
 
 
 ###### tcgetattr()函数
@@ -113,8 +119,9 @@ int tcsetattr(int fd, int optional_actions,const struct termios *termios_p);
 
 > note：optional_actions--更改何时生效
 >
-> | **TCSANOW**   | **配置立即生效**                                     |
+> |               |                                                      |
 > | ------------- | ---------------------------------------------------- |
+> | **TCSANOW**   | **配置立即生效**                                     |
 > | **TCSADRAIN** | **配置在所有写入 fd 的输出都传输完毕之后生效**       |
 > | **TCSAFLUSH** | **所有已接收但未读取的输入都将在配置生效之前被丢弃** |
 
@@ -184,8 +191,9 @@ int tcflow(int fd, int action);
 
 > note: action
 >
-> | **TCOOFF** | **暂停数据输出（输出传输）**                          |
+> |            |                                                       |
 > | ---------- | ----------------------------------------------------- |
+> | **TCOOFF** | **暂停数据输出（输出传输）**                          |
 > | **TCOON**  | **重新启动暂停的输出**                                |
 > | **TCIOFF** | **发送 STOP 字符，停止终端设备向系统发送数据**        |
 > | **TCION**  | **发送一个 START 字符，启动终端设备向系统发送数据；** |
@@ -205,6 +213,8 @@ struct termios
     speed_t c_ospeed; /* output speed */
 };
 ```
+
+###### 波特率、数据位、停止位使用案例
 
 ~~~c++
 
@@ -306,3 +316,10 @@ struct termios
     }
 ~~~
 
+###### 非规范模式：C_CC[]--MIN TIME
+
+![image-20220426194202725](images/image-20220426194202725.png)
+
+![image-20220426194237670](images/image-20220426194237670.png)
+
+![image-20220426194300096](images/image-20220426194300096.png)

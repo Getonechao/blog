@@ -39,7 +39,7 @@
 <meta itemprop="name" content="Linux串口编程">
 <meta itemprop="description" content="linux串口编程一些总结（本文为linux串口编程中的raw模式）"><meta itemprop="datePublished" content="2022-04-26T17:51:22+08:00" />
 <meta itemprop="dateModified" content="2022-04-26T17:51:22+08:00" />
-<meta itemprop="wordCount" content="1935">
+<meta itemprop="wordCount" content="1989">
 <meta itemprop="keywords" content=" c,project ,linux," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Linux串口编程"/>
 <meta name="twitter:description" content="linux串口编程一些总结（本文为linux串口编程中的raw模式）"/>
@@ -471,7 +471,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1935字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1989字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4分 </span>
       </div>
     </div>
@@ -538,6 +538,9 @@ extern int tcflow (int __fd, int __action) __THROW;
 extern __pid_t tcgetsid (int __fd) __THROW;
 #endif
 </code></pre>
+<h6 id="open函数">open()函数</h6>
+<pre><code>int open (const char *__path, int __oflag, ...)
+</code></pre>
 <h6 id="tcgetattr函数">tcgetattr()函数</h6>
 <p>功能：获取终端的属性</p>
 <p>返回值：返回值：调用成功时返回 0；失败将返回-1</p>
@@ -555,11 +558,15 @@ int tcsetattr(int fd, int optional_actions,const struct termios *termios_p);
 <table>
 <thead>
 <tr>
-<th><strong>TCSANOW</strong></th>
-<th><strong>配置立即生效</strong></th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>TCSANOW</strong></td>
+<td><strong>配置立即生效</strong></td>
+</tr>
 <tr>
 <td><strong>TCSADRAIN</strong></td>
 <td><strong>配置在所有写入 fd 的输出都传输完毕之后生效</strong></td>
@@ -632,11 +639,15 @@ int tcflow(int fd, int action);
 <table>
 <thead>
 <tr>
-<th><strong>TCOOFF</strong></th>
-<th><strong>暂停数据输出（输出传输）</strong></th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><strong>TCOOFF</strong></td>
+<td><strong>暂停数据输出（输出传输）</strong></td>
+</tr>
 <tr>
 <td><strong>TCOON</strong></td>
 <td><strong>重新启动暂停的输出</strong></td>
@@ -665,6 +676,7 @@ int tcflow(int fd, int action);
     speed_t c_ospeed; /* output speed */
 };
 </code></pre>
+<h6 id="波特率数据位停止位使用案例">波特率、数据位、停止位使用案例</h6>
 <pre><code class="language-c++">
     /*0. 保存原有的termios*/
     tcgetattr(this-&gt;fd, &amp;old_termios);
@@ -763,6 +775,10 @@ int tcflow(int fd, int action);
         return -1;
     }
 </code></pre>
+<h6 id="非规范模式c_cc--min-time">非规范模式：C_CC[]&ndash;MIN TIME</h6>
+<p><img src="images/image-20220426194202725.png" alt="image-20220426194202725"></p>
+<p><img src="images/image-20220426194237670.png" alt="image-20220426194237670"></p>
+<p><img src="images/image-20220426194300096.png" alt="image-20220426194300096"></p>
 
     </div>
     <div class="article-footer">
