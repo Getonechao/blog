@@ -89,11 +89,23 @@ extern __pid_t tcgetsid (int __fd) __THROW;
 
 ###### open()函数
 
+功能：打开设备文件
+
+返回值：如果操作成功，它将返回一个文件描述符，如果操作失败，它将返回-1
+
 ~~~
 int open (const char *__path, int __oflag, ...)
 ~~~
 
-
+>note:flags = O_RDWR | O_NOCTTY | O_NDELAY | O_EXCL;（libmodbus代码截取）
+>
+>O_RDWR ： 可读可写
+>
+>O_NOCTTY ：该参数不会使打开的文件成为该进程的控制终端。如果没有指定这个标志，那么任何一个 输入都将会影响用户的进程。
+>
+>O_NDELAY ：这个程序不关心DCD信号线所处的状态,端口的另一端是否激活或者停止。如果用户不指定了这个标志，则进程将会一直处在睡眠状态，直到DCD信号线被激活。
+>
+>O_EXCL：原子操作，确保只有一个执行流使用这个设备文件
 
 ###### tcgetattr()函数
 
