@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Tue, 26 Apr 2022 17:51:22 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Apr 2022 09:17:43 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>实验7条件判断</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C7%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:43 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C7%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/</guid>
+      <description>条件判断 在本节实验中，我们会学习到 xmake 条件判断语句的基础用法，以及常用的平台、架构等判断接口，另外还会学习如何判断自定义选项的值来控制编译。 知</description>
+    </item>
     
     <item>
       <title>实验6目标依赖</title>

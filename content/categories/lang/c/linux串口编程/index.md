@@ -22,10 +22,6 @@ tags=  [
 
 [ linux-串口应用编程_邻居家的小南瓜的博客-CSDN博客](https://blog.csdn.net/qq_37932504/article/details/121125906?ops_request_misc=&request_id=&biz_id=102&utm_term=linux 串口api&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-4-121125906.142^v9^pc_search_result_control_group,157^v4^new_style&spm=1018.2226.3001.4187)
 
-## 案例代码
-
-[click here]([code/02c/uart at main · Getonechao/code (github.com)](https://github.com/Getonechao/code/tree/main/02c/uart))
-
 ## API总结
 
 ###### <termios.h>
@@ -280,12 +276,12 @@ struct termios
         new_termios.c_cflag &= ~PARENB;//关闭奇偶位
         break;
     case 'E'://奇
-        new_termios.c_iflag |= (INPCK | ISTRIP);//开启输入奇偶检验检查
+        new_termios.c_iflag |= (INPCK );//开启输入奇偶检验检查
         new_termios.c_cflag |= PARENB;//开启奇偶位
         new_termios.c_cflag &= ~PARODD;//关闭偶位
         break;
     case 'O'://偶
-        new_termios.c_iflag |= (INPCK | ISTRIP);//开启输入奇偶检验检查
+        new_termios.c_iflag |= (INPCK);//开启输入奇偶检验检查
         new_termios.c_cflag|= PARENB;//开启奇偶位
         new_termios.c_cflag |= PARODD;//开启偶位
         break;
@@ -317,7 +313,10 @@ struct termios
     new_termios.c_cc[VTIME]=1;
 
     /*6.other*/
-    new_termios.c_iflag &= ~(IXON | IXOFF | IXANY);/* Software flow control is disabled */
+    new_termios.c_oflag &= ~OPOST; /* Raw output */
+    new_termios.c_iflag &= ~(IXON | IXOFF | IXANY);  /* Software flow control is disabled */
+    new_termios.c_iflag &= ~(IUCLC|ICRNL|INLCR|IGNCR);/* 1.关闭input大小写转换 2.禁止CR、LF相互转换 3.不忽略CR、LF*/
+    new_termios.c_oflag &= ~(OLCUC|OCRNL|ONLCR);/* 1.关闭output大小写转换 2.同上*/
     
     /*7.设置生效 */
     if(tcsetattr(this->fd,TCSANOW,&(new_termios))<0)
@@ -335,3 +334,31 @@ struct termios
 ![image-20220426194237670](images/image-20220426194237670.png)
 
 ![image-20220426194300096](images/image-20220426194300096.png)
+
+
+
+## 代码及其测试
+
+### 代码
+
+[代码案例 click here]([code/02c/uart at main · Getonechao/code (github.com)](https://github.com/Getonechao/code/tree/main/02c/uart))
+
+### 测试
+
+~~~matlab
+%写
+clear;
+device=serialport("COM5",115200,"Parity","even","DataBits",8,"StopBits",1);
+flush(device);
+for i=1:10
+write(device,[0:255],"uint8");
+end
+
+%读
+clear;
+device=serialport("COM5",115200,"Parity","even","DataBits",8,"StopBits",1);
+flush(device);
+ret=read(device,3,"uint8")
+
+~~~
+

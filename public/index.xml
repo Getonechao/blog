@@ -6,10 +6,19 @@
     <description>Recent content on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Tue, 26 Apr 2022 17:51:22 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Apr 2022 09:17:43 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tcp_server</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/tcp_server/</link>
+      <pubDate>Wed, 27 Apr 2022 09:17:43 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/tcp_server/</guid>
+      <description>TCP server epoll 头文件 #include &amp;lt;sys/epoll.h&amp;gt; 结构体 typedef union epoll_data { void *ptr; int fd; uint32_t u32; uint64_t u64; } epoll_data_t; struct epoll_event { uint32_t events; /* Epoll events 即enum EPOLL_EVENTS*/ epoll_data_t data; /* User data variable */ } __EPOLL_PACKED; 宏 enum EPOLL_EVENTS { EPOLLIN = 0x001,//表示对应的文件描</description>
+    </item>
     
     <item>
       <title>Linux串口编程</title>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/carcontrol/%E5%AF%BB%E8%BF%B9/%E7%BA%AF%E8%BF%BD%E8%B8%AA/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>《概率机器人》-读书笔记</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/slam/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/</link>
-      <pubDate>Thu, 31 Mar 2022 01:05:24 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/slam/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
-      <description>概率机器人 1. 基础课程 1.1 概率论基础 概率论与数理统计基本概念 1.2 随机过程 随机过程可依其在任一时刻的状态是连续型随机变量或离散型随机变量而分成连续型</description>
     </item>
     
   </channel>
