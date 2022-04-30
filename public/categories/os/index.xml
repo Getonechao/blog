@@ -6,10 +6,46 @@
     <description>Recent content in os on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Fri, 01 Apr 2022 13:25:02 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 28 Apr 2022 14:01:38 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Raspberry系统初始配置操作</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/linux/raspberry%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Sat, 30 Apr 2022 13:21:57 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/linux/raspberry%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</guid>
+      <description>Raspberry系统初始配置操作 网络配置 以太网固定 sudo nano /etc/dhcpcd.conf 取消相应的注释 interface wlan0 static ip_address=192.168.1.102/24 static ip6_address=fd51:42f8:caae:d92e::ff/64 static routers=192.168.1.1 static domain_name_servers=192.168.18.1 192.168.1.1 fd51:42f8:caae:d92e::1 interface eth0 static ip_address=192.168.1.181/24 static routers=192.168.1.1 static domain_name_servers=192.168.1.1 wifi连接 已经进入系统，联</description>
+    </item>
+    
+    <item>
+      <title>Amcl踩坑集</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/slam/amcl%E8%B8%A9%E5%9D%91%E9%9B%86/</link>
+      <pubDate>Fri, 29 Apr 2022 16:08:12 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/slam/amcl%E8%B8%A9%E5%9D%91%E9%9B%86/</guid>
+      <description>Amcl踩坑集 2022.4.29 Q1 [ERROR] [1651219018.862852200]: Couldn&#39;t determine robot&#39;s pose associated with laser scan [ WARN] [1651219018.942895300]: Failed to compute odom pose, skipping scan (Lookup would require extrapolation into the past. Requested time 1651219008.851113400 but the earliest data is at time 1651219008.964298200, when looking up transform from frame [base_link] to frame [odom]) A2 原因是我在amcl中打印</description>
+    </item>
+    
+    <item>
+      <title>4_tf转换</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/4_tf%E8%BD%AC%E6%8D%A2/</link>
+      <pubDate>Thu, 28 Apr 2022 14:01:38 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/4_tf%E8%BD%AC%E6%8D%A2/</guid>
+      <description>TF转换 安装 sudo apt install ros-melodic-turtle-tf 可视化观测tf tree #pdf rosrun tf view_frames #stdout rosrun tf tf_echo node1 nodde2</description>
+    </item>
+    
+    <item>
+      <title>Bluez</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/bluez/</link>
+      <pubDate>Thu, 28 Apr 2022 10:39:16 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/bluez/</guid>
+      <description>linux官方蓝牙协议bluez的使用 相关网址 官网源码 官网文档 python调用bluez bluepy - a Bluetooth LE interface for Python — bluepy 0.9.11 documentation (ianharvey.github.io) 安装bluez (Ubuntu 20.04</description>
+    </item>
     
     <item>
       <title>Tcp_server</title>
@@ -31,10 +67,10 @@
     
     <item>
       <title>ubuntu系统初始化常用一些指令</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/linux/command/</link>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/linux/ubuntu%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</link>
       <pubDate>Sat, 23 Apr 2022 15:19:00 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/linux/command/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/linux/ubuntu%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</guid>
       <description>ubuntu系统初始化常用一些指令 换源 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak sudo nano /etc/apt/sources.list 清华源 # 清华源 18.04 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse deb-src</description>
     </item>
     
@@ -153,42 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</guid>
       <description>概率论与数理统计 古典概型 试验中所有可能出现的基本事件只有有限个 试验中每个基本事件出现的可能性相等。 具有以上两个特点的概率模型是大量存在的，这</description>
-    </item>
-    
-    <item>
-      <title>Ros学习之旅3</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%853/</link>
-      <pubDate>Fri, 01 Apr 2022 13:25:02 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/ros%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%853/</guid>
-      <description>如何安装ros 脚本安装 wget http://fishros.com/install -O fishros &amp;amp;&amp;amp; sudo bash fishros 原文章链接：鱼香ros rosdep 安装 note: 注意安装ros过程中，可以不安装rosdep，它不是ros系统必须安装的</description>
-    </item>
-    
-    <item>
-      <title>网络配置</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/liunx/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Fri, 01 Apr 2022 13:11:10 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/liunx/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</guid>
-      <description>网络配置 ubuntu18.04配置IP 使用ip addr 只限于以太网配置(临时) ip addr add 192.168.8.30 dev eth0 /etc/netplan/*配置文件 服务器中是50-cl</description>
-    </item>
-    
-    <item>
-      <title>激光有反</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/%E6%BF%80%E5%85%89%E6%9C%89%E5%8F%8D/</link>
-      <pubDate>Thu, 31 Mar 2022 01:09:25 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/%E6%BF%80%E5%85%89%E6%9C%89%E5%8F%8D/</guid>
-      <description>激光有反 激光有反.............. 引用</description>
-    </item>
-    
-    <item>
-      <title>纯追踪</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/carcontrol/%E5%AF%BB%E8%BF%B9/%E7%BA%AF%E8%BF%BD%E8%B8%AA/</link>
-      <pubDate>Thu, 31 Mar 2022 01:07:34 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/carcontrol/%E5%AF%BB%E8%BF%B9/%E7%BA%AF%E8%BF%BD%E8%B8%AA/</guid>
-      <description></description>
     </item>
     
   </channel>

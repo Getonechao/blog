@@ -94,6 +94,15 @@ sudo apt-get update
 sudo apt install g++ cmake openssh-server libtool autoconf git
 ~~~
 
+>  note：如果vscode或者ssh在装新系统失败后，可能是.ssh/known_hosts文件中ip对应的指纹还是旧的。
+
+~~~shell
+ git config --global user.email "1509670272@qq.com"
+ git config --global user.name "chao"
+~~~
+
+
+
 ## SSH-公钥生成
 
 ~~~shell
