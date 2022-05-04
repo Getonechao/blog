@@ -32,6 +32,8 @@ tags=  [
 
 <img src="images/image-20220504165029460.png" alt="image-20220504165029460" style="zoom: 50%;" />
 
+<br/>
+
 > note：保证回调函数中处理不能太长
 
 ##### 1.3 话题消息的定义与使用
@@ -82,4 +84,8 @@ find_package(catkin REQUIRED COMPONENTS
 )
 add_dependencies(new_pack_name publish_pack_name_generate_messages_cpp)
 ~~~
+
+1.4 ros内置消息类型--std_msgs
+
+[详解常用的ROS内置消息类型](https://blog.csdn.net/qq_30193419/article/details/111867500?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.pc_relevant_default&spm=1001.2101.3001.4242.1&utm_relevant_index=3)
 
