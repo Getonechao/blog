@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Wed, 04 May 2022 11:56:53 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 04 May 2022 14:01:09 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Wiringpi的安装及使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</link>
+      <pubDate>Wed, 04 May 2022 14:01:09 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</guid>
+      <description>WiringPi 安装 WiringPi 官网介绍截取 WiringPi is a PIN based GPIO access library written in C for the BCM2835, BCM2836 and BCM2837 SoC devices used in all Raspberry Pi. versions. The source code is not publicly available but may be made available to those who wish commercial support. It’s designed to be familiar to people who have used the Arduino “w</description>
+    </item>
     
     <item>
       <title>树莓派硬件资料</title>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/net/win/%E5%AE%89%E8%A3%85clash/</guid>
       <description>win10安装clash 下载 clash for win软件是一个开源项目，被开源在github上，它是具有windows,mac,linux(x86和arm</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/about/</link>
-      <pubDate>Fri, 01 Apr 2022 23:59:49 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/about/</guid>
-      <description>hello 该折腾的年纪就要折腾。.。</description>
     </item>
     
   </channel>
