@@ -18,7 +18,7 @@ tags=  [
 
 # Raspberry系统初始配置操作
 
-## 网络配置
+## 1. 网络配置
 
 ###### 以太网固定
 
@@ -84,4 +84,109 @@ priority=1
 ~~~
 
 同上创建一个名字是ssh的文本文档，什么都不写，开启ssh服务
+
+## 2. 换源
+
+[参考资源—树莓派实验室](https://shumeipai.nxez.com/2013/08/31/raspbian-chinese-software-source.html)
+
+确定树莓派系统版本
+
+~~~
+lsb_release -a
+~~~
+
+![image-20220504112334276](images/image-20220504112334276.png)
+
+> note:
+>
+> 树莓派有如下两个架构：
+>
+> - arm64
+> - armhf
+>
+> 树莓派系统有如下几个版本
+>
+> - wheezy
+> - jessie
+> - stretch（Debian 9）
+> - buster（Debian 10）
+> - bullseye（Debian 11）
+
+可用以下网站替换下面源
+
+中国科学技术大学
+Raspbian http://mirrors.ustc.edu.cn/raspbian/raspbian/
+
+阿里云
+Raspbian http://mirrors.aliyun.com/raspbian/raspbian/
+
+清华大学
+Raspbian http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/
+
+华中科技大学
+Raspbian http://mirrors.hustunique.com/raspbian/raspbian/
+Arch Linux ARM http://mirrors.hustunique.com/archlinuxarm/
+
+华南农业大学（华南用户）
+Raspbian http://mirrors.scau.edu.cn/raspbian/
+
+大连东软信息学院源（北方用户）
+Raspbian http://mirrors.neusoft.edu.cn/raspbian/raspbian/
+
+重庆大学源（中西部用户）
+Raspbian http://mirrors.cqu.edu.cn/Raspbian/raspbian/
+
+~~中山大学~~ 已跳转至中国科学技术大学源
+Raspbian [~~http://mirror.sysu.edu.cn/raspbian/raspbian/~~](http://mirror.sysu.edu.cn/raspbian/raspbian/)
+
+新加坡国立大学
+Raspbian http://mirror.nus.edu.sg/raspbian/raspbian
+
+牛津大学
+Raspbian http://mirror.ox.ac.uk/sites/archive.raspbian.org/archive/raspbian/
+
+韩国KAIST大学
+Raspbian http://ftp.kaist.ac.kr/raspbian/raspbian/
+
+ cd /etc/apt/sources.list 
+
+wheezy
+
+~~~
+deb http://mirrors.sysu.edu.cn/raspbian/raspbian/ wheezy main contrib non-free
+deb-src http://mirrors.sysu.edu.cn/raspbian/raspbian/ wheezy main contrib non-free
+~~~
+
+jessie
+
+~~~
+deb http://mirrors.sysu.edu.cn/raspbian/raspbian/ jessie main contrib non-free
+deb-src http://mirrors.sysu.edu.cn/raspbian/raspbian/ jessie main contrib non-free
+~~~
+
+stretch
+
+~~~
+deb http://mirrors.sysu.edu.cn/raspbian/raspbian/ stretch main contrib non-free
+deb-src http://mirrors.sysu.edu.cn/raspbian/raspbian/ stretch main contrib non-free
+~~~
+
+buster
+
+~~~
+deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib
+deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib
+~~~
+
+bullseye
+
+~~~
+
+#如果需要 armhf软件源
+deb [arch=armhf] http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ bullseye main non-free contrib rpi
+deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ bullseye main non-free contrib rpi
+
+# 如果需要 arm64 软件源，在 `/etc/apt/sources.list` 中加上
+deb [arch=arm64] http://mirrors.tuna.tsinghua.edu.cn/raspbian/multiarch/ bullseye main
+~~~
 
