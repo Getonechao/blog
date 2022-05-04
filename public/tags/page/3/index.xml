@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Wed, 04 May 2022 14:01:09 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 04 May 2022 16:45:20 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>实验15扩展模块导入和使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C15%E6%89%A9%E5%B1%95%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%85%A5%E5%92%8C%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:57 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C15%E6%89%A9%E5%B1%95%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%85%A5%E5%92%8C%E4%BD%BF%E7%94%A8/</guid>
+      <description>扩展模块导入和使用 在本节实验中，我们将会学习到 xmake 中模块的基本概念和种类，并且还会学到如何在项目配置中通过 import 去导入和使用内部扩展模块，以及用户</description>
+    </item>
+    
+    <item>
+      <title>实验14io读写</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C14io%E8%AF%BB%E5%86%99/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:55 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/3xmake%E8%BF%9B%E9%98%B6/%E5%AE%9E%E9%AA%8C14io%E8%AF%BB%E5%86%99/</guid>
+      <description>io读写 在本节实验中，我们可以学习到 xmake 内置的 io 模块的基本操作，例如文件数据的快速读写和序列化，还能更深入地学习如何使用 print 接口来实现打印输出，</description>
+    </item>
     
     <item>
       <title>实验13系统操作详解</title>
