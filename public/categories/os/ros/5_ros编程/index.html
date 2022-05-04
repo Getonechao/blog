@@ -39,7 +39,7 @@
 <meta itemprop="name" content="5_ros编程">
 <meta itemprop="description" content="topic server"><meta itemprop="datePublished" content="2022-05-04T16:45:20+08:00" />
 <meta itemprop="dateModified" content="2022-05-04T16:45:20+08:00" />
-<meta itemprop="wordCount" content="385">
+<meta itemprop="wordCount" content="423">
 <meta itemprop="keywords" content="robat, ros," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="5_ros编程"/>
 <meta name="twitter:description" content="topic server"/>
@@ -486,7 +486,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 385字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 423字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
       </div>
     </div>
@@ -501,7 +501,7 @@ function tagCloud(where, min, max) {
 <p>note：保证回调函数中处理不能太长</p>
 </blockquote>
 <h5 id="13-话题消息的定义与使用">1.3 话题消息的定义与使用</h5>
-<h6 id="定义">定义</h6>
+<h6 id="-------定义">- &mdash;&ndash;&gt;定义</h6>
 <img src="images/image-20220504170019694.png" alt="image-20220504170019694" style="zoom:50%;" />
 <pre><code>#在功能包src/package/,创建msg文件夹
 mkdir msg
@@ -521,7 +521,8 @@ generate_messages(DEPENDENCIES std_msgs)#person.msg依赖那些库
 catkin_package(CATKIN_DEPENDS ... message_runtime)
 
 </code></pre>
-<h6 id="使用订阅自定义的消息">使用：订阅自定义的消息</h6>
+<hr>
+<h6 id="-------使用订阅自定义的消息">&mdash;&mdash;-&gt;使用：订阅自定义的消息</h6>
 <p><a href="https://blog.csdn.net/plokm789456/article/details/79290592?ops_request_misc=%7B%22request%5Fid%22%3A%22165166505916781667830593%22%2C%22scm%22%3A%2220140713.130102334..%22%7D&amp;request_id=165166505916781667830593&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-2-79290592.142%5Ev9%5Epc_search_result_control_group,157%5Ev4%5Enew_style&amp;utm_term=ros+%E8%AE%A2%E9%98%85%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B6%88%E6%81%AF&amp;spm=1018.2226.3001.4187">ROS订阅自定义消息_plokm789456的博客-CSDN博客</a></p>
 <p>1.package.xml custom_pack_name需要修改成发布消息的包名称。</p>
 <pre><code class="language-xml">
