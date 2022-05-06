@@ -39,7 +39,7 @@
 <meta itemprop="name" content="cmake 模板">
 <meta itemprop="description" content="cmake模板"><meta itemprop="datePublished" content="2022-04-19T15:57:41+08:00" />
 <meta itemprop="dateModified" content="2022-04-19T15:57:41+08:00" />
-<meta itemprop="wordCount" content="176">
+<meta itemprop="wordCount" content="178">
 <meta itemprop="keywords" content=" project,cmake," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="cmake 模板"/>
 <meta name="twitter:description" content="cmake模板"/>
@@ -486,7 +486,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 176字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 178字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
       </div>
     </div>
@@ -506,12 +506,12 @@ set (CMAKE_C_COMPILER &quot;/usr/bin/gcc&quot;)
 set (CMAKE_CXX_COMPILER &quot;/usr/bin/g++&quot;)
 
 #lib&amp;&amp;bin
-set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/lib)
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
+set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 
 #release debug
-set(CMAKE_BUILD_TYPE #[[Release | Debug| RelWithDebInfo |MinSizeRel]])
-add_compile_options()#等同CMAKE_CXXFLAGS_RELESE,前者可以对所有的编译器设置，后者只能是C++编译器
+set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]])
+#add_compile_options()#等同CMAKE_CXXFLAGS_RELESE,前者可以对所有的编译器设置，后者只能是C++编译器
 
 
 include_directories(
@@ -520,11 +520,11 @@ include_directories(
 
 aux_source_directory(目录 变量)
 
-FIND_LIBRARY(#变量 libceres.so #目录)
+#FIND_LIBRARY(#变量 libceres.so #目录)
 
 add_executable(${PROJECT_NAME} )
-target_link_libraries(${PROJECT_NAME} 
-/usr/local/lib/libmodbus.so)
+#target_link_libraries(${PROJECT_NAME} 
+#/usr/local/lib/libmodbus.so)
 
 
 </code></pre>

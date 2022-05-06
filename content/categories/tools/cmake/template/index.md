@@ -34,12 +34,12 @@ set (CMAKE_C_COMPILER "/usr/bin/gcc")
 set (CMAKE_CXX_COMPILER "/usr/bin/g++")
 
 #lib&&bin
-set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/lib)
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
+set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 
 #release debug
-set(CMAKE_BUILD_TYPE #[[Release | Debug| RelWithDebInfo |MinSizeRel]])
-add_compile_options()#等同CMAKE_CXXFLAGS_RELESE,前者可以对所有的编译器设置，后者只能是C++编译器
+set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]])
+#add_compile_options()#等同CMAKE_CXXFLAGS_RELESE,前者可以对所有的编译器设置，后者只能是C++编译器
 
 
 include_directories(
@@ -48,11 +48,11 @@ include_directories(
 
 aux_source_directory(目录 变量)
 
-FIND_LIBRARY(#变量 libceres.so #目录)
+#FIND_LIBRARY(#变量 libceres.so #目录)
 
 add_executable(${PROJECT_NAME} )
-target_link_libraries(${PROJECT_NAME} 
-/usr/local/lib/libmodbus.so)
+#target_link_libraries(${PROJECT_NAME} 
+#/usr/local/lib/libmodbus.so)
 
 
 ~~~
