@@ -132,8 +132,8 @@ iptables -t nat -A POSTROUTING -p udp -d [目标IP] --dport [端口号] -j SNAT 
 
 将本地(内网:192.168.20.3 外网:192.168.8.101)10022端口映射到192.168.20.2:22
 
-sudo iptables -t nat -I PREROUTING -p tcp --dport 10022 -j DNAT --to-destination 192.168.20.2
-sudo iptables -t nat -I PREROUTING -p udp --dport 10022 -j DNAT --to-destination 192.168.20.2
+sudo iptables -t nat -I PREROUTING -p tcp --dport 10022 -j DNAT --to-destination 192.168.20.2:22
+sudo iptables -t nat -I PREROUTING -p udp --dport 10022 -j DNAT --to-destination 192.168.20.2:22
 
 sudo iptables -t nat -I POSTROUTING -p tcp -d 192.168.20.2/24   --dport 22 -j SNAT --to-source 192.168.20.3
 sudo iptables -t nat -I POSTROUTING -p udp -d 192.168.20.2/24   --dport 22 -j SNAT --to-source 192.168.20.3
