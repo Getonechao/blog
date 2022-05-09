@@ -148,7 +148,11 @@ Raspbian http://mirror.ox.ac.uk/sites/archive.raspbian.org/archive/raspbian/
 韩国KAIST大学
 Raspbian http://ftp.kaist.ac.kr/raspbian/raspbian/
 
- cd /etc/apt/sources.list 
+~~~
+ sudo nano /etc/apt/sources.list 
+~~~
+
+
 
 wheezy
 

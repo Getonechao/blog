@@ -21,7 +21,7 @@ tags=  [
 ### 使用ip addr
 ~~~
 只限于以太网配置(临时)
-ip addr add 192.168.8.30 dev eth0
+ip addr add 192.168.8.30/24 dev eth0
 ~~~
 
 ### /etc/netplan/*配置文件
