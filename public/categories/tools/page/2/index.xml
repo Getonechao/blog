@@ -6,10 +6,19 @@
     <description>Recent content in tools on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Tue, 19 Apr 2022 15:57:41 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 10 May 2022 13:38:58 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>matlab--符号表达式转LaTeX、C、mathml代码</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/matlab/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/</link>
+      <pubDate>Mon, 18 Apr 2022 21:58:01 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/matlab/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/</guid>
+      <description>matlab&amp;ndash;符号表达式转LaTeX、C、mathml代码 网址&amp;ndash;Code Generation - MATLAB &amp;amp; Simulink - MathWorks 中国 latex syms f(t); y=f==5*exp(-0.8*t)*sin(pi*t); latex(y) ans= &amp;lsquo;f\left(t\right)=5,{\mathrm{e}}^{-\frac{4,t}{5}},\sin\left(\pi ,t\right)&amp;rsquo; Mathml syms f(t); y=f==5*exp(-0.8*t)*sin(pi*t); mathml(y)</description>
+    </item>
     
     <item>
       <title>matlab-画图</title>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/4xmake%E5%AE%9E%E6%88%98/%E5%AE%9E%E9%AA%8C21%E4%BD%BF%E7%94%A8xmake%E5%BC%80%E5%8F%91qt%E7%A8%8B%E5%BA%8F/</guid>
       <description># 使用 xmake 开发 Qt 程序 在本节实验中，我们将会学习到如何使用 vscode 结合 xmake-vscode 插件去编译开发 Qt 应用程序，并且也会学习到一些 Qt 相关的基础概念，以及 Qt Widgets 和 Quick App 两</description>
-    </item>
-    
-    <item>
-      <title>实验20xmake-vscode 插件介绍</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/4xmake%E5%AE%9E%E6%88%98/%E5%AE%9E%E9%AA%8C20xmake-%E4%B8%8E-vscode-%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83%E4%BD%BF%E7%94%A8/</link>
-      <pubDate>Thu, 15 Jul 2021 10:37:15 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/4xmake%E5%AE%9E%E6%88%98/%E5%AE%9E%E9%AA%8C20xmake-%E4%B8%8E-vscode-%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83%E4%BD%BF%E7%94%A8/</guid>
-      <description>在本节实验中，我们将学习如何在 vscode 中使用 xmake 编译开发 C/C++ 程序，如何进行断点调试以及 xmake-vscode 插件的一些基本操作和使用。 知识点 xmake-vscode 插件基本使用 使用插件进行断点</description>
     </item>
     
   </channel>

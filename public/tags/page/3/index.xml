@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Mon, 09 May 2022 16:28:55 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 10 May 2022 13:38:58 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>实验20xmake-vscode 插件介绍</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/4xmake%E5%AE%9E%E6%88%98/%E5%AE%9E%E9%AA%8C20xmake-%E4%B8%8E-vscode-%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 15 Jul 2021 10:37:15 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/4xmake%E5%AE%9E%E6%88%98/%E5%AE%9E%E9%AA%8C20xmake-%E4%B8%8E-vscode-%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83%E4%BD%BF%E7%94%A8/</guid>
+      <description>在本节实验中，我们将学习如何在 vscode 中使用 xmake 编译开发 C/C++ 程序，如何进行断点调试以及 xmake-vscode 插件的一些基本操作和使用。 知识点 xmake-vscode 插件基本使用 使用插件进行断点</description>
+    </item>
     
     <item>
       <title>实验19libjpeg 开源库移植</title>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/5/</guid>
       <description>继承与面向对象设计 条款32：确定你的public继承塑模出“is-a”（是一种）关系 结论 “public继承关系”意味is-a。适用于base</description>
-    </item>
-    
-    <item>
-      <title>《C&#43;&#43; Effective》-读书笔记4</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/4/</link>
-      <pubDate>Thu, 15 Apr 2021 12:50:11 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/4/</guid>
-      <description>实现 大多情况下，适当提出你的class（和class templates）定义以及functions(和 function templates)声明，是花费最多</description>
     </item>
     
   </channel>
