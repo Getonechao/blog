@@ -6,26 +6,35 @@
     <description>Recent content on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Mon, 09 May 2022 08:41:54 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 May 2022 16:28:55 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Mount挂载</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/tool/mount%E6%8C%82%E8%BD%BD/</link>
+      <pubDate>Mon, 09 May 2022 16:28:55 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/tool/mount%E6%8C%82%E8%BD%BD/</guid>
+      <description>Mount挂载 mount网络挂载 1 win10上新建一个文件夹 修改属性，设置共享 如果不确定win10的用户名和密码，就新建一个本地用户 2 lin</description>
+    </item>
+    
+    <item>
       <title>Netfilter</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/net/linux/netfilter/</link>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/tool/netfilter/</link>
       <pubDate>Mon, 09 May 2022 08:41:54 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/net/linux/netfilter/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/tool/netfilter/</guid>
       <description>netfilter 相关网址 官网：netfilter/iptables project homepage iptables基础知识详解_LarryHai6的博客-CSDN博客_iptable</description>
     </item>
     
     <item>
       <title>内网穿透</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/net/linux/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/app/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
       <pubDate>Sat, 07 May 2022 09:20:36 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/net/linux/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/app/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
       <description>内网穿透 1. frp解决方案 1.1 下载 wget https://github.com/fatedier/frp/releases/download/v0.42.0/frp_0.42.0_linux_arm.tar.gz tar -zxvf frp_0.42.0_linux_arm.tar.gz 1.2 server配置 ​ note：联塑项目：车体控制程序是服务端 进入程序目录 cd frp_0.42.0_linux_arm 图中红线部分是serve</description>
     </item>
     
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/matlab/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/</guid>
       <description>matlab&amp;ndash;符号表达式转LaTeX、C、mathml代码 网址&amp;ndash;Code Generation - MATLAB &amp;amp; Simulink - MathWorks 中国 latex syms f(t); y=f==5*exp(-0.8*t)*sin(pi*t); latex(y) ans= &amp;lsquo;f\left(t\right)=5,{\mathrm{e}}^{-\frac{4,t}{5}},\sin\left(\pi ,t\right)&amp;rsquo; Mathml syms f(t); y=f==5*exp(-0.8*t)*sin(pi*t); mathml(y)</description>
-    </item>
-    
-    <item>
-      <title>matlab-画图</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/matlab/%E7%94%BB%E5%9B%BE/</link>
-      <pubDate>Mon, 18 Apr 2022 21:17:05 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/matlab/%E7%94%BB%E5%9B%BE/</guid>
-      <description>Matlab中一些画图方式 符号表达式-画图 fimplicit 隐函数 fimplicit3 Plot 3-D implicit equation or function fmesh Plot 3-D mesh fplot 一般式、参数方程 fplot3 Plot 3-D parametric curve fsurf Plot 3-D surface ezpolar 极坐标 fcontour 3维，等高线 例子 figure(1); syms f(t);</description>
     </item>
     
   </channel>

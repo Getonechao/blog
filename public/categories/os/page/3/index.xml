@@ -6,10 +6,19 @@
     <description>Recent content in os on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Fri, 06 May 2022 13:03:17 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 May 2022 16:28:55 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>实验19libjpeg 开源库移植</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/4xmake%E5%AE%9E%E6%88%98/%E5%AE%9E%E9%AA%8C19libjpeg%E5%BC%80%E6%BA%90%E5%BA%93%E7%A7%BB%E6%A4%8D/</link>
+      <pubDate>Thu, 15 Jul 2021 10:37:10 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/4xmake%E5%AE%9E%E6%88%98/%E5%AE%9E%E9%AA%8C19libjpeg%E5%BC%80%E6%BA%90%E5%BA%93%E7%A7%BB%E6%A4%8D/</guid>
+      <description>libjpeg 开源库移植 在本节实验中，我们会学习到如何使用 xmake 去移植编译第三方库 libjpeg 源码，以及如何将移植好的库快速集成进自己的 C/C++ 工程中去使用。 知识点 autotools 介绍和</description>
+    </item>
     
     <item>
       <title>实验18插件开发详解</title>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/4/</guid>
       <description>实现 大多情况下，适当提出你的class（和class templates）定义以及functions(和 function templates)声明，是花费最多</description>
-    </item>
-    
-    <item>
-      <title>《C&#43;&#43; Effective》-读书笔记2</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/2/</link>
-      <pubDate>Thu, 15 Apr 2021 12:47:11 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/2/</guid>
-      <description>资源管理 资源：一旦用了它，将来必须还给系统。 譬如：动态分配内存、文件描述器、互斥锁、图形界面中的字型和笔刷、数据库连接、网络sockets。</description>
     </item>
     
   </channel>

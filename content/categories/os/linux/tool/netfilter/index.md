@@ -7,11 +7,11 @@ draft= false
 image= "" 
 math= true
 categories= [
-    "net"
+    "os"
 ]
 
 tags=  [
-    " linux","net"
+    " linux","net","tool"
 ]
 
 +++

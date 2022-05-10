@@ -1,17 +1,17 @@
 +++
 title= "内网穿透"
-description= "frp内网传统"
+description= "frp内网穿透"
 date= 2022-05-07T09:20:36+08:00
 author= "chao"
 draft= false
 image= "" 
 math= true
 categories= [
-    "net"
+    "os"
 ]
 
 tags=  [
-    " linux"
+    " linux","app"
 ]
 
 +++

@@ -1,5 +1,5 @@
 +++
-title= "网络配置"
+title= "eth wifi 网络配置"
 description= "对linux(基于ubuntu18.04)网络的一些配置"
 date= 2022-04-01T13:11:10+08:00
 author= "张超"
