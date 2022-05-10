@@ -58,3 +58,18 @@ id
 sudo mount -t cifs -o username=chao2,password=88888888zc! -o rw,uid=1000,gid=1000  //192.168.209.1/shrae_file /home/chao/Desktop/mountpoint
 ~~~
 
+## 3 other
+
+windows的cifs的端口是445
+
+~~~shell
+端口映射
+
+树莓派(车体控制)
+sudo iptables -t nat -I PREROUTING -p tcp --dport 445 -j DNAT --to-destination 192.168.8.50:445
+sudo iptables -t nat -I POSTROUTING -p tcp -d 192.168.8.50/24   --dport 445 -j SNAT --to-source 192.168.8.101
+
+ros(导航)
+sudo mount -t cifs -o username=chao2,password=88888888zc! -o rw,uid=1000,gid=1000  //192.168.20.3/shrae_file /home/ubuntu/mount
+~~~
+

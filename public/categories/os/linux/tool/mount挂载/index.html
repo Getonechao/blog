@@ -39,7 +39,7 @@
 <meta itemprop="name" content="Mount挂载">
 <meta itemprop="description" content="文章简介"><meta itemprop="datePublished" content="2022-05-09T16:28:55+08:00" />
 <meta itemprop="dateModified" content="2022-05-09T16:28:55+08:00" />
-<meta itemprop="wordCount" content="102">
+<meta itemprop="wordCount" content="183">
 <meta itemprop="keywords" content="linux, tool," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mount挂载"/>
 <meta name="twitter:description" content="文章简介"/>
@@ -502,7 +502,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 102字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 183字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
       </div>
     </div>
@@ -524,6 +524,17 @@ function tagCloud(where, min, max) {
 <p><img src="images/image-20220510103204731.png" alt="image-20220510103204731"></p>
 <p>挂载</p>
 <pre><code class="language-shell">sudo mount -t cifs -o username=chao2,password=88888888zc! -o rw,uid=1000,gid=1000  //192.168.209.1/shrae_file /home/chao/Desktop/mountpoint
+</code></pre>
+<h2 id="3-other">3 other</h2>
+<p>windows的cifs的端口是445</p>
+<pre><code class="language-shell">端口映射
+
+树莓派(车体控制)
+sudo iptables -t nat -I PREROUTING -p tcp --dport 445 -j DNAT --to-destination 192.168.8.50:445
+sudo iptables -t nat -I POSTROUTING -p tcp -d 192.168.8.50/24   --dport 445 -j SNAT --to-source 192.168.8.101
+
+ros(导航)
+sudo mount -t cifs -o username=chao2,password=88888888zc! -o rw,uid=1000,gid=1000  //192.168.20.3/shrae_file /home/ubuntu/mount
 </code></pre>
 
     </div>
