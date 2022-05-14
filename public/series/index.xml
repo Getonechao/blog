@@ -12,19 +12,19 @@
     
     <item>
       <title>Git常用命令</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sat, 14 May 2022 20:30:47 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>git常用指令 git 流程图 git指令 1 分支操作 1查看 //查看本地所有分支 git branch //查看远程所有分支 git branch -r //查看本地和远程的所有分支 git branch -a 2新建 /</description>
     </item>
     
     <item>
       <title>离线使用remote ssh</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/vscode/%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8remote-ssh/</link>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8remote-ssh/</link>
       <pubDate>Tue, 10 May 2022 13:38:58 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/vscode/%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8remote-ssh/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8remote-ssh/</guid>
       <description>离线使用remote ssh 参考链接 VS Code Server的离线安装过程 - 知乎 (zhihu.com) .vscode-server 准备工作 下载安装包 1 确定vscode的commit id 点击帮助&amp;ndas</description>
     </item>
     
@@ -174,19 +174,19 @@
     
     <item>
       <title>cmake 模板</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/cmake/template/</link>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/cmake/template/</link>
       <pubDate>Tue, 19 Apr 2022 15:57:41 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/cmake/template/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/cmake/template/</guid>
       <description>Cmake模板 cmake_minimum_required(VERSION 3.1) project(PROJECT_XXX VERSION 0.0.0.0 ) #C/C++标准 set(CMAKE_CXX_STANDARD 14) set(CMAKE_C_STANDARD 11) #设置编译器 set (CMAKE_C_COMPILER &amp;quot;/usr/bin/gcc&amp;quot;) set (CMAKE_CXX_COMPILER &amp;quot;/usr/bin/g++&amp;quot;) #lib&amp;amp;&amp;amp;bin set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib) set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin) #release debug set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]]) #add_compile_options</description>
     </item>
     
     <item>
       <title>vspd&amp;VM</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/vspd/</link>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vspd/</link>
       <pubDate>Tue, 19 Apr 2022 15:57:41 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/vspd/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vspd/</guid>
       <description>使用vspd配置VM的虚拟机的串口调试 下载vspd 链接：https://pan.baidu.com/s/15sQ3B3Ty4QGH8Rvl7</description>
     </item>
     
