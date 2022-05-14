@@ -18,7 +18,8 @@ tags=  [
 
 ## 1.下载
 clash for win软件是一个开源项目，被开源在github上，它是具有windows,mac,linux(x86和arm)多版本的gui软件。  
-[点击跳转：开源地址](https://github.com/Fndroid/clash_for_windows_pkg)
+[点击跳转：开源地址](https://github.com/Fndroid/clash_for_windows_pkg)  
+
 <img src="./githubclash.png" alt="clash" style="zoom:50%;" />
 由于github的网站位于国外，可能打不开，下载地址如下：  
 [点击下载：clash下载地址](https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.15/Clash.for.Windows-0.19.15-win.7z)
@@ -37,10 +38,14 @@ clash for win软件是一个开源项目，被开源在github上，它是具有w
 由于软件是国外开发的，所以gui界面文字是英语，我们需要将它汉化。
 汉化教程在github上开源的  
 
-[点击跳转：开源地址](https://github.com/BoyceLig/Clash_Chinese_Patch)
+[点击跳转：开源地址 ](https://github.com/BoyceLig/Clash_Chinese_Patch)
+
 <img src="%E6%B1%89%E5%8C%96%E5%8C%85.png" alt="汉化包" style="zoom:50%;" />
 
-[点击下载：汉化包下载地址](https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/0.19.15/app.7z)
+[点击下载：汉化包下载地址](https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/0.19.15/app.7z)    
+
+
+
 <img src="./downloadapp.png" style="zoom:50%;" />
 <br>
 解压汉化包，得到一个app.asar文件，用汉化包中的app.asar替换resources/app.asar
@@ -50,7 +55,7 @@ clash for win软件是一个开源项目，被开源在github上，它是具有w
 
 ## 4.节点导入
 
-导入yaml配置文件
+导入yaml配置文件  
 <img src="./yaml.png" style="zoom:50%;" />
 
 ### 4.1 在线转换 
@@ -73,9 +78,9 @@ v2ray转换到clash,将vmess协议转换为yaml配置文件在线小工具
 
 
 
-开启系统代理
+开启系统代理  
 <img src="./systemproxy.png" style="zoom:50%;" />
-检测网络是否通
+检测网络是否通  
 <img src="./check.png" style="zoom:50%;" />
 <br>
 <br>
