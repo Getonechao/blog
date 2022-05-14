@@ -1,5 +1,5 @@
 +++
-title= "000xmake入门"
+title= "实验0xmake入门"
 description= "蓝桥网课xmake笔记"
 date= 2021-07-15T10:36:38+08:00
 author= "chao"
@@ -17,6 +17,8 @@ tags=  [
 +++
 
 # xmake 入门
+
+> note:这是xmake的作者在蓝桥网课上面开设的一门课程的笔记
 
 #### 知识点
 

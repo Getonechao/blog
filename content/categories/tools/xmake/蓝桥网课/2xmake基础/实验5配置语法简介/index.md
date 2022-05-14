@@ -1,6 +1,6 @@
 +++
 
-title= "005配置语法简介"
+title= "实验5配置语法简介"
 description= "蓝桥网课xmake笔记"
 date= 2021-07-15T10:36:41+08:00
 author= "chao"

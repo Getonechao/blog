@@ -1,6 +1,6 @@
 +++
 
-title= "002C/C++ 依赖包的集成和使用"
+title= "实验2C/C++ 依赖包的集成和使用"
 description= "蓝桥网课xmake笔记"
 date= 2021-07-15T10:36:40+08:00
 author= "chao"
