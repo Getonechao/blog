@@ -21,18 +21,21 @@ tags=  [
 clash for win软件是一个开源项目，被开源在github上，它是具有windows,mac,linux(x86和arm)多版本的gui软件。  
 [点击跳转：开源地址](https://github.com/Fndroid/clash_for_windows_pkg)  
 
-<img src="./githubclash.png" alt="clash" style="zoom:50%;" />  
+<img src="./githubclash.png" alt="clash" style="zoom:50%;" />  <br/>
 由于github的网站位于国外，可能打不开，下载地址如下：  
-[点击下载：clash下载地址](https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.15/Clash.for.Windows-0.19.15-win.7z)  
+[点击下载:clash下载地址](https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.15/Clash.for.Windows-0.19.15-win.7z)  
 
 <img src="./download.png" alt="clash" style="zoom:50%;" />
 
 ## 2.安装
 - 解压软件包  
-  <img src="./unzip.png" alt="unzip" style="zoom:50%;" />
-  
-- 软件包是安装的，可以直接运行  
-  <img src="./run.png" style="zoom:50%;" />
+<br/>
+<img src="./unzip.png" alt="unzip" style="zoom:50%;" />
+<br/>
+-  软件包是安装的，可以直接运行   
+<br/>
+ <img src="./run.png" style="zoom:50%;" />
+<br/>
 
 ## 3.汉化
 由于软件是国外开发的，所以gui界面文字是英语，我们需要将它汉化。  
@@ -44,9 +47,11 @@ clash for win软件是一个开源项目，被开源在github上，它是具有w
 - [点击下载：汉化包下载地址](https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/0.19.15/app.7z)    
 
 <img src="./downloadapp.png" style="zoom:50%;" />
-<br/>解压汉化包，得到一个app.asar文件，用汉化包中的app.asar替换resources/app.asar  
+<br/>
+解压汉化包，得到一个app.asar文件，用汉化包中的app.asar替换resources/app.asar 
+<br/>
 <img src="./instead.png" style="zoom:50%;" />  
-<br>
+<br/>
 启动clash
 
 ## 4.节点导入

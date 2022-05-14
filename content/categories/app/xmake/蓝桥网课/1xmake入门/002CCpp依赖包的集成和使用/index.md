@@ -8,7 +8,7 @@ draft= false
 image= "" 
 math= true
 categories= [
-    "tools"
+    "app"
 ]
 
 tags=  [
