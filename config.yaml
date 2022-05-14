@@ -207,8 +207,9 @@ params:
     - board
     - recent_posts
     - category
-    - tag
     - tag_cloud
+    - tag
+    
 
   ## 后来添加的
   # markup:
