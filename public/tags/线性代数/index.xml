@@ -12,12 +12,30 @@
     
     
     <item>
+      <title>Docker常用命令</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sun, 15 May 2022 01:12:54 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>docker常用命令 1.命令图 2.docker run流程</description>
+    </item>
+    
+    <item>
       <title>Git常用命令</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sat, 14 May 2022 20:30:47 +0800</pubDate>
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>git常用指令 git 流程图 git指令 1 分支操作 1查看 //查看本地所有分支 git branch //查看远程所有分支 git branch -r //查看本地和远程的所有分支 git branch -a 2新建 /</description>
+    </item>
+    
+    <item>
+      <title>Docker安装</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/docker%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Sat, 14 May 2022 01:12:54 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/docker%E5%AE%89%E8%A3%85/</guid>
+      <description>docker安装 Docker 官方文档 | Docker Documentation 1. window安装 需要安装wsl2 2. linux 2.1. ubuntu安装 1.系统需求 Ubuntu Jammy 22.04 (LTS) Ubuntu Impish 21.10 Ubuntu Focal 20.04 (LTS) Ubuntu Bionic 18.04 (LTS) Docker Engine is supported on</description>
     </item>
     
     <item>
@@ -171,24 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/libmodbus/</guid>
       <description>libmodbus的使用 安装 wget https://github.com/stephane/libmodbus/archive/refs/tags/v3.1.7.zip unzip v3.1.7.zip sudo apt install libtool sudo apt install autoconf ./autoconf ./configure --prefix=/usr/local/ sudo make install 源码解析 参考网址 【嵌入式】Libmodbus源码分析(一)-类型和结构体_沧</description>
-    </item>
-    
-    <item>
-      <title>cmake 模板</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/cmake/template/</link>
-      <pubDate>Tue, 19 Apr 2022 15:57:41 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/cmake/template/</guid>
-      <description>Cmake模板 cmake_minimum_required(VERSION 3.1) project(PROJECT_XXX VERSION 0.0.0.0 ) #C/C++标准 set(CMAKE_CXX_STANDARD 14) set(CMAKE_C_STANDARD 11) #设置编译器 set (CMAKE_C_COMPILER &amp;quot;/usr/bin/gcc&amp;quot;) set (CMAKE_CXX_COMPILER &amp;quot;/usr/bin/g++&amp;quot;) #lib&amp;amp;&amp;amp;bin set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib) set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin) #release debug set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]]) #add_compile_options</description>
-    </item>
-    
-    <item>
-      <title>vspd&amp;VM</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vspd/</link>
-      <pubDate>Tue, 19 Apr 2022 15:57:41 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vspd/</guid>
-      <description>使用vspd配置VM的虚拟机的串口调试 下载vspd 链接：https://pan.baidu.com/s/15sQ3B3Ty4QGH8Rvl7</description>
     </item>
     
   </channel>

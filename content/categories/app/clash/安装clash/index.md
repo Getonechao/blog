@@ -48,7 +48,7 @@ clash for win软件是一个开源项目，被开源在github上，它是具有w
 
 <img src="./downloadapp.png" style="zoom:50%;" />
 <br/>
-解压汉化包，得到一个app.asar文件，用汉化包中的app.asar替换resources/app.asar 
+- 解压汉化包，得到一个app.asar文件，用汉化包中的app.asar替换resources/app.asar 
 <br/>
 <img src="./instead.png" style="zoom:50%;" />  
 <br/>

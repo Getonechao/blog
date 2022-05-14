@@ -11,7 +11,7 @@ categories= [
 ]
 
 tags=  [
-    " linux","app"
+    " linux","tool"
 ]
 
 +++
