@@ -29,8 +29,8 @@ math类
 hugo new categories/math/
 --> hugo new categories/math/signalsAndSystems/
 
-net类
-hugo new categories/net/
+app类
+hugo new categories/app/
 
 os类
 hugo new categories/os/
@@ -40,9 +40,6 @@ hugo new categories/robat/
 
 lang类
 hugo new categories/lang/
-
-tools类
-hugo new categories/tools/
 
 other类
 hugo new categories/other/
