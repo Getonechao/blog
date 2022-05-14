@@ -39,7 +39,7 @@
 <meta itemprop="name" content="4_ros常用命令">
 <meta itemprop="description" content="4_ros常用命令"><meta itemprop="datePublished" content="2022-04-28T14:01:38+08:00" />
 <meta itemprop="dateModified" content="2022-04-28T14:01:38+08:00" />
-<meta itemprop="wordCount" content="46">
+<meta itemprop="wordCount" content="103">
 <meta itemprop="keywords" content="ros ,robat ," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="4_ros常用命令"/>
 <meta name="twitter:description" content="4_ros常用命令"/>
@@ -157,6 +157,16 @@
             <li>
                 <div class="item-inner">
                     <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="title">Git常用命令</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-05-14 20:30:47 &#43;0800 CST" itemprop="datePublished">2022-05-14</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
                         <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/vscode/%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8remote-ssh/" class="title">离线使用remote ssh</a>
                     </p>
                     <p class="item-date">
@@ -194,16 +204,6 @@
                     </p>
                 </div>
             </li>
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/6_launch%E6%96%87%E4%BB%B6/" class="title">6_launch文件</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2022-05-06 13:03:17 &#43;0800 CST" itemprop="datePublished">2022-05-06</time>
-                    </p>
-                </div>
-            </li>
         </ul>
     </div>
 </div>
@@ -218,7 +218,7 @@
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/" class="category-list-link">os</a><span class="category-list-count">13</span></li>
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/" class="category-list-link">other</a><span class="category-list-count">3</span></li>
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/" class="category-list-link">robat</a><span class="category-list-count">4</span></li>
-            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/" class="category-list-link">tools</a><span class="category-list-count">23</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/" class="category-list-link">tools</a><span class="category-list-count">24</span></li>
         </ul>
     </div>
 </div>
@@ -254,6 +254,10 @@
             
             <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/cpp/" class="tag-list-link">cpp</a><span
                     class="tag-list-count">5</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/git/" class="tag-list-link">git</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/linux/" class="tag-list-link">linux</a><span
@@ -362,6 +366,10 @@
             
             <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/cpp/" class="tag-list-link" rel="5">cpp<span
                class="tag-list-count">5</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/git/" class="tag-list-link" rel="1">git<span
+               class="tag-list-count">1</span></a>
             
             
             <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/linux/" class="tag-list-link" rel="8">linux<span
@@ -510,7 +518,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 46字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 103字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
       </div>
     </div>
@@ -533,6 +541,20 @@ function tagCloud(where, min, max) {
 <pre><code class="language-bash">cd ~/catkin_ws/src
 
 catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
+</code></pre>
+<h6 id="ros参数命令">ros参数命令</h6>
+<pre><code class="language-shell">
+rosparam set     [param_name]       设置参数
+
+rosparam get     [param_name]      获取参数
+
+rosparam load    params.yaml       从文件中加载参数
+
+rosparam dump 	 params.yaml  向文件中转储参数
+
+rosparam delete  [param_name]      删除参数
+
+rosparam list           列出参数名
 </code></pre>
 
     </div>

@@ -44,5 +44,24 @@ cd ~/catkin_ws/src
 catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
 ~~~
 
+###### ros参数命令
+
+~~~shell
+
+rosparam set     [param_name]       设置参数
+
+rosparam get     [param_name]      获取参数
+
+rosparam load    params.yaml       从文件中加载参数
+
+rosparam dump 	 params.yaml  向文件中转储参数
+
+rosparam delete  [param_name]      删除参数
+
+rosparam list           列出参数名
+~~~
+
+
+
 
 

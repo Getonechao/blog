@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Freemodbus</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/freemodbus/</link>
+      <pubDate>Tue, 19 Apr 2022 09:01:21 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/freemodbus/</guid>
+      <description>freemodus 源码 cwalter-at/freemodbus armink/FreeModbus_Slave-Master-RTT-STM32: Add master mode to FreeModbus. | 在 FreeModbus 中添加主机模式 (github.com) modbus 0x01 读线圈寄存器 0x02 读离散输入寄存器 0x03 读保持寄存器 0x04 读输入寄存器 0x05 写单个线圈寄存器 0x06 写单个保持寄存器</description>
+    </item>
+    
+    <item>
       <title>matlab--符号表达式转LaTeX、C、mathml代码</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/matlab/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/</link>
       <pubDate>Mon, 18 Apr 2022 21:58:01 +0800</pubDate>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/matrix/%E7%9F%A9%E9%98%B5%E8%AE%BA%E4%B9%8B%E4%B8%80/</guid>
       <description>矩阵论之一 线性空间 线性空间也称&amp;quot;向量空间&amp;quot;。\( \sqrt{x} \) $$ \sqrt{x} $$</description>
-    </item>
-    
-    <item>
-      <title>实验21使用 xmake 开发 Qt 程序</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/4xmake%E5%AE%9E%E6%88%98/%E5%AE%9E%E9%AA%8C21%E4%BD%BF%E7%94%A8xmake%E5%BC%80%E5%8F%91qt%E7%A8%8B%E5%BA%8F/</link>
-      <pubDate>Thu, 15 Jul 2021 10:37:20 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/tools/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/4xmake%E5%AE%9E%E6%88%98/%E5%AE%9E%E9%AA%8C21%E4%BD%BF%E7%94%A8xmake%E5%BC%80%E5%8F%91qt%E7%A8%8B%E5%BA%8F/</guid>
-      <description># 使用 xmake 开发 Qt 程序 在本节实验中，我们将会学习到如何使用 vscode 结合 xmake-vscode 插件去编译开发 Qt 应用程序，并且也会学习到一些 Qt 相关的基础概念，以及 Qt Widgets 和 Quick App 两</description>
     </item>
     
   </channel>
