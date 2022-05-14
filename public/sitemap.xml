@@ -332,7 +332,7 @@
   </url>
   
   <url>
-    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/boke/</loc>
+    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/</loc>
     <lastmod>2022-04-18T09:19:39+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -341,20 +341,6 @@
   <url>
     <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/signalsandsystems/bookmark2/</loc>
     <lastmod>2022-04-18T09:19:39+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/book/</loc>
-    <lastmod>2022-04-17T15:40:32+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/</loc>
-    <lastmod>2022-04-17T15:40:32+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -474,6 +460,13 @@
   <url>
     <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/carcontrol/%E5%AF%BB%E8%BF%B9/%E7%BA%AF%E8%BF%BD%E8%B8%AA/</loc>
     <lastmod>2022-03-31T01:07:34+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/book/</loc>
+    <lastmod>2022-03-31T01:05:24+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -1,5 +1,5 @@
 +++
-title= "Bookmark2"
+title= "《信号与系统》读书笔记2"
 description= "文章简介"
 date= 2022-04-18T09:19:39+08:00
 author= "somebody"
@@ -7,11 +7,10 @@ draft= true
 image= "" 
 math= true
 categories= [
-    "boke"
+    "math"
 ]
 
 tags=  [
-    " "," "
 ]
 
 +++
