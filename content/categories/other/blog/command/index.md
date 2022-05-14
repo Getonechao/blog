@@ -55,8 +55,6 @@ hugo new categories/other/
 ~~~
 hugo -D && git add .&&git commit -m ""
 
-git push github &&git push gitee 
-
 git push github &&git push gitee &&cloudbase hosting deploy ./public  -e  blog-0g8860131649bb29
 ~~~
 

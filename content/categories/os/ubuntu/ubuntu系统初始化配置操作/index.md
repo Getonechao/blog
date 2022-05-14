@@ -7,11 +7,11 @@ draft= false
 image= "" 
 math= true
 categories= [
-    "other"
+    "os"
 ]
 
 tags=  [
-    " linux","command"
+    " ubuntu","command"
 ]
 
 +++

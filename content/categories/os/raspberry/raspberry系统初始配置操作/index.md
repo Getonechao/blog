@@ -7,20 +7,28 @@ draft= false
 image= "" 
 math= true
 categories= [
-    "other"
+    "os"
 ]
 
 tags=  [
-    "command"
+    "command","raspberry"
 ]
 
 +++
 
 # Raspberry系统初始配置操作
 
+![image-20220514215411948](images/image-20220514215411948.png)
+
+> note: Raspberry Pi OS从bullseye(2022-04-04 debaian 11)以后不在设置默认用户pi和密码raspberry，建议用官方下载器烧录系统，可以自定义初始化一个用户名和密码。
+
+- 下载器地址：[Raspberry Pi OS – Raspberry Pi](https://www.raspberrypi.com/software/)
+
+- Raspberry Pi OS下载地址：[Operating system images – Raspberry Pi](https://www.raspberrypi.com/software/operating-systems/)
+
 ## 1. 网络配置
 
-###### 以太网固定
+### 1.1 以太网固定ip地址
 
 ~~~shell
 sudo nano /etc/dhcpcd.conf
@@ -45,11 +53,11 @@ static domain_name_servers=192.168.1.1
 
 
 
-###### wifi连接
+### 1.2 wifi连接
 
 
 
-已经进入系统，联网情况下
+###### 1.2.1 已经进入系统，联网情况下
 
 ~~~
 //进入配置文件
@@ -66,7 +74,7 @@ psk="无线密码"
 
 ~~~
 
-没用进入到系统，boot中配置
+###### 1.2.1 没用进入到系统，boot中配置
 
 boot盘中，新建文件，文件名为wpa_supplicant.conf,写入
 
