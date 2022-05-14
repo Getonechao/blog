@@ -36,19 +36,15 @@ clash for win软件是一个开源项目，被开源在github上，它是具有w
 
 ## 3.汉化
 由于软件是国外开发的，所以gui界面文字是英语，我们需要将它汉化。
-汉化教程在github上开源的  
 
-[点击跳转：开源地址 ](https://github.com/BoyceLig/Clash_Chinese_Patch)
+- 汉化教程在github上开源的  [点击跳转：开源地址 ](https://github.com/BoyceLig/Clash_Chinese_Patch)
 
-<img src="%E6%B1%89%E5%8C%96%E5%8C%85.png" alt="汉化包" style="zoom:50%;" />
+<img src="%E6%B1%89%E5%8C%96%E5%8C%85.png" alt="汉化包" style="zoom: 67%;" />
 
-[点击下载：汉化包下载地址](https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/0.19.15/app.7z)    
-
-
+- [点击下载：汉化包下载地址](https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/0.19.15/app.7z)    
 
 <img src="./downloadapp.png" style="zoom:50%;" />
-<br>
-解压汉化包，得到一个app.asar文件，用汉化包中的app.asar替换resources/app.asar
+<br/>解压汉化包，得到一个app.asar文件，用汉化包中的app.asar替换resources/app.asar  
 <img src="./instead.png" style="zoom:50%;" />  
 <br>
 启动clash
@@ -86,6 +82,6 @@ v2ray转换到clash,将vmess协议转换为yaml配置文件在线小工具
 - 检测网络是否通  
   <img src="./check.png" style="zoom:50%;" />
   <br>
-  
+
 
 <font size="16"> 大功告成！！！</font>
