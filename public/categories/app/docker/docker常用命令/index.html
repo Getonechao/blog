@@ -39,7 +39,7 @@
 <meta itemprop="name" content="Docker常用命令">
 <meta itemprop="description" content="docker"><meta itemprop="datePublished" content="2022-05-15T01:12:54+08:00" />
 <meta itemprop="dateModified" content="2022-05-15T01:12:54+08:00" />
-<meta itemprop="wordCount" content="21">
+<meta itemprop="wordCount" content="652">
 <meta itemprop="keywords" content=" docker," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Docker常用命令"/>
 <meta name="twitter:description" content="docker"/>
@@ -157,6 +157,16 @@
             <li>
                 <div class="item-inner">
                     <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/git/gitflow/" class="title">Gitflow</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-05-15 13:10:26 &#43;0800 CST" itemprop="datePublished">2022-05-15</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
                         <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="title">Docker常用命令</a>
                     </p>
                     <p class="item-date">
@@ -194,16 +204,6 @@
                     </p>
                 </div>
             </li>
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/tool/mount%E6%8C%82%E8%BD%BD/" class="title">Mount挂载</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2022-05-09 16:28:55 &#43;0800 CST" itemprop="datePublished">2022-05-09</time>
-                    </p>
-                </div>
-            </li>
         </ul>
     </div>
 </div>
@@ -211,7 +211,7 @@
     <h3 class="widget-title"> 分类</h3>
     <div class="widget-body">
         <ul class="category-list">
-            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/" class="category-list-link">app</a><span class="category-list-count">28</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/" class="category-list-link">app</a><span class="category-list-count">29</span></li>
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/" class="category-list-link">lang</a><span class="category-list-count">12</span></li>
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/" class="category-list-link">math</a><span class="category-list-count">6</span></li>
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/" class="category-list-link">os</a><span class="category-list-count">15</span></li>
@@ -253,8 +253,8 @@
                class="tag-list-count">2</span></a>
             
             
-            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/git/" class="tag-list-link" rel="1">git<span
-               class="tag-list-count">1</span></a>
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/git/" class="tag-list-link" rel="2">git<span
+               class="tag-list-count">2</span></a>
             
             
             <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/linux/" class="tag-list-link" rel="6">linux<span
@@ -388,7 +388,7 @@ function tagCloud(where, min, max) {
             
             
             <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/git/" class="tag-list-link">git</a><span
-                    class="tag-list-count">1</span></li>
+                    class="tag-list-count">2</span></li>
             
             
             <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/linux/" class="tag-list-link">linux</a><span
@@ -515,8 +515,8 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 21字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 652字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -525,6 +525,126 @@ function tagCloud(where, min, max) {
 <p><img src="images/v2-820aee2a33654099d87cdd2b7a1ce741_r.jpg" alt="查看源图像"></p>
 <h2 id="2docker-run流程">2.docker run流程</h2>
 <p><img src="images/image-20220515022411757.png" alt="image-20220515022411757"></p>
+<h2 id="3docker-命令">3.docker 命令</h2>
+<h3 id="31-帮助命令">3.1 帮助命令</h3>
+<pre><code class="language-sh">    sudo docker version #显示docker版本信息
+
+    sudo docker info #显示docker系统信息，包括镜像和容器的数量
+
+    docker 命令 --help
+
+</code></pre>
+<h3 id="32-镜像命令">3.2 镜像命令</h3>
+<ol>
+<li>
+<h5 id="查看所有镜像">查看所有镜像</h5>
+<pre><code class="language-shell">sudo docker images -a
+</code></pre>
+</li>
+<li>
+<h5 id="搜索镜像">搜索镜像</h5>
+<pre><code class="language-shell">//搜索stars数量大于500的镜像
+sudo docker search [镜像名] --filter=STARS=500
+</code></pre>
+</li>
+<li>
+<h5 id="下载镜像">下载镜像</h5>
+<pre><code class="language-shell">sudo docker pull [镜像名]
+sudo docker pull [镜像名]:[版本名]
+</code></pre>
+</li>
+<li>
+<h5 id="删除镜像">删除镜像</h5>
+<pre><code class="language-shell">sudo docker rmi -f [镜像ID]
+</code></pre>
+</li>
+</ol>
+<h3 id="33-容器命令">3.3 容器命令</h3>
+<ol>
+<li>
+<h5 id="新建容器并启动">新建容器并启动</h5>
+<pre><code class="language-shell">
+sudo docker run [可选参数] [镜像名]
+
+#参数说明
+--name='name' 容器的名字
+-d			  后台交互运行
+-it  		  使用交互方式运行，进入容器查看内容
+-P			  指定容器的端口 -P 8080:8080
+-p			  随机指定端口
+
+
+//启动并进入容器
+sudo docker run -it [镜像名] /bin/bash
+
+//退出容器
+exit #直接容器停止并退出
+ctrl+p+q #容器不停止，退出
+
+</code></pre>
+</li>
+<li>
+<h5 id="列出容器">列出容器</h5>
+<pre><code class="language-shell">//列出所有正在运行中的容器
+sudo docker ps
+
+//列出所有正在运行中的容器+历史记录
+sudo docker ps -a
+
+//列出最近创建的前number个的容器
+sudo docker ps -a -n=number
+</code></pre>
+</li>
+<li>
+<h5 id="删除容器">删除容器</h5>
+<pre><code class="language-shell">//删除停止运行的容器
+sudo docker rm [容器id]
+
+//删除正在运行的容器
+sudo docker rm -f [容器id]
+
+//删除所有容器
+sudo docker rm -f $(docker ps -aq)
+
+</code></pre>
+</li>
+<li>
+<h5 id="启动和停止容器">启动和停止容器</h5>
+<pre><code class="language-shell">//启动容器
+sudo docker start [容器ID]
+
+//重启容器
+sudo docker restart [容器ID]
+
+//停止当前正在运行的容器
+sudo docker stop [容器ID]
+
+//强制停止容器
+sudo docker kill [容器ID]
+
+</code></pre>
+</li>
+</ol>
+<h3 id="34-常用的其他命令">3.4 常用的其他命令</h3>
+<h5 id="日志信息">日志信息</h5>
+<pre><code class="language-shell">sudo docker logs  [容器ID ]
+</code></pre>
+<h5 id="容器进程信息">容器进程信息</h5>
+<pre><code class="language-shell">sudo docker top [容器ID ]
+</code></pre>
+<h5 id="容器元数据">容器元数据</h5>
+<pre><code class="language-shell">sudo docker inspect [容器ID] 
+</code></pre>
+<h5 id="进入正在运行的容器">进入正在运行的容器</h5>
+<pre><code class="language-shell">//进入容器后开启一个新的终端
+sudo docker exec -it [容器ID]  /bin/bash
+//进入容器执行的当前终端
+sudo docker attach [容器ID] 
+</code></pre>
+<h5 id="copy容器文件copy到linux系统">copy[容器文件copy到linux系统]</h5>
+<pre><code class="language-shell">
+sudo docker cp [容器ID]:/home/chao/demo.txt /home/chao
+</code></pre>
 
     </div>
     <div class="article-footer">
@@ -566,6 +686,11 @@ function tagCloud(where, min, max) {
                 <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Git常用命令"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            <li class="next">
+                <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/git/gitflow/"
+                    title="Gitflow"><span>上一篇&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             
             <li class="toggle-toc">
