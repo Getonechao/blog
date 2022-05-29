@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>1.ros资源</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/1_ros%E8%B5%84%E6%BA%90/</link>
+      <pubDate>Sun, 27 Mar 2022 19:03:06 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/1_ros%E8%B5%84%E6%BA%90/</guid>
+      <description>ros学习之旅1 ros学习网站收集 Ros官网 wiki.ros.org 中国大学MOOC&amp;mdash;《机器人操作系统入门》课程讲义 中国大学MOOC&amp;mdash;《智</description>
+    </item>
+    
+    <item>
       <title>如何在wsl1中使用网络代理？</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/wsl1/test-post/</link>
       <pubDate>Wed, 23 Mar 2022 20:09:16 +0800</pubDate>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C6%E7%9B%AE%E6%A0%87%E4%BE%9D%E8%B5%96/</guid>
       <description>实验6目标依赖 在本节实验中，我们会学习到如何控制多个程序的编译顺序，如何设置依赖来继承编译配置，以及动态库和静态库的编译使用。 知识点 多个 C++ 程</description>
-    </item>
-    
-    <item>
-      <title>实验5配置语法简介</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C5%E9%85%8D%E7%BD%AE%E8%AF%AD%E6%B3%95%E7%AE%80%E4%BB%8B/</link>
-      <pubDate>Thu, 15 Jul 2021 10:36:41 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C5%E9%85%8D%E7%BD%AE%E8%AF%AD%E6%B3%95%E7%AE%80%E4%BB%8B/</guid>
-      <description>配置语法简介 在本节实验中，我们可以大概了解 xmake.lua 的语法设计理念，以及一些基本配置的写法，通过本节实验，基本上能掌握如何去编写合理的 xmake.lua 配置来简化工</description>
     </item>
     
   </channel>

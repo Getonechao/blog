@@ -6,10 +6,19 @@
     <description>Recent content on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Sun, 15 May 2022 13:10:26 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 May 2022 22:18:10 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>实验5配置语法简介</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C5%E9%85%8D%E7%BD%AE%E8%AF%AD%E6%B3%95%E7%AE%80%E4%BB%8B/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:41 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C5%E9%85%8D%E7%BD%AE%E8%AF%AD%E6%B3%95%E7%AE%80%E4%BB%8B/</guid>
+      <description>配置语法简介 在本节实验中，我们可以大概了解 xmake.lua 的语法设计理念，以及一些基本配置的写法，通过本节实验，基本上能掌握如何去编写合理的 xmake.lua 配置来简化工</description>
+    </item>
     
     <item>
       <title>实验2C/C&#43;&#43; 依赖包的集成和使用</title>
