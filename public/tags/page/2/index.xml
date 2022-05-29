@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Mon, 23 May 2022 22:18:10 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 29 May 2022 10:45:50 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux串口编程</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/linux%E4%B8%B2%E5%8F%A3%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Tue, 26 Apr 2022 17:51:22 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/linux%E4%B8%B2%E5%8F%A3%E7%BC%96%E7%A8%8B/</guid>
+      <description>LINUX串口编程&amp;ndash;raw 参考blog [ linux-串口应用编程_邻居家的小南瓜的博客-CSDN博客](https://blog</description>
+    </item>
     
     <item>
       <title>ubuntu系统初始化常用一些指令</title>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/slam/%E6%A6%82%E7%8E%87%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid>
       <description>概率机器人 1. 基础课程 1.1 概率论基础 概率论与数理统计基本概念 1.2 随机过程 随机过程可依其在任一时刻的状态是连续型随机变量或离散型随机变量而分成连续型</description>
-    </item>
-    
-    <item>
-      <title>2机器人种类</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/2_%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%A7%8D%E7%B1%BB/</link>
-      <pubDate>Thu, 31 Mar 2022 00:21:47 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/2_%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%A7%8D%E7%B1%BB/</guid>
-      <description>ROS学习之旅2 机器人种类 AGV的框架(搬运机器人) 穿梭车</description>
     </item>
     
   </channel>

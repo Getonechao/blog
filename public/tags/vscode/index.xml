@@ -6,10 +6,19 @@
     <description>Recent content in  vscode on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Tue, 10 May 2022 13:38:58 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 29 May 2022 10:45:50 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vscode的c_cpp配置</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/vscode%E7%9A%84c_cpp%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 29 May 2022 10:45:50 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/vscode%E7%9A%84c_cpp%E9%85%8D%E7%BD%AE/</guid>
+      <description>.vscode的配置 c_cpp_properties.json ctrl+shift+p ,运行C/Cpp: Edit configurations... { &amp;quot;configurations&amp;quot;: [ { &amp;quot;name&amp;quot;: &amp;quot;linux&amp;quot;, &amp;quot;includePath&amp;quot;: [ &amp;quot;/opt/ros/melodic/include&amp;quot;, &amp;quot;/usr/include&amp;quot;, &amp;quot;${workspaceFolder}/**&amp;quot;, &amp;quot;${workspaceFolder}/devel/include&amp;quot; ], &amp;quot;intelliSenseMode&amp;quot;: &amp;quot;linux-gcc-x64&amp;quot;, &amp;quot;compilerPath&amp;quot;: &amp;quot;/usr/bin/gcc&amp;quot;, &amp;quot;cppStandard&amp;quot;: &amp;quot;c++17&amp;quot;, &amp;quot;cStandard&amp;quot;: &amp;quot;c17&amp;quot; } ], &amp;quot;version&amp;quot;: 4 } tasks.json ctrl+shift+p ,运行task { // See https://go.microsoft.com/fwlink/?LinkId=733558 // for the documentation about the tasks.json format</description>
+    </item>
     
     <item>
       <title>8_vscode适配</title>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/tcp_server/</guid>
       <description>TCP server epoll 头文件 #include &amp;lt;sys/epoll.h&amp;gt; 结构体 typedef union epoll_data { void *ptr; int fd; uint32_t u32; uint64_t u64; } epoll_data_t; struct epoll_event { uint32_t events; /* Epoll events 即enum EPOLL_EVENTS*/ epoll_data_t data; /* User data variable */ } __EPOLL_PACKED; 宏 enum EPOLL_EVENTS { EPOLLIN = 0x001,//表示对应的文件描</description>
-    </item>
-    
-    <item>
-      <title>Linux串口编程</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/linux%E4%B8%B2%E5%8F%A3%E7%BC%96%E7%A8%8B/</link>
-      <pubDate>Tue, 26 Apr 2022 17:51:22 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/linux%E4%B8%B2%E5%8F%A3%E7%BC%96%E7%A8%8B/</guid>
-      <description>LINUX串口编程&amp;ndash;raw 参考blog [ linux-串口应用编程_邻居家的小南瓜的博客-CSDN博客](https://blog</description>
     </item>
     
   </channel>
