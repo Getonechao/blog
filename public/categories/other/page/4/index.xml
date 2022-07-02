@@ -12,6 +12,24 @@
     
     
     <item>
+      <title>实验8内置变量</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C8%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:44 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C8%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F/</guid>
+      <description>内置变量 在本节实验中，我们可以学习到 xmake 内置变量的基础使用，以及如何跟环境变量、shell、自定义选项配置交互来动态配置项目工程。 知识点 了解 xmake</description>
+    </item>
+    
+    <item>
+      <title>实验7条件判断</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C7%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/</link>
+      <pubDate>Thu, 15 Jul 2021 10:36:43 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C7%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/</guid>
+      <description>条件判断 在本节实验中，我们会学习到 xmake 条件判断语句的基础用法，以及常用的平台、架构等判断接口，另外还会学习如何判断自定义选项的值来控制编译。 知</description>
+    </item>
+    
+    <item>
       <title>实验6目标依赖</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/xmake/%E8%93%9D%E6%A1%A5%E7%BD%91%E8%AF%BE/2xmake%E5%9F%BA%E7%A1%80/%E5%AE%9E%E9%AA%8C6%E7%9B%AE%E6%A0%87%E4%BE%9D%E8%B5%96/</link>
       <pubDate>Thu, 15 Jul 2021 10:36:42 +0800</pubDate>
