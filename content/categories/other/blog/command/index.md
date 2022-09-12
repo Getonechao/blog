@@ -1,5 +1,5 @@
 +++
-title= "一些部署博客的常用指令"
+title= "一些部署博客blog的常用指令"
 description= "command"
 date= 2022-04-15T10:36:38+08:00
 author= "somebody"
@@ -52,7 +52,7 @@ hugo new categories/other/
 ~~~
 hugo -D && git add .&&git commit -m ""
 
-git push github &&git push gitee &&cloudbase hosting deploy ./public  -e  blog-0g8860131649bb29
+git push && cloudbase hosting deploy ./public  -e  blog-0g8860131649bb29
 ~~~
 
 ### 1.3 markdown技巧

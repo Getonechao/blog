@@ -6,7 +6,52 @@
     <description>Recent content on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Sat, 02 Jul 2022 12:54:05 +0800</lastBuildDate><atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Sep 2022 04:17:39 +0800</lastBuildDate><atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vim常用命令</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/vim%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Mon, 12 Sep 2022 04:17:39 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/vim%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>vim常用指令 窗口命令 新建横向窗口 :sp 新建纵向窗口 :vs 切换窗口 ctrl+w w ctrl+w h j k l ctrl+w t(左上) b(右下) 窗口移动 ctrl+w H 最左端 ctrl+w L 最右端 ctrl+w J 最低端 ctrl+w K 最高</description>
+    </item>
+    
+    <item>
+      <title>插件配置</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 11 Sep 2022 02:22:44 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE/</guid>
+      <description>neovim插件配置 前提: proxy网络代理 1.WSL1 nano ~/.bashrc ###############PROXY#################### export WIN11_IP=127.0.0.1 export all_proxy=&amp;quot;socks5://${WIN11_IP}:7890&amp;quot; 2.wsl2 nano ~/.bashrc ###############PROXY#################### export WIN11_IP=$(cat /etc/resolv.conf |grep &amp;quot;nameserver&amp;quot; |cut -f 2 -d &amp;quot; &amp;quot;) export all_proxy=&amp;quot;socks5://${WIN11_IP}:7890&amp;quot; 3. VM nano ~/.bashrc ###############PROXY#################### export WIN11_IP=windowsIP export all_proxy=&amp;quot;socks5://${WIN11_IP}:7890&amp;quot; 测试 curl www.google.com 插件 1.packer.nvim ##下载插件 git</description>
+    </item>
+    
+    <item>
+      <title>2_ros2模板范式</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros2/2_ros2%E6%A8%A1%E6%9D%BF%E8%8C%83%E5%BC%8F/</link>
+      <pubDate>Sat, 03 Sep 2022 17:13:39 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros2/2_ros2%E6%A8%A1%E6%9D%BF%E8%8C%83%E5%BC%8F/</guid>
+      <description>ros2模板范式 cpp 1. ament_cmake set #生成compile_command.json set(CMAKE_EXPORT_COMPILE_COMMANDS ON) #c编译器 set(CMAKE_C_COMPILER &amp;quot;/usr/bin/clang&amp;quot;) #cpp编译器 set(CMAKE_CXX_COMPILER &amp;quot;/usr/bin/clang++&amp;quot;) set(CMAKE_CXX_FLAGS &amp;quot;${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Werror&amp;quot;) 固定范式 find_package(ament_cmake REQUIRED) find_package(rclcpp REQUIRED) find_package(std_msgs REQUIRED) aux_source_directory(src SRC_LIST)</description>
+    </item>
+    
+    <item>
+      <title>1_ros2命令的使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros2/1_ros2%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 01 Sep 2022 18:08:20 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros2/1_ros2%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>ros2命令 ros2 pkg 创建功能包 # cpp ros2 pkg create --dependencies rclcpp std_msgs --build-type ament_cmake [pkg name] # python ros2 pkg create --dependencies rclpy std_msgs --build-type ament_python [pkg name] colcon&amp;ndash;编译 #下载依赖 rosdep install -y --from-paths src --rosdistro $ROS_DISTRO colcon build --symlink-install ------------------ --symlink-install :</description>
+    </item>
+    
+    <item>
+      <title>个人插件配置</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/%E4%B8%AA%E4%BA%BA%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 01 Sep 2022 14:07:53 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/%E4%B8%AA%E4%BA%BA%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE/</guid>
+      <description>vscode 插件使用 clangd&amp;ndash;智能提示 以ubuntu为例，需要先在ubuntu中安装 sudo apt install llvm clangd lldb 再在打开vscode，下载两款插件 clangd 和</description>
+    </item>
+    
     <item>
       <title>一些常用的package包安装</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/python/package/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84package%E5%8C%85%E5%AE%89%E8%A3%85/</link>
@@ -296,7 +341,7 @@
     </item>
     
     <item>
-      <title>一些部署博客的常用指令</title>
+      <title>一些部署博客blog的常用指令</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/blog/command/</link>
       <pubDate>Fri, 15 Apr 2022 10:36:38 +0800</pubDate>
       

@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tool on Getone超</title>
+    <title> tool on Getone超</title>
     <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/tool/</link>
-    <description>Recent content in tool on Getone超</description>
+    <description>Recent content in  tool on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Mon, 09 May 2022 16:28:55 +0800</lastBuildDate><atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Sep 2022 14:07:53 +0800</lastBuildDate><atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>个人插件配置</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/%E4%B8%AA%E4%BA%BA%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 01 Sep 2022 14:07:53 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/%E4%B8%AA%E4%BA%BA%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE/</guid>
+      <description>vscode 插件使用 clangd&amp;ndash;智能提示 以ubuntu为例，需要先在ubuntu中安装 sudo apt install llvm clangd lldb 再在打开vscode，下载两款插件 clangd 和</description>
+    </item>
+    
     <item>
       <title>Mount挂载</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/tool/mount%E6%8C%82%E8%BD%BD/</link>

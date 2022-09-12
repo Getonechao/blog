@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> vim on Getone超</title>
+    <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/vim/</link>
+    <description>Recent content in  vim on Getone超</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>CC BY 4.0 CN</copyright>
+    <lastBuildDate>Mon, 12 Sep 2022 04:17:39 +0800</lastBuildDate><atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vim常用命令</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/vim%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Mon, 12 Sep 2022 04:17:39 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/vim%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>vim常用指令 窗口命令 新建横向窗口 :sp 新建纵向窗口 :vs 切换窗口 ctrl+w w ctrl+w h j k l ctrl+w t(左上) b(右下) 窗口移动 ctrl+w H 最左端 ctrl+w L 最右端 ctrl+w J 最低端 ctrl+w K 最高</description>
+    </item>
+    
+    <item>
+      <title>插件配置</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 11 Sep 2022 02:22:44 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE/</guid>
+      <description>neovim插件配置 前提: proxy网络代理 1.WSL1 nano ~/.bashrc ###############PROXY#################### export WIN11_IP=127.0.0.1 export all_proxy=&amp;quot;socks5://${WIN11_IP}:7890&amp;quot; 2.wsl2 nano ~/.bashrc ###############PROXY#################### export WIN11_IP=$(cat /etc/resolv.conf |grep &amp;quot;nameserver&amp;quot; |cut -f 2 -d &amp;quot; &amp;quot;) export all_proxy=&amp;quot;socks5://${WIN11_IP}:7890&amp;quot; 3. VM nano ~/.bashrc ###############PROXY#################### export WIN11_IP=windowsIP export all_proxy=&amp;quot;socks5://${WIN11_IP}:7890&amp;quot; 测试 curl www.google.com 插件 1.packer.nvim ##下载插件 git</description>
+    </item>
+    
+  </channel>
+</rss>
