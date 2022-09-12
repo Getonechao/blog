@@ -77,3 +77,11 @@ note：去除'\'
 ## 2. 腾讯云部署
 
 [静态网站托管 部署 Hugo - 最佳实践 - 文档中心 - 腾讯云 (tencent.com)](https://cloud.tencent.com/document/product/1210/43389)
+
+## 3.hugo
+
+
+
+[hugo-theme-pure/README-ZH.md at master · xiaoheiAh/hugo-theme-pure (github.com)](https://github.com/xiaoheiAh/hugo-theme-pure/blob/master/README-ZH.md)
+
+> note: 注意submoudel
