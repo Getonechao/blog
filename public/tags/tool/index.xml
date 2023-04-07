@@ -6,7 +6,7 @@
     <description>Recent content in  tool on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Thu, 01 Sep 2022 14:07:53 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 09 May 2022 16:28:55 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/tool/index.xml" rel="self" type="application/rss+xml" />
     
@@ -48,15 +48,6 @@
     </item>
     
     <item>
-      <title>个人插件配置</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/%E4%B8%AA%E4%BA%BA%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Thu, 01 Sep 2022 14:07:53 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/%E4%B8%AA%E4%BA%BA%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE/</guid>
-      <description>vscode 插件使用 clangd&amp;ndash;智能提示 以ubuntu为例，需要先在ubuntu中安装 sudo apt install llvm clangd lldb 再在打开vscode，下载两款插件 clangd 和</description>
-    </item>
-    
-    <item>
       <title>一些常用的package包安装</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/python/package/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84package%E5%8C%85%E5%AE%89%E8%A3%85/</link>
       <pubDate>Sat, 02 Jul 2022 12:54:05 +0800</pubDate>
@@ -75,25 +66,16 @@
     </item>
     
     <item>
-      <title>Vscode的c_cpp配置</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/vscode%E7%9A%84c_cpp%E9%85%8D%E7%BD%AE/</link>
+      <title>VScode：一款多插件多功能的编辑器</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/</link>
       <pubDate>Sun, 29 May 2022 10:45:50 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/vscode%E7%9A%84c_cpp%E9%85%8D%E7%BD%AE/</guid>
-      <description>.vscode的配置 c_cpp_properties.json ctrl+shift+p ,运行C/Cpp: Edit configurations... { &amp;quot;configurations&amp;quot;: [ { &amp;quot;name&amp;quot;: &amp;quot;linux&amp;quot;, &amp;quot;includePath&amp;quot;: [ &amp;quot;/opt/ros/melodic/include&amp;quot;, &amp;quot;/usr/include&amp;quot;, &amp;quot;${workspaceFolder}/**&amp;quot;, &amp;quot;${workspaceFolder}/devel/include&amp;quot; ], &amp;quot;intelliSenseMode&amp;quot;: &amp;quot;linux-gcc-x64&amp;quot;, &amp;quot;compilerPath&amp;quot;: &amp;quot;/usr/bin/gcc&amp;quot;, &amp;quot;cppStandard&amp;quot;: &amp;quot;c++17&amp;quot;, &amp;quot;cStandard&amp;quot;: &amp;quot;c17&amp;quot; } ], &amp;quot;version&amp;quot;: 4 } tasks.json ctrl+shift+p ,运行task { // See https://go.microsoft.com/fwlink/?LinkId=733558 // for the documentation about the tasks.json format</description>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/</guid>
+      <description>一、.vscode的配置 c_cpp_properties.json ctrl+shift+p ,运行C/Cpp: Edit configurations... { &amp;quot;configurations&amp;quot;: [ { &amp;quot;name&amp;quot;: &amp;quot;linux&amp;quot;, &amp;quot;includePath&amp;quot;: [ &amp;quot;/opt/ros/melodic/include&amp;quot;, &amp;quot;/usr/include&amp;quot;, &amp;quot;${workspaceFolder}/**&amp;quot;, &amp;quot;${workspaceFolder}/devel/include&amp;quot; ], &amp;quot;intelliSenseMode&amp;quot;: &amp;quot;linux-gcc-x64&amp;quot;, &amp;quot;compilerPath&amp;quot;: &amp;quot;/usr/bin/gcc&amp;quot;, &amp;quot;cppStandard&amp;quot;: &amp;quot;c++17&amp;quot;, &amp;quot;cStandard&amp;quot;: &amp;quot;c17&amp;quot; } ], &amp;quot;version&amp;quot;: 4 } tasks.json ctrl+shift+p ,运行task { // See https://go.microsoft.com/fwlink/?LinkId=733558 // for the documentation about the</description>
     </item>
     
     <item>
-      <title>Docker常用命令</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
-      <pubDate>Sun, 15 May 2022 01:12:54 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description>docker常用命令 1.命令图 2.docker run流程 3.docker 命令 3.1 帮助命令 sudo docker version #显示docker版本信息 sudo docker info #显示docker系统信息，包括镜像和容器的</description>
-    </item>
-    
-    <item>
-      <title>git的使用</title>
+      <title>git：日常用法</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/git/</link>
       <pubDate>Sat, 14 May 2022 20:30:47 +0800</pubDate>
       
@@ -102,38 +84,29 @@
     </item>
     
     <item>
-      <title>Docker安装</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/docker%E5%AE%89%E8%A3%85/</link>
+      <title>Docker：一个环境打包的容器</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/</link>
       <pubDate>Sat, 14 May 2022 01:12:54 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/docker%E5%AE%89%E8%A3%85/</guid>
-      <description>docker安装 Docker 官方文档 | Docker Documentation 1. window安装 需要安装wsl2 2. linux 2.1. ubuntu安装 1.系统需求 Ubuntu Jammy 22.04 (LTS) Ubuntu Impish 21.10 Ubuntu Focal 20.04 (LTS) Ubuntu Bionic 18.04 (LTS) Docker Engine is supported on</description>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/</guid>
+      <description>一、docker安装 Docker 官方文档 | Docker Documentation window安装 需要安装wsl2 linux 2.1. ubuntu安装 1.系统需求 Ubuntu Jammy 22.04 (LTS) Ubuntu Impish 21.10 Ubuntu Focal 20.04 (LTS) Ubuntu Bionic 18.04 (LTS) Docker Engine is supported on</description>
     </item>
     
     <item>
-      <title>离线使用remote ssh</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8remote-ssh/</link>
-      <pubDate>Tue, 10 May 2022 13:38:58 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8remote-ssh/</guid>
-      <description>离线使用remote ssh 参考链接 VS Code Server的离线安装过程 - 知乎 (zhihu.com) .vscode-server 准备工作 下载安装包 1 确定vscode的commit id 点击帮助&amp;ndas</description>
-    </item>
-    
-    <item>
-      <title>Mount挂载</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/tool/mount%E6%8C%82%E8%BD%BD/</link>
+      <title>Mount：网络文件夹挂载</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/mount%E6%8C%82%E8%BD%BD/</link>
       <pubDate>Mon, 09 May 2022 16:28:55 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/tool/mount%E6%8C%82%E8%BD%BD/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/mount%E6%8C%82%E8%BD%BD/</guid>
       <description>Mount挂载 mount网络挂载 1 win10上新建一个文件夹 修改属性，设置共享 如果不确定win10的用户名和密码，就新建一个本地用户 2 lin</description>
     </item>
     
     <item>
-      <title>Netfilter</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/tool/netfilter/</link>
+      <title>Netfilter：iptable的使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/netfilter/</link>
       <pubDate>Mon, 09 May 2022 08:41:54 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/tool/netfilter/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/netfilter/</guid>
       <description>netfilter 相关网址 官网：netfilter/iptables project homepage iptables基础知识详解_LarryHai6的博客-CSDN博客_iptable</description>
     </item>
     
@@ -189,6 +162,33 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/bluez/</guid>
       <description>linux官方蓝牙协议bluez的使用 相关网址 官网源码 官网文档 python调用bluez bluepy - a Bluetooth LE interface for Python — bluepy 0.9.11 documentation (ianharvey.github.io) 安装bluez (Ubuntu 20.04</description>
+    </item>
+    
+    <item>
+      <title>Tcp_server</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/tcp_server/</link>
+      <pubDate>Wed, 27 Apr 2022 09:17:43 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/tcp_server/</guid>
+      <description>TCP server epoll 头文件 #include &amp;lt;sys/epoll.h&amp;gt; 结构体 typedef union epoll_data { void *ptr; int fd; uint32_t u32; uint64_t u64; } epoll_data_t; struct epoll_event { uint32_t events; /* Epoll events 即enum EPOLL_EVENTS*/ epoll_data_t data; /* User data variable */ } __EPOLL_PACKED; 宏 enum EPOLL_EVENTS { EPOLLIN = 0x001,//表示对应的文件描</description>
+    </item>
+    
+    <item>
+      <title>Linux串口编程</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/linux%E4%B8%B2%E5%8F%A3%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Tue, 26 Apr 2022 17:51:22 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/linux%E4%B8%B2%E5%8F%A3%E7%BC%96%E7%A8%8B/</guid>
+      <description>LINUX串口编程&amp;ndash;raw 参考blog [ linux-串口应用编程_邻居家的小南瓜的博客-CSDN博客](https://blog</description>
+    </item>
+    
+    <item>
+      <title>ubuntu系统初始化常用一些指令</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ubuntu/ubuntu%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Sat, 23 Apr 2022 15:19:00 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ubuntu/ubuntu%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</guid>
+      <description>ubuntu系统初始化常用一些指令 换源 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak sudo nano /etc/apt/sources.list 清华源 # 清华源 18.04 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse deb-src</description>
     </item>
     
   </channel>

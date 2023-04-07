@@ -1,5 +1,5 @@
 +++
-title= "git的使用"
+title= "git：日常用法"
 description= "Git的日常使用"
 date= 2022-05-14T20:30:47+08:00
 author= "somebody"

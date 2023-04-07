@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>
+        Docker：一个环境打包的容器 - Getone超
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="docker" />
+    <meta name="generator" content="Hugo 0.102.2 with theme pure" />
+    <title>Docker：一个环境打包的容器 - Getone超</title>
+    
+    
+    <link rel="stylesheet" href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/css/style.min.a85959a41e7abcc0db1f81f44bd264649303417f91b536e87dcde644340fea6d.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="Docker：一个环境打包的容器" />
+<meta property="og:description" content="docker" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/" /><meta property="article:section" content="categories" />
+<meta property="article:published_time" content="2022-05-14T01:12:54+08:00" />
+<meta property="article:modified_time" content="2022-05-14T01:12:54+08:00" />
+
+<meta itemprop="name" content="Docker：一个环境打包的容器">
+<meta itemprop="description" content="docker"><meta itemprop="datePublished" content="2022-05-14T01:12:54+08:00" />
+<meta itemprop="dateModified" content="2022-05-14T01:12:54+08:00" />
+<meta itemprop="wordCount" content="982">
+<meta itemprop="keywords" content=" docker," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Docker：一个环境打包的容器"/>
+<meta name="twitter:description" content="docker"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  
+  
+
+  <body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/" target="_blank">
+            <img class="img-circle img-rotate" src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/images.jpg" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">张超</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">永远好奇世界</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>Shanghai, China</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="想要查找什么..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">首页</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/series/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">记录</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">分类</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">标签</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about/">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">关于</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content"><p>我是我与世界的桥梁。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+      
+<div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/vim%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="title">Vim常用命令</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-09-12 04:17:39 &#43;0800 CST" itemprop="datePublished">2022-09-12</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE/" class="title">插件配置</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-09-11 02:22:44 &#43;0800 CST" itemprop="datePublished">2022-09-11</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/2_ros2%E6%A8%A1%E6%9D%BF%E8%8C%83%E5%BC%8F/" class="title">2_ros2模板范式</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-09-03 17:13:39 &#43;0800 CST" itemprop="datePublished">2022-09-03</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/1_ros2%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/" class="title">1_ros2命令的使用</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-09-01 18:08:20 &#43;0800 CST" itemprop="datePublished">2022-09-01</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/python/package/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84package%E5%8C%85%E5%AE%89%E8%A3%85/" class="title">一些常用的package包安装</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2022-07-02 12:54:05 &#43;0800 CST" itemprop="datePublished">2022-07-02</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 分类</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/" class="category-list-link">app</a><span class="category-list-count">11</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/" class="category-list-link">lang</a><span class="category-list-count">14</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/" class="category-list-link">math</a><span class="category-list-count">4</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/" class="category-list-link">os</a><span class="category-list-count">7</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/" class="category-list-link">other</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/" class="category-list-link">robot</a><span class="category-list-count">4</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 标签</h3>
+    <div id="tag-cloud-list" class="widget-body">
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/blog/" class="tag-list-link" rel="1">blog<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/book/" class="tag-list-link" rel="5">book<span
+               class="tag-list-count">5</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/c/" class="tag-list-link" rel="5">c<span
+               class="tag-list-count">5</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/cmake/" class="tag-list-link" rel="1">cmake<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/command/" class="tag-list-link" rel="3">command<span
+               class="tag-list-count">3</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/cpp/" class="tag-list-link" rel="5">cpp<span
+               class="tag-list-count">5</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/docker/" class="tag-list-link" rel="1">docker<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/git/" class="tag-list-link" rel="1">git<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/linux/" class="tag-list-link" rel="6">linux<span
+               class="tag-list-count">6</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/math/" class="tag-list-link" rel="1">math<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/matlab/" class="tag-list-link" rel="2">matlab<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/net/" class="tag-list-link" rel="4">net<span
+               class="tag-list-count">4</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/project/" class="tag-list-link" rel="7">project<span
+               class="tag-list-count">7</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/python/" class="tag-list-link" rel="2">python<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/raspberry/" class="tag-list-link" rel="3">raspberry<span
+               class="tag-list-count">3</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/robat/" class="tag-list-link" rel="1">robat<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/robot/" class="tag-list-link" rel="1">robot<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/ros/" class="tag-list-link" rel="2">ros<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/ros2/" class="tag-list-link" rel="1">ros2<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/slam/" class="tag-list-link" rel="1">slam<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/tool/" class="tag-list-link" rel="3">tool<span
+               class="tag-list-count">3</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/ubuntu/" class="tag-list-link" rel="1">ubuntu<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/vim/" class="tag-list-link" rel="2">vim<span
+               class="tag-list-count">2</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/vscode/" class="tag-list-link" rel="1">vscode<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/wsl1/" class="tag-list-link" rel="1">wsl1<span
+               class="tag-list-count">1</span></a>
+            
+            
+            <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" class="tag-list-link" rel="1">概率论<span
+               class="tag-list-count">1</span></a>
+            
+    </div>
+<script>
+document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+    tagCloud('#tag-cloud-list a',  8 ,  30 );
+  }
+};
+
+function tagCloud(where, min, max) {
+  let iMax = 0;
+  let iMin = 0;
+  $(where).each(function() {
+    let weight = Number($(this).attr("rel"));
+    if(iMax < weight) iMax = weight;
+    if(iMin > weight || iMin == 0) iMin = weight;
+  });
+  let step = (max - min)/(iMax - iMin);
+  $(where).each(function() {
+    let weight = $(this).attr("rel") - iMin;
+    $(this).css({"font-size": min + (weight * step) + 'px'});
+  });
+};
+</script>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> 标签</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/blog/" class="tag-list-link">blog</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/book/" class="tag-list-link">book</a><span
+                    class="tag-list-count">5</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/c/" class="tag-list-link">c</a><span
+                    class="tag-list-count">5</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/cmake/" class="tag-list-link">cmake</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/command/" class="tag-list-link">command</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/cpp/" class="tag-list-link">cpp</a><span
+                    class="tag-list-count">5</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/docker/" class="tag-list-link">docker</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/git/" class="tag-list-link">git</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/linux/" class="tag-list-link">linux</a><span
+                    class="tag-list-count">6</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/math/" class="tag-list-link">math</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/matlab/" class="tag-list-link">matlab</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/net/" class="tag-list-link">net</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/project/" class="tag-list-link">project</a><span
+                    class="tag-list-count">7</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/raspberry/" class="tag-list-link">raspberry</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/robat/" class="tag-list-link">robat</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/robot/" class="tag-list-link">robot</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/ros/" class="tag-list-link">ros</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/ros2/" class="tag-list-link">ros2</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/slam/" class="tag-list-link">slam</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/tool/" class="tag-list-link">tool</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/ubuntu/" class="tag-list-link">ubuntu</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/vim/" class="tag-list-link">vim</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/vscode/" class="tag-list-link">vscode</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/wsl1/" class="tag-list-link">wsl1</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" class="tag-list-link">概率论</a><span
+                    class="tag-list-count">1</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">文章目录</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/categories/app/docker/"
+    >Docker：一个环境打包的容器</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/" class="article-date">
+  <time datetime="2022-05-14 01:12:54 &#43;0800 CST" itemprop="datePublished">2022-05-14</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/app/"> app </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/docker/">  docker </a>
+  </span>
+
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 982字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2分 </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h1 id="一docker安装">一、docker安装</h1>
+<p><a href="https://docs.docker.com/">Docker 官方文档 | Docker Documentation</a></p>
+<ol>
+<li>
+<h2 id="window安装">window安装</h2>
+</li>
+</ol>
+<p>需要安装wsl2</p>
+<hr>
+<ol start="2">
+<li>
+<h2 id="linux">linux</h2>
+</li>
+</ol>
+<h3 id="21-ubuntu安装">2.1. ubuntu安装</h3>
+<p>1.系统需求</p>
+<ul>
+<li>Ubuntu Jammy 22.04 (LTS)</li>
+<li>Ubuntu Impish 21.10</li>
+<li>Ubuntu Focal 20.04 (LTS)</li>
+<li>Ubuntu Bionic 18.04 (LTS)</li>
+</ul>
+<p>Docker Engine is supported on <code>x86_64</code> (or <code>amd64</code>), <code>armhf</code>, <code>arm64</code>, and <code>s390x</code> architectures.</p>
+<p>2.卸载旧版本</p>
+<pre><code class="language-shell">sudo apt-get remove docker docker-engine docker.io containerd runc
+</code></pre>
+<p>3.使用仓库安装(也可以使用二进制包安装)</p>
+<pre><code class="language-shell">sudo apt-get update
+
+ sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+
+</code></pre>
+<p>4.添加 GPG key</p>
+<pre><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+</code></pre>
+<p>5.添加docker源</p>
+<pre><code class="language-shell">echo \
+  &quot;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</code></pre>
+<ol start="6">
+<li>安装 Docker Engine</li>
+</ol>
+<pre><code class="language-shell"> #安装最新docker
+ sudo apt-get update
+ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+ 
+ #安装指定版本
+ apt-cache madison docker-ce
+ udo apt-get install docker-ce=&lt;VERSION_STRING&gt; docker-ce-cli=&lt;VERSION_STRING&gt; containerd.io docker-compose-plugin
+</code></pre>
+<p>7.测试</p>
+<pre><code class="language-shell">docker version
+
+sudo docker run hello-world
+</code></pre>
+<p>8.卸载 Docker Engine🔗</p>
+<pre><code class="language-shell">
+//1.Uninstall the Docker Engine, CLI, Containerd, and Docker Compose packages:
+sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+
+//2.Images, containers, volumes, or customized configuration files on your host are not automatically removed. To delete all images, containers, and volumes:
+sudo rm -rf /var/lib/docker
+sudo rm -rf /var/lib/containerd
+
+</code></pre>
+<h2 id="3docker加速">3.docker加速</h2>
+<p><a href="https://cloud.tencent.com/document/product/1207/45596">轻量应用服务器 安装 Docker 并配置镜像加速源-最佳实践-文档中心-腾讯云-腾讯云 (tencent.com)</a></p>
+<h1 id="二docker常用命令">二、docker常用命令</h1>
+<h2 id="1命令图">1.命令图</h2>
+<p><img src="images/v2-820aee2a33654099d87cdd2b7a1ce741_r.jpg" alt="查看源图像"></p>
+<h2 id="2docker-run流程">2.docker run流程</h2>
+<p><img src="images/image-20220515022411757.png" alt="image-20220515022411757"></p>
+<h2 id="3docker-命令">3.docker 命令</h2>
+<h3 id="31-帮助命令">3.1 帮助命令</h3>
+<pre><code class="language-sh">    sudo docker version #显示docker版本信息
+
+    sudo docker info #显示docker系统信息，包括镜像和容器的数量
+
+    docker 命令 --help
+
+</code></pre>
+<h3 id="32-镜像命令">3.2 镜像命令</h3>
+<ol>
+<li>
+<h5 id="查看所有镜像">查看所有镜像</h5>
+<pre><code class="language-shell">sudo docker images -a
+</code></pre>
+</li>
+<li>
+<h5 id="搜索镜像">搜索镜像</h5>
+<pre><code class="language-shell">//搜索stars数量大于500的镜像
+sudo docker search [镜像名] --filter=STARS=500
+</code></pre>
+</li>
+<li>
+<h5 id="下载镜像">下载镜像</h5>
+<pre><code class="language-shell">sudo docker pull [镜像名]
+sudo docker pull [镜像名]:[版本名]
+</code></pre>
+</li>
+<li>
+<h5 id="删除镜像">删除镜像</h5>
+<pre><code class="language-shell">sudo docker rmi -f [镜像ID]
+</code></pre>
+</li>
+</ol>
+<h3 id="33-容器命令">3.3 容器命令</h3>
+<ol>
+<li>
+<h5 id="新建容器并启动">新建容器并启动</h5>
+<pre><code class="language-shell">sudo docker run [可选参数] [镜像名]
+
+#参数说明
+--name='name' 容器的名字
+-d			  后台交互运行
+-it  		  使用交互方式运行，进入容器查看内容
+-P			  指定容器的端口 -P 8080:8080
+-p			  随机指定端口
+
+
+//启动并进入容器
+sudo docker run -it [镜像名] /bin/bash
+
+//退出容器
+exit #直接容器停止并退出
+ctrl+p+q #容器不停止，退出
+
+</code></pre>
+</li>
+<li>
+<h5 id="列出容器">列出容器</h5>
+<pre><code class="language-shell">//列出所有正在运行中的容器
+sudo docker ps
+
+//列出所有正在运行中的容器+历史记录
+sudo docker ps -a
+
+//列出最近创建的前number个的容器
+sudo docker ps -a -n=number
+</code></pre>
+</li>
+<li>
+<h5 id="删除容器">删除容器</h5>
+<pre><code class="language-shell">//删除停止运行的容器
+sudo docker rm [容器id]
+
+//删除正在运行的容器
+sudo docker rm -f [容器id]
+
+//删除所有容器
+sudo docker rm -f $(docker ps -aq)
+
+</code></pre>
+</li>
+<li>
+<h5 id="启动和停止容器">启动和停止容器</h5>
+<pre><code class="language-shell">//启动容器
+sudo docker start [容器ID]
+
+//重启容器
+sudo docker restart [容器ID]
+
+//停止当前正在运行的容器
+sudo docker stop [容器ID]
+
+//强制停止容器
+sudo docker kill [容器ID]
+
+</code></pre>
+</li>
+</ol>
+<h3 id="34-常用的其他命令">3.4 常用的其他命令</h3>
+<h5 id="日志信息">日志信息</h5>
+<pre><code class="language-shell">sudo docker logs  [容器ID ]
+</code></pre>
+<h5 id="容器进程信息">容器进程信息</h5>
+<pre><code class="language-shell">sudo docker top [容器ID ]
+</code></pre>
+<h5 id="容器元数据">容器元数据</h5>
+<pre><code class="language-shell">sudo docker inspect [容器ID] 
+</code></pre>
+<h5 id="进入正在运行的容器">进入正在运行的容器</h5>
+<pre><code class="language-shell">//进入容器后开启一个新的终端
+sudo docker exec -it [容器ID]  /bin/bash
+//进入容器执行的当前终端
+sudo docker attach [容器ID] 
+</code></pre>
+<h5 id="copy容器文件copy到linux系统">copy[容器文件copy到linux系统]</h5>
+<pre><code class="language-shell">sudo docker cp [容器ID]:/home/chao/demo.txt /home/chao
+</code></pre>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接: </strong>
+      <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/" title="Docker：一个环境打包的容器" target="_blank" rel="external">https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License: </strong>
+        <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/images.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/" target="_blank"><span class="text-dark">张超</span><small class="ml-1x">永远好奇世界</small></a></h3>
+        <div>I THINK THERFORE I AM</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+    </div>
+  </article>
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/mount%E6%8C%82%E8%BD%BD/" title="Mount：网络文件夹挂载"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            <li class="next">
+                <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/git/"
+                    title="git：日常用法"><span>上一篇&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="文章目录" role="button">
+                    <span>[&nbsp;</span><span>文章目录</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://getone_chao.gitee.io" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2017  -
+    2023
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+    
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/js/application.min.e4989ab4dc212027af8773861b05b6bc333a1217f6b0a1b3377a3a3dbd454483.js"></script>
+<script src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/js/plugin.min.738a460bf4317fac61717f1bca393e53d00973db9754d9f0a81c7312d5874840.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(未命名)',
+            },
+            ROOT_URL: 'https:\/\/blog-0g8860131649bb29-1304987963.tcloudbaseapp.com\/',
+            CONTENT_URL: 'https:\/\/blog-0g8860131649bb29-1304987963.tcloudbaseapp.com\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/js/insight.min.716b0c6a00b68ccc31a2b65345f3412f4246ffa94a90f8e25d525528b4504f9937880692bbe619023233caba5d0a17ebe23d7cfb57cd3a88f23ea337ad5e4d00.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  </body>
+</html>

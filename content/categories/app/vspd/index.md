@@ -1,6 +1,6 @@
 +++
 title= "vspd&VM"
-description= "使用vspd配置VM的虚拟机的串口调试"
+description= "vspd：配置VM的虚拟机的串口调试"
 date= 2022-04-19T15:57:41+08:00
 author= "somebody"
 draft= true
