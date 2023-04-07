@@ -6,7 +6,7 @@
     <description>Recent content in book on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Thu, 31 Mar 2022 01:05:24 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 15 Apr 2021 12:51:11 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/book/index.xml" rel="self" type="application/rss+xml" />
     
@@ -31,19 +31,19 @@
     
     <item>
       <title>2_ros2模板范式</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros2/2_ros2%E6%A8%A1%E6%9D%BF%E8%8C%83%E5%BC%8F/</link>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/2_ros2%E6%A8%A1%E6%9D%BF%E8%8C%83%E5%BC%8F/</link>
       <pubDate>Sat, 03 Sep 2022 17:13:39 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros2/2_ros2%E6%A8%A1%E6%9D%BF%E8%8C%83%E5%BC%8F/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/2_ros2%E6%A8%A1%E6%9D%BF%E8%8C%83%E5%BC%8F/</guid>
       <description>ros2模板范式 cpp 1. ament_cmake set #生成compile_command.json set(CMAKE_EXPORT_COMPILE_COMMANDS ON) #c编译器 set(CMAKE_C_COMPILER &amp;quot;/usr/bin/clang&amp;quot;) #cpp编译器 set(CMAKE_CXX_COMPILER &amp;quot;/usr/bin/clang++&amp;quot;) set(CMAKE_CXX_FLAGS &amp;quot;${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Werror&amp;quot;) 固定范式 find_package(ament_cmake REQUIRED) find_package(rclcpp REQUIRED) find_package(std_msgs REQUIRED) aux_source_directory(src SRC_LIST)</description>
     </item>
     
     <item>
       <title>1_ros2命令的使用</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros2/1_ros2%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/1_ros2%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Thu, 01 Sep 2022 18:08:20 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros2/1_ros2%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/1_ros2%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
       <description>ros2命令 ros2 pkg 创建功能包 # cpp ros2 pkg create --dependencies rclcpp std_msgs --build-type ament_cmake [pkg name] # python ros2 pkg create --dependencies rclpy std_msgs --build-type ament_python [pkg name] colcon&amp;ndash;编译 #下载依赖 rosdep install -y --from-paths src --rosdistro $ROS_DISTRO colcon build --symlink-install ------------------ --symlink-install :</description>
     </item>
     
@@ -81,15 +81,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/vscode%E7%9A%84c_cpp%E9%85%8D%E7%BD%AE/</guid>
       <description>.vscode的配置 c_cpp_properties.json ctrl+shift+p ,运行C/Cpp: Edit configurations... { &amp;quot;configurations&amp;quot;: [ { &amp;quot;name&amp;quot;: &amp;quot;linux&amp;quot;, &amp;quot;includePath&amp;quot;: [ &amp;quot;/opt/ros/melodic/include&amp;quot;, &amp;quot;/usr/include&amp;quot;, &amp;quot;${workspaceFolder}/**&amp;quot;, &amp;quot;${workspaceFolder}/devel/include&amp;quot; ], &amp;quot;intelliSenseMode&amp;quot;: &amp;quot;linux-gcc-x64&amp;quot;, &amp;quot;compilerPath&amp;quot;: &amp;quot;/usr/bin/gcc&amp;quot;, &amp;quot;cppStandard&amp;quot;: &amp;quot;c++17&amp;quot;, &amp;quot;cStandard&amp;quot;: &amp;quot;c17&amp;quot; } ], &amp;quot;version&amp;quot;: 4 } tasks.json ctrl+shift+p ,运行task { // See https://go.microsoft.com/fwlink/?LinkId=733558 // for the documentation about the tasks.json format</description>
-    </item>
-    
-    <item>
-      <title>8_vscode适配</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/8_vscode%E9%80%82%E9%85%8D/</link>
-      <pubDate>Mon, 23 May 2022 22:18:10 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/8_vscode%E9%80%82%E9%85%8D/</guid>
-      <description>配置vscode 头文件智能提示 进入c/c++插件 配置头文件路径 ros中文乱码问题 setlocale(LC_ALL,&amp;quot;&amp;quot;); c_cpp_properties.json { &amp;quot;configurations&amp;quot;: [ { &amp;quot;name&amp;quot;: &amp;quot;linux&amp;quot;, &amp;quot;includePath&amp;quot;: [ &amp;quot;/opt/ros/melodic/include&amp;quot;, &amp;quot;/usr/include&amp;quot;, &amp;quot;${workspaceFolder}/**&amp;quot;, &amp;quot;${workspaceFolder}/devel/include&amp;quot; ], &amp;quot;intelliSenseMode&amp;quot;: &amp;quot;linux-gcc-x64&amp;quot;, &amp;quot;compilerPath&amp;quot;: &amp;quot;/usr/bin/gcc&amp;quot;, &amp;quot;cppStandard&amp;quot;: &amp;quot;c++17&amp;quot;, &amp;quot;cStandard&amp;quot;: &amp;quot;c17&amp;quot; } ], &amp;quot;version&amp;quot;: 4 }</description>
     </item>
     
     <item>
@@ -165,30 +156,39 @@
     </item>
     
     <item>
-      <title>6_launch文件</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/6_launch%E6%96%87%E4%BB%B6/</link>
-      <pubDate>Fri, 06 May 2022 13:03:17 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/6_launch%E6%96%87%E4%BB%B6/</guid>
-      <description>launch文件 模板 &amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt; &amp;lt;launch&amp;gt; &amp;lt;include file=&amp;quot;$(find pepperl_fuchs_r2000)/launch/r2000.launch&amp;quot;/&amp;gt; &amp;lt;!--pkg:功能包名称(文件夹) type：节点的可执行文件名称。name：运行节点名 --&amp;gt; &amp;lt;node pkg=&amp;quot;&amp;quot; type=&amp;quot;&amp;quot; name=&amp;quot;&amp;quot; output=&amp;quot;screen&amp;quot;&amp;gt;&amp;lt;/node&amp;gt; &amp;lt;/launch&amp;gt;</description>
-    </item>
-    
-    <item>
       <title>5_ros编程</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/5_ros%E7%BC%96%E7%A8%8B/</link>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/5_ros%E7%BC%96%E7%A8%8B/</link>
       <pubDate>Wed, 04 May 2022 16:45:20 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/5_ros%E7%BC%96%E7%A8%8B/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/5_ros%E7%BC%96%E7%A8%8B/</guid>
       <description>ros编程 1.topic 1.1 topic_pulisher程序实现四个步骤 1.2 topic_subscriber程序实现四个步骤 note：保证回调函数中处理不能</description>
     </item>
     
     <item>
-      <title>7_tf转换</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/7_tf%E8%BD%AC%E6%8D%A2/</link>
-      <pubDate>Wed, 04 May 2022 15:13:09 +0800</pubDate>
+      <title>Wiringpi的安装及使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</link>
+      <pubDate>Wed, 04 May 2022 14:01:09 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/7_tf%E8%BD%AC%E6%8D%A2/</guid>
-      <description>TF转换 安装 sudo apt install ros-melodic-turtle-tf 可视化观测tf tree #pdf rosrun tf view_frames #stdout rosrun tf tf_echo node1 nodde2 常用的tf坐标系 laser_link：激光雷达 base_link：车体 odom:里程</description>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</guid>
+      <description>WiringPi 安装 WiringPi 官网介绍截取 WiringPi is a PIN based GPIO access library written in C for the BCM2835, BCM2836 and BCM2837 SoC devices used in all Raspberry Pi. versions. The source code is not publicly available but may be made available to those who wish commercial support. It’s designed to be familiar to people who have used the Arduino “w</description>
+    </item>
+    
+    <item>
+      <title>树莓派硬件资料</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%A1%AC%E4%BB%B6%E8%B5%84%E6%96%99/</link>
+      <pubDate>Wed, 04 May 2022 11:56:53 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%A1%AC%E4%BB%B6%E8%B5%84%E6%96%99/</guid>
+      <description>树莓派硬件资料 40pin SDA.0、SDA.1：I2C数据传输口 SCL.0、SCL.1：I2C的时钟信号 GPIO.x（x = 0,1,2,3,4,5,6</description>
+    </item>
+    
+    <item>
+      <title>Raspberry系统初始配置操作</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/raspberry%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Sat, 30 Apr 2022 13:21:57 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/raspberry%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</guid>
+      <description>Raspberry系统初始配置操作 note: Raspberry Pi OS从bullseye(2022-04-04 debaian 11)以后不在设置默认用户pi和密码raspberry</description>
     </item>
     
   </channel>
