@@ -52,7 +52,7 @@ hugo new categories/other/
 ~~~
 hugo -D && git add .&&git commit -m ""
 
-git push && cloudbase hosting deploy ./public  -e  blog-0g8860131649bb29
+git push && tcb hosting deploy ./public  -e  blog-0g8860131649bb29
 ~~~
 
 ### 1.3 markdown技巧
