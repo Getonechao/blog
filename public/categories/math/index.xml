@@ -12,21 +12,12 @@
     
     
     <item>
-      <title>Vim常用命令</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/vim%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <title>neovim：一款vim的编辑器</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/</link>
       <pubDate>Mon, 12 Sep 2022 04:17:39 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/vim%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/</guid>
       <description>vim常用指令 窗口命令 新建横向窗口 :sp 新建纵向窗口 :vs 切换窗口 ctrl+w w ctrl+w h j k l ctrl+w t(左上) b(右下) 窗口移动 ctrl+w H 最左端 ctrl+w L 最右端 ctrl+w J 最低端 ctrl+w K 最高</description>
-    </item>
-    
-    <item>
-      <title>插件配置</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Sun, 11 Sep 2022 02:22:44 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE/</guid>
-      <description>neovim插件配置 前提: proxy网络代理 1.WSL1 nano ~/.bashrc ###############PROXY#################### export WIN11_IP=127.0.0.1 export all_proxy=&amp;quot;socks5://${WIN11_IP}:7890&amp;quot; 2.wsl2 nano ~/.bashrc ###############PROXY#################### export WIN11_IP=$(cat /etc/resolv.conf |grep &amp;quot;nameserver&amp;quot; |cut -f 2 -d &amp;quot; &amp;quot;) export all_proxy=&amp;quot;socks5://${WIN11_IP}:7890&amp;quot; 3. VM nano ~/.bashrc ###############PROXY#################### export WIN11_IP=windowsIP export all_proxy=&amp;quot;socks5://${WIN11_IP}:7890&amp;quot; 测试 curl www.google.com 插件 1.packer.nvim ##下载插件 git</description>
     </item>
     
     <item>
@@ -189,6 +180,15 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ubuntu/ubuntu%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</guid>
       <description>ubuntu系统初始化常用一些指令 换源 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak sudo nano /etc/apt/sources.list 清华源 # 清华源 18.04 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse deb-src</description>
+    </item>
+    
+    <item>
+      <title>Libmodbus</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/libmodbus/</link>
+      <pubDate>Wed, 20 Apr 2022 00:18:44 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/libmodbus/</guid>
+      <description>libmodbus的使用 安装 wget https://github.com/stephane/libmodbus/archive/refs/tags/v3.1.7.zip unzip v3.1.7.zip sudo apt install libtool sudo apt install autoconf ./autoconf ./configure --prefix=/usr/local/ sudo make install 源码解析 参考网址 【嵌入式】Libmodbus源码分析(一)-类型和结构体_沧</description>
     </item>
     
   </channel>
