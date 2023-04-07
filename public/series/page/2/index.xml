@@ -11,15 +11,6 @@
     
     
     <item>
-      <title>Bluez</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/bluez/</link>
-      <pubDate>Thu, 28 Apr 2022 10:39:16 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/bluez/</guid>
-      <description>linux官方蓝牙协议bluez的使用 相关网址 官网源码 官网文档 python调用bluez bluepy - a Bluetooth LE interface for Python — bluepy 0.9.11 documentation (ianharvey.github.io) 安装bluez (Ubuntu 20.04</description>
-    </item>
-    
-    <item>
       <title>Tcp_server</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/tcp_server/</link>
       <pubDate>Wed, 27 Apr 2022 09:17:43 +0800</pubDate>
@@ -137,11 +128,11 @@
     </item>
     
     <item>
-      <title>安装clash</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/clash/%E5%AE%89%E8%A3%85clash/</link>
+      <title>clash：一款代理科学上网的软件</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/clash/</link>
       <pubDate>Tue, 12 Apr 2022 23:56:53 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/clash/%E5%AE%89%E8%A3%85clash/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/clash/</guid>
       <description>win10安装clash 1.下载 clash for win软件是一个开源项目，被开源在github上，它是具有windows,mac,linux(x86和a</description>
     </item>
     
@@ -188,6 +179,15 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/slam%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/</guid>
       <description>slam资料汇集 ros学习网站收集 Ros官网 wiki.ros.org 中国大学MOOC&amp;mdash;《机器人操作系统入门》课程讲义 中国大学MOOC&amp;mdash;《智</description>
+    </item>
+    
+    <item>
+      <title>如何在wsl1中使用网络代理？</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/wsl1/test-post/</link>
+      <pubDate>Wed, 23 Mar 2022 20:09:16 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/wsl1/test-post/</guid>
+      <description>如何在wsl1中使用网络代理？ 代理工具 polipo proxychain 前提条件 v2ray中开启允许局域网连接 记住以下ip:port 开始代理 polipo 参考博客：为 windows wsl 配置 socks5 代理 (github.com)</description>
     </item>
     
   </channel>
