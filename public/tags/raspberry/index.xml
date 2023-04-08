@@ -12,6 +12,33 @@
     
     
     <item>
+      <title>Minicom：linux下一款好用的串口调试工具</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/minicom/</link>
+      <pubDate>Sat, 08 Apr 2023 23:55:03 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/minicom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pv：Pipe Viewer 通过管道显示数据处理进度的信息</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/pv/</link>
+      <pubDate>Sat, 08 Apr 2023 22:44:43 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/pv/</guid>
+      <description>一、简介 Pipe Viewer 的简称，意思是通过管道显示数据处理进度的信息。特别适合某些场景比如拷贝文件，不显示进度，可以用PV显示 pv(选项)(参数) -p, --progress 显</description>
+    </item>
+    
+    <item>
+      <title>netcat：一款网络测试的瑞士军刀</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/netcat/</link>
+      <pubDate>Sat, 08 Apr 2023 17:14:54 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/netcat/</guid>
+      <description>一、基本使用简介 usage: nc [-46CDdFhklNnrStUuvZz] [-I length] [-i interval] [-M ttl] [-m minttl] [-O length] [-P proxy_username] [-p source_port] [-q seconds] [-s source] [-T keyword] [-V rtable] [-W recvlimit] [-w timeout] [-X proxy_protocol] [-x proxy_address[:port]] [destination] [port] Command Summary: -4 Use IPv4 -6 Use IPv6 -b Allow broadcast -C Send CRLF as line-ending -D Enable the debug socket option -d Detach from stdin -F</description>
+    </item>
+    
+    <item>
       <title>neovim：一款vim的编辑器</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/</link>
       <pubDate>Mon, 12 Sep 2022 04:17:39 +0800</pubDate>
@@ -162,33 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/tcp_server/</guid>
       <description>TCP server epoll 头文件 #include &amp;lt;sys/epoll.h&amp;gt; 结构体 typedef union epoll_data { void *ptr; int fd; uint32_t u32; uint64_t u64; } epoll_data_t; struct epoll_event { uint32_t events; /* Epoll events 即enum EPOLL_EVENTS*/ epoll_data_t data; /* User data variable */ } __EPOLL_PACKED; 宏 enum EPOLL_EVENTS { EPOLLIN = 0x001,//表示对应的文件描</description>
-    </item>
-    
-    <item>
-      <title>Linux串口编程</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/linux%E4%B8%B2%E5%8F%A3%E7%BC%96%E7%A8%8B/</link>
-      <pubDate>Tue, 26 Apr 2022 17:51:22 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/linux%E4%B8%B2%E5%8F%A3%E7%BC%96%E7%A8%8B/</guid>
-      <description>LINUX串口编程&amp;ndash;raw 参考blog [ linux-串口应用编程_邻居家的小南瓜的博客-CSDN博客](https://blog</description>
-    </item>
-    
-    <item>
-      <title>ubuntu系统初始化常用一些指令</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ubuntu/ubuntu%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</link>
-      <pubDate>Sat, 23 Apr 2022 15:19:00 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ubuntu/ubuntu%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</guid>
-      <description>ubuntu系统初始化常用一些指令 换源 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak sudo nano /etc/apt/sources.list 清华源 # 清华源 18.04 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse deb-src</description>
-    </item>
-    
-    <item>
-      <title>Libmodbus</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/libmodbus/</link>
-      <pubDate>Wed, 20 Apr 2022 00:18:44 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/libmodbus/</guid>
-      <description>libmodbus的使用 安装 wget https://github.com/stephane/libmodbus/archive/refs/tags/v3.1.7.zip unzip v3.1.7.zip sudo apt install libtool sudo apt install autoconf ./autoconf ./configure --prefix=/usr/local/ sudo make install 源码解析 参考网址 【嵌入式】Libmodbus源码分析(一)-类型和结构体_沧</description>
     </item>
     
   </channel>
