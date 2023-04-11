@@ -1,18 +1,14 @@
 +++
-title= "树莓派硬件资料"
+title= "Raspberry：硬件资料"
 description= "40pin、wiringPi"
 date= 2022-05-04T11:56:53+08:00
 author= "chao"
 draft= false
 image= "" 
 math= true
-categories= [
-    "os"
-]
+categories= ["os"]
 
-tags=  [
-    "raspberry "
-]
+tags=  ["raspberry "]
 
 +++
 

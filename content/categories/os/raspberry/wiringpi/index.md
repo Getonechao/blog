@@ -1,5 +1,5 @@
 +++
-title= "Wiringpi的安装及使用"
+title= "Raspberry：Wiringpi的安装及使用"
 description= "Wiringpi的安装及使用"
 date= 2022-05-04T14:01:09+08:00
 author= "chao"
