@@ -6,10 +6,19 @@
     <description>Recent content in os on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Sat, 07 May 2022 09:20:36 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 11 Apr 2023 09:02:51 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>《C&#43;&#43; Effective》-读书笔记5</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/5/</link>
+      <pubDate>Thu, 15 Apr 2021 12:51:11 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/5/</guid>
+      <description>继承与面向对象设计 条款32：确定你的public继承塑模出“is-a”（是一种）关系 结论 “public继承关系”意味is-a。适用于base</description>
+    </item>
     
     <item>
       <title>《C&#43;&#43; Effective》-读书笔记4</title>

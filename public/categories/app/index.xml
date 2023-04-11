@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>app on Getone超</title>
@@ -6,7 +6,29 @@
     <description>Recent content in app on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Sat, 08 Apr 2023 22:44:43 +0800</lastBuildDate><atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Apr 2023 22:44:43 +0800</lastBuildDate>
+    
+        <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>linux：/proc 硬件信息查询</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2/</link>
+      <pubDate>Tue, 11 Apr 2023 09:02:51 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2/</guid>
+      <description>一、/proc文件系统 1.进程相关信息-PID：646 进程目录中的此文件不包含任何信息； cwd — 指向“当前进程运行目录的”一个符号链接； environ — 当前</description>
+    </item>
+    
+    <item>
+      <title>Minicom：linux下一款好用的串口调试工具</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/minicom/</link>
+      <pubDate>Sat, 08 Apr 2023 23:55:03 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/minicom/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>pv：Pipe Viewer 通过管道显示数据处理进度的信息</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/pv/</link>
@@ -32,6 +54,42 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/neovim/</guid>
       <description>vim常用指令 窗口命令 新建横向窗口 :sp 新建纵向窗口 :vs 切换窗口 ctrl+w w ctrl+w h j k l ctrl+w t(左上) b(右下) 窗口移动 ctrl+w H 最左端 ctrl+w L 最右端 ctrl+w J 最低端 ctrl+w K 最高</description>
+    </item>
+    
+    <item>
+      <title>2_ros2模板范式</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/2_ros2%E6%A8%A1%E6%9D%BF%E8%8C%83%E5%BC%8F/</link>
+      <pubDate>Sat, 03 Sep 2022 17:13:39 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/2_ros2%E6%A8%A1%E6%9D%BF%E8%8C%83%E5%BC%8F/</guid>
+      <description>ros2模板范式 cpp 1. ament_cmake set #生成compile_command.json set(CMAKE_EXPORT_COMPILE_COMMANDS ON) #c编译器 set(CMAKE_C_COMPILER &amp;quot;/usr/bin/clang&amp;quot;) #cpp编译器 set(CMAKE_CXX_COMPILER &amp;quot;/usr/bin/clang++&amp;quot;) set(CMAKE_CXX_FLAGS &amp;quot;${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Werror&amp;quot;) 固定范式 find_package(ament_cmake REQUIRED) find_package(rclcpp REQUIRED) find_package(std_msgs REQUIRED) aux_source_directory(src SRC_LIST)</description>
+    </item>
+    
+    <item>
+      <title>1_ros2命令的使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/1_ros2%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 01 Sep 2022 18:08:20 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/1_ros2%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>ros2命令 ros2 pkg 创建功能包 # cpp ros2 pkg create --dependencies rclcpp std_msgs --build-type ament_cmake [pkg name] # python ros2 pkg create --dependencies rclpy std_msgs --build-type ament_python [pkg name] colcon&amp;ndash;编译 #下载依赖 rosdep install -y --from-paths src --rosdistro $ROS_DISTRO colcon build --symlink-install ------------------ --symlink-install :</description>
+    </item>
+    
+    <item>
+      <title>一些常用的package包安装</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/python/package/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84package%E5%8C%85%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Sat, 02 Jul 2022 12:54:05 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/python/package/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84package%E5%8C%85%E5%AE%89%E8%A3%85/</guid>
+      <description>常用的package包安装 matplotlib matlab 图形包 conda install matplotlib numpy Numeric Python。 它是一个由多维数组对象和用于处理数组的例程集合组成的库。 conda install numpy SciPy Scientific Python。</description>
+    </item>
+    
+    <item>
+      <title>如何安装anaconda</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/python/anaconda/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85anaconda/</link>
+      <pubDate>Sat, 02 Jul 2022 12:05:57 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/python/anaconda/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85anaconda/</guid>
+      <description>安装anaconda 1.环境配置 D:\[Anaconda]\ D:\Anaconda\Scripts D:\Anaconda\Library\bin D:\Anaconda\Library\mingw-w64\bin（可选） 2. 换源 打开C:\Users\</description>
     </item>
     
     <item>
@@ -80,39 +138,57 @@
     </item>
     
     <item>
-      <title>cmake：c/c&#43;&#43;的工程构建工具</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/cmake/</link>
-      <pubDate>Tue, 19 Apr 2022 15:57:41 +0800</pubDate>
+      <title>内网穿透</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/app/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+      <pubDate>Sat, 07 May 2022 09:20:36 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/cmake/</guid>
-      <description>一、Cmake模板 cmake_minimum_required(VERSION 3.1) project(PROJECT_XXX VERSION 0.0.0.0 ) #C/C++标准 set(CMAKE_CXX_STANDARD 14) set(CMAKE_C_STANDARD 11) #设置编译器 set (CMAKE_C_COMPILER &amp;quot;/usr/bin/gcc&amp;quot;) set (CMAKE_CXX_COMPILER &amp;quot;/usr/bin/g++&amp;quot;) #lib&amp;amp;&amp;amp;bin set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib) set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin) #release debug set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]]) #add_compile_optio</description>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/app/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+      <description>内网穿透 1. frp解决方案 1.1 下载 wget https://github.com/fatedier/frp/releases/download/v0.42.0/frp_0.42.0_linux_arm.tar.gz tar -zxvf frp_0.42.0_linux_arm.tar.gz 1.2 server配置 ​ note：联塑项目：车体控制程序是服务端 进入程序目录 cd frp_0.42.0_linux_arm 图中红线部分是serve</description>
     </item>
     
     <item>
-      <title>vspd&amp;VM</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vspd/</link>
-      <pubDate>Tue, 19 Apr 2022 15:57:41 +0800</pubDate>
+      <title>5_ros编程</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/5_ros%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Wed, 04 May 2022 16:45:20 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vspd/</guid>
-      <description>使用vspd配置VM的虚拟机的串口调试 下载vspd 链接：https://pan.baidu.com/s/15sQ3B3Ty4QGH8Rvl7</description>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/5_ros%E7%BC%96%E7%A8%8B/</guid>
+      <description>ros编程 1.topic 1.1 topic_pulisher程序实现四个步骤 1.2 topic_subscriber程序实现四个步骤 note：保证回调函数中处理不能</description>
     </item>
     
     <item>
-      <title>clash：一款代理科学上网的软件</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/clash/</link>
-      <pubDate>Tue, 12 Apr 2022 23:56:53 +0800</pubDate>
+      <title>Raspberry：Wiringpi的安装及使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</link>
+      <pubDate>Wed, 04 May 2022 14:01:09 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/clash/</guid>
-      <description>win10安装clash 1.下载 clash for win软件是一个开源项目，被开源在github上，它是具有windows,mac,linux(x86和a</description>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</guid>
+      <description>WiringPi 安装 WiringPi 官网介绍截取 WiringPi is a PIN based GPIO access library written in C for the BCM2835, BCM2836 and BCM2837 SoC devices used in all Raspberry Pi. versions. The source code is not publicly available but may be made available to those who wish commercial support. It’s designed to be familiar to people who have used the Arduino “w</description>
     </item>
     
     <item>
-      <title>wsl1：使用网络代理？</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/test-post/</link>
-      <pubDate>Wed, 23 Mar 2022 20:09:16 +0800</pubDate>
+      <title>Raspberry：硬件资料</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%A1%AC%E4%BB%B6%E8%B5%84%E6%96%99/</link>
+      <pubDate>Wed, 04 May 2022 11:56:53 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/test-post/</guid>
-      <description>如何在wsl1中使用网络代理？ 代理工具 polipo proxychain 前提条件 v2ray中开启允许局域网连接 记住以下ip:port 开始代理 polipo 参考博客：为 windows wsl 配置 socks5 代理 (github.com)</description>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%A1%AC%E4%BB%B6%E8%B5%84%E6%96%99/</guid>
+      <description>树莓派硬件资料 40pin SDA.0、SDA.1：I2C数据传输口 SCL.0、SCL.1：I2C的时钟信号 GPIO.x（x = 0,1,2,3,4,5,6</description>
+    </item>
+    
+    <item>
+      <title>Raspberry：系统初始配置操作</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/raspberry%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Sat, 30 Apr 2022 13:21:57 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/raspberry%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</guid>
+      <description>Raspberry系统初始配置操作 note: Raspberry Pi OS从bullseye(2022-04-04 debaian 11)以后不在设置默认用户pi和密码raspberry</description>
+    </item>
+    
+    <item>
+      <title>Bluez</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/bluez/</link>
+      <pubDate>Thu, 28 Apr 2022 10:39:16 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/bluez/</guid>
+      <description>linux官方蓝牙协议bluez的使用 相关网址 官网源码 官网文档 python调用bluez bluepy - a Bluetooth LE interface for Python — bluepy 0.9.11 documentation (ianharvey.github.io) 安装bluez (Ubuntu 20.04</description>
     </item>
     
   </channel>

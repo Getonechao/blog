@@ -6,10 +6,19 @@
     <description>Recent content in linux on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Sat, 08 Apr 2023 22:44:43 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 11 Apr 2023 09:02:51 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tcp_server</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/tcp_server/</link>
+      <pubDate>Wed, 27 Apr 2022 09:17:43 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/tcp_server/</guid>
+      <description>TCP server epoll 头文件 #include &amp;lt;sys/epoll.h&amp;gt; 结构体 typedef union epoll_data { void *ptr; int fd; uint32_t u32; uint64_t u64; } epoll_data_t; struct epoll_event { uint32_t events; /* Epoll events 即enum EPOLL_EVENTS*/ epoll_data_t data; /* User data variable */ } __EPOLL_PACKED; 宏 enum EPOLL_EVENTS { EPOLLIN = 0x001,//表示对应的文件描</description>
+    </item>
     
     <item>
       <title>Linux串口编程</title>
@@ -107,7 +116,7 @@
       <pubDate>Fri, 15 Apr 2022 10:36:38 +0800</pubDate>
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/blog/command/</guid>
-      <description>command 1. 常用命令 1.1 新建文档 math类 hugo new categories/math/ --&amp;gt; hugo new categories/math/signalsAndSystems/ app类 hugo new categories/app/ os类 hugo new categories/os/ robat类 hugo new categories/robat/ lang类 hugo new categories/lang/ other类 hugo new categories/other/ 1.2 上传命令 hugo -D &amp;amp;&amp;amp;</description>
+      <description>command 1. 常用命令 1.1 新建文档 math类 hugo new categories/math/ --&amp;gt; hugo new categories/math/signalsAndSystems/ app类 hugo new categories/app/ os类 hugo new categories/os/ robat类 hugo new categories/robat/ lang类 hugo new categories/lang/ other类 hugo new categories/other/ 1.2 上传命令 CMD hugo -D</description>
     </item>
     
     <item>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/test-post/</guid>
       <description>如何在wsl1中使用网络代理？ 代理工具 polipo proxychain 前提条件 v2ray中开启允许局域网连接 记住以下ip:port 开始代理 polipo 参考博客：为 windows wsl 配置 socks5 代理 (github.com)</description>
-    </item>
-    
-    <item>
-      <title>《C&#43;&#43; Effective》-读书笔记5</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/5/</link>
-      <pubDate>Thu, 15 Apr 2021 12:51:11 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/5/</guid>
-      <description>继承与面向对象设计 条款32：确定你的public继承塑模出“is-a”（是一种）关系 结论 “public继承关系”意味is-a。适用于base</description>
     </item>
     
   </channel>
