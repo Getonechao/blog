@@ -49,11 +49,23 @@ hugo new categories/other/
 
 ### 1.2 上传命令
 
+#### CMD
+
 ~~~
 hugo -D && git add .&&git commit -m ""
 
 git push && tcb hosting deploy ./public  -e  blog-0g8860131649bb29
 ~~~
+
+#### powershell
+
+~~~
+hugo -D | git add .|git commit -m ""
+
+git push | tcb hosting deploy ./public  -e  blog-0g8860131649bb29
+~~~
+
+
 
 ### 1.3 markdown技巧
 
