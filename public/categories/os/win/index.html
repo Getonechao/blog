@@ -39,7 +39,7 @@
 <meta itemprop="name" content="windows:一些好用的操作">
 <meta itemprop="description" content="文章简介"><meta itemprop="datePublished" content="2023-04-12T11:58:49+08:00" />
 <meta itemprop="dateModified" content="2023-04-12T11:58:49+08:00" />
-<meta itemprop="wordCount" content="1202">
+<meta itemprop="wordCount" content="2630">
 <meta itemprop="keywords" content="win , ," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="windows:一些好用的操作"/>
 <meta name="twitter:description" content="文章简介"/>
@@ -532,8 +532,8 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1202字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3分 </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 2630字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 6分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -685,7 +685,98 @@ if [not] errorlevel number (
    命令行2
 )
 </code></pre>
-<h3 id="33-setlocal与endlocal命令">3.3 setlocal与endlocal命令</h3>
+<p>errorle</p>
+<pre><code>@ECHO OFF
+XCOPY C:\AUTOEXEC.BAT D:\
+IF ERRORLEVEL 0 ECHO 成功拷贝文件
+IF ERRORLEVEL 1 ECHO 未找到拷贝文件
+IF ERRORLEVEL 2 ECHO 用户通过ctrl-c中止拷贝操作
+IF ERRORLEVEL 3 ECHO 预置错误阻止文件拷贝操作
+IF ERRORLEVEL 4 ECHO 拷贝过程中写盘错误 
+
+无论拷贝是否成功，后面的：
+
+未找到拷贝文件
+用户通过ctrl-c中止拷贝操作
+预置错误阻止文件拷贝操作
+拷贝过程中写盘错误
+
+都将显示出来。 
+</code></pre>
+<h3 id="32-for语法">3.2 for语法</h3>
+<pre><code>for %%a in (A B C) do echo %%a
+
+案例：
+for %%c in (*.bat *.txt) do type %%c
+</code></pre>
+<h3 id="33-choice语句">3.3 choice语句</h3>
+<p>choice 使用此命令可以让用户输入一个字符（用于选择），从而根据用户的选择返回不同的errorlevel，然后于if errorlevel配合，根据用户的选择运行不同的命令。</p>
+<p>注意：choice命令为DOS或者Windows系统提供的外部命令，不同版本的choice命令语法会稍有不同，请用choice /?查看用法。</p>
+<p>choice的命令语法（该语法为Windows 2003中choice命令的语法，其它版本的choice的命令语法与此大同小异）:</p>
+<pre><code>CHOICE [/C choices] [/N] [/CS] [/T timeout /D choice] [/M text]
+
+描述:该工具允许用户从选择列表选择一个项目并返回所选项目的索引。
+
+参数列表:
+/C choices 指定要创建的选项列表。默认列表是 &quot;YN&quot;。
+
+/N 在提示符中隐藏选项列表。提示前面的消息得到显示，
+选项依旧处于启用状态。
+
+/CS 允许选择分大小写的选项。在默认情况下，这个工具
+是不分大小写的。
+
+/T timeout 做出默认选择之前，暂停的秒数。可接受的值是从 0
+到 9999。如果指定了 0，就不会有暂停，默认选项
+会得到选择。
+
+/D choice 在 nnnn 秒之后指定默认选项。字符必须在用 /C 选
+项指定的一组选择中; 同时，必须用 /T 指定 nnnn。
+
+/M text 指定提示之前要显示的消息。如果没有指定，工具只
+显示提示。
+
+/? 显示帮助消息。
+
+注意:
+ERRORLEVEL 环境变量被设置为从选择集选择的键索引。列出的第一个选
+择返回 1，第二个选择返回 2，等等。如果用户按的键不是有效的选择，
+该工具会发出警告响声。如果该工具检测到错误状态，它会返回 255 的
+ERRORLEVEL 值。如果用户按 Ctrl+Break 或 Ctrl+C 键，该工具会返回 0
+的 ERRORLEVEL 值。在一个批程序中使用 ERRORLEVEL 参数时，将参数降
+序排列。
+
+示例:
+CHOICE /?
+CHOICE /C YNC /M &quot;确认请按 Y，否请按 N，或者取消请按 C。&quot;
+CHOICE /T 10 /C ync /CS /D y
+CHOICE /C ab /M &quot;选项 1 请选择 a，选项 2 请选择 b。&quot;
+CHOICE /C ab /N /M &quot;选项 1 请选择 a，选项 2 请选择 b。&quot;
+
+
+案例：
+@echo off
+choice /C dme /M &quot;defrag,mem,end&quot;
+if errorlevel 1 goto defrag
+if errorlevel 2 goto mem
+if errorlevel 3 goto end
+
+:defrag
+c:\dos\defrag
+goto end
+
+:mem
+mem
+goto end
+
+:end
+echo good bye
+
+按下d，%errorlevel%=1
+按下m，%errorlevel%=2
+按下e，%errorlevel%=3
+</code></pre>
+<h3 id="34-setlocal与endlocal命令">3.4 setlocal与endlocal命令</h3>
 <p>setlocal和endlocal命令执行结果：让中间的程序对于系统变量的改变只在程序内起作用，不会影响整个系统级别。</p>
 <pre><code>@echo off
 setlocal
@@ -697,6 +788,48 @@ echo 系统环境变量path的值
 set path
 </code></pre>
 <p>在第二行setlocal之后，第三行对于变量path进行了赋值，第四行就是显示一下该值。在第六行endlocal后，重新显示一下系统变量path（第七行），会发现仍然是程序运行之前的path值，没有被程序改变。</p>
+<h1 id="三bat成品案例">三、bat成品案例</h1>
+<h2 id="1通过批处理文件bat一键修改电脑ip地址">1.通过批处理文件（.bat）一键修改电脑ip地址</h2>
+<pre><code>@echo off
+echo.
+echo 修改ip地址，1为自动获取ip地址，2为修改家里ip地址,3 为公司IP
+echo.set sel=
+set/p sel=请选择修改方式：
+if &quot;%sel%&quot;==&quot;1&quot; goto auto
+if &quot;%sel%&quot;==&quot;2&quot; goto home
+if &quot;%sel%&quot;==&quot;3&quot; goto company
+echo 您没有选择修改方式。
+goto end
+
+  :auto
+netsh interface ip set address name=&quot;本地连接&quot; source=dhcp
+netsh interface ip delete dns &quot;本地连接&quot; all
+ipconfig /flushdns
+ipconfig /all
+goto end
+
+  :home
+echo 正在更改IP地址，请稍等......
+netsh interface ip set address name=&quot;本地连接&quot; source=static addr=192.168.1.80 mask=255.255.255.0 gateway=192.168.1.1 gwmetric=1
+netsh interface ip set dns name=&quot;本地连接&quot; source=static addr=202.102.192.68
+netsh interface ip add dns name=&quot;本地连接&quot; addr=202.102.199.68 index=2 
+ipconfig /flushdns
+ipconfig /all
+echo 更改IP地址完成！
+goto end
+
+  :company
+echo 正在更改IP地址，请稍等......
+netsh interface ip set address name=&quot;本地连接&quot; source=static addr=10.85.10.80 mask=255.255.255.0 gateway=10.85.10.253 gwmetric=1
+netsh interface ip set dns name=&quot;本地连接&quot; source=static addr=218.104.78.2
+netsh interface ip add dns name=&quot;本地连接&quot; addr=10.85.7.100 index=2 
+ipconfig /flushdns
+ipconfig /all
+goto end
+
+  :end
+pause
+</code></pre>
 
     </div>
     <div class="article-footer">
