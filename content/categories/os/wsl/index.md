@@ -1,5 +1,5 @@
 +++
-title= "wsl1：使用网络代理？"
+title= "wsl：window下一款Linux环境"
 description= "访问不了Google？git失败？"
 date= 2022-03-23T20:09:16+08:00
 author= "somebody"
@@ -7,24 +7,43 @@ draft= false
 slug= "test-post"
 image= "face.jpg" 
 categories= [
-    "app"
+    "os"
 ]
 
 tags=  [
-    " wsl1"
+    " wsl"
 ]
 
 +++
 
-# 如何在wsl1中使用网络代理？
+# 一、wsl与wsl2相互切换
 
-## 代理工具
+## 1.开启windows相关功能
 
-1. ### polipo
+![image-20230412101652516](images/image-20230412101652516.png)
 
-2. proxychain
+## 2.安装Windows升级软件
 
-## 前提条件
+![image-20230412102121655](images/image-20230412102121655.png)
+
+## 3.重启，然后“管理员终端”
+
+~~~ shell
+wsl --set-version <分发版名称 wsl -l -v 查看> 2或1
+~~~
+
+
+
+
+
+# 二、如何在wsl1中使用网络代理？
+
+## 1. 代理工具
+
+- polipo
+- proxychain
+
+## 2. 前提条件
 
 v2ray中开启允许局域网连接
 
@@ -34,7 +53,7 @@ v2ray中开启允许局域网连接
 
 ![image-20220323201749350](index.assets/image-20220323201749350.png)
 
-## 开始代理
+## 3. 开始代理
 
 ### polipo
 

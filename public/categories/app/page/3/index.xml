@@ -6,10 +6,19 @@
     <description>Recent content in app on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Sat, 08 Apr 2023 22:44:43 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 11 Apr 2023 19:02:39 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>wsl：window下一款Linux环境</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/test-post/</link>
+      <pubDate>Wed, 23 Mar 2022 20:09:16 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/test-post/</guid>
+      <description>一、wsl与wsl2相互切换 1.开启windows相关功能 2.安装Windows升级软件 3.重启，然后“管理员终端” wsl --set-version &amp;lt;分发版名称 wsl</description>
+    </item>
     
     <item>
       <title>《C&#43;&#43; Effective》-读书笔记5</title>

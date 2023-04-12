@@ -6,10 +6,19 @@
     <description>Recent content on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Tue, 11 Apr 2023 09:02:51 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 11 Apr 2023 19:02:39 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bluez</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/bluez/</link>
+      <pubDate>Thu, 28 Apr 2022 10:39:16 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/bluez/</guid>
+      <description>linux官方蓝牙协议bluez的使用 相关网址 官网源码 官网文档 python调用bluez bluepy - a Bluetooth LE interface for Python — bluepy 0.9.11 documentation (ianharvey.github.io) 安装bluez (Ubuntu 20.04</description>
+    </item>
     
     <item>
       <title>Tcp_server</title>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/slam%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/</guid>
       <description>slam资料汇集 ros学习网站收集 Ros官网 wiki.ros.org 中国大学MOOC&amp;mdash;《机器人操作系统入门》课程讲义 中国大学MOOC&amp;mdash;《智</description>
-    </item>
-    
-    <item>
-      <title>wsl1：使用网络代理？</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/test-post/</link>
-      <pubDate>Wed, 23 Mar 2022 20:09:16 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/test-post/</guid>
-      <description>如何在wsl1中使用网络代理？ 代理工具 polipo proxychain 前提条件 v2ray中开启允许局域网连接 记住以下ip:port 开始代理 polipo 参考博客：为 windows wsl 配置 socks5 代理 (github.com)</description>
     </item>
     
   </channel>
