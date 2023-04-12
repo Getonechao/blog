@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Tue, 11 Apr 2023 09:02:51 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 Apr 2023 11:58:49 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>windows:一些好用的操作</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/win/</link>
+      <pubDate>Wed, 12 Apr 2023 11:58:49 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/win/</guid>
+      <description>一、定时任务 二、bat脚本 1. 基础命令 echo rem pause call 1.调用另一个批处理程序，并且不终止父批处理程序（如果不用call而直接调用别的批处理文件，那么</description>
+    </item>
     
     <item>
       <title>Lxrunoffline：一款自定义安装wsl的工具</title>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%A1%AC%E4%BB%B6%E8%B5%84%E6%96%99/</guid>
       <description>树莓派硬件资料 40pin SDA.0、SDA.1：I2C数据传输口 SCL.0、SCL.1：I2C的时钟信号 GPIO.x（x = 0,1,2,3,4,5,6</description>
-    </item>
-    
-    <item>
-      <title>Raspberry：系统初始配置操作</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/raspberry%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</link>
-      <pubDate>Sat, 30 Apr 2022 13:21:57 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/raspberry%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</guid>
-      <description>Raspberry系统初始配置操作 note: Raspberry Pi OS从bullseye(2022-04-04 debaian 11)以后不在设置默认用户pi和密码raspberry</description>
     </item>
     
   </channel>

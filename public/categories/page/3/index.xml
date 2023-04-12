@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Tue, 11 Apr 2023 19:02:39 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 Apr 2023 11:58:49 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>slam的相关资料：一</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/slam%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Sun, 27 Mar 2022 19:03:06 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/slam%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/</guid>
+      <description>slam资料汇集 ros学习网站收集 Ros官网 wiki.ros.org 中国大学MOOC&amp;mdash;《机器人操作系统入门》课程讲义 中国大学MOOC&amp;mdash;《智</description>
+    </item>
     
     <item>
       <title>wsl：window下一款Linux环境</title>
