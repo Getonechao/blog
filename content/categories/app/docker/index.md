@@ -6,13 +6,9 @@ author= "chao"
 draft= false
 image= "" 
 math= true
-categories= [
-    "app"
-]
+categories= ["app”]
 
-tags=  [
-    " docker"
-]
+tags=  [" docker"]
 
 +++
 
@@ -20,17 +16,21 @@ tags=  [
 
 [Docker 官方文档 | Docker Documentation](https://docs.docker.com/)
 
-1. ## window安装
 
-需要安装wsl2
+
+## 1.自动安装
+
+~~~
+wget http://fishros.com/install -O fishros && sudo bash fishros
+~~~
 
 ********
 
-2.  ## linux
+## 2.手动安装
 
 ### 2.1. ubuntu安装
 
-1.系统需求
+#### 1.系统需求
 
 - Ubuntu Jammy 22.04 (LTS)
 - Ubuntu Impish 21.10
@@ -39,13 +39,13 @@ tags=  [
 
 Docker Engine is supported on `x86_64` (or `amd64`), `armhf`, `arm64`, and `s390x` architectures.
 
-2.卸载旧版本
+#### 2.卸载旧版本
 
 ~~~shell
 sudo apt-get remove docker docker-engine docker.io containerd runc
 ~~~
 
-3.使用仓库安装(也可以使用二进制包安装)
+#### 3.使用仓库安装(也可以使用二进制包安装)
 
 ~~~shell
 sudo apt-get update
@@ -58,13 +58,13 @@ sudo apt-get update
 
 ~~~
 
-4.添加 GPG key
+#### 4.添加 GPG key
 
 ~~~
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ~~~
 
-5.添加docker源
+#### 5.添加docker源
 
 ~~~shell
 echo \
@@ -72,7 +72,7 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ~~~
 
-6. 安装 Docker Engine
+6. #### 安装 Docker Engine
 
 ~~~shell
  #安装最新docker
@@ -84,7 +84,7 @@ echo \
  udo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io docker-compose-plugin
 ~~~
 
-7.测试
+#### 7.测试
 
 ~~~shell
 docker version
@@ -92,7 +92,7 @@ docker version
 sudo docker run hello-world
 ~~~
 
-8.卸载 Docker Engine🔗
+#### 8.卸载 Docker Engine🔗
 
 ~~~shell
 
@@ -106,7 +106,7 @@ sudo rm -rf /var/lib/containerd
 
 ~~~
 
-## 3.docker加速
+## 3.docker镜像元
 
 [轻量应用服务器 安装 Docker 并配置镜像加速源-最佳实践-文档中心-腾讯云-腾讯云 (tencent.com)](https://cloud.tencent.com/document/product/1207/45596)
 
