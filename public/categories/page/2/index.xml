@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Wed, 12 Apr 2023 11:58:49 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 14 Apr 2023 12:49:07 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Raspberry：硬件资料</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%A1%AC%E4%BB%B6%E8%B5%84%E6%96%99/</link>
+      <pubDate>Wed, 04 May 2022 11:56:53 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%A1%AC%E4%BB%B6%E8%B5%84%E6%96%99/</guid>
+      <description>树莓派硬件资料 40pin SDA.0、SDA.1：I2C数据传输口 SCL.0、SCL.1：I2C的时钟信号 GPIO.x（x = 0,1,2,3,4,5,6</description>
+    </item>
     
     <item>
       <title>Raspberry：系统初始配置操作</title>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
       <description>ROS的使用 一、安装ros 脚本安装 wget http://fishros.com/install -O fishros &amp;amp;&amp;amp; sudo bash fishros 原文章链接：鱼香ros rosdep 安装 note: 注意安装ros过程中，可以不安装rosdep，它不是ros系</description>
-    </item>
-    
-    <item>
-      <title>eth wifi 网络配置</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/etc/eth_wifi%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Fri, 01 Apr 2022 13:11:10 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/etc/eth_wifi%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</guid>
-      <description>网络配置 ubuntu18.04配置IP 使用ip addr 只限于以太网配置(临时) ip addr add 192.168.8.30/24 dev eth0 /etc/netplan/*配置文件 服务器中是50-cl</description>
     </item>
     
   </channel>

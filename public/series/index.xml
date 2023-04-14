@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Linux：Shell脚本编程</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/shell/</link>
+      <pubDate>Fri, 14 Apr 2023 12:49:07 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/shell/</guid>
+      <description>README - 《阮一峰 Bash 脚本教程》 - 书栈网 · BookStack 一、启动环境 当前bash环境 source main.sh 子bash环境 ./main.sh 二、变量 2.1 将局部变量声明为全局变量 export a=1 2.2 位置变量 $0 $1 $2 $3</description>
+    </item>
+    
+    <item>
       <title>windows:一些好用的操作</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/win/</link>
       <pubDate>Wed, 12 Apr 2023 11:58:49 +0800</pubDate>
@@ -133,7 +142,7 @@
       <pubDate>Sat, 14 May 2022 01:12:54 +0800</pubDate>
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/</guid>
-      <description>一、docker安装 Docker 官方文档 | Docker Documentation window安装 需要安装wsl2 linux 2.1. ubuntu安装 1.系统需求 Ubuntu Jammy 22.04 (LTS) Ubuntu Impish 21.10 Ubuntu Focal 20.04 (LTS) Ubuntu Bionic 18.04 (LTS) Docker Engine is supported on</description>
+      <description>一、docker安装 Docker 官方文档 | Docker Documentation 1.自动安装 wget http://fishros.com/install -O fishros &amp;amp;&amp;amp; sudo bash fishros 2.手动安装 2.1. ubuntu安装 1.系统需求 Ubuntu Jammy 22.04 (LTS) Ubuntu Impish 21.10 Ubuntu Focal 20.04 (LTS) Ubuntu Bionic 18.04 (LTS) Docker Engine</description>
     </item>
     
     <item>
@@ -179,15 +188,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</guid>
       <description>WiringPi 安装 WiringPi 官网介绍截取 WiringPi is a PIN based GPIO access library written in C for the BCM2835, BCM2836 and BCM2837 SoC devices used in all Raspberry Pi. versions. The source code is not publicly available but may be made available to those who wish commercial support. It’s designed to be familiar to people who have used the Arduino “w</description>
-    </item>
-    
-    <item>
-      <title>Raspberry：硬件资料</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%A1%AC%E4%BB%B6%E8%B5%84%E6%96%99/</link>
-      <pubDate>Wed, 04 May 2022 11:56:53 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%A1%AC%E4%BB%B6%E8%B5%84%E6%96%99/</guid>
-      <description>树莓派硬件资料 40pin SDA.0、SDA.1：I2C数据传输口 SCL.0、SCL.1：I2C的时钟信号 GPIO.x（x = 0,1,2,3,4,5,6</description>
     </item>
     
   </channel>

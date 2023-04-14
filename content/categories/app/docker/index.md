@@ -6,9 +6,14 @@ author= "chao"
 draft= false
 image= "" 
 math= true
-categories= ["app”]
 
-tags=  [" docker"]
+categories= [
+    "app"
+]
+
+tags=  [
+    " docker"
+]
 
 +++
 
