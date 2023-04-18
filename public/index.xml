@@ -6,10 +6,19 @@
     <description>Recent content on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Fri, 14 Apr 2023 12:49:07 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 18 Apr 2023 11:41:19 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>python3:一些库的总结经验</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/python/lib/</link>
+      <pubDate>Tue, 18 Apr 2023 11:41:19 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/python/lib/</guid>
+      <description>一、OS模块 1.目录操作 os.chdir(path) os.getcwd() 打开一个文件，并且设置需要的打开选项 os.open(file, flags) 取得指定文件夹下的文件列表 os.listdir(path) 创建一个名为 path 的目录，应用以数字表示的权限模</description>
+    </item>
     
     <item>
       <title>Linux：Shell脚本编程</title>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/5_ros%E7%BC%96%E7%A8%8B/</guid>
       <description>ros编程 1.topic 1.1 topic_pulisher程序实现四个步骤 1.2 topic_subscriber程序实现四个步骤 note：保证回调函数中处理不能</description>
-    </item>
-    
-    <item>
-      <title>Raspberry：Wiringpi的安装及使用</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</link>
-      <pubDate>Wed, 04 May 2022 14:01:09 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</guid>
-      <description>WiringPi 安装 WiringPi 官网介绍截取 WiringPi is a PIN based GPIO access library written in C for the BCM2835, BCM2836 and BCM2837 SoC devices used in all Raspberry Pi. versions. The source code is not publicly available but may be made available to those who wish commercial support. It’s designed to be familiar to people who have used the Arduino “w</description>
     </item>
     
   </channel>
