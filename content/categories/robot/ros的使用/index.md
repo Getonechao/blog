@@ -258,7 +258,7 @@ geometry_msgs/Point point
 
 
 
-# rviz的使用
+# xlaunch的使用
 
 ###### 1.安装VcXsrv
 
@@ -295,3 +295,27 @@ source ~/.bashrc
 参数-ac 等同 Disable access control的作用一样，允许所有客户端程序都能连接上这个VcXsrv
 
 ![image-20230420125735991](images/image-20230420125735991.png)
+
+# gazebo使用
+
+## 一、报错
+
+运行gazebo报错libcurl: (51) SSL
+
+~~~
+nano ~/.ignition/fuel/config.yaml
+
+把api.ignitionfuel.org换成 fuel.ignitionrobotics.org，然后保存退出
+~~~
+
+## 二、gazebo插件
+
+~~~
+cd ~/.gazebo && git clone git@github.com:osrf/gazebo_models.git
+
+mv gazebo_models models
+~~~
+
+## 三、验证
+
+![image-20230420163707070](images/image-20230420163707070.png)

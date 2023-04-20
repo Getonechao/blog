@@ -36,57 +36,27 @@ wsl --set-version <分发版名称 wsl -l -v 查看> 2或1
 
 
 
-# 二、如何在wsl1中使用网络代理？
+# 二、如何在wsl中使用网络代理？
 
-## 1. 代理工具
+wsl2需要在管理员终端，先开启windows防火墙权限
 
-- polipo
-- proxychain
+~~~
+New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
+~~~
 
-## 2. 前提条件
+打开clash的端口
 
-v2ray中开启允许局域网连接
+![](images/image-20230420163307553.png)
 
-![image-20220323201609014](index.assets/image-20220323201609014.png)
+代理端口设置
 
-记住以下ip:port
-
-![image-20220323201749350](index.assets/image-20220323201749350.png)
-
-## 3. 开始代理
-
-### polipo
-
-参考博客：[为 windows wsl 配置 socks5 代理 (github.com)](https://gist.github.com/moenn/2db47589724cf6c06ad9316ac57e2144)
-
-步骤总结：
-
-```
-下载
-sudo apt install polipo
-打开配置文件
-sudo nano /etc/polipo/config
-写入
-socksParentProxy = "localhost:10808"
-socksProxyType = socks5
-proxyPort = 8123
-
-环境设置
+~~~
 nano ~/.bashrc
-写入
-export https_proxy=http://127.0.0.1:8123
-export http_proxy=http://127.0.0.1:8123 
-export all_proxy=socks5://127.0.0.1:8123
+#加入，其中7890为clash的代理端口
 
-启动
-sudo service polipo stop 
-sudo service polipo start 
-
-测试
-curl www.google.com
-```
-
-### proxychain
-
-参考博客：[linux下的全局代理工具proxychain | MonkeyWie's Blog](https://monkeywie.cn/2020/07/06/linux-global-proxy-tool-proxychain/)
+hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
+export https_proxy="http://${hostip}:7890"
+export http_proxy="http://${hostip}:7890"
+export all_proxy="socks5://${hostip}:7890"
+~~~
 

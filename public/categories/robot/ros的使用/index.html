@@ -39,7 +39,7 @@
 <meta itemprop="name" content="ROS的使用">
 <meta itemprop="description" content="如何安装ros"><meta itemprop="datePublished" content="2022-04-01T13:25:02+08:00" />
 <meta itemprop="dateModified" content="2022-04-01T13:25:02+08:00" />
-<meta itemprop="wordCount" content="879">
+<meta itemprop="wordCount" content="994">
 <meta itemprop="keywords" content="ros," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ROS的使用"/>
 <meta name="twitter:description" content="如何安装ros"/>
@@ -532,7 +532,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 879字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 994字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2分 </span>
       </div>
     </div>
@@ -719,7 +719,7 @@ geometry_msgs/Point point
 
 
 </code></pre>
-<h1 id="rviz的使用">rviz的使用</h1>
+<h1 id="xlaunch的使用">xlaunch的使用</h1>
 <h6 id="1安装vcxsrv">1.安装VcXsrv</h6>
 <p><img src="images/image-20230420105823072.png" alt="image-20230420105823072"></p>
 <h6 id="2解决wsl2-ping不通windows而windows可以ping通wsl2">2.解决wsl2 ping不通windows，而windows可以ping通wsl2</h6>
@@ -742,6 +742,20 @@ source ~/.bashrc
 <p><img src="images/image-20230420125638785.png" alt="image-20230420125638785"></p>
 <p>参数-ac 等同 Disable access control的作用一样，允许所有客户端程序都能连接上这个VcXsrv</p>
 <p><img src="images/image-20230420125735991.png" alt="image-20230420125735991"></p>
+<h1 id="gazebo使用">gazebo使用</h1>
+<h2 id="一报错">一、报错</h2>
+<p>运行gazebo报错libcurl: (51) SSL</p>
+<pre><code>nano ~/.ignition/fuel/config.yaml
+
+把api.ignitionfuel.org换成 fuel.ignitionrobotics.org，然后保存退出
+</code></pre>
+<h2 id="二gazebo插件">二、gazebo插件</h2>
+<pre><code>cd ~/.gazebo &amp;&amp; git clone git@github.com:osrf/gazebo_models.git
+
+mv gazebo_models models
+</code></pre>
+<h2 id="三验证">三、验证</h2>
+<p><img src="images/image-20230420163707070.png" alt="image-20230420163707070"></p>
 
     </div>
     <div class="article-footer">
