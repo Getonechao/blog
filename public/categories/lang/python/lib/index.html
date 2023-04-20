@@ -39,7 +39,7 @@
 <meta itemprop="name" content="python3:一些库的总结经验">
 <meta itemprop="description" content="文章简介"><meta itemprop="datePublished" content="2023-04-18T11:41:19+08:00" />
 <meta itemprop="dateModified" content="2023-04-18T11:41:19+08:00" />
-<meta itemprop="wordCount" content="2337">
+<meta itemprop="wordCount" content="2479">
 <meta itemprop="keywords" content=" , ," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="python3:一些库的总结经验"/>
 <meta name="twitter:description" content="文章简介"/>
@@ -214,9 +214,10 @@
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/" class="category-list-link">app</a><span class="category-list-count">12</span></li>
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/" class="category-list-link">lang</a><span class="category-list-count">15</span></li>
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/" class="category-list-link">math</a><span class="category-list-count">4</span></li>
-            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/" class="category-list-link">os</a><span class="category-list-count">11</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/" class="category-list-link">os</a><span class="category-list-count">10</span></li>
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/" class="category-list-link">other</a><span class="category-list-count">1</span></li>
-            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/" class="category-list-link">robot</a><span class="category-list-count">4</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/" class="category-list-link">robat</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/" class="category-list-link">robot</a><span class="category-list-count">3</span></li>
         </ul>
     </div>
 </div>
@@ -532,7 +533,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 2337字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 2479字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 5分 </span>
       </div>
     </div>
@@ -643,6 +644,23 @@ os.copy_file_range(src, dst, count, offset_src=None, offset_dst=None) 从文件�
 </code></pre>
 <h2 id="5-linux-扩展属性">5. Linux 扩展属性</h2>
 <h2 id="6进程管理">6.进程管理</h2>
+<pre><code>os.abort()
+os.add_dll_directory(path)将路径添加到 DLL 搜索路径。
+
+*************************
+os.execl(path, arg0, arg1, ...)
+os.execle(path, arg0, arg1, ..., env)
+os.execlp(file, arg0, arg1, ...)
+os.execlpe(file, arg0, arg1, ..., env)
+os.execv(path, args)
+os.execve(path, args, env)
+os.execvp(file, args)
+os.execvpe(file, args, env)
+这些函数都将执行一个新程序，以替换当前进程。它们没有返回值。在 Unix 上，新程序会加载到当前进程中，且进程号与调用者相同。过程中的错误会被报告为 OSError 异常
+**************************
+
+os._exit(n)
+</code></pre>
 <h2 id="7调度器接口">7.调度器接口</h2>
 <p><strong>控制操作系统如何为进程分配 CPU 时间</strong></p>
 <pre><code>***********调度策略常量**************

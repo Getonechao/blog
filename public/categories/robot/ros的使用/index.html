@@ -39,7 +39,7 @@
 <meta itemprop="name" content="ROS的使用">
 <meta itemprop="description" content="如何安装ros"><meta itemprop="datePublished" content="2022-04-01T13:25:02+08:00" />
 <meta itemprop="dateModified" content="2022-04-01T13:25:02+08:00" />
-<meta itemprop="wordCount" content="694">
+<meta itemprop="wordCount" content="879">
 <meta itemprop="keywords" content="ros," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ROS的使用"/>
 <meta name="twitter:description" content="如何安装ros"/>
@@ -214,9 +214,10 @@
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/" class="category-list-link">app</a><span class="category-list-count">12</span></li>
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/" class="category-list-link">lang</a><span class="category-list-count">15</span></li>
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/" class="category-list-link">math</a><span class="category-list-count">4</span></li>
-            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/" class="category-list-link">os</a><span class="category-list-count">11</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/" class="category-list-link">os</a><span class="category-list-count">10</span></li>
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/" class="category-list-link">other</a><span class="category-list-count">1</span></li>
-            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/" class="category-list-link">robot</a><span class="category-list-count">4</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/" class="category-list-link">robat</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/" class="category-list-link">robot</a><span class="category-list-count">3</span></li>
         </ul>
     </div>
 </div>
@@ -531,7 +532,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 694字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 879字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2分 </span>
       </div>
     </div>
@@ -580,7 +581,7 @@ rosparam delete  [param_name]      删除参数
 
 rosparam list           列出参数名
 </code></pre>
-<h3 id="三ros的使用教程">三、ros的使用教程</h3>
+<h2 id="三ros的使用教程">三、ros的使用教程</h2>
 <h4 id="1-发布者与订阅者">1. 发布者与订阅者</h4>
 <h4 id="2服务器">2.服务器</h4>
 <h4 id="3tf函数的使用">3.tf函数的使用</h4>
@@ -668,7 +669,7 @@ geometry_msgs/Point point
   float64 y
   float64 z
 </code></pre>
-<h3 id="四launch文件的使用">四、launch文件的使用</h3>
+<h2 id="四launch文件的使用">四、launch文件的使用</h2>
 <pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;launch&gt;
     
@@ -680,7 +681,7 @@ geometry_msgs/Point point
     
 &lt;/launch&gt;
 </code></pre>
-<h3 id="五vscode的配置">五、VScode的配置</h3>
+<h2 id="五vscode的配置">五、VScode的配置</h2>
 <h4 id="头文件智能提示">头文件智能提示</h4>
 <ol>
 <li>进入c/c++插件</li>
@@ -718,6 +719,29 @@ geometry_msgs/Point point
 
 
 </code></pre>
+<h1 id="rviz的使用">rviz的使用</h1>
+<h6 id="1安装vcxsrv">1.安装VcXsrv</h6>
+<p><img src="images/image-20230420105823072.png" alt="image-20230420105823072"></p>
+<h6 id="2解决wsl2-ping不通windows而windows可以ping通wsl2">2.解决wsl2 ping不通windows，而windows可以ping通wsl2</h6>
+<p>管理员终端设置防火墙</p>
+<pre><code>New-NetFirewallRule -DisplayName &quot;WSL&quot; -Direction Inbound  -InterfaceAlias &quot;vEthernet (WSL)&quot;  -Action Allow
+</code></pre>
+<h6 id="3解决wsl每次重启之后ip地址都会重新配置和分配">3.解决wsl每次重启之后IP地址都会重新配置和分配</h6>
+<pre><code>nano ~/.bashrc
+
+加入
+#########display############
+export LIBGL_ALWAYS_INDIRECT=0 #直接硬件渲染
+export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2&gt;/dev/null):0
+############################
+
+source ~/.bashrc
+</code></pre>
+<p>4.xlaunch设置</p>
+<p><img src="images/image-20230420125624266.png" alt="image-20230420125624266"></p>
+<p><img src="images/image-20230420125638785.png" alt="image-20230420125638785"></p>
+<p>参数-ac 等同 Disable access control的作用一样，允许所有客户端程序都能连接上这个VcXsrv</p>
+<p><img src="images/image-20230420125735991.png" alt="image-20230420125735991"></p>
 
     </div>
     <div class="article-footer">

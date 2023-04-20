@@ -195,6 +195,25 @@ os.isatty(fd, /)
 
 ## 6.进程管理
 
+~~~
+os.abort()
+os.add_dll_directory(path)将路径添加到 DLL 搜索路径。
+
+*************************
+os.execl(path, arg0, arg1, ...)
+os.execle(path, arg0, arg1, ..., env)
+os.execlp(file, arg0, arg1, ...)
+os.execlpe(file, arg0, arg1, ..., env)
+os.execv(path, args)
+os.execve(path, args, env)
+os.execvp(file, args)
+os.execvpe(file, args, env)
+这些函数都将执行一个新程序，以替换当前进程。它们没有返回值。在 Unix 上，新程序会加载到当前进程中，且进程号与调用者相同。过程中的错误会被报告为 OSError 异常
+**************************
+
+os._exit(n)
+~~~
+
 
 
 ## 7.调度器接口

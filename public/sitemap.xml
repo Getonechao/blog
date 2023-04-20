@@ -143,20 +143,6 @@
   </url>
   
   <url>
-    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/2_ros2%E6%A8%A1%E6%9D%BF%E8%8C%83%E5%BC%8F/</loc>
-    <lastmod>2022-09-03T17:13:39+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/</loc>
-    <lastmod>2022-09-03T17:13:39+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/robot/</loc>
     <lastmod>2022-09-01T18:08:20+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -164,7 +150,7 @@
   </url>
   
   <url>
-    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/1_ros2%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/</loc>
     <lastmod>2022-09-01T18:08:20+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -172,6 +158,13 @@
   
   <url>
     <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/ros2/</loc>
+    <lastmod>2022-09-01T18:08:20+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2022-09-01T18:08:20+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -283,14 +276,21 @@
   </url>
   
   <url>
-    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/5_ros%E7%BC%96%E7%A8%8B/</loc>
+    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/robat/</loc>
     <lastmod>2022-05-04T16:45:20+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/robat/</loc>
+    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/</loc>
+    <lastmod>2022-05-04T16:45:20+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/5_ros%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2022-05-04T16:45:20+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

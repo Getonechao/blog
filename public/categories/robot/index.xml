@@ -6,7 +6,7 @@
     <description>Recent content in robot on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Sat, 03 Sep 2022 17:13:39 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 01 Sep 2022 18:08:20 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/index.xml" rel="self" type="application/rss+xml" />
     
@@ -93,20 +93,11 @@
     </item>
     
     <item>
-      <title>2_ros2模板范式</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/2_ros2%E6%A8%A1%E6%9D%BF%E8%8C%83%E5%BC%8F/</link>
-      <pubDate>Sat, 03 Sep 2022 17:13:39 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/2_ros2%E6%A8%A1%E6%9D%BF%E8%8C%83%E5%BC%8F/</guid>
-      <description>ros2模板范式 cpp 1. ament_cmake set #生成compile_command.json set(CMAKE_EXPORT_COMPILE_COMMANDS ON) #c编译器 set(CMAKE_C_COMPILER &amp;quot;/usr/bin/clang&amp;quot;) #cpp编译器 set(CMAKE_CXX_COMPILER &amp;quot;/usr/bin/clang++&amp;quot;) set(CMAKE_CXX_FLAGS &amp;quot;${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Werror&amp;quot;) 固定范式 find_package(ament_cmake REQUIRED) find_package(rclcpp REQUIRED) find_package(std_msgs REQUIRED) aux_source_directory(src SRC_LIST)</description>
-    </item>
-    
-    <item>
-      <title>1_ros2命令的使用</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/1_ros2%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <title>ros2:命令的使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Thu, 01 Sep 2022 18:08:20 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/1_ros2%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
       <description>ros2命令 ros2 pkg 创建功能包 # cpp ros2 pkg create --dependencies rclcpp std_msgs --build-type ament_cmake [pkg name] # python ros2 pkg create --dependencies rclpy std_msgs --build-type ament_python [pkg name] colcon&amp;ndash;编译 #下载依赖 rosdep install -y --from-paths src --rosdistro $ROS_DISTRO colcon build --symlink-install ------------------ --symlink-install :</description>
     </item>
     
@@ -183,12 +174,21 @@
     </item>
     
     <item>
-      <title>5_ros编程</title>
+      <title>ros编程</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/5_ros%E7%BC%96%E7%A8%8B/</link>
       <pubDate>Wed, 04 May 2022 16:45:20 +0800</pubDate>
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/5_ros%E7%BC%96%E7%A8%8B/</guid>
       <description>ros编程 1.topic 1.1 topic_pulisher程序实现四个步骤 1.2 topic_subscriber程序实现四个步骤 note：保证回调函数中处理不能</description>
+    </item>
+    
+    <item>
+      <title>Raspberry：Wiringpi的安装及使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</link>
+      <pubDate>Wed, 04 May 2022 14:01:09 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</guid>
+      <description>WiringPi 安装 WiringPi 官网介绍截取 WiringPi is a PIN based GPIO access library written in C for the BCM2835, BCM2836 and BCM2837 SoC devices used in all Raspberry Pi. versions. The source code is not publicly available but may be made available to those who wish commercial support. It’s designed to be familiar to people who have used the Arduino “w</description>
     </item>
     
   </channel>
