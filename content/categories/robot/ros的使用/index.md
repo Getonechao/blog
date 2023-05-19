@@ -258,7 +258,7 @@ geometry_msgs/Point point
 
 
 
-# xlaunch的使用
+## 六、xlaunch的使用
 
 ###### 1.安装VcXsrv
 
@@ -296,9 +296,9 @@ source ~/.bashrc
 
 ![image-20230420125735991](images/image-20230420125735991.png)
 
-# gazebo使用
+## 七、gazebo使用
 
-## 一、报错
+###### 一、报错
 
 运行gazebo报错libcurl: (51) SSL
 
@@ -308,7 +308,7 @@ nano ~/.ignition/fuel/config.yaml
 把api.ignitionfuel.org换成 fuel.ignitionrobotics.org，然后保存退出
 ~~~
 
-## 二、gazebo插件
+###### 二、gazebo插件
 
 ~~~
 cd ~/.gazebo && git clone git@github.com:osrf/gazebo_models.git
@@ -316,6 +316,25 @@ cd ~/.gazebo && git clone git@github.com:osrf/gazebo_models.git
 mv gazebo_models models
 ~~~
 
-## 三、验证
+###### 三、验证
 
 ![image-20230420163707070](images/image-20230420163707070.png)
+
+## 八、ros相关功能包收集
+
+~~~
+scan_tools
+~~~
+
+~~~
+rf2o_laser_odometry
+~~~
+
+~~~
+robot_localization
+在robot_localization包中包含了两个状态估计节点
+ 1. ekf_localization_node 是一个扩展卡尔曼估计器，它使用一个三维测量模型随着时间生成状态，同时利用感知数据校正已经监测过的估计。
+
+ 2. ukf_localization_node 是一个无迹卡尔曼滤波估计器，它使用一系列sigma点通过非线性变换生成状态，并使用这些估计过的sigma点覆盖状态估计点和协方差，这个估计使用雅克比矩阵并使得估计器更加稳定。然而缺点是比ekf_localization_node耗费更大的计算量。
+~~~
+
