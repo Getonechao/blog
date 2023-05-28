@@ -88,3 +88,5 @@
 2023/05/22 周一 19:40:20.22 upload Blog failed! 
 2023/05/23 周二 19:30:35.15 upload Blog over! 
 2023/05/23 周二 19:33:36.88 upload Blog failed! 
+2023/05/26 周五 19:30:33.99 upload Blog over! 
+2023/05/26 周五 19:31:58.72 upload Blog failed! 
