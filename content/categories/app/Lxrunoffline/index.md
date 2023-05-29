@@ -56,5 +56,7 @@ LxRunOffline.exe run -n <wslname>
  lxrunoffline su -n <WSL名称> -v 1000(UID)
 ~~~
 
+## WSL2中使用USB
+
 
 

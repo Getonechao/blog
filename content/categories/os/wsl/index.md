@@ -60,3 +60,20 @@ export http_proxy="http://${hostip}:7890"
 export all_proxy="socks5://${hostip}:7890"
 ~~~
 
+# 三、WSL2中使用USB
+
+[WSL2连接 USB 设备 - liu-huan - 博客园 (cnblogs.com)](https://www.cnblogs.com/huanliu/p/17161382.html)
+
+1. 需要[Linux 内核 5.10.60.1 或更高版本](https://docs.microsoft.com/zh-cn/windows/wsl/kernel-release-notes)
+
+2. uname -a查看版本号
+
+3. 更新
+
+   ~~~
+   wsl --update
+   ~~~
+
+4. 安装 USBIPD-WIN 项目
+
+   [连接 USB 设备 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/wsl/connect-usb)
