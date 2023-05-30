@@ -416,9 +416,33 @@ sudo apt install llvm clangd lldb
 
 
 
+clang：前端编译器，将二进制码转换为IR码
+
+llvm：后端虚拟机，将IR码转换为机器码
+
+clangd：语言服务器的一种
+
+lldb：调试器
+
+
+
 再在打开vscode，下载两款插件 clangd  和 codelldb
 
+### 3.1 clangd 代码自动补全
+
 ![image-20220901150949828](images/image-20220901150949828.png)
+
+clangd插件会自动提示你安装clangd
+
+生成compile_commands.json
+
+> 1. 普通cmake编译：CMakeLists.txt
+>
+>     set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+>
+> 2. ROS编译指令：**`catkin_make -DCMAKE_EXPORT_COMPILE_COMMANDS=1`**
+
+### 3.2 codeLLDB代码调试
 
 其中CodeLLDB可能会下载不成功，可以从vsix安装
 

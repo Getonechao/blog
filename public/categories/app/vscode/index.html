@@ -39,7 +39,7 @@
 <meta itemprop="name" content="VScode：一款多插件多功能的编辑器">
 <meta itemprop="description" content="文章简介"><meta itemprop="datePublished" content="2022-05-29T10:45:50+08:00" />
 <meta itemprop="dateModified" content="2022-05-29T10:45:50+08:00" />
-<meta itemprop="wordCount" content="2809">
+<meta itemprop="wordCount" content="2988">
 <meta itemprop="keywords" content=" vscode," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="VScode：一款多插件多功能的编辑器"/>
 <meta name="twitter:description" content="文章简介"/>
@@ -532,7 +532,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 2809字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 2988字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 6分 </span>
       </div>
     </div>
@@ -785,8 +785,27 @@ chmod -R 775 57fd6d0195bb9b9d1b49f6da5db789060795de47
 <p>以ubuntu为例，需要先在ubuntu中安装</p>
 <pre><code>sudo apt install llvm clangd lldb
 </code></pre>
+<p>clang：前端编译器，将二进制码转换为IR码</p>
+<p>llvm：后端虚拟机，将IR码转换为机器码</p>
+<p>clangd：语言服务器的一种</p>
+<p>lldb：调试器</p>
 <p>再在打开vscode，下载两款插件 clangd  和 codelldb</p>
+<h3 id="31-clangd-代码自动补全">3.1 clangd 代码自动补全</h3>
 <p><img src="images/image-20220901150949828.png" alt="image-20220901150949828"></p>
+<p>clangd插件会自动提示你安装clangd</p>
+<p>生成compile_commands.json</p>
+<blockquote>
+<ol>
+<li>
+<p>普通cmake编译：CMakeLists.txt</p>
+<p>set(CMAKE_EXPORT_COMPILE_COMMANDS ON)</p>
+</li>
+<li>
+<p>ROS编译指令：<strong><code>catkin_make -DCMAKE_EXPORT_COMPILE_COMMANDS=1</code></strong></p>
+</li>
+</ol>
+</blockquote>
+<h3 id="32-codelldb代码调试">3.2 codeLLDB代码调试</h3>
 <p>其中CodeLLDB可能会下载不成功，可以从vsix安装</p>
 <p><img src="images/image-20220901151139977.png" alt="image-20220901151139977"></p>
 <h1 id="四vscode-icons--图标显示">四、vscode-icons&ndash;图标显示</h1>
