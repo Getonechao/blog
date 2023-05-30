@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>LUA：C/C&#43;&#43;的脚本语言</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/lua/</link>
+      <pubDate>Mon, 24 Apr 2023 14:58:29 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/lua/</guid>
+      <description>一、c/c++中调用LUA 1.开启控制台 // 打开lua LUA=luaL_newstate(); // 导入LUA标准库 luaL_openlibs(LUA); // 打开脚本文件 if(luaL_dofile(LUA, &amp;quot;LidarConfig.lua&amp;quot;)!=LUA_OK) { std::cerr&amp;lt;&amp;lt;&amp;quot;sorry lua file load and run failed&amp;quot;&amp;lt;&amp;lt;std::endl; exit(-1); } 2.入栈操作 void lua_pushnil (lua_State *L); void lua_pushboolean (lua_State *L,</description>
+    </item>
+    
+    <item>
       <title>python3:一些库的总结经验</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/python/lib/</link>
       <pubDate>Tue, 18 Apr 2023 11:41:19 +0800</pubDate>
@@ -125,7 +134,7 @@
       <pubDate>Sun, 29 May 2022 10:45:50 +0800</pubDate>
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/</guid>
-      <description>一、.vscode的配置 c_cpp_properties.json ctrl+shift+p ,运行C/Cpp: Edit configurations... { &amp;quot;configurations&amp;quot;: [ { &amp;quot;name&amp;quot;: &amp;quot;linux&amp;quot;, &amp;quot;includePath&amp;quot;: [ &amp;quot;/opt/ros/melodic/include&amp;quot;, &amp;quot;/usr/include&amp;quot;, &amp;quot;${workspaceFolder}/**&amp;quot;, &amp;quot;${workspaceFolder}/devel/include&amp;quot; ], &amp;quot;intelliSenseMode&amp;quot;: &amp;quot;linux-gcc-x64&amp;quot;, &amp;quot;compilerPath&amp;quot;: &amp;quot;/usr/bin/gcc&amp;quot;, &amp;quot;cppStandard&amp;quot;: &amp;quot;c++17&amp;quot;, &amp;quot;cStandard&amp;quot;: &amp;quot;c17&amp;quot; } ], &amp;quot;version&amp;quot;: 4 } tasks.json ctrl+shift+p ,运行task { // See https://go.microsoft.com/fwlink/?LinkId=733558 // for the documentation about the</description>
+      <description>一、.vscode的配置 1. c_cpp_properties.json ctrl+shift+p ,运行C/Cpp: Edit configurations... { &amp;quot;configurations&amp;quot;: [ { &amp;quot;name&amp;quot;: &amp;quot;linux&amp;quot;, &amp;quot;includePath&amp;quot;: [ &amp;quot;/opt/ros/melodic/include&amp;quot;, &amp;quot;/usr/include&amp;quot;, &amp;quot;${workspaceFolder}/**&amp;quot;, &amp;quot;${workspaceFolder}/devel/include&amp;quot; ], &amp;quot;intelliSenseMode&amp;quot;: &amp;quot;linux-gcc-x64&amp;quot;, &amp;quot;compilerPath&amp;quot;: &amp;quot;/usr/bin/gcc&amp;quot;, &amp;quot;cppStandard&amp;quot;: &amp;quot;c++17&amp;quot;, &amp;quot;cStandard&amp;quot;: &amp;quot;c17&amp;quot; } ], &amp;quot;version&amp;quot;: 4 } 2. tasks.json ctrl+shift+p ,运行task { // See https://go.microsoft.com/fwlink/?LinkId=733558 // for the documentation</description>
     </item>
     
     <item>
@@ -180,15 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/5_ros%E7%BC%96%E7%A8%8B/</guid>
       <description>ros编程 1.topic 1.1 topic_pulisher程序实现四个步骤 1.2 topic_subscriber程序实现四个步骤 note：保证回调函数中处理不能</description>
-    </item>
-    
-    <item>
-      <title>Raspberry：Wiringpi的安装及使用</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</link>
-      <pubDate>Wed, 04 May 2022 14:01:09 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</guid>
-      <description>WiringPi 安装 WiringPi 官网介绍截取 WiringPi is a PIN based GPIO access library written in C for the BCM2835, BCM2836 and BCM2837 SoC devices used in all Raspberry Pi. versions. The source code is not publicly available but may be made available to those who wish commercial support. It’s designed to be familiar to people who have used the Arduino “w</description>
     </item>
     
   </channel>

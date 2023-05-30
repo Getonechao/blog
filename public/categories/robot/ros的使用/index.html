@@ -39,7 +39,7 @@
 <meta itemprop="name" content="ROS的使用">
 <meta itemprop="description" content="如何安装ros"><meta itemprop="datePublished" content="2022-04-01T13:25:02+08:00" />
 <meta itemprop="dateModified" content="2022-04-01T13:25:02+08:00" />
-<meta itemprop="wordCount" content="994">
+<meta itemprop="wordCount" content="1223">
 <meta itemprop="keywords" content="ros," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ROS的使用"/>
 <meta name="twitter:description" content="如何安装ros"/>
@@ -157,6 +157,16 @@
             <li>
                 <div class="item-inner">
                     <p class="item-title">
+                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/lua/" class="title">LUA：C/C&#43;&#43;的脚本语言</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2023-04-24 14:58:29 &#43;0800 CST" itemprop="datePublished">2023-04-24</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
                         <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/python/lib/" class="title">python3:一些库的总结经验</a>
                     </p>
                     <p class="item-date">
@@ -194,16 +204,6 @@
                     </p>
                 </div>
             </li>
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2/" class="title">linux：/proc 硬件信息查询</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2023-04-11 09:02:51 &#43;0800 CST" itemprop="datePublished">2023-04-11</time>
-                    </p>
-                </div>
-            </li>
         </ul>
     </div>
 </div>
@@ -212,7 +212,7 @@
     <div class="widget-body">
         <ul class="category-list">
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/" class="category-list-link">app</a><span class="category-list-count">12</span></li>
-            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/" class="category-list-link">lang</a><span class="category-list-count">15</span></li>
+            <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/" class="category-list-link">lang</a><span class="category-list-count">16</span></li>
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/" class="category-list-link">math</a><span class="category-list-count">4</span></li>
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/" class="category-list-link">os</a><span class="category-list-count">10</span></li>
             <li class="category-list-item"><a href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/" class="category-list-link">other</a><span class="category-list-count">1</span></li>
@@ -532,8 +532,8 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 994字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2分 </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1223字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -719,7 +719,7 @@ geometry_msgs/Point point
 
 
 </code></pre>
-<h1 id="xlaunch的使用">xlaunch的使用</h1>
+<h2 id="六xlaunch的使用">六、xlaunch的使用</h2>
 <h6 id="1安装vcxsrv">1.安装VcXsrv</h6>
 <p><img src="images/image-20230420105823072.png" alt="image-20230420105823072"></p>
 <h6 id="2解决wsl2-ping不通windows而windows可以ping通wsl2">2.解决wsl2 ping不通windows，而windows可以ping通wsl2</h6>
@@ -742,20 +742,31 @@ source ~/.bashrc
 <p><img src="images/image-20230420125638785.png" alt="image-20230420125638785"></p>
 <p>参数-ac 等同 Disable access control的作用一样，允许所有客户端程序都能连接上这个VcXsrv</p>
 <p><img src="images/image-20230420125735991.png" alt="image-20230420125735991"></p>
-<h1 id="gazebo使用">gazebo使用</h1>
-<h2 id="一报错">一、报错</h2>
+<h2 id="七gazebo使用">七、gazebo使用</h2>
+<h6 id="一报错">一、报错</h6>
 <p>运行gazebo报错libcurl: (51) SSL</p>
 <pre><code>nano ~/.ignition/fuel/config.yaml
 
 把api.ignitionfuel.org换成 fuel.ignitionrobotics.org，然后保存退出
 </code></pre>
-<h2 id="二gazebo插件">二、gazebo插件</h2>
+<h6 id="二gazebo插件">二、gazebo插件</h6>
 <pre><code>cd ~/.gazebo &amp;&amp; git clone git@github.com:osrf/gazebo_models.git
 
 mv gazebo_models models
 </code></pre>
-<h2 id="三验证">三、验证</h2>
+<h6 id="三验证">三、验证</h6>
 <p><img src="images/image-20230420163707070.png" alt="image-20230420163707070"></p>
+<h2 id="八ros相关功能包收集">八、ros相关功能包收集</h2>
+<pre><code>scan_tools
+</code></pre>
+<pre><code>rf2o_laser_odometry
+</code></pre>
+<pre><code>robot_localization
+在robot_localization包中包含了两个状态估计节点
+ 1. ekf_localization_node 是一个扩展卡尔曼估计器，它使用一个三维测量模型随着时间生成状态，同时利用感知数据校正已经监测过的估计。
+
+ 2. ukf_localization_node 是一个无迹卡尔曼滤波估计器，它使用一系列sigma点通过非线性变换生成状态，并使用这些估计过的sigma点覆盖状态估计点和协方差，这个估计使用雅克比矩阵并使得估计器更加稳定。然而缺点是比ekf_localization_node耗费更大的计算量。
+</code></pre>
 
     </div>
     <div class="article-footer">
