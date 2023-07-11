@@ -152,3 +152,5 @@
 2023/07/02 周日 12:19:56.72 upload Blog failed! 
 2023/07/03 周一  8:24:19.08 upload Blog over! 
 2023/07/03 周一  8:25:21.27 upload Blog failed! 
+2023/07/06 周四 19:30:34.14 upload Blog over! 
+2023/07/06 周四 19:32:22.28 upload Blog failed! 
