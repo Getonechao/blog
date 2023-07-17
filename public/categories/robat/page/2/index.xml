@@ -6,13 +6,13 @@
     <description>Recent content in robat on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Fri, 29 Apr 2022 16:08:12 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 04 May 2022 16:45:20 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Wiringpi的安装及使用</title>
+      <title>Raspberry：Wiringpi的安装及使用</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</link>
       <pubDate>Wed, 04 May 2022 14:01:09 +0800</pubDate>
       
@@ -21,7 +21,7 @@
     </item>
     
     <item>
-      <title>树莓派硬件资料</title>
+      <title>Raspberry：硬件资料</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%A1%AC%E4%BB%B6%E8%B5%84%E6%96%99/</link>
       <pubDate>Wed, 04 May 2022 11:56:53 +0800</pubDate>
       
@@ -30,30 +30,12 @@
     </item>
     
     <item>
-      <title>Raspberry系统初始配置操作</title>
+      <title>Raspberry：系统初始配置操作</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/raspberry%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</link>
       <pubDate>Sat, 30 Apr 2022 13:21:57 +0800</pubDate>
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/raspberry%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</guid>
       <description>Raspberry系统初始配置操作 note: Raspberry Pi OS从bullseye(2022-04-04 debaian 11)以后不在设置默认用户pi和密码raspberry</description>
-    </item>
-    
-    <item>
-      <title>Amcl踩坑集</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/slam/amcl%E8%B8%A9%E5%9D%91%E9%9B%86/</link>
-      <pubDate>Fri, 29 Apr 2022 16:08:12 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robat/slam/amcl%E8%B8%A9%E5%9D%91%E9%9B%86/</guid>
-      <description>Amcl踩坑集 2022.4.29 Q1 [ERROR] [1651219018.862852200]: Couldn&#39;t determine robot&#39;s pose associated with laser scan [ WARN] [1651219018.942895300]: Failed to compute odom pose, skipping scan (Lookup would require extrapolation into the past. Requested time 1651219008.851113400 but the earliest data is at time 1651219008.964298200, when looking up transform from frame [base_link] to frame [odom]) A2 原因是我在amcl中打印</description>
-    </item>
-    
-    <item>
-      <title>4_ros常用命令</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/4_ros%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
-      <pubDate>Thu, 28 Apr 2022 14:01:38 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ros/4_ros%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description>ros常用命令 创建ros工作空间 mkdir -p ~/catkin_ws/src cd ~/catkin_ws catkin_make source devel/setup.bash echo $ROS_PACKAGE_PATH echo &amp;quot;source /home/chao/Desktop/code/02c/ros1/src/devel/setup.bash&amp;quot; &amp;gt;&amp;gt; ~/.bashrc 创建ros程序包 cd ~/catkin_ws/src catkin_create_pkg beginner_tutorials std_msgs rospy roscpp ros参数命令 rosparam set [param_name] 设置参数 rosparam get [param_name] 获取参数 rosparam load params.yaml</description>
     </item>
     
     <item>
@@ -102,12 +84,12 @@
     </item>
     
     <item>
-      <title>cmake 模板</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/cmake/template/</link>
+      <title>cmake：c/c&#43;&#43;的工程构建工具</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/cmake/</link>
       <pubDate>Tue, 19 Apr 2022 15:57:41 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/cmake/template/</guid>
-      <description>Cmake模板 cmake_minimum_required(VERSION 3.1) project(PROJECT_XXX VERSION 0.0.0.0 ) #C/C++标准 set(CMAKE_CXX_STANDARD 14) set(CMAKE_C_STANDARD 11) #设置编译器 set (CMAKE_C_COMPILER &amp;quot;/usr/bin/gcc&amp;quot;) set (CMAKE_CXX_COMPILER &amp;quot;/usr/bin/g++&amp;quot;) #lib&amp;amp;&amp;amp;bin set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib) set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin) #release debug set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]]) #add_compile_options</description>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/cmake/</guid>
+      <description>一、Cmake模板 cmake_minimum_required(VERSION 3.1) project(PROJECT_XXX VERSION 0.0.0.0 ) #C/C++标准 set(CMAKE_CXX_STANDARD 14) set(CMAKE_C_STANDARD 11) #设置编译器 set (CMAKE_C_COMPILER &amp;quot;/usr/bin/gcc&amp;quot;) set (CMAKE_CXX_COMPILER &amp;quot;/usr/bin/g++&amp;quot;) #lib&amp;amp;&amp;amp;bin输出目录 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_C</description>
     </item>
     
     <item>
@@ -170,7 +152,7 @@
       <pubDate>Fri, 15 Apr 2022 10:36:38 +0800</pubDate>
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/other/blog/command/</guid>
-      <description>command 1. 常用命令 1.1 新建文档 math类 hugo new categories/math/ --&amp;gt; hugo new categories/math/signalsAndSystems/ app类 hugo new categories/app/ os类 hugo new categories/os/ robat类 hugo new categories/robat/ lang类 hugo new categories/lang/ other类 hugo new categories/other/ 1.2 上传命令 hugo -D &amp;amp;&amp;amp;</description>
+      <description>command 1. 常用命令 1.1 新建文档 math类 hugo new categories/math/ --&amp;gt; hugo new categories/math/signalsAndSystems/ app类 hugo new categories/app/ os类 hugo new categories/os/ robat类 hugo new categories/robat/ lang类 hugo new categories/lang/ other类 hugo new categories/other/ 1.2 上传命令 CMD hugo -D</description>
     </item>
     
     <item>
@@ -183,12 +165,30 @@
     </item>
     
     <item>
-      <title>安装clash</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/clash/%E5%AE%89%E8%A3%85clash/</link>
+      <title>clash：一款代理科学上网的软件</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/clash/</link>
       <pubDate>Tue, 12 Apr 2022 23:56:53 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/clash/%E5%AE%89%E8%A3%85clash/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/clash/</guid>
       <description>win10安装clash 1.下载 clash for win软件是一个开源项目，被开源在github上，它是具有windows,mac,linux(x86和a</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/about/</link>
+      <pubDate>Fri, 01 Apr 2022 23:59:49 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/about/</guid>
+      <description>因为好奇那些“非我”的部分，于是思想在身体中跳动，就在 世界上最美的东西，是我的目光与星空交汇的刹那，我意识到了我的存在和“非我”的存在， 我曾</description>
+    </item>
+    
+    <item>
+      <title>概率论学习之旅1</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</link>
+      <pubDate>Fri, 01 Apr 2022 20:47:41 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</guid>
+      <description>概率论与数理统计 古典概型 试验中所有可能出现的基本事件只有有限个 试验中每个基本事件出现的可能性相等。 具有以上两个特点的概率模型是大量存在的，这</description>
     </item>
     
   </channel>

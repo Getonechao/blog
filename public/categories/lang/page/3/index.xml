@@ -6,10 +6,28 @@
     <description>Recent content in lang on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Sat, 02 Jul 2022 12:54:05 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 24 Apr 2023 14:58:29 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ROS的使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Fri, 01 Apr 2022 13:25:02 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>ROS的使用 一、安装ros 脚本安装 wget http://fishros.com/install -O fishros &amp;amp;&amp;amp; sudo bash fishros 原文章链接：鱼香ros rosdep 安装 note: 注意安装ros过程中，可以不安装rosdep，它不是ros系</description>
+    </item>
+    
+    <item>
+      <title>eth wifi 网络配置</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/etc/eth_wifi%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 01 Apr 2022 13:11:10 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/etc/eth_wifi%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</guid>
+      <description>网络配置 ubuntu18.04配置IP 使用ip addr 只限于以太网配置(临时) ip addr add 192.168.8.30/24 dev eth0 /etc/netplan/*配置文件 服务器中是50-cl</description>
+    </item>
     
     <item>
       <title>slam的相关资料：一</title>

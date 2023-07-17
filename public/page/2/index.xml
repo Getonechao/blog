@@ -6,10 +6,28 @@
     <description>Recent content on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Wed, 12 Apr 2023 11:58:49 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 24 Apr 2023 14:58:29 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Raspberry：Wiringpi的安装及使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</link>
+      <pubDate>Wed, 04 May 2022 14:01:09 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</guid>
+      <description>WiringPi 安装 WiringPi 官网介绍截取 WiringPi is a PIN based GPIO access library written in C for the BCM2835, BCM2836 and BCM2837 SoC devices used in all Raspberry Pi. versions. The source code is not publicly available but may be made available to those who wish commercial support. It’s designed to be familiar to people who have used the Arduino “w</description>
+    </item>
+    
+    <item>
+      <title>Raspberry：硬件资料</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%A1%AC%E4%BB%B6%E8%B5%84%E6%96%99/</link>
+      <pubDate>Wed, 04 May 2022 11:56:53 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%A1%AC%E4%BB%B6%E8%B5%84%E6%96%99/</guid>
+      <description>树莓派硬件资料 40pin SDA.0、SDA.1：I2C数据传输口 SCL.0、SCL.1：I2C的时钟信号 GPIO.x（x = 0,1,2,3,4,5,6</description>
+    </item>
     
     <item>
       <title>Raspberry：系统初始配置操作</title>
@@ -71,7 +89,7 @@
       <pubDate>Tue, 19 Apr 2022 15:57:41 +0800</pubDate>
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/cmake/</guid>
-      <description>一、Cmake模板 cmake_minimum_required(VERSION 3.1) project(PROJECT_XXX VERSION 0.0.0.0 ) #C/C++标准 set(CMAKE_CXX_STANDARD 14) set(CMAKE_C_STANDARD 11) #设置编译器 set (CMAKE_C_COMPILER &amp;quot;/usr/bin/gcc&amp;quot;) set (CMAKE_CXX_COMPILER &amp;quot;/usr/bin/g++&amp;quot;) #lib&amp;amp;&amp;amp;bin set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib) set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin) #release debug set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]]) #add_compile_optio</description>
+      <description>一、Cmake模板 cmake_minimum_required(VERSION 3.1) project(PROJECT_XXX VERSION 0.0.0.0 ) #C/C++标准 set(CMAKE_CXX_STANDARD 14) set(CMAKE_C_STANDARD 11) #设置编译器 set (CMAKE_C_COMPILER &amp;quot;/usr/bin/gcc&amp;quot;) set (CMAKE_CXX_COMPILER &amp;quot;/usr/bin/g++&amp;quot;) #lib&amp;amp;&amp;amp;bin输出目录 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_C</description>
     </item>
     
     <item>
@@ -171,24 +189,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</guid>
       <description>概率论与数理统计 古典概型 试验中所有可能出现的基本事件只有有限个 试验中每个基本事件出现的可能性相等。 具有以上两个特点的概率模型是大量存在的，这</description>
-    </item>
-    
-    <item>
-      <title>ROS的使用</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
-      <pubDate>Fri, 01 Apr 2022 13:25:02 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
-      <description>ROS的使用 一、安装ros 脚本安装 wget http://fishros.com/install -O fishros &amp;amp;&amp;amp; sudo bash fishros 原文章链接：鱼香ros rosdep 安装 note: 注意安装ros过程中，可以不安装rosdep，它不是ros系</description>
-    </item>
-    
-    <item>
-      <title>eth wifi 网络配置</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/etc/eth_wifi%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Fri, 01 Apr 2022 13:11:10 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/etc/eth_wifi%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</guid>
-      <description>网络配置 ubuntu18.04配置IP 使用ip addr 只限于以太网配置(临时) ip addr add 192.168.8.30/24 dev eth0 /etc/netplan/*配置文件 服务器中是50-cl</description>
     </item>
     
   </channel>

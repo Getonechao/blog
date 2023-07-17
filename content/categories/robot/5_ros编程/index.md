@@ -1,18 +1,14 @@
 +++
-title= "5_ros编程"
+title= "ros编程"
 description= "topic server"
 date= 2022-05-04T16:45:20+08:00
 author= "somebody"
 draft= true
 image= "" 
 math= true
-categories= [
-    "os"
-]
+categories= [ "robat"]
 
-tags=  [
-    "robat"," ros"
-]
+tags=  ["robat"," ros"]
 
 +++
 

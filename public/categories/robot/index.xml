@@ -6,10 +6,37 @@
     <description>Recent content in robot on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Sat, 03 Sep 2022 17:13:39 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 01 Sep 2022 18:08:20 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LUA：C/C&#43;&#43;的脚本语言</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/lua/</link>
+      <pubDate>Mon, 24 Apr 2023 14:58:29 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/lua/</guid>
+      <description>一、c/c++中调用LUA 1.开启控制台 // 打开lua LUA=luaL_newstate(); // 导入LUA标准库 luaL_openlibs(LUA); // 打开脚本文件 if(luaL_dofile(LUA, &amp;quot;LidarConfig.lua&amp;quot;)!=LUA_OK) { std::cerr&amp;lt;&amp;lt;&amp;quot;sorry lua file load and run failed&amp;quot;&amp;lt;&amp;lt;std::endl; exit(-1); } 2.入栈操作 void lua_pushnil (lua_State *L); void lua_pushboolean (lua_State *L,</description>
+    </item>
+    
+    <item>
+      <title>python3:一些库的总结经验</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/python/lib/</link>
+      <pubDate>Tue, 18 Apr 2023 11:41:19 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/python/lib/</guid>
+      <description>一、OS模块 1.目录操作 os.chdir(path) os.getcwd() 打开一个文件，并且设置需要的打开选项 os.open(file, flags) 取得指定文件夹下的文件列表 os.listdir(path) 创建一个名为 path 的目录，应用以数字表示的权限模</description>
+    </item>
+    
+    <item>
+      <title>Linux：Shell脚本编程</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/shell/</link>
+      <pubDate>Fri, 14 Apr 2023 12:49:07 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/shell/</guid>
+      <description>README - 《阮一峰 Bash 脚本教程》 - 书栈网 · BookStack 一、启动环境 当前bash环境 source main.sh 子bash环境 ./main.sh 二、变量 2.1 将局部变量声明为全局变量 export a=1 2.2 位置变量 $0 $1 $2 $3</description>
+    </item>
     
     <item>
       <title>windows:一些好用的操作</title>
@@ -75,20 +102,11 @@
     </item>
     
     <item>
-      <title>2_ros2模板范式</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/2_ros2%E6%A8%A1%E6%9D%BF%E8%8C%83%E5%BC%8F/</link>
-      <pubDate>Sat, 03 Sep 2022 17:13:39 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/2_ros2%E6%A8%A1%E6%9D%BF%E8%8C%83%E5%BC%8F/</guid>
-      <description>ros2模板范式 cpp 1. ament_cmake set #生成compile_command.json set(CMAKE_EXPORT_COMPILE_COMMANDS ON) #c编译器 set(CMAKE_C_COMPILER &amp;quot;/usr/bin/clang&amp;quot;) #cpp编译器 set(CMAKE_CXX_COMPILER &amp;quot;/usr/bin/clang++&amp;quot;) set(CMAKE_CXX_FLAGS &amp;quot;${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Werror&amp;quot;) 固定范式 find_package(ament_cmake REQUIRED) find_package(rclcpp REQUIRED) find_package(std_msgs REQUIRED) aux_source_directory(src SRC_LIST)</description>
-    </item>
-    
-    <item>
-      <title>1_ros2命令的使用</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/1_ros2%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <title>ros2:命令的使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Thu, 01 Sep 2022 18:08:20 +0800</pubDate>
       
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/1_ros2%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros2%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
       <description>ros2命令 ros2 pkg 创建功能包 # cpp ros2 pkg create --dependencies rclcpp std_msgs --build-type ament_cmake [pkg name] # python ros2 pkg create --dependencies rclpy std_msgs --build-type ament_python [pkg name] colcon&amp;ndash;编译 #下载依赖 rosdep install -y --from-paths src --rosdistro $ROS_DISTRO colcon build --symlink-install ------------------ --symlink-install :</description>
     </item>
     
@@ -116,7 +134,7 @@
       <pubDate>Sun, 29 May 2022 10:45:50 +0800</pubDate>
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/vscode/</guid>
-      <description>一、.vscode的配置 c_cpp_properties.json ctrl+shift+p ,运行C/Cpp: Edit configurations... { &amp;quot;configurations&amp;quot;: [ { &amp;quot;name&amp;quot;: &amp;quot;linux&amp;quot;, &amp;quot;includePath&amp;quot;: [ &amp;quot;/opt/ros/melodic/include&amp;quot;, &amp;quot;/usr/include&amp;quot;, &amp;quot;${workspaceFolder}/**&amp;quot;, &amp;quot;${workspaceFolder}/devel/include&amp;quot; ], &amp;quot;intelliSenseMode&amp;quot;: &amp;quot;linux-gcc-x64&amp;quot;, &amp;quot;compilerPath&amp;quot;: &amp;quot;/usr/bin/gcc&amp;quot;, &amp;quot;cppStandard&amp;quot;: &amp;quot;c++17&amp;quot;, &amp;quot;cStandard&amp;quot;: &amp;quot;c17&amp;quot; } ], &amp;quot;version&amp;quot;: 4 } tasks.json ctrl+shift+p ,运行task { // See https://go.microsoft.com/fwlink/?LinkId=733558 // for the documentation about the</description>
+      <description>一、.vscode的配置 1. c_cpp_properties.json ctrl+shift+p ,运行C/Cpp: Edit configurations... { &amp;quot;configurations&amp;quot;: [ { &amp;quot;name&amp;quot;: &amp;quot;linux&amp;quot;, &amp;quot;includePath&amp;quot;: [ &amp;quot;/opt/ros/melodic/include&amp;quot;, &amp;quot;/usr/include&amp;quot;, &amp;quot;${workspaceFolder}/**&amp;quot;, &amp;quot;${workspaceFolder}/devel/include&amp;quot; ], &amp;quot;intelliSenseMode&amp;quot;: &amp;quot;linux-gcc-x64&amp;quot;, &amp;quot;compilerPath&amp;quot;: &amp;quot;/usr/bin/gcc&amp;quot;, &amp;quot;cppStandard&amp;quot;: &amp;quot;c++17&amp;quot;, &amp;quot;cStandard&amp;quot;: &amp;quot;c17&amp;quot; } ], &amp;quot;version&amp;quot;: 4 } 2. tasks.json ctrl+shift+p ,运行task { // See https://go.microsoft.com/fwlink/?LinkId=733558 // for the documentation</description>
     </item>
     
     <item>
@@ -134,7 +152,7 @@
       <pubDate>Sat, 14 May 2022 01:12:54 +0800</pubDate>
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/app/docker/</guid>
-      <description>一、docker安装 Docker 官方文档 | Docker Documentation window安装 需要安装wsl2 linux 2.1. ubuntu安装 1.系统需求 Ubuntu Jammy 22.04 (LTS) Ubuntu Impish 21.10 Ubuntu Focal 20.04 (LTS) Ubuntu Bionic 18.04 (LTS) Docker Engine is supported on</description>
+      <description>一、docker安装 Docker 官方文档 | Docker Documentation 1.自动安装 wget http://fishros.com/install -O fishros &amp;amp;&amp;amp; sudo bash fishros 2.手动安装 2.1. ubuntu安装 1.系统需求 Ubuntu Jammy 22.04 (LTS) Ubuntu Impish 21.10 Ubuntu Focal 20.04 (LTS) Ubuntu Bionic 18.04 (LTS) Docker Engine</description>
     </item>
     
     <item>
@@ -165,30 +183,12 @@
     </item>
     
     <item>
-      <title>5_ros编程</title>
+      <title>ros编程</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/5_ros%E7%BC%96%E7%A8%8B/</link>
       <pubDate>Wed, 04 May 2022 16:45:20 +0800</pubDate>
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/5_ros%E7%BC%96%E7%A8%8B/</guid>
       <description>ros编程 1.topic 1.1 topic_pulisher程序实现四个步骤 1.2 topic_subscriber程序实现四个步骤 note：保证回调函数中处理不能</description>
-    </item>
-    
-    <item>
-      <title>Raspberry：Wiringpi的安装及使用</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</link>
-      <pubDate>Wed, 04 May 2022 14:01:09 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/wiringpi/</guid>
-      <description>WiringPi 安装 WiringPi 官网介绍截取 WiringPi is a PIN based GPIO access library written in C for the BCM2835, BCM2836 and BCM2837 SoC devices used in all Raspberry Pi. versions. The source code is not publicly available but may be made available to those who wish commercial support. It’s designed to be familiar to people who have used the Arduino “w</description>
-    </item>
-    
-    <item>
-      <title>Raspberry：硬件资料</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%A1%AC%E4%BB%B6%E8%B5%84%E6%96%99/</link>
-      <pubDate>Wed, 04 May 2022 11:56:53 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%A1%AC%E4%BB%B6%E8%B5%84%E6%96%99/</guid>
-      <description>树莓派硬件资料 40pin SDA.0、SDA.1：I2C数据传输口 SCL.0、SCL.1：I2C的时钟信号 GPIO.x（x = 0,1,2,3,4,5,6</description>
     </item>
     
   </channel>
