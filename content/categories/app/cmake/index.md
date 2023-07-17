@@ -42,18 +42,549 @@ set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]])
 #add_compile_options()#等同CMAKE_CXXFLAGS_RELESE,前者可以对所有的编译器设置，后者只能是C++编译器
 
 
-include_directories(
-目录
-)
 
+
+
+
+
+#find_package(Eigen3 REQUIRED)
+#find_path (<VAR> name1 [path1 path2 ...])
+#find_file (<VAR> name1 [path1 path2 ...])
+#find_library (<VAR> name1 [path1 path2 ...])
+
+######### Target LIB #########
 aux_source_directory(目录 变量)
 
-#FIND_LIBRARY(#变量 libceres.so #目录)
+add_library(${PROJECT_NAME} )#默认是STATIC
+target_include_directories(EigenSample PRIVATE )
+target_sources(EigenSample PRIVATE )
+target_link_libraries(EigenSample )
+target_compile_options(EigenSample PRIVATE -Wall
+                                           -O3 -std=c++11 )
+target_compile_definitions(EigenSample PRIVATE
+                                           CMAKE_BUILD_TYPE=Release
+                                           CMAKE_EXPORT_COMPILE_COMMANDS=ON)
+                                           
+######### Target EXE #########
+aux_source_directory(目录 变量)
 
 add_executable(${PROJECT_NAME} )
-#target_link_libraries(${PROJECT_NAME} 
-#/usr/local/lib/libmodbus.so)
+target_include_directories(EigenSample PRIVATE )
+target_sources(EigenSample PRIVATE )
+target_link_libraries(EigenSample )
+target_compile_options(EigenSample PRIVATE -Wall
+                                           -O3 -std=c++11 )
+target_compile_definitions(EigenSample PRIVATE
+                                           CMAKE_BUILD_TYPE=Release
+                                           CMAKE_EXPORT_COMPILE_COMMANDS=ON)
+########## TEST ##########
+enable_testing()
+add_test(NAME test COMMAND ${PROJECT_NAME} -arg1 -arg2)                                           
+              
 
 
 ~~~
 
+
+
+# 二、参数设置
+
+> 编译选项
+>
+> **CMAKE_BUILD_TYPE  Release | Debug| RelWithDebInfo |MinSizeRel**
+>
+> 
+
+
+
+# 三、命令解释
+
+## 3.1 find命令
+
+### find_path：用于找到指定文件或目录路径的命令(安装ini文件)
+
+```cmake
+find_path(<VAR> name1 [path1 path2 ...])
+
+eg：
+find_path(STDIO_H_INCLUDE_DIR stdio.h
+    /usr/include
+    /usr/local/include)
+    
+   
+```
+
+其中，`<VAR>`是用于存储找到的路径的变量名。`name1`是要查找的文件或目录的名称。`path1`，`path2`等是可选的搜索路径。
+
+ **find_path命令特别适用于需要在构建过程中动态查找头文件路径的情况**
+
+### find_file：用于查找指定文件的路径
+
+```cmake
+find_file(<VAR> name1 [path1 path2 ...])
+
+eg：
+find_file(EXAMPLE_FILE example.txt)
+执行上述命令后，如果找到了example.txt文件，路径将存储在EXAMPLE_FILE变量中，否则该变量将为空。
+
+find_file(EXAMPLE_FILE example.txt
+    /usr/data
+    /home/user/data
+)
+这将在/usr/data和/home/user/data目录下搜索example.txt文件
+```
+
+其中，`<VAR>`是一个变量，用于存储找到的文件路径。`name1`是要查找的文件的名称。`path1`，`path2`等是可选的搜索路径。
+
+### find_library：用于查找指定库文件的路径
+
+```cmake
+find_library(<VAR> name1 [path1 path2 ...])
+```
+
+其中，`<VAR>`是用于存储找到的库文件路径的变量名。`name1`是要查找的库文件的名称（不包括前缀`lib`和文件扩展名）。
+
+使用案例
+
+~~~cmake
+cmake_minimum_required(VERSION 3.12)
+project(MyProject)
+
+# 查找名为 mylibrary 的库文件
+find_library(MYLIBRARY_LIB mylibrary)
+
+# 如果找到了库文件
+if(MYLIBRARY_LIB)
+    message("Found mylibrary at: ${MYLIBRARY_LIB}")
+    # 添加库文件的路径到链接器
+    target_link_libraries(MyExecutable ${MYLIBRARY_LIB})
+else()
+    message(FATAL_ERROR "mylibrary not found")
+endif()
+~~~
+
+### find_program：用于查找指定可执行程序的路径
+
+~~~cmake
+find_program(<VAR> name1 [path1 path2 ...])
+
+eg：
+find_program(MYPROGRAM_EXECUTABLE myprogram
+    /usr/bin
+    /usr/local/bin
+)
+~~~
+
+这将在`/usr/bin`和`/usr/local/bin`目录下搜索`myprogram`可执行程序。
+
+使用案例
+
+~~~cmake
+cmake_minimum_required(VERSION 3.12)
+project(MyProject)
+
+# 查找名为 myprogram 的可执行程序
+find_program(MYPROGRAM_EXECUTABLE myprogram)
+
+# 如果找到了可执行程序
+if(MYPROGRAM_EXECUTABLE)
+    message("Found myprogram at: ${MYPROGRAM_EXECUTABLE}")
+    # 在构建过程中使用可执行程序
+    add_custom_target(run_myprogram COMMAND ${MYPROGRAM_EXECUTABLE})
+else()
+    message(FATAL_ERROR "myprogram not found")
+endif()
+~~~
+
+在这个案例中，假设我们的项目想要运行名为`myprogram`的可执行程序。
+
+通过`find_program(MYPROGRAM_EXECUTABLE myprogram)`命令，CMake会尝试在系统的默认可执行程序搜索路径中找到名为`myprogram`的可执行程序。
+
+如果成功找到了可执行程序，CMake会将路径存储在变量`MYPROGRAM_EXECUTABLE`中，并通过`add_custom_target`命令定义一个自定义目标，使得我们可以在构建过程中使用该可执行程序。
+
+如果未找到可执行程序，则会输出错误消息并终止构建过程
+
+### find_package: CMake中用于查找和加载第三方库的命令
+
+使用案例
+
+~~~cmake
+cmake_minimum_required(VERSION 3.12)
+project(MyProject)
+
+# 查找并加载 OpenCV
+find_package(OpenCV 4 REQUIRED)
+
+# 检查是否找到库
+if(OpenCV_FOUND)
+    message("Found OpenCV version ${OpenCV_VERSION}")
+    include_directories(${OpenCV_INCLUDE_DIRS})
+    add_executable(MyApp main.cpp)
+    target_link_libraries(MyApp ${OpenCV_LIBS})
+else()
+    message(FATAL_ERROR "OpenCV not found")
+endif()
+
+# 添加其他项目配置和构建指令...
+~~~
+
+变量
+
+>1. `<PackageName>_FOUND`：
+>   表示是否找到了指定的库。它是一个布尔值，如果找到了库，则为 `TRUE`，否则为 `FALSE`。
+>2. `<PackageName>_VERSION`：
+>   当找到库时，它表示所找到的库的版本号。该值可能是一个字符串或一个列表。
+>3. `<PackageName>_INCLUDE_DIRS`：
+>   包含着所找到的库的头文件路径的变量。这允许您在项目中包含库的头文件。
+>4. `<PackageName>_LIBRARIES`：
+>   存储了所找到的库的完整库文件路径的变量。通过这个变量，您可以将所需的库链接到项目的可执行文件或库中。
+>
+>这些变量的命名约定在不同的 `Find` 模块中可能会有所不同，因此请查阅库的相关文档来获取详细的变量名称和用途。
+
+## 3.2 file 执行与文件和目录相关的操作
+
+它可以用于创建、复制、删除、重命名、读取文件内容等操作。以下是一些 `file()` 命令的常见用法：
+
+1. `file(COPY ...)`：
+   将指定的文件或目录复制到指定的目标目录下。该命令可以用于将文件复制到构建目录或安装位置。
+
+   ```
+   file(COPY source_file DESTINATION destination_directory)
+   ```
+
+   
+
+2. `file(REMOVE ...)`：
+   删除指定的文件或目录。
+
+   ```
+   file(REMOVE file_path)
+   ```
+
+   
+
+3. `file(RENAME ...)`：
+   将文件或目录重命名。
+
+   ```
+   file(RENAME old_name new_name)
+   ```
+
+   
+
+4. `file(READ ...)`：
+   读取文件内容到变量中。
+
+   ```
+   file(READ file_path variable_name)
+   ```
+
+   
+
+5. `file(WRITE ...)`：
+   将字符串内容写入文件中。
+
+   ```
+   file(WRITE file_path "content")
+   ```
+
+   
+
+6. `file(APPEND ...)`：
+   将字符串内容追加到文件末尾。
+
+   ```
+   file(APPEND file_path "content")
+   ```
+
+   
+
+这只是 `file()` 命令的一些常见用法示例，实际上它还有很多其他用法，例如创建目录、查找文件、获取文件属性等。您可以在 CMake 官方文档中查找 `file()` 命令的完整参考以获取更详细的信息和用法示例。
+
+## 3.3 自定义命令
+
+在很多时候，需要在`cmake`中创建一些目标，如`clean`、`copy`等等，这就需要通过`add_custom_target`来指定。同时，`add_custom_command`可以用来完成对`add_custom_target`生成的`target`的补充。
+
+### 区别
+
+在CMake中，"add_custom_command"和"add_custom_target"是两个常用的命令，用于定义自定义编译命令和自定义构建目标。它们之间的区别如下：
+
+1. add_custom_command：
+   - add_custom_command用于定义在构建时执行的自定义命令。它可以用来生成文件、生成代码、运行脚本等。add_custom_command通常被用作目标的依赖项。
+   - add_custom_command并不会创建真正的构建目标，它仅仅是一个构建过程中执行的命令。因此，默认情况下，add_custom_command不会导致重新构建整个项目。
+2. add_custom_target：
+   - add_custom_target用于定义一个构建目标，该目标不与实际的文件或输出相关联，而是与一组其他规则相关联。
+   - add_custom_target可以用来执行一系列自定义命令或构建步骤。它对于组织和管理构建过程非常有用。
+   - add_custom_target通常用作构建系统的入口点，通过依赖其他目标和规则来执行自定义构建任务。
+
+总结来说，add_custom_command用于定义构建过程中的自定义命令，而add_custom_target用于定义自定义构建目标。两者可以结合使用，以实现更复杂的构建逻辑。
+
+### add_custom_target：自定义构建目标
+
+~~~cmake
+add_custom_target(Name [ALL] [command1 [args1...]]
+                  [COMMAND command2 [args2...] ...]
+                  …
+)
+# Name：定义的target的名字
+# COMMAND：该target要执行的命令
+
+add_custom_target(
+    target_name
+    [COMMAND command1 [ARGS] [args1...]]
+    [COMMAND command2 [ARGS] [args2...] ...]
+    [DEPENDS [depend1...]]
+    [WORKING_DIRECTORY dir]
+    [COMMENT comment]
+    [VERBATIM]
+    [USES_TERMINAL]
+)
+
+其中，常用的参数和选项包括：
+
+target_name：自定义构建目标的名称。
+COMMAND：指定要执行的命令。
+DEPENDS：指定自定义目标所依赖的其他目标或文件。
+WORKING_DIRECTORY：设置命令的工作目录。
+COMMENT：添加对命令或目标的注释。
+VERBATIM：保留命令中的转义字符，确保按原样传递给底层的构建工具。
+USES_TERMINAL：指示命令是否会使用终端。
+
+通过使用 add_custom_target，可以在构建过程中定义各种自定义的构建目标，例如运行测试、生成文档、执行代码检查等。这些目标可以依赖其他目标或文件，并根据需要执行自定义的命令或操作
+
+add_custom_target 命令不会生成实际的构建产物（如可执行文件或库），它只是定义了一个自定义的构建目标。您可以通过 add_dependencies 命令将这个自定义目标与其他目标关联起来，以确保在构建过程中执行相关的自定义操作。
+~~~
+
+使用案例
+
+~~~cmake
+add_custom_target(RunTests
+    COMMAND run_tests.sh
+    DEPENDS test_files
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+    COMMENT "Running tests..."
+)
+
+add_dependencies(RunTests MyApp)
+
+在这个示例中，RunTests 是一个自定义目标，通过执行 run_tests.sh 脚本来运行测试。它依赖于 test_files 目标（或文件），并在 ${CMAKE_BINARY_DIR} 目录下执行。通过 COMMENT 可以添加注释，说明正在运行的操作。最后，通过 add_dependencies 将 RunTests 目标与 MyApp 目标关联起来，以确保在构建 RunTests 目标时先构建 MyApp 目标。
+~~~
+
+使用教程
+
+1. 创建自定义目标：
+   首先，使用 `add_custom_target` 命令创建一个自定义构建目标并指定它的名称。
+
+   ```
+   add_custom_target(MyTarget)
+   ```
+
+   
+
+   在上述示例中，我们创建了一个名为 `MyTarget` 的自定义目标，这个目标还没有定义任何操作。
+
+2. 添加命令：
+   使用 `COMMAND` 选项来添加要执行的命令或操作。
+
+   ```
+   add_custom_target(MyTarget
+       COMMAND echo "Hello, World!"
+   )
+   ```
+
+   
+
+   在这个例子中，我们在 `MyTarget` 目标中添加了一个命令，即输出 “Hello, World!”。您可以根据实际需求添加更多的命令或操作。
+
+3. 添加依赖项：
+   使用 `DEPENDS` 选项来指定 `MyTarget` 目标所依赖的其他目标或文件。
+
+   ```
+   add_custom_target(MyTarget
+       COMMAND echo "Hello, World!"
+       DEPENDS other_target file.txt
+   )
+   ```
+
+   
+
+   在上述示例中，我们将 `MyTarget` 目标设置为依赖于 `other_target` 目标和 `file.txt` 文件。这意味着在构建 `MyTarget` 之前，CMake 将确保先构建 `other_target` 目标和检查 `file.txt` 文件的更新。
+
+4. 设置工作目录和注释：
+   使用其他选项如 `WORKING_DIRECTORY` 和 `COMMENT` 来设置工作目录和添加注释。
+
+   ```
+   add_custom_target(MyTarget
+       COMMAND echo "Hello, World!"
+       DEPENDS other_target file.txt
+       WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+       COMMENT "Running custom commands..."
+   )
+   ```
+
+   
+
+   在上述示例中，我们设置了 `MyTarget` 的工作目录为 `${CMAKE_BINARY_DIR}`，并添加了一个注释以描述正在执行的操作。
+
+5. 添加到其他目标的依赖项：
+   使用 `add_dependencies` 命令将自定义目标与其他目标关联起来。
+
+   ```
+   add_executable(MyApp main.cpp)
+   add_custom_target(MyTarget
+       COMMAND echo "Hello, World!"
+       DEPENDS other_target file.txt
+       WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+       COMMENT "Running custom commands..."
+   )
+   
+   add_dependencies(MyApp MyTarget)
+   ```
+
+   
+
+   在这个例子中，我们将自定义目标 `MyTarget` 添加为可执行文件 `MyApp` 的依赖项。这意味着在构建 `MyApp` 时，CMake 将确保先构建 `MyTarget`。
+
+
+
+### add_custom_command：自定义编译命令
+
+~~~cmake
+add_custom_command(OUTPUT output1 [output2 ...]
+                   COMMAND command1 [ARGS] [args1...]
+                   [COMMAND command2 [ARGS] [args2...] ...]
+                   [MAIN_DEPENDENCY depend]
+                   [DEPENDS [depends...]]
+                   [BYPRODUCTS [files...]]
+                   [IMPLICIT_DEPENDS <lang1> depend1
+                                    [<lang2> depend2] ...]
+                   [WORKING_DIRECTORY dir]
+                   [COMMENT comment]
+                   [DEPFILE depfile]
+                   [JOB_POOL job_pool]
+                   [VERBATIM] [APPEND] [USES_TERMINAL]
+                   [COMMAND_EXPAND_LISTS]
+                   [DEPENDS_EXPLICIT_ONLY])
+~~~
+
+其中，常用的参数和选项包括：
+
+- `TARGET`：指定目标（可执行文件或库），表示该自定义命令与构建目标相关联。
+- `PRE_BUILD`、`PRE_LINK`、`POST_BUILD`：指定自定义命令在何时执行，分别表示前置构建、前置链接和后置构建。
+- `COMMAND`：指定要执行的命令。
+- `WORKING_DIRECTORY`：设置命令的工作目录。
+- `COMMENT`：添加对命令的注释。
+- `MAIN_DEPENDENCY`：指定自定义命令所依赖的主文件。
+- `DEPENDS`：指定自定义命令所依赖的其他文件。
+- `BYPRODUCTS`：指定由命令生成的副产品文件。
+- `IMPLICIT_DEPENDS`：指定命令的隐式依赖关系，这些依赖关系可能是根据源文件的语言推断出来的。
+- `USES_TERMINAL`：指示命令是否会使用终端（仅在可执行文件的情况下）。
+
+通过使用 `add_custom_command`，可以在构建过程中执行各种自定义的命令，如生成代码、拷贝文件、运行脚本等。这允许您在构建过程中执行与编译和链接无关的任意操作。
+
+请注意，`add_custom_command` 命令必须与 `add_custom_target` 或 `add_executable` / `add_library` 配合使用，以将其与构建目标关联起来。
+
+使用案例
+
+`add_custom_command` 命令用于在构建过程中执行自定义的命令。下面是一个简单的教程，介绍了如何使用 `add_custom_command`：
+
+1. 添加生成文件的自定义命令：
+   首先，使用 `add_custom_command` 命令定义一个用于生成文件的自定义命令。
+
+   ```
+   add_custom_command(
+       OUTPUT generated_file.txt
+       COMMAND generate_file.py
+       DEPENDS generate_file.py
+   )
+   ```
+
+   
+
+   在上述示例中，我们定义了一个自定义命令，它使用 Python 脚本 `generate_file.py` 来生成一个名为 `generated_file.txt` 的文件。`DEPENDS` 参数指定生成文件的依赖项，例如脚本文件本身。
+
+2. 将生成的文件作为构建目标使用：
+   可以将生成的文件作为构建目标的一部分使用，例如作为源文件或目标文件。
+
+   ```
+   add_executable(MyApp main.cpp generated_file.txt)
+   ```
+
+   
+
+   在上述示例中，我们将生成的文件 `generated_file.txt` 作为一个源文件之一与 `main.cpp` 一起使用，构建一个名为 `MyApp` 的可执行文件。
+
+3. 声明生成文件的依赖关系：
+   使用 `add_dependencies` 命令将自定义命令与其他目标关联起来。
+
+   ```
+   add_custom_command(
+       OUTPUT generated_file.txt
+       COMMAND generate_file.py
+       DEPENDS generate_file.py
+   )
+   
+   add_executable(MyApp main.cpp)
+   add_dependencies(MyApp generated_file.txt)
+   ```
+
+   
+
+   在这个例子中，我们在自定义命令与目标之间建立了依赖关系。通过 `add_dependencies` 命令，`MyApp` 目标将在构建之前先构建 `generated_file.txt`。
+
+使用 `add_custom_command`，您可以执行各种自定义的命令或操作，并将其与构建目标进行关联。这使得您可以在构建过程中执行额外的操作，例如生成代码、复制文件、预处理资源等。根据自己的项目需求，您可以根据需要实现适合的自定义命令，并根据构建逻辑设置相关的依赖关系。
+
+## 3.4 配置文件
+
+configure_file命令是CMake提供的一个常用命令，用于在构建过程中根据模板文件生成配置文件
+
+
+
+## 四、自动化测试
+
+当使用CTest来运行测试时，通常需要按照以下步骤进行配置和执行：
+
+1. 创建测试目录：在项目中创建一个用于存放测试脚本和测试数据的目录。可以将该目录命名为`tests`或者其他合适的名称。
+
+2. 编写测试脚本：在测试目录中创建一个或多个测试脚本文件，用于描述测试用例和测试步骤。测试脚本可以使用CTest的命令和语法来定义测试行为、验证结果等。以下是一个简单的示例：
+
+   ```
+   # tests/mytest.cmake
+   
+   # 定义一个测试用例
+   add_test(NAME MyTest COMMAND my_program input_data.txt output_data.txt)
+   
+   # 验证测试结果
+   set_tests_properties(MyTest PROPERTIES PASS_REGULAR_EXPRESSION "Expected output")
+   ```
+
+   
+
+3. 创建CTest配置文件：在项目的根目录中创建一个名为`CTestTestfile.cmake`的配置文件，用于配置测试设置、测试套件和测试驱动程序等细节。该文件会被CTest自动加载。以下是一个简单的示例：
+
+   ```
+   # CTestTestfile.cmake
+   
+   # 添加测试目录
+   add_subdirectory(tests)
+   ```
+
+   
+
+4. 构建项目：使用CMake构建项目，此时确保CTest被启用并已成功集成到项目中。
+
+5. 运行CTest：在项目构建完成后，在构建目录中运行`ctest`命令来执行测试。可以使用`ctest --verbose`来显示详细的测试输出。
+
+   ```
+   $ ctest
+   ```
+
+   
+
+   或者使用图形界面工具来运行CTest，例如运行`ccmake`或`cmake-gui`命令来查看和运行CTest。
+
+6. 查看测试结果：CTest将测试结果输出到终端或CTest的GUI前端。你将看到每个测试的状态（通过、失败、跳过等），以及相关的错误消息和日志文件。
+
+这只是一个简单的CTest使用示例，你可以根据项目的特定需求和测试要求自定义和扩展CTest的功能。参阅CTest文档以获取更多详细信息和更高级的CTest配置选项。
+
+记住，在编写测试脚本时，应该尽可能涵盖项目的各方面，并验证预期的行为和结果。测试是质量保证过程的重要组成部分，能够提供反馈以确保项目的正确性和可靠性。
