@@ -33,52 +33,57 @@ set(CMAKE_C_STANDARD 11)
 set (CMAKE_C_COMPILER "/usr/bin/gcc")
 set (CMAKE_CXX_COMPILER "/usr/bin/g++")
 
-#lib&&bin
-set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib)
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+#lib&&bin输出目录
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/lib)#静态库
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/bin)#动态库
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/bin)#可执行文件
 
 #release debug
-set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]])
+#set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]])
 #add_compile_options()#等同CMAKE_CXXFLAGS_RELESE,前者可以对所有的编译器设置，后者只能是C++编译器
 
 
-
-
-
-
-
+######### FIND FILE   #######
 #find_package(Eigen3 REQUIRED)
 #find_path (<VAR> name1 [path1 path2 ...])
 #find_file (<VAR> name1 [path1 path2 ...])
 #find_library (<VAR> name1 [path1 path2 ...])
 
-######### Target LIB #########
-aux_source_directory(目录 变量)
 
-add_library(${PROJECT_NAME} )#默认是STATIC
-target_include_directories(EigenSample PRIVATE )
-target_sources(EigenSample PRIVATE )
-target_link_libraries(EigenSample )
-target_compile_options(EigenSample PRIVATE -Wall
+######### sub directory#######
+
+#add_subdirectory(external)
+#add_subdirectory(src)
+
+
+######### Target LIB #########
+#aux_source_directory(目录 变量)
+
+#add_library(${PROJECT_NAME} "")#默认是STATIC
+#target_include_directories(EigenSample PRIVATE )
+#target_sources(EigenSample PRIVATE )
+#target_link_libraries(EigenSample )
+#target_compile_options(EigenSample PRIVATE -Wall
                                            -O3 -std=c++11 )
-target_compile_definitions(EigenSample PRIVATE
+#target_compile_definitions(EigenSample PRIVATE
                                            CMAKE_BUILD_TYPE=Release
                                            CMAKE_EXPORT_COMPILE_COMMANDS=ON)
                                            
 ######### Target EXE #########
-aux_source_directory(目录 变量)
+#aux_source_directory(目录 变量)
 
-add_executable(${PROJECT_NAME} )
-target_include_directories(EigenSample PRIVATE )
-target_sources(EigenSample PRIVATE )
-target_link_libraries(EigenSample )
-target_compile_options(EigenSample PRIVATE -Wall
+#add_executable(${PROJECT_NAME} )
+#target_include_directories(EigenSample PRIVATE )
+#target_sources(EigenSample PRIVATE )
+#target_link_libraries(EigenSample )
+#target_compile_options(EigenSample PRIVATE -Wall
                                            -O3 -std=c++11 )
-target_compile_definitions(EigenSample PRIVATE
+#target_compile_definitions(EigenSample PRIVATE
                                            CMAKE_BUILD_TYPE=Release
                                            CMAKE_EXPORT_COMPILE_COMMANDS=ON)
 ########## TEST ##########
 enable_testing()
+add_subdirectory(test)
 add_test(NAME test COMMAND ${PROJECT_NAME} -arg1 -arg2)                                           
               
 
@@ -231,13 +236,13 @@ endif()
 变量
 
 >1. `<PackageName>_FOUND`：
->   表示是否找到了指定的库。它是一个布尔值，如果找到了库，则为 `TRUE`，否则为 `FALSE`。
+>     表示是否找到了指定的库。它是一个布尔值，如果找到了库，则为 `TRUE`，否则为 `FALSE`。
 >2. `<PackageName>_VERSION`：
->   当找到库时，它表示所找到的库的版本号。该值可能是一个字符串或一个列表。
+>     当找到库时，它表示所找到的库的版本号。该值可能是一个字符串或一个列表。
 >3. `<PackageName>_INCLUDE_DIRS`：
->   包含着所找到的库的头文件路径的变量。这允许您在项目中包含库的头文件。
+>     包含着所找到的库的头文件路径的变量。这允许您在项目中包含库的头文件。
 >4. `<PackageName>_LIBRARIES`：
->   存储了所找到的库的完整库文件路径的变量。通过这个变量，您可以将所需的库链接到项目的可执行文件或库中。
+>     存储了所找到的库的完整库文件路径的变量。通过这个变量，您可以将所需的库链接到项目的可执行文件或库中。
 >
 >这些变量的命名约定在不同的 `Find` 模块中可能会有所不同，因此请查阅库的相关文档来获取详细的变量名称和用途。
 

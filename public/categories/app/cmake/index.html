@@ -39,7 +39,7 @@
 <meta itemprop="name" content="cmake：c/c&#43;&#43;的工程构建工具">
 <meta itemprop="description" content="cmake模板"><meta itemprop="datePublished" content="2022-04-19T15:57:41+08:00" />
 <meta itemprop="dateModified" content="2022-04-19T15:57:41+08:00" />
-<meta itemprop="wordCount" content="5539">
+<meta itemprop="wordCount" content="5686">
 <meta itemprop="keywords" content=" project,cmake," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="cmake：c/c&#43;&#43;的工程构建工具"/>
 <meta name="twitter:description" content="cmake模板"/>
@@ -533,7 +533,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 5539字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 5686字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 12分 </span>
       </div>
     </div>
@@ -552,52 +552,57 @@ set(CMAKE_C_STANDARD 11)
 set (CMAKE_C_COMPILER &quot;/usr/bin/gcc&quot;)
 set (CMAKE_CXX_COMPILER &quot;/usr/bin/g++&quot;)
 
-#lib&amp;&amp;bin
-set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lib)
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+#lib&amp;&amp;bin输出目录
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/lib)#静态库
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/bin)#动态库
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/bin)#可执行文件
 
 #release debug
-set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]])
+#set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]])
 #add_compile_options()#等同CMAKE_CXXFLAGS_RELESE,前者可以对所有的编译器设置，后者只能是C++编译器
 
 
-
-
-
-
-
+######### FIND FILE   #######
 #find_package(Eigen3 REQUIRED)
 #find_path (&lt;VAR&gt; name1 [path1 path2 ...])
 #find_file (&lt;VAR&gt; name1 [path1 path2 ...])
 #find_library (&lt;VAR&gt; name1 [path1 path2 ...])
 
-######### Target LIB #########
-aux_source_directory(目录 变量)
 
-add_library(${PROJECT_NAME} )#默认是STATIC
-target_include_directories(EigenSample PRIVATE )
-target_sources(EigenSample PRIVATE )
-target_link_libraries(EigenSample )
-target_compile_options(EigenSample PRIVATE -Wall
+######### sub directory#######
+
+#add_subdirectory(external)
+#add_subdirectory(src)
+
+
+######### Target LIB #########
+#aux_source_directory(目录 变量)
+
+#add_library(${PROJECT_NAME} &quot;&quot;)#默认是STATIC
+#target_include_directories(EigenSample PRIVATE )
+#target_sources(EigenSample PRIVATE )
+#target_link_libraries(EigenSample )
+#target_compile_options(EigenSample PRIVATE -Wall
                                            -O3 -std=c++11 )
-target_compile_definitions(EigenSample PRIVATE
+#target_compile_definitions(EigenSample PRIVATE
                                            CMAKE_BUILD_TYPE=Release
                                            CMAKE_EXPORT_COMPILE_COMMANDS=ON)
                                            
 ######### Target EXE #########
-aux_source_directory(目录 变量)
+#aux_source_directory(目录 变量)
 
-add_executable(${PROJECT_NAME} )
-target_include_directories(EigenSample PRIVATE )
-target_sources(EigenSample PRIVATE )
-target_link_libraries(EigenSample )
-target_compile_options(EigenSample PRIVATE -Wall
+#add_executable(${PROJECT_NAME} )
+#target_include_directories(EigenSample PRIVATE )
+#target_sources(EigenSample PRIVATE )
+#target_link_libraries(EigenSample )
+#target_compile_options(EigenSample PRIVATE -Wall
                                            -O3 -std=c++11 )
-target_compile_definitions(EigenSample PRIVATE
+#target_compile_definitions(EigenSample PRIVATE
                                            CMAKE_BUILD_TYPE=Release
                                            CMAKE_EXPORT_COMPILE_COMMANDS=ON)
 ########## TEST ##########
 enable_testing()
+add_subdirectory(test)
 add_test(NAME test COMMAND ${PROJECT_NAME} -arg1 -arg2)                                           
               
 
