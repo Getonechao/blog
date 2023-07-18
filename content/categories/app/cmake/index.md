@@ -25,7 +25,7 @@ cmake_minimum_required(VERSION 3.1)
 
 project(PROJECT_XXX VERSION 0.0.0.0 )
 
-#C/C++标准
+#  C/C++标准
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_C_STANDARD 11)
 
@@ -33,12 +33,12 @@ set(CMAKE_C_STANDARD 11)
 set (CMAKE_C_COMPILER "/usr/bin/gcc")
 set (CMAKE_CXX_COMPILER "/usr/bin/g++")
 
-#lib&&bin输出目录
+####### lib&&bin输出目录 #####
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/lib)#静态库
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/bin)#动态库
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/bin)#可执行文件
 
-#release debug
+########## BUILD_TYPE #######
 #set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]])
 #add_compile_options()#等同CMAKE_CXXFLAGS_RELESE,前者可以对所有的编译器设置，后者只能是C++编译器
 
@@ -81,7 +81,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/bin)#可执行文�
 #target_compile_definitions(EigenSample PRIVATE
                                            CMAKE_BUILD_TYPE=Release
                                            CMAKE_EXPORT_COMPILE_COMMANDS=ON)
-########## TEST ##########
+########## TEST #############
 enable_testing()
 add_subdirectory(test)
 add_test(NAME test COMMAND ${PROJECT_NAME} -arg1 -arg2)                                           
@@ -106,7 +106,7 @@ add_test(NAME test COMMAND ${PROJECT_NAME} -arg1 -arg2)
 
 ## 3.1 find命令
 
-### find_path：用于找到指定文件或目录路径的命令(安装ini文件)
+**find_path：用于找到指定文件或目录路径的命令(安装ini文件)**
 
 ```cmake
 find_path(<VAR> name1 [path1 path2 ...])
@@ -121,9 +121,9 @@ find_path(STDIO_H_INCLUDE_DIR stdio.h
 
 其中，`<VAR>`是用于存储找到的路径的变量名。`name1`是要查找的文件或目录的名称。`path1`，`path2`等是可选的搜索路径。
 
- **find_path命令特别适用于需要在构建过程中动态查找头文件路径的情况**
+ find_path命令特别适用于需要在构建过程中动态查找头文件路径的情况
 
-### find_file：用于查找指定文件的路径
+**find_file：用于查找指定文件的路径**
 
 ```cmake
 find_file(<VAR> name1 [path1 path2 ...])
@@ -141,7 +141,7 @@ find_file(EXAMPLE_FILE example.txt
 
 其中，`<VAR>`是一个变量，用于存储找到的文件路径。`name1`是要查找的文件的名称。`path1`，`path2`等是可选的搜索路径。
 
-### find_library：用于查找指定库文件的路径
+**find_library：用于查找指定库文件的路径**
 
 ```cmake
 find_library(<VAR> name1 [path1 path2 ...])
@@ -168,7 +168,7 @@ else()
 endif()
 ~~~
 
-### find_program：用于查找指定可执行程序的路径
+**find_program：用于查找指定可执行程序的路径**
 
 ~~~cmake
 find_program(<VAR> name1 [path1 path2 ...])
@@ -209,7 +209,7 @@ endif()
 
 如果未找到可执行程序，则会输出错误消息并终止构建过程
 
-### find_package: CMake中用于查找和加载第三方库的命令
+**find_package: CMake中用于查找和加载第三方库的命令**
 
 使用案例
 
@@ -310,7 +310,7 @@ endif()
 
 在很多时候，需要在`cmake`中创建一些目标，如`clean`、`copy`等等，这就需要通过`add_custom_target`来指定。同时，`add_custom_command`可以用来完成对`add_custom_target`生成的`target`的补充。
 
-### 区别
+**区别**
 
 在CMake中，"add_custom_command"和"add_custom_target"是两个常用的命令，用于定义自定义编译命令和自定义构建目标。它们之间的区别如下：
 
@@ -324,7 +324,7 @@ endif()
 
 总结来说，add_custom_command用于定义构建过程中的自定义命令，而add_custom_target用于定义自定义构建目标。两者可以结合使用，以实现更复杂的构建逻辑。
 
-### add_custom_target：自定义构建目标
+**add_custom_target：自定义构建目标**
 
 ~~~cmake
 add_custom_target(Name [ALL] [command1 [args1...]]
@@ -452,7 +452,7 @@ add_dependencies(RunTests MyApp)
 
 
 
-### add_custom_command：自定义编译命令
+**add_custom_command：自定义编译命令**
 
 ~~~cmake
 add_custom_command(OUTPUT output1 [output2 ...]
@@ -543,9 +543,7 @@ add_custom_command(OUTPUT output1 [output2 ...]
 
 configure_file命令是CMake提供的一个常用命令，用于在构建过程中根据模板文件生成配置文件
 
-
-
-## 四、自动化测试
+# 四、自动化测试
 
 当使用CTest来运行测试时，通常需要按照以下步骤进行配置和执行：
 
@@ -593,3 +591,273 @@ configure_file命令是CMake提供的一个常用命令，用于在构建过程�
 这只是一个简单的CTest使用示例，你可以根据项目的特定需求和测试要求自定义和扩展CTest的功能。参阅CTest文档以获取更多详细信息和更高级的CTest配置选项。
 
 记住，在编写测试脚本时，应该尽可能涵盖项目的各方面，并验证预期的行为和结果。测试是质量保证过程的重要组成部分，能够提供反馈以确保项目的正确性和可靠性。
+
+
+
+
+
+# 五、安装
+
+
+
+
+
+## 5.1 Linux的rpath机制
+
+在 CMake 中，可以通过使用 `CMAKE_INSTALL_RPATH` 或者 `CMAKE_BUILD_RPATH` 属性来设置可执行文件的 rpath。
+
+1. `CMAKE_INSTALL_RPATH`：用于指定在安装过程中可执行文件的 rpath。可执行文件会被安装到目标目录，同时 rpath 会被设置为 `CMAKE_INSTALL_RPATH` 指定的路径。可以通过在 CMakeLists.txt 文件中设置该属性来达到目的。
+
+```
+set(CMAKE_INSTALL_RPATH <path>)
+```
+
+
+
+其中 `<path>` 是要设置的 rpath 的路径。
+
+1. `CMAKE_BUILD_RPATH`：用于指定在构建过程中可执行文件的 rpath。可执行文件在构建过程中会被放置在构建目录，同时 rpath 会被设置为 `CMAKE_BUILD_RPATH` 指定的路径。可以通过在 CMakeLists.txt 文件中设置该属性来达到目的。
+
+```
+set(CMAKE_BUILD_RPATH <path>)
+```
+
+
+
+同样，`<path>` 是要设置的 rpath 的路径。
+
+注意：
+
+- `<path>` 可以是多个路径的列表。可以使用 `;` 分隔路径。
+- 在设置 `CMAKE_INSTALL_RPATH` 和 `CMAKE_BUILD_RPATH` 时，可以使用 CMake 的 generator expressions，以便根据不同的配置和平台展开不同的路径。
+- `CMAKE_INSTALL_RPATH` 和 `CMAKE_BUILD_RPATH` 可以同时设置，并且它们的优先级会根据具体的情况决定。
+
+设置 `CMAKE_INSTALL_RPATH` 或 `CMAKE_BUILD_RPATH` 后，重新运行 CMake 构建过程，可执行文件的 rpath 会被相应地设置。这样，在运行时可执行文件会使用 rpath 指定的路径来查找动态库，从而确保动态库能够正确加载。
+
+需要注意的是，rpath 机制在不同的操作系统上有所不同，具体的设置和行为可能会有所差异。确保根据目标平台和操作系统的要求进行适当的配置和测试。
+
+
+
+## 5.2 `CMAKE_INSTALL_RPATH`的使用案例
+
+以下是一个使用 `CMAKE_INSTALL_RPATH` 的简单示例：
+
+```
+cmake_minimum_required(VERSION 3.12)
+project(MyApp)
+
+# 设置可执行文件的源文件
+set(SOURCES main.cpp)
+
+# 设置生成可执行文件
+add_executable(myapp ${SOURCES})
+
+# 设置动态库的搜索路径
+set(CMAKE_INSTALL_RPATH "$ORIGIN/lib")
+
+# 安装规则
+install(TARGETS myapp
+    RUNTIME DESTINATION bin
+    DESTINATION "${CMAKE_INSTALL_PREFIX}"
+    # 设置 rpath 为 CMAKE_INSTALL_RPATH 变量的值
+    INSTALL_RPATH "${CMAKE_INSTALL_RPATH}"
+)
+```
+
+
+
+在这个示例中，假设项目目录结构如下：
+
+```
+.
+├── CMakeLists.txt
+├── main.cpp
+└── lib
+    └── mylib.so
+```
+
+
+
+- `main.cpp` 是可执行文件的源文件。
+- `lib` 目录下包含一个名为 `mylib.so` 的动态库文件。
+
+在 CMakeLists.txt 中，我们首先定义了可执行文件的源文件，并通过 `add_executable()` 命令添加了一个名为 `myapp` 的可执行目标。
+
+接下来，我们通过 `set()` 命令设置了 `CMAKE_INSTALL_RPATH` 的值为 `$ORIGIN/lib`。这里使用了 `$ORIGIN` 变量，它表示可执行文件所在的目录。
+
+最后，在安装规则中，我们使用 `install()` 命令将可执行文件安装到指定的目录，并通过 `INSTALL_RPATH` 属性将 `CMAKE_INSTALL_RPATH` 的值传递给 rpath。
+
+在构建并运行项目时，可执行文件 `myapp` 将被安装到目标目录（例如安装到 `/usr/local/bin`），同时 rpath 将被设置为 `/usr/local/bin/lib`。这样在运行时，可执行文件就能够找到并加载位于 `lib` 目录下的动态库文件。
+
+请注意，实际的 rpath 设置可能因操作系统、CMake 版本和项目结构而有所不同，上述示例仅为了说明如何使用 `CMAKE_INSTALL_RPATH`。根据具体的需求和情况，可能需要进行适当的调整。
+
+## 5.3 `CMAKE_BUILD_RPATH`的使用案例
+
+以下是一个使用 `CMAKE_BUILD_RPATH` 的简单示例：
+
+```
+cmake_minimum_required(VERSION 3.12)
+project(MyApp)
+
+# 设置可执行文件的源文件
+set(SOURCES main.cpp)
+
+# 设置生成可执行文件
+add_executable(myapp ${SOURCES})
+
+# 设置动态库的搜索路径
+set(CMAKE_BUILD_RPATH "$ORIGIN/lib")
+
+# 构建规则
+set_target_properties(myapp PROPERTIES
+    # 设置 rpath 为 CMAKE_BUILD_RPATH 变量的值
+    BUILD_RPATH "${CMAKE_BUILD_RPATH}"
+)
+```
+
+
+
+在这个示例中，假设项目目录结构如下：
+
+```
+.
+├── CMakeLists.txt
+├── main.cpp
+└── lib
+    └── mylib.so
+```
+
+
+
+- `main.cpp` 是可执行文件的源文件。
+- `lib` 目录下包含一个名为 `mylib.so` 的动态库文件。
+
+在 CMakeLists.txt 中，我们首先定义了可执行文件的源文件，并通过 `add_executable()` 命令添加一个名为 `myapp` 的可执行目标。
+
+接下来，我们通过 `set()` 命令设置了 `CMAKE_BUILD_RPATH` 的值为 `$ORIGIN/lib`。这里使用了 `$ORIGIN` 变量，它表示构建目录。
+
+最后，使用 `set_target_properties()` 命令，将 `BUILD_RPATH` 属性设置为 `CMAKE_BUILD_RPATH` 的值。这样，在构建过程中，可执行文件 `myapp` 的 rpath 将被设置为构建目录下的 `lib` 目录。
+
+在构建项目时，生成的可执行文件 `myapp` 将具有指定的 rpath，以便在运行时正确加载位于构建目录下的动态库文件。
+
+请注意，实际的 rpath 设置可能因操作系统、CMake 版本和项目结构而有所不同，上述示例仅为了说明如何使用 `CMAKE_BUILD_RPATH`。根据具体的需求和情况，可能需要进行适当的调整。
+
+# 六、闭源包引用
+
+~~~
+#glfw
+add_library(glfw STATIC IMPORTED)
+set_property(TARGET glfw PROPERTY IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/extern/glfw/lib-vc2019/glfw3.lib)
+target_include_directories(glfw INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/extern/glfw/include)
+
+
+#引用
+target_link_libraries(main glfw)
+~~~
+
+
+
+# 七、vcpkg包管理
+
+## 6.1 安装
+
+1. 打开终端。
+
+2. 克隆 Vcpkg 存储库：
+
+   ```
+   git clone https://github.com/microsoft/vcpkg.git
+   ```
+
+   
+
+3. 进入 Vcpkg 目录：
+
+   ```
+   cd vcpkg
+   ```
+
+   
+
+4. 运行 `bootstrap-vcpkg.sh` 脚本以初始化和构建 Vcpkg：
+
+   ```
+   ./bootstrap-vcpkg.sh
+   ```
+
+   
+
+5. 运行以下命令将 Vcpkg 安装到系统目录 `/usr/local`：
+
+   ```
+   sudo ./vcpkg integrate install
+   ```
+
+   
+
+   输入您的密码以进行身份验证。
+
+6. 现在，Vcpkg 已成功安装到您的 Ubuntu 系统上。
+
+7. 使用 Vcpkg 安装和管理库。
+
+   - 在终端中，使用以下命令安装所需的库：
+
+     ```
+     ./vcpkg install <library-name>
+     ```
+
+     
+
+     将 `<library-name>` 替换为您要安装的库的名称。
+
+   - 安装完成后，您可以在代码中使用 Vcpkg 安装的库来进行开发和构建。
+
+请注意，使用 Vcpkg 在 Ubuntu 上安装库可能需要满足一些依赖项和构建工具的要求。在某些情况下，您可能需要在 Ubuntu 上预先安装一些依赖项，以便成功安装和使用特定的库
+
+## 6.2 vcpkg.json
+
+1. 在项目的根目录下创建一个名为 vcpkg.json 的文件。
+
+2. 打开 vcpkg.json 并编辑文件，按照 JSON 格式的语法来定义您的库和其设置。下面是一个示例：
+
+   ```
+   {
+     "name": "myproject",
+     "version": "0.1",
+     "dependencies": [
+       {
+         "name": "library1",
+         "version": "1.2"
+       },
+       {
+         "name": "library2",
+         "version": "2.0"
+       }
+     ]
+   }
+   ```
+
+   
+
+   上述示例中，“name” 指定项目名称，“version” 指定项目版本，“dependencies” 下列出了项目所依赖的库。
+
+3. 定义库的依赖项。每个依赖项都需要指定名称 (“name”) 和版本 (“version”)。此外，您还可以指定特定的库功能（如果有）。
+
+4. 保存 vcpkg.json 文件。
+
+5. 在终端中，导航到项目的根目录。
+
+6. 运行以下命令，使用 Vcpkg 安装项目依赖项：
+
+   ```
+   vcpkg install
+   ```
+
+   
+
+   Vcpkg 将根据 vcpkg.json 文件中定义的库和版本信息，自动下载、安装和构建所需的库。
+
+7. 安装完成后，您可以在项目中使用已安装的库进行开发和构建。
+
+vcpkg.json 是一个方便的方法，可以在项目级别上配置 Vcpkg。通过使用该文件，可以轻松地与其他人共享项目依赖项和配置，并确保每个人都能够使用相同的库版本。
