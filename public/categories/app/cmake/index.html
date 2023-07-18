@@ -39,7 +39,11 @@
 <meta itemprop="name" content="cmake：c/c&#43;&#43;的工程构建工具">
 <meta itemprop="description" content="cmake模板"><meta itemprop="datePublished" content="2022-04-19T15:57:41+08:00" />
 <meta itemprop="dateModified" content="2022-04-19T15:57:41+08:00" />
+<<<<<<< HEAD
 <meta itemprop="wordCount" content="7843">
+=======
+<meta itemprop="wordCount" content="8027">
+>>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
 <meta itemprop="keywords" content=" project,cmake," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="cmake：c/c&#43;&#43;的工程构建工具"/>
 <meta name="twitter:description" content="cmake模板"/>
@@ -533,25 +537,51 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
+<<<<<<< HEAD
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 7843字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 16分 </span>
+=======
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 8027字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 17分 </span>
+>>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
       <h1 id="一cmake模板">一、Cmake模板</h1>
+<pre><code class="language-shell">|--CMakeLists.txt
+|--extern
+|--src
+|--|--subsrc1
+|--|--|--CMakeLists.txt
+|--|--subsrc2
+|--|--|--CMakeLists.txt
+|--|--main.cc
+|--|--CMakeLists.txt
+|--test
+|--|--CMakeLists.txt
+|--vcpkg.json
+</code></pre>
+<p>根目录的CMakeLists.txt</p>
 <pre><code class="language-cmake">
 cmake_minimum_required(VERSION 3.1)
 
 project(PROJECT_XXX VERSION 0.0.0.0 )
 
+<<<<<<< HEAD
 #  C/C++标准
 set(CMAKE_CXX_STANDARD 14)
+=======
+#C/C++标准
+>>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
 set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
+
 
 #设置编译器
 set (CMAKE_C_COMPILER &quot;/usr/bin/gcc&quot;)
 set (CMAKE_CXX_COMPILER &quot;/usr/bin/g++&quot;)
 
+<<<<<<< HEAD
 ####### lib&amp;&amp;bin输出目录 #####
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/lib)#静态库
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/bin)#动态库
@@ -559,22 +589,36 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/bin)#可执行文�
 
 ########## BUILD_TYPE #######
 #set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]])
+=======
+#lib&amp;&amp;bin输出目录
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)#静态库
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)#动态库
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)#可执行文件
+
+######### build 变量 ######
+set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]])
+set(CMAKE_BUILD_PARALLEL_LEVEL 4)#编译处理器数量
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)#clang
+set(CMAKE_GENERATOR &quot;Unix Makefiles&quot;)#“Ninja”、“Unix Makefiles”、“Visual Studio”
+#set(CMAKE_TOOLCHAIN_FILE )
+
+>>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
 #add_compile_options()#等同CMAKE_CXXFLAGS_RELESE,前者可以对所有的编译器设置，后者只能是C++编译器
 
-
-######### FIND FILE   #######
-#find_package(Eigen3 REQUIRED)
-#find_path (&lt;VAR&gt; name1 [path1 path2 ...])
-#find_file (&lt;VAR&gt; name1 [path1 path2 ...])
-#find_library (&lt;VAR&gt; name1 [path1 path2 ...])
-
-
 ######### sub directory#######
-
-#add_subdirectory(external)
 #add_subdirectory(src)
+#add_subdirectory(external)
 
 
+########## TEST ##########
+if(FALSE)
+	enable_testing()
+	add_subdirectory(test)
+	add_test(NAME test COMMAND ${PROJECT_NAME} -arg1 -arg2)
+endif()
+</code></pre>
+<p>LIB</p>
+<pre><code class="language-cmake">
 ######### Target LIB #########
 #aux_source_directory(目录 变量)
 
@@ -587,8 +631,10 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/bin)#可执行文�
 #target_compile_definitions(EigenSample PRIVATE
                                            CMAKE_BUILD_TYPE=Release
                                            CMAKE_EXPORT_COMPILE_COMMANDS=ON)
-                                           
-######### Target EXE #########
+
+</code></pre>
+<p>EXE</p>
+<pre><code class="language-cmake">######### Target EXE #########
 #aux_source_directory(目录 变量)
 
 #add_executable(${PROJECT_NAME} )
@@ -600,13 +646,43 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/bin)#可执行文�
 #target_compile_definitions(EigenSample PRIVATE
                                            CMAKE_BUILD_TYPE=Release
                                            CMAKE_EXPORT_COMPILE_COMMANDS=ON)
+<<<<<<< HEAD
 ########## TEST #############
 enable_testing()
 add_subdirectory(test)
 add_test(NAME test COMMAND ${PROJECT_NAME} -arg1 -arg2)                                           
               
 
+=======
+</code></pre>
+<p>FIND</p>
+<pre><code class="language-cmake">######### FIND FILE   #######
+#find_package(Eigen3 REQUIRED)
+#find_path (&lt;VAR&gt; name1 [path1 path2 ...])
+#find_file (&lt;VAR&gt; name1 [path1 path2 ...])
+#find_library (&lt;VAR&gt; name1 [path1 path2 ...])
+>>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
 
+</code></pre>
+<p>vcpkg</p>
+<pre><code class="language-cmake">                                           
+#########  VCPKG #########
+set(CMAKE_TOOLCHAIN_FILE $ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake)
+find_package(Boost REQUIRED)
+include_directories(${Boost_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
+</code></pre>
+<p>闭源库</p>
+<pre><code class="language-cmake">######### 闭源库 ##########
+add_library(${LIBNAME} STATIC IMPORTED)
+set_property(TARGET ${LIBNAME} PROPERTY IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/extern/{LIBNAME}/lib-vc2019/glfw3.lib)
+target_include_directories( ${LIBNAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/extern/${LIBNAME}/include)
+</code></pre>
+<p>test</p>
+<pre><code class="language-cmake">           
+</code></pre>
+<p>安装</p>
+<pre><code>
 </code></pre>
 <h1 id="二参数设置">二、参数设置</h1>
 <blockquote>
@@ -672,18 +748,18 @@ find_program(MYPROGRAM_EXECUTABLE myprogram
 </code></pre>
 <p>这将在<code>/usr/bin</code>和<code>/usr/local/bin</code>目录下搜索<code>myprogram</code>可执行程序。</p>
 <p>使用案例</p>
-<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.12)
-project(MyProject)
-
-# 查找名为 myprogram 的可执行程序
-find_program(MYPROGRAM_EXECUTABLE myprogram)
-
-# 如果找到了可执行程序
-if(MYPROGRAM_EXECUTABLE)
-    message(&quot;Found myprogram at: ${MYPROGRAM_EXECUTABLE}&quot;)
-    # 在构建过程中使用可执行程序
-    add_custom_target(run_myprogram COMMAND ${MYPROGRAM_EXECUTABLE})
+<p>​~~~cmake
+cmake_minimum_required(VERSION 3.12)
+project(MyProject)</p>
+<h1 id="查找名为-myprogram-的可执行程序">查找名为 myprogram 的可执行程序</h1>
+<p>find_program(MYPROGRAM_EXECUTABLE myprogram)</p>
+<h1 id="如果找到了可执行程序">如果找到了可执行程序</h1>
+<p>if(MYPROGRAM_EXECUTABLE)
+message(&ldquo;Found myprogram at: ${MYPROGRAM_EXECUTABLE}&rdquo;)
+# 在构建过程中使用可执行程序
+add_custom_target(run_myprogram COMMAND ${MYPROGRAM_EXECUTABLE})
 else()
+<<<<<<< HEAD
     message(FATAL_ERROR &quot;myprogram not found&quot;)
 endif()
 </code></pre>
@@ -694,6 +770,25 @@ endif()
 <p><strong>find_package: CMake中用于查找和加载第三方库的命令</strong></p>
 <p>使用案例</p>
 <pre><code class="language-cmake">cmake_minimum_required(VERSION 3.12)
+=======
+message(FATAL_ERROR &ldquo;myprogram not found&rdquo;)
+endif()</p>
+<pre><code>
+在这个案例中，假设我们的项目想要运行名为`myprogram`的可执行程序。
+
+通过`find_program(MYPROGRAM_EXECUTABLE myprogram)`命令，CMake会尝试在系统的默认可执行程序搜索路径中找到名为`myprogram`的可执行程序。
+
+如果成功找到了可执行程序，CMake会将路径存储在变量`MYPROGRAM_EXECUTABLE`中，并通过`add_custom_target`命令定义一个自定义目标，使得我们可以在构建过程中使用该可执行程序。
+
+如果未找到可执行程序，则会输出错误消息并终止构建过程
+
+### find_package: CMake中用于查找和加载第三方库的命令
+
+使用案例
+
+~~~cmake
+cmake_minimum_required(VERSION 3.12)
+>>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
 project(MyProject)
 
 # 查找并加载 OpenCV
@@ -1107,6 +1202,10 @@ target_link_libraries(main glfw)
 </code></pre>
 <h1 id="七vcpkg包管理">七、vcpkg包管理</h1>
 <h2 id="61-安装">6.1 安装</h2>
+<<<<<<< HEAD
+=======
+<p><a href="https://github.com/microsoft/vcpkg/blob/master/README_zh_CN.md">官方链接</a></p>
+>>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
 <ol>
 <li>
 <p>打开终端。</p>
@@ -1124,6 +1223,13 @@ target_link_libraries(main glfw)
 <li>
 <p>运行 <code>bootstrap-vcpkg.sh</code> 脚本以初始化和构建 Vcpkg：</p>
 <pre><code>./bootstrap-vcpkg.sh
+<<<<<<< HEAD
+=======
+
+sudo ln -s $HOME/vcpkg/vcpkg /usr/bin
+
+cat &quot;EXPORT VCPKG_ROOT=/home/chao/vcpkg&quot; &amp;&gt;&gt; ~/.bashrc
+>>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
 </code></pre>
 </li>
 <li>
@@ -1158,7 +1264,11 @@ target_link_libraries(main glfw)
 </li>
 <li>
 <p>打开 vcpkg.json 并编辑文件，按照 JSON 格式的语法来定义您的库和其设置。下面是一个示例：</p>
+<<<<<<< HEAD
 <pre><code>{
+=======
+<pre><code class="language-json">{
+>>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
   &quot;name&quot;: &quot;myproject&quot;,
   &quot;version&quot;: &quot;0.1&quot;,
   &quot;dependencies&quot;: [
@@ -1195,6 +1305,20 @@ target_link_libraries(main glfw)
 </li>
 </ol>
 <p>vcpkg.json 是一个方便的方法，可以在项目级别上配置 Vcpkg。通过使用该文件，可以轻松地与其他人共享项目依赖项和配置，并确保每个人都能够使用相同的库版本。</p>
+<<<<<<< HEAD
+=======
+<h2 id="63-多包管理器共存">6.3 多包管理器共存</h2>
+<pre><code class="language-cmake">if(USE_VCPKG)
+    find_package(&lt;VCPKG_PACKAGE&gt; REQUIRED)
+    include_directories(${&lt;VCPKG_PACKAGE&gt;_INCLUDE_DIRS})
+    target_link_libraries(MyProject ${&lt;VCPKG_PACKAGE&gt;_LIBRARIES})
+else()
+    find_package(&lt;APT_PACKAGE&gt; REQUIRED)
+    include_directories(${&lt;APT_PACKAGE&gt;_INCLUDE_DIRS})
+    target_link_libraries(MyProject ${&lt;APT_PACKAGE&gt;_LIBRARIES})
+endif()
+</code></pre>
+>>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
 
     </div>
     <div class="article-footer">
