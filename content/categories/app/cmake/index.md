@@ -42,7 +42,7 @@ tags=  [
 
 ~~~cmake
 
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.15)
 
 project(PROJECT_XXX VERSION 0.0.0 )
 
@@ -92,7 +92,7 @@ set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/install)
 # 2.普通文件 放置放到 DESTINATION 指定的目录,eg:readme.md config.ini
 #install(FILES ... DESTINATION etc)
 # 3.目录
-install(DIRECTORY ... DESTINATION ...)
+#install(DIRECTORY ... DESTINATION ...)
 # 4.脚本    放置到 DESTINATION 指定的目录,eg:install.sh
 #install(PROGRAMS ... DESTINATION ...)
 # 5.target集合
@@ -101,7 +101,7 @@ install(DIRECTORY ... DESTINATION ...)
 
 ########## PACK ##########
 if(FALSE)
-# 软件包名称
+# 安装包名称
 set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
 # 版本号                       
 set(CPACK_PACKAGE_VERSION "1.0.0") 
@@ -111,8 +111,23 @@ set(CPACK_PACKAGE_DESCRIPTION "My awesome application")
 set(CPACK_RPM_PACKAGE_LICENSE "Apache 2.0 + Common Clause 1.0")
 # vendor                             
 set(CPACK_PACKAGE_VENDOR "vesoft")  
+# 安装包图标
+#set(CPACK_PACKAGE_ICON )
+
 #配置软件包类型和生成器ZIP、TGZ、RPM、NSIS
-set(CPACK_GENERATOR ZIP)
+set(CPACK_GENERATOR ZIP)#二进制包
+#set(CPACK_SOURCE_GENERATOR ZIP)#源码包
+
+#安装系统依赖库
+include(InstallRequiredSystemLibraries)
+
+#安装安装包时的依赖关系
+#set(CPACK_DEBIAN_PACKAGE_DEPENDS "")#Debian自动安装依赖
+#set(CPACK_RPM_PACKAGE_REQUIRES "")
+
+#添加脚本和配置
+#set(CPACK_PRE_INSTALL_SCRIPTS "${CMAKE_CURRENT_SOURCE_DIR}/pre_install_script.sh")#安装前,目录权限
+#set(CPACK_POST_INSTALL_SCRIPTS "${CMAKE_CURRENT_SOURCE_DIR}/post_install_script.sh")#安装后，systemctl自启动脚本
 
 # 设置支持指定安装目录的控制为 ON;设置安装到的目录路径                                   
 #set(CPACK_SET_DESTDIR ON)
@@ -147,13 +162,13 @@ EXE
 
 ~~~cmake
 ######### Target EXE #########
-#aux_source_directory(目录 EXE_SRC_LISTS)
+aux_source_directory(目录 EXE_SRC_LISTS)
 
-#add_executable(${PROJECT_NAME} )
+add_executable(${PROJECT_NAME} )
 #target_include_directories(${PROJECT_NAME} RIVATE )
 target_sources(${PROJECT_NAME} PRIVATE  ${EXE_SRC_LISTS})
 #target_link_libraries(${PROJECT_NAME} )
-target_compile_options(${PROJECT_NAME} RIVATE -Wall
+target_compile_options(${PROJECT_NAME} RRIVATE -Wall
                                             -O3 -std=c++11 )
 target_compile_definitions(${PROJECT_NAME} PRIVATE
                                           CMAKE_BUILD_TYPE=Release
@@ -321,7 +336,7 @@ endif()
 
 使用案例
 
-​~~~cmake
+~~~cmake
 cmake_minimum_required(VERSION 3.12)
 project(MyProject)
 
@@ -434,7 +449,7 @@ endif()
 
 **add_custom_target：自定义构建目标**
 
-~~~cmake
+​~~~cmake
 add_custom_target(Name [ALL] [command1 [args1...]]
                   [COMMAND command2 [args2...] ...]
                   …

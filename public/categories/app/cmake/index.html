@@ -25,7 +25,7 @@
     <title>cmake：c/c&#43;&#43;的工程构建工具 - Getone超</title>
     
     
-    <link rel="stylesheet" href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/css/style.min.a85959a41e7abcc0db1f81f44bd264649303417f91b536e87dcde644340fea6d.css">
+    <link rel="stylesheet" href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/css/style.min.084a5eb24fb0cf9d5aade7246f19ba0c820cf904996a28ffe88039427693ac68.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
@@ -39,11 +39,7 @@
 <meta itemprop="name" content="cmake：c/c&#43;&#43;的工程构建工具">
 <meta itemprop="description" content="cmake模板"><meta itemprop="datePublished" content="2022-04-19T15:57:41+08:00" />
 <meta itemprop="dateModified" content="2022-04-19T15:57:41+08:00" />
-<<<<<<< HEAD
-<meta itemprop="wordCount" content="7843">
-=======
-<meta itemprop="wordCount" content="8027">
->>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
+<meta itemprop="wordCount" content="8561">
 <meta itemprop="keywords" content=" project,cmake," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="cmake：c/c&#43;&#43;的工程构建工具"/>
 <meta name="twitter:description" content="cmake模板"/>
@@ -537,17 +533,12 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-<<<<<<< HEAD
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 7843字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 16分 </span>
-=======
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 8027字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 17分 </span>
->>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 8561字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 18分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <h1 id="一cmake模板">一、Cmake模板</h1>
+      <h1 id="一cmake模板">一、cmake模板</h1>
 <pre><code class="language-shell">|--CMakeLists.txt
 |--extern
 |--src
@@ -563,16 +554,11 @@ function tagCloud(where, min, max) {
 </code></pre>
 <p>根目录的CMakeLists.txt</p>
 <pre><code class="language-cmake">
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.15)
 
-project(PROJECT_XXX VERSION 0.0.0.0 )
+project(PROJECT_XXX VERSION 0.0.0 )
 
-<<<<<<< HEAD
-#  C/C++标准
-set(CMAKE_CXX_STANDARD 14)
-=======
 #C/C++标准
->>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 14)
 
@@ -581,34 +567,24 @@ set(CMAKE_CXX_STANDARD 14)
 set (CMAKE_C_COMPILER &quot;/usr/bin/gcc&quot;)
 set (CMAKE_CXX_COMPILER &quot;/usr/bin/g++&quot;)
 
-<<<<<<< HEAD
-####### lib&amp;&amp;bin输出目录 #####
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/lib)#静态库
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/bin)#动态库
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/bin)#可执行文件
-
-########## BUILD_TYPE #######
-#set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]])
-=======
-#lib&amp;&amp;bin输出目录
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)#静态库
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)#动态库
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)#可执行文件
-
-######### build 变量 ######
+######### build 变量 #####
 set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]])
 set(CMAKE_BUILD_PARALLEL_LEVEL 4)#编译处理器数量
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)#clang
 set(CMAKE_GENERATOR &quot;Unix Makefiles&quot;)#“Ninja”、“Unix Makefiles”、“Visual Studio”
 #set(CMAKE_TOOLCHAIN_FILE )
-
->>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
 #add_compile_options()#等同CMAKE_CXXFLAGS_RELESE,前者可以对所有的编译器设置，后者只能是C++编译器
 
-######### sub directory#######
-#add_subdirectory(src)
-#add_subdirectory(external)
 
+#lib&amp;&amp;bin输出目录
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/build/bin)#可执行文件
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/build/lib)#动态库
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/build/lib/static)#静态库
+
+
+###### sub directory #####
+add_subdirectory(src)
+#add_subdirectory(external)
 
 ########## TEST ##########
 if(FALSE)
@@ -616,44 +592,92 @@ if(FALSE)
 	add_subdirectory(test)
 	add_test(NAME test COMMAND ${PROJECT_NAME} -arg1 -arg2)
 endif()
+
+########## istanll #######
+set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/install)
+# 1.target  放到 DESTINATION 指定的目录
+#install(TARGETS ... RUNTIME DESTINATION bin)#exe
+#install(TARGETS ... LIBRARY DESTINATION lib)#*.so
+#install(TARGETS ... ARCHIVE DESTINATION lib/static)#*.lib
+#install(TARGETS ... PUBLIC_HEADER DESTINATION include)#公共头文件的安装路径
+#install(TARGETS ... RESOURCE 	   DESTINATION &lt;dir&gt;)#私有头文件的安装路径
+# 2.普通文件 放置放到 DESTINATION 指定的目录,eg:readme.md config.ini
+#install(FILES ... DESTINATION etc)
+# 3.目录
+#install(DIRECTORY ... DESTINATION ...)
+# 4.脚本    放置到 DESTINATION 指定的目录,eg:install.sh
+#install(PROGRAMS ... DESTINATION ...)
+# 5.target集合
+#install(TARGETS ...  EXPORT export_name RUNTIME DESTINATION bin)#exe
+#install(EXPORT export_name NAMESPACE namespace DESTINATION &lt;dir&gt;)
+
+########## PACK ##########
+if(FALSE)
+# 安装包名称
+set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
+# 版本号                       
+set(CPACK_PACKAGE_VERSION &quot;1.0.0&quot;) 
+# 描述信息
+set(CPACK_PACKAGE_DESCRIPTION &quot;My awesome application&quot;)
+# 许可证                                  
+set(CPACK_RPM_PACKAGE_LICENSE &quot;Apache 2.0 + Common Clause 1.0&quot;)
+# vendor                             
+set(CPACK_PACKAGE_VENDOR &quot;vesoft&quot;)  
+# 安装包图标
+#set(CPACK_PACKAGE_ICON )
+
+#配置软件包类型和生成器ZIP、TGZ、RPM、NSIS
+set(CPACK_GENERATOR ZIP)#二进制包
+#set(CPACK_SOURCE_GENERATOR ZIP)#源码包
+
+#安装系统依赖库
+include(InstallRequiredSystemLibraries)
+
+#安装安装包时的依赖关系
+#set(CPACK_DEBIAN_PACKAGE_DEPENDS &quot;&quot;)#Debian自动安装依赖
+#set(CPACK_RPM_PACKAGE_REQUIRES &quot;&quot;)
+
+#添加脚本和配置
+#set(CPACK_PRE_INSTALL_SCRIPTS &quot;${CMAKE_CURRENT_SOURCE_DIR}/pre_install_script.sh&quot;)#安装前,目录权限
+#set(CPACK_POST_INSTALL_SCRIPTS &quot;${CMAKE_CURRENT_SOURCE_DIR}/post_install_script.sh&quot;)#安装后，systemctl自启动脚本
+
+# 设置支持指定安装目录的控制为 ON;设置安装到的目录路径                                   
+#set(CPACK_SET_DESTDIR ON)
+#set(CPACK_INSTALL_PREFIX )   
+include(CPack)
+endif()
+
 </code></pre>
 <p>LIB</p>
 <pre><code class="language-cmake">
 ######### Target LIB #########
-#aux_source_directory(目录 变量)
+aux_source_directory(目录 LIBS_SRC_LISTS)
 
-#add_library(${PROJECT_NAME} &quot;&quot;)#默认是STATIC
-#target_include_directories(EigenSample PRIVATE )
-#target_sources(EigenSample PRIVATE )
-#target_link_libraries(EigenSample )
-#target_compile_options(EigenSample PRIVATE -Wall
-                                           -O3 -std=c++11 )
-#target_compile_definitions(EigenSample PRIVATE
-                                           CMAKE_BUILD_TYPE=Release
+set(LIBS_NAME )
+add_library(${LIBS_NAME } &quot;&quot;)#默认是STATIC
+target_include_directories(${LIBS_NAME} PRIVATE )
+target_sources(${LIBS_NAME} PRIVATE ${LIBS_SRC_LISTS})
+#target_link_libraries(${LIBS_NAME} )
+target_compile_options(${LIBS_NAME} PRIVATE -Wall
+                                          -O3 -std=c++11 )
+target_compile_definitions(${LIBS_NAME} PRIVATE
+                                          CMAKE_BUILD_TYPE=Release
                                            CMAKE_EXPORT_COMPILE_COMMANDS=ON)
 
 </code></pre>
 <p>EXE</p>
 <pre><code class="language-cmake">######### Target EXE #########
-#aux_source_directory(目录 变量)
+aux_source_directory(目录 EXE_SRC_LISTS)
 
-#add_executable(${PROJECT_NAME} )
-#target_include_directories(EigenSample PRIVATE )
-#target_sources(EigenSample PRIVATE )
-#target_link_libraries(EigenSample )
-#target_compile_options(EigenSample PRIVATE -Wall
-                                           -O3 -std=c++11 )
-#target_compile_definitions(EigenSample PRIVATE
-                                           CMAKE_BUILD_TYPE=Release
+add_executable(${PROJECT_NAME} )
+#target_include_directories(${PROJECT_NAME} RIVATE )
+target_sources(${PROJECT_NAME} PRIVATE  ${EXE_SRC_LISTS})
+#target_link_libraries(${PROJECT_NAME} )
+target_compile_options(${PROJECT_NAME} RRIVATE -Wall
+                                            -O3 -std=c++11 )
+target_compile_definitions(${PROJECT_NAME} PRIVATE
+                                          CMAKE_BUILD_TYPE=Release
                                            CMAKE_EXPORT_COMPILE_COMMANDS=ON)
-<<<<<<< HEAD
-########## TEST #############
-enable_testing()
-add_subdirectory(test)
-add_test(NAME test COMMAND ${PROJECT_NAME} -arg1 -arg2)                                           
-              
-
-=======
 </code></pre>
 <p>FIND</p>
 <pre><code class="language-cmake">######### FIND FILE   #######
@@ -661,7 +685,6 @@ add_test(NAME test COMMAND ${PROJECT_NAME} -arg1 -arg2)
 #find_path (&lt;VAR&gt; name1 [path1 path2 ...])
 #find_file (&lt;VAR&gt; name1 [path1 path2 ...])
 #find_library (&lt;VAR&gt; name1 [path1 path2 ...])
->>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
 
 </code></pre>
 <p>vcpkg</p>
@@ -675,14 +698,11 @@ target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
 <p>闭源库</p>
 <pre><code class="language-cmake">######### 闭源库 ##########
 add_library(${LIBNAME} STATIC IMPORTED)
-set_property(TARGET ${LIBNAME} PROPERTY IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/extern/{LIBNAME}/lib-vc2019/glfw3.lib)
-target_include_directories( ${LIBNAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/extern/${LIBNAME}/include)
+set_property(TARGET ${LIBNAME} PROPERTY IMPORTED_LOCATION ${CMAKE_CURRENT_LIST_DIR}/extern/{LIBNAME}/lib-vc2019/glfw3.lib)
+target_include_directories( ${LIBNAME} INTERFACE ${CMAKE_CURRENT_LIST_DIR}/extern/${LIBNAME}/include)
 </code></pre>
 <p>test</p>
 <pre><code class="language-cmake">           
-</code></pre>
-<p>安装</p>
-<pre><code>
 </code></pre>
 <h1 id="二参数设置">二、参数设置</h1>
 <blockquote>
@@ -748,18 +768,18 @@ find_program(MYPROGRAM_EXECUTABLE myprogram
 </code></pre>
 <p>这将在<code>/usr/bin</code>和<code>/usr/local/bin</code>目录下搜索<code>myprogram</code>可执行程序。</p>
 <p>使用案例</p>
-<p>​~~~cmake
-cmake_minimum_required(VERSION 3.12)
-project(MyProject)</p>
-<h1 id="查找名为-myprogram-的可执行程序">查找名为 myprogram 的可执行程序</h1>
-<p>find_program(MYPROGRAM_EXECUTABLE myprogram)</p>
-<h1 id="如果找到了可执行程序">如果找到了可执行程序</h1>
-<p>if(MYPROGRAM_EXECUTABLE)
-message(&ldquo;Found myprogram at: ${MYPROGRAM_EXECUTABLE}&rdquo;)
-# 在构建过程中使用可执行程序
-add_custom_target(run_myprogram COMMAND ${MYPROGRAM_EXECUTABLE})
+<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.12)
+project(MyProject)
+
+# 查找名为 myprogram 的可执行程序
+find_program(MYPROGRAM_EXECUTABLE myprogram)
+
+# 如果找到了可执行程序
+if(MYPROGRAM_EXECUTABLE)
+    message(&quot;Found myprogram at: ${MYPROGRAM_EXECUTABLE}&quot;)
+    # 在构建过程中使用可执行程序
+    add_custom_target(run_myprogram COMMAND ${MYPROGRAM_EXECUTABLE})
 else()
-<<<<<<< HEAD
     message(FATAL_ERROR &quot;myprogram not found&quot;)
 endif()
 </code></pre>
@@ -770,25 +790,6 @@ endif()
 <p><strong>find_package: CMake中用于查找和加载第三方库的命令</strong></p>
 <p>使用案例</p>
 <pre><code class="language-cmake">cmake_minimum_required(VERSION 3.12)
-=======
-message(FATAL_ERROR &ldquo;myprogram not found&rdquo;)
-endif()</p>
-<pre><code>
-在这个案例中，假设我们的项目想要运行名为`myprogram`的可执行程序。
-
-通过`find_program(MYPROGRAM_EXECUTABLE myprogram)`命令，CMake会尝试在系统的默认可执行程序搜索路径中找到名为`myprogram`的可执行程序。
-
-如果成功找到了可执行程序，CMake会将路径存储在变量`MYPROGRAM_EXECUTABLE`中，并通过`add_custom_target`命令定义一个自定义目标，使得我们可以在构建过程中使用该可执行程序。
-
-如果未找到可执行程序，则会输出错误消息并终止构建过程
-
-### find_package: CMake中用于查找和加载第三方库的命令
-
-使用案例
-
-~~~cmake
-cmake_minimum_required(VERSION 3.12)
->>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
 project(MyProject)
 
 # 查找并加载 OpenCV
@@ -882,40 +883,38 @@ endif()
 </ol>
 <p>总结来说，add_custom_command用于定义构建过程中的自定义命令，而add_custom_target用于定义自定义构建目标。两者可以结合使用，以实现更复杂的构建逻辑。</p>
 <p><strong>add_custom_target：自定义构建目标</strong></p>
-<pre><code class="language-cmake">add_custom_target(Name [ALL] [command1 [args1...]]
-                  [COMMAND command2 [args2...] ...]
-                  …
-)
-# Name：定义的target的名字
-# COMMAND：该target要执行的命令
-
-add_custom_target(
-    target_name
-    [COMMAND command1 [ARGS] [args1...]]
-    [COMMAND command2 [ARGS] [args2...] ...]
-    [DEPENDS [depend1...]]
-    [WORKING_DIRECTORY dir]
-    [COMMENT comment]
-    [VERBATIM]
-    [USES_TERMINAL]
-)
-
-其中，常用的参数和选项包括：
-
-target_name：自定义构建目标的名称。
+<p>​~~~cmake
+add_custom_target(Name [ALL] [command1 [args1&hellip;]]
+[COMMAND command2 [args2&hellip;] &hellip;]
+…
+)</p>
+<h1 id="name定义的target的名字">Name：定义的target的名字</h1>
+<h1 id="command该target要执行的命令">COMMAND：该target要执行的命令</h1>
+<p>add_custom_target(
+target_name
+[COMMAND command1 [ARGS] [args1&hellip;]]
+[COMMAND command2 [ARGS] [args2&hellip;] &hellip;]
+[DEPENDS [depend1&hellip;]]
+[WORKING_DIRECTORY dir]
+[COMMENT comment]
+[VERBATIM]
+[USES_TERMINAL]
+)</p>
+<p>其中，常用的参数和选项包括：</p>
+<p>target_name：自定义构建目标的名称。
 COMMAND：指定要执行的命令。
 DEPENDS：指定自定义目标所依赖的其他目标或文件。
 WORKING_DIRECTORY：设置命令的工作目录。
 COMMENT：添加对命令或目标的注释。
 VERBATIM：保留命令中的转义字符，确保按原样传递给底层的构建工具。
-USES_TERMINAL：指示命令是否会使用终端。
+USES_TERMINAL：指示命令是否会使用终端。</p>
+<p>通过使用 add_custom_target，可以在构建过程中定义各种自定义的构建目标，例如运行测试、生成文档、执行代码检查等。这些目标可以依赖其他目标或文件，并根据需要执行自定义的命令或操作</p>
+<p>add_custom_target 命令不会生成实际的构建产物（如可执行文件或库），它只是定义了一个自定义的构建目标。您可以通过 add_dependencies 命令将这个自定义目标与其他目标关联起来，以确保在构建过程中执行相关的自定义操作。</p>
+<pre><code>
+使用案例
 
-通过使用 add_custom_target，可以在构建过程中定义各种自定义的构建目标，例如运行测试、生成文档、执行代码检查等。这些目标可以依赖其他目标或文件，并根据需要执行自定义的命令或操作
-
-add_custom_target 命令不会生成实际的构建产物（如可执行文件或库），它只是定义了一个自定义的构建目标。您可以通过 add_dependencies 命令将这个自定义目标与其他目标关联起来，以确保在构建过程中执行相关的自定义操作。
-</code></pre>
-<p>使用案例</p>
-<pre><code class="language-cmake">add_custom_target(RunTests
+~~~cmake
+add_custom_target(RunTests
     COMMAND run_tests.sh
     DEPENDS test_files
     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
@@ -1202,10 +1201,7 @@ target_link_libraries(main glfw)
 </code></pre>
 <h1 id="七vcpkg包管理">七、vcpkg包管理</h1>
 <h2 id="61-安装">6.1 安装</h2>
-<<<<<<< HEAD
-=======
 <p><a href="https://github.com/microsoft/vcpkg/blob/master/README_zh_CN.md">官方链接</a></p>
->>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
 <ol>
 <li>
 <p>打开终端。</p>
@@ -1223,13 +1219,10 @@ target_link_libraries(main glfw)
 <li>
 <p>运行 <code>bootstrap-vcpkg.sh</code> 脚本以初始化和构建 Vcpkg：</p>
 <pre><code>./bootstrap-vcpkg.sh
-<<<<<<< HEAD
-=======
 
 sudo ln -s $HOME/vcpkg/vcpkg /usr/bin
 
 cat &quot;EXPORT VCPKG_ROOT=/home/chao/vcpkg&quot; &amp;&gt;&gt; ~/.bashrc
->>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
 </code></pre>
 </li>
 <li>
@@ -1264,11 +1257,7 @@ cat &quot;EXPORT VCPKG_ROOT=/home/chao/vcpkg&quot; &amp;&gt;&gt; ~/.bashrc
 </li>
 <li>
 <p>打开 vcpkg.json 并编辑文件，按照 JSON 格式的语法来定义您的库和其设置。下面是一个示例：</p>
-<<<<<<< HEAD
-<pre><code>{
-=======
 <pre><code class="language-json">{
->>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
   &quot;name&quot;: &quot;myproject&quot;,
   &quot;version&quot;: &quot;0.1&quot;,
   &quot;dependencies&quot;: [
@@ -1305,8 +1294,6 @@ cat &quot;EXPORT VCPKG_ROOT=/home/chao/vcpkg&quot; &amp;&gt;&gt; ~/.bashrc
 </li>
 </ol>
 <p>vcpkg.json 是一个方便的方法，可以在项目级别上配置 Vcpkg。通过使用该文件，可以轻松地与其他人共享项目依赖项和配置，并确保每个人都能够使用相同的库版本。</p>
-<<<<<<< HEAD
-=======
 <h2 id="63-多包管理器共存">6.3 多包管理器共存</h2>
 <pre><code class="language-cmake">if(USE_VCPKG)
     find_package(&lt;VCPKG_PACKAGE&gt; REQUIRED)
@@ -1318,7 +1305,6 @@ else()
     target_link_libraries(MyProject ${&lt;APT_PACKAGE&gt;_LIBRARIES})
 endif()
 </code></pre>
->>>>>>> f2efd5bd589de4d2997c3b0d7ef1552ead3718cd
 
     </div>
     <div class="article-footer">
@@ -1398,7 +1384,6 @@ endif()
     <div class="publishby">
         Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
     </div>
-    
   </div>
 </footer>
 
