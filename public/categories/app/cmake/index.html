@@ -39,7 +39,7 @@
 <meta itemprop="name" content="cmake：c/c&#43;&#43;的工程构建工具">
 <meta itemprop="description" content="cmake模板"><meta itemprop="datePublished" content="2022-04-19T15:57:41+08:00" />
 <meta itemprop="dateModified" content="2022-04-19T15:57:41+08:00" />
-<meta itemprop="wordCount" content="8644">
+<meta itemprop="wordCount" content="8954">
 <meta itemprop="keywords" content=" project,cmake," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="cmake：c/c&#43;&#43;的工程构建工具"/>
 <meta name="twitter:description" content="cmake模板"/>
@@ -533,7 +533,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 8644字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 8954字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 18分 </span>
       </div>
     </div>
@@ -705,8 +705,9 @@ target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
 find_package(PkgConfig REQUIRED)
 
 pkg_check_modules(LIBRARY_NAME REQUIRED libname)#变量 libname.pc
-target_include_directories(${TARGET_NAME}  ${LIBRARY_NAME_INCLUDE_DIRS})
-target_link_libraries(${TARGET_NAME} ${LIBRARY_NAME_LIBRARIES})
+target_include_directories(${TARGET_NAME}  ${LIBRARY_NAME_INCLUDE_DIRS})#头文件目录
+target_link_directories(${PROJECT_NAME} PRIVATE ${LIBRARY_NAME_INCLUDE_DIRS})#链接目录
+target_link_libraries(${TARGET_NAME} ${LIBRARY_NAME_LIBRARIES})#链接库
 </code></pre>
 <p>闭源库</p>
 <pre><code class="language-cmake">######### 闭源库 ##########
@@ -929,232 +930,249 @@ USES_TERMINAL：指示命令是否会使用终端。
 add_custom_target 命令不会生成实际的构建产物（如可执行文件或库），它只是定义了一个自定义的构建目标。您可以通过 add_dependencies 命令将这个自定义目标与其他目标关联起来，以确保在构建过程中执行相关的自定义操作。
 </code></pre>
 <p>使用案例</p>
+<pre><code class="language-cmake">add_custom_target(RunTests
+    COMMAND run_tests.sh
+    DEPENDS test_files
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+    COMMENT &quot;Running tests...&quot;
+)
+
+add_dependencies(RunTests MyApp)
+
+在这个示例中，RunTests 是一个自定义目标，通过执行 run_tests.sh 脚本来运行测试。它依赖于 test_files 目标（或文件），并在 ${CMAKE_BINARY_DIR} 目录下执行。通过 COMMENT 可以添加注释，说明正在运行的操作。最后，通过 add_dependencies 将 RunTests 目标与 MyApp 目标关联起来，以确保在构建 RunTests 目标时先构建 MyApp 目标。
+</code></pre>
+<p>使用教程</p>
+<ol>
+<li>
+<p>创建自定义目标：
+首先，使用 <code>add_custom_target</code> 命令创建一个自定义构建目标并指定它的名称。</p>
+<pre><code>add_custom_target(MyTarget)
+</code></pre>
+<p>在上述示例中，我们创建了一个名为 <code>MyTarget</code> 的自定义目标，这个目标还没有定义任何操作。</p>
+</li>
+<li>
+<p>添加命令：
+使用 <code>COMMAND</code> 选项来添加要执行的命令或操作。</p>
+<pre><code>add_custom_target(MyTarget
+    COMMAND echo &quot;Hello, World!&quot;
+)
+</code></pre>
+<p>在这个例子中，我们在 <code>MyTarget</code> 目标中添加了一个命令，即输出 “Hello, World!”。您可以根据实际需求添加更多的命令或操作。</p>
+</li>
+<li>
+<p>添加依赖项：
+使用 <code>DEPENDS</code> 选项来指定 <code>MyTarget</code> 目标所依赖的其他目标或文件。</p>
+<pre><code>add_custom_target(MyTarget
+    COMMAND echo &quot;Hello, World!&quot;
+    DEPENDS other_target file.txt
+)
+</code></pre>
+<p>在上述示例中，我们将 <code>MyTarget</code> 目标设置为依赖于 <code>other_target</code> 目标和 <code>file.txt</code> 文件。这意味着在构建 <code>MyTarget</code> 之前，CMake 将确保先构建 <code>other_target</code> 目标和检查 <code>file.txt</code> 文件的更新。</p>
+</li>
+<li>
+<p>设置工作目录和注释：
+使用其他选项如 <code>WORKING_DIRECTORY</code> 和 <code>COMMENT</code> 来设置工作目录和添加注释。</p>
+<pre><code>add_custom_target(MyTarget
+    COMMAND echo &quot;Hello, World!&quot;
+    DEPENDS other_target file.txt
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+    COMMENT &quot;Running custom commands...&quot;
+)
+</code></pre>
+<p>在上述示例中，我们设置了 <code>MyTarget</code> 的工作目录为 <code>${CMAKE_BINARY_DIR}</code>，并添加了一个注释以描述正在执行的操作。</p>
+</li>
+<li>
+<p>添加到其他目标的依赖项：
+使用 <code>add_dependencies</code> 命令将自定义目标与其他目标关联起来。</p>
+<pre><code>add_executable(MyApp main.cpp)
+add_custom_target(MyTarget
+    COMMAND echo &quot;Hello, World!&quot;
+    DEPENDS other_target file.txt
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+    COMMENT &quot;Running custom commands...&quot;
+)
+
+add_dependencies(MyApp MyTarget)
+</code></pre>
+<p>在这个例子中，我们将自定义目标 <code>MyTarget</code> 添加为可执行文件 <code>MyApp</code> 的依赖项。这意味着在构建 <code>MyApp</code> 时，CMake 将确保先构建 <code>MyTarget</code>。</p>
+</li>
+</ol>
+<p><strong>add_custom_command：自定义编译命令</strong></p>
 <p>​~~~cmake
-add_custom_target(RunTests
-COMMAND run_tests.sh
-DEPENDS test_files
-WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-COMMENT &ldquo;Running tests&hellip;&rdquo;
-)</p>
-<p>add_dependencies(RunTests MyApp)</p>
-<p>在这个示例中，RunTests 是一个自定义目标，通过执行 run_tests.sh 脚本来运行测试。它依赖于 test_files 目标（或文件），并在 ${CMAKE_BINARY_DIR} 目录下执行。通过 COMMENT 可以添加注释，说明正在运行的操作。最后，通过 add_dependencies 将 RunTests 目标与 MyApp 目标关联起来，以确保在构建 RunTests 目标时先构建 MyApp 目标。</p>
+add_custom_command(OUTPUT output1 [output2 &hellip;]
+COMMAND command1 [ARGS] [args1&hellip;]
+[COMMAND command2 [ARGS] [args2&hellip;] &hellip;]
+[MAIN_DEPENDENCY depend]
+[DEPENDS [depends&hellip;]]
+[BYPRODUCTS [files&hellip;]]
+[IMPLICIT_DEPENDS <lang1> depend1
+[<lang2> depend2] &hellip;]
+[WORKING_DIRECTORY dir]
+[COMMENT comment]
+[DEPFILE depfile]
+[JOB_POOL job_pool]
+[VERBATIM] [APPEND] [USES_TERMINAL]
+[COMMAND_EXPAND_LISTS]
+[DEPENDS_EXPLICIT_ONLY])</p>
 <pre><code>
-使用教程
+其中，常用的参数和选项包括：
 
-1. 创建自定义目标：
-   首先，使用 `add_custom_target` 命令创建一个自定义构建目标并指定它的名称。
+- `TARGET`：指定目标（可执行文件或库），表示该自定义命令与构建目标相关联。
+- `PRE_BUILD`、`PRE_LINK`、`POST_BUILD`：指定自定义命令在何时执行，分别表示前置构建、前置链接和后置构建。
+- `COMMAND`：指定要执行的命令。
+- `WORKING_DIRECTORY`：设置命令的工作目录。
+- `COMMENT`：添加对命令的注释。
+- `MAIN_DEPENDENCY`：指定自定义命令所依赖的主文件。
+- `DEPENDS`：指定自定义命令所依赖的其他文件。
+- `BYPRODUCTS`：指定由命令生成的副产品文件。
+- `IMPLICIT_DEPENDS`：指定命令的隐式依赖关系，这些依赖关系可能是根据源文件的语言推断出来的。
+- `USES_TERMINAL`：指示命令是否会使用终端（仅在可执行文件的情况下）。
+
+通过使用 `add_custom_command`，可以在构建过程中执行各种自定义的命令，如生成代码、拷贝文件、运行脚本等。这允许您在构建过程中执行与编译和链接无关的任意操作。
+
+请注意，`add_custom_command` 命令必须与 `add_custom_target` 或 `add_executable` / `add_library` 配合使用，以将其与构建目标关联起来。
+
+使用案例
+
+`add_custom_command` 命令用于在构建过程中执行自定义的命令。下面是一个简单的教程，介绍了如何使用 `add_custom_command`：
+
+1. 添加生成文件的自定义命令：
+   首先，使用 `add_custom_command` 命令定义一个用于生成文件的自定义命令。
 
    ```
-   add_custom_target(MyTarget)
-   ```
-
-   
-
-   在上述示例中，我们创建了一个名为 `MyTarget` 的自定义目标，这个目标还没有定义任何操作。
-
-2. 添加命令：
-   使用 `COMMAND` 选项来添加要执行的命令或操作。
-
-   ```
-   add_custom_target(MyTarget
-       COMMAND echo &quot;Hello, World!&quot;
+   add_custom_command(
+       OUTPUT generated_file.txt
+       COMMAND generate_file.py
+       DEPENDS generate_file.py
    )
    ```
 
    
 
-   在这个例子中，我们在 `MyTarget` 目标中添加了一个命令，即输出 “Hello, World!”。您可以根据实际需求添加更多的命令或操作。
+   在上述示例中，我们定义了一个自定义命令，它使用 Python 脚本 `generate_file.py` 来生成一个名为 `generated_file.txt` 的文件。`DEPENDS` 参数指定生成文件的依赖项，例如脚本文件本身。
 
-3. 添加依赖项：
-   使用 `DEPENDS` 选项来指定 `MyTarget` 目标所依赖的其他目标或文件。
+2. 将生成的文件作为构建目标使用：
+   可以将生成的文件作为构建目标的一部分使用，例如作为源文件或目标文件。
 
    ```
-   add_custom_target(MyTarget
-       COMMAND echo &quot;Hello, World!&quot;
-       DEPENDS other_target file.txt
-   )
+   add_executable(MyApp main.cpp generated_file.txt)
    ```
 
    
 
-   在上述示例中，我们将 `MyTarget` 目标设置为依赖于 `other_target` 目标和 `file.txt` 文件。这意味着在构建 `MyTarget` 之前，CMake 将确保先构建 `other_target` 目标和检查 `file.txt` 文件的更新。
+   在上述示例中，我们将生成的文件 `generated_file.txt` 作为一个源文件之一与 `main.cpp` 一起使用，构建一个名为 `MyApp` 的可执行文件。
 
-4. 设置工作目录和注释：
-   使用其他选项如 `WORKING_DIRECTORY` 和 `COMMENT` 来设置工作目录和添加注释。
+3. 声明生成文件的依赖关系：
+   使用 `add_dependencies` 命令将自定义命令与其他目标关联起来。
 
    ```
-   add_custom_target(MyTarget
-       COMMAND echo &quot;Hello, World!&quot;
-       DEPENDS other_target file.txt
-       WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-       COMMENT &quot;Running custom commands...&quot;
+   add_custom_command(
+       OUTPUT generated_file.txt
+       COMMAND generate_file.py
+       DEPENDS generate_file.py
    )
-   ```
-
    
-
-   在上述示例中，我们设置了 `MyTarget` 的工作目录为 `${CMAKE_BINARY_DIR}`，并添加了一个注释以描述正在执行的操作。
-
-5. 添加到其他目标的依赖项：
-   使用 `add_dependencies` 命令将自定义目标与其他目标关联起来。
-
-   ```
    add_executable(MyApp main.cpp)
-   add_custom_target(MyTarget
-       COMMAND echo &quot;Hello, World!&quot;
-       DEPENDS other_target file.txt
-       WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-       COMMENT &quot;Running custom commands...&quot;
-   )
-   
-   add_dependencies(MyApp MyTarget)
+   add_dependencies(MyApp generated_file.txt)
    ```
 
    
 
-   在这个例子中，我们将自定义目标 `MyTarget` 添加为可执行文件 `MyApp` 的依赖项。这意味着在构建 `MyApp` 时，CMake 将确保先构建 `MyTarget`。
+   在这个例子中，我们在自定义命令与目标之间建立了依赖关系。通过 `add_dependencies` 命令，`MyApp` 目标将在构建之前先构建 `generated_file.txt`。
 
+使用 `add_custom_command`，您可以执行各种自定义的命令或操作，并将其与构建目标进行关联。这使得您可以在构建过程中执行额外的操作，例如生成代码、复制文件、预处理资源等。根据自己的项目需求，您可以根据需要实现适合的自定义命令，并根据构建逻辑设置相关的依赖关系。
 
+## 3.4 配置文件
 
-**add_custom_command：自定义编译命令**
+configure_file命令是CMake提供的一个常用命令，用于在构建过程中根据模板文件生成配置文件
 
-~~~cmake
-add_custom_command(OUTPUT output1 [output2 ...]
-                   COMMAND command1 [ARGS] [args1...]
-                   [COMMAND command2 [ARGS] [args2...] ...]
-                   [MAIN_DEPENDENCY depend]
-                   [DEPENDS [depends...]]
-                   [BYPRODUCTS [files...]]
-                   [IMPLICIT_DEPENDS &lt;lang1&gt; depend1
-                                    [&lt;lang2&gt; depend2] ...]
-                   [WORKING_DIRECTORY dir]
-                   [COMMENT comment]
-                   [DEPFILE depfile]
-                   [JOB_POOL job_pool]
-                   [VERBATIM] [APPEND] [USES_TERMINAL]
-                   [COMMAND_EXPAND_LISTS]
-                   [DEPENDS_EXPLICIT_ONLY])
-</code></pre>
-<p>其中，常用的参数和选项包括：</p>
-<ul>
-<li><code>TARGET</code>：指定目标（可执行文件或库），表示该自定义命令与构建目标相关联。</li>
-<li><code>PRE_BUILD</code>、<code>PRE_LINK</code>、<code>POST_BUILD</code>：指定自定义命令在何时执行，分别表示前置构建、前置链接和后置构建。</li>
-<li><code>COMMAND</code>：指定要执行的命令。</li>
-<li><code>WORKING_DIRECTORY</code>：设置命令的工作目录。</li>
-<li><code>COMMENT</code>：添加对命令的注释。</li>
-<li><code>MAIN_DEPENDENCY</code>：指定自定义命令所依赖的主文件。</li>
-<li><code>DEPENDS</code>：指定自定义命令所依赖的其他文件。</li>
-<li><code>BYPRODUCTS</code>：指定由命令生成的副产品文件。</li>
-<li><code>IMPLICIT_DEPENDS</code>：指定命令的隐式依赖关系，这些依赖关系可能是根据源文件的语言推断出来的。</li>
-<li><code>USES_TERMINAL</code>：指示命令是否会使用终端（仅在可执行文件的情况下）。</li>
-</ul>
-<p>通过使用 <code>add_custom_command</code>，可以在构建过程中执行各种自定义的命令，如生成代码、拷贝文件、运行脚本等。这允许您在构建过程中执行与编译和链接无关的任意操作。</p>
-<p>请注意，<code>add_custom_command</code> 命令必须与 <code>add_custom_target</code> 或 <code>add_executable</code> / <code>add_library</code> 配合使用，以将其与构建目标关联起来。</p>
-<p>使用案例</p>
-<p><code>add_custom_command</code> 命令用于在构建过程中执行自定义的命令。下面是一个简单的教程，介绍了如何使用 <code>add_custom_command</code>：</p>
-<ol>
-<li>
-<p>添加生成文件的自定义命令：
-首先，使用 <code>add_custom_command</code> 命令定义一个用于生成文件的自定义命令。</p>
-<pre><code>add_custom_command(
-    OUTPUT generated_file.txt
-    COMMAND generate_file.py
-    DEPENDS generate_file.py
-)
-</code></pre>
-<p>在上述示例中，我们定义了一个自定义命令，它使用 Python 脚本 <code>generate_file.py</code> 来生成一个名为 <code>generated_file.txt</code> 的文件。<code>DEPENDS</code> 参数指定生成文件的依赖项，例如脚本文件本身。</p>
-</li>
-<li>
-<p>将生成的文件作为构建目标使用：
-可以将生成的文件作为构建目标的一部分使用，例如作为源文件或目标文件。</p>
-<pre><code>add_executable(MyApp main.cpp generated_file.txt)
-</code></pre>
-<p>在上述示例中，我们将生成的文件 <code>generated_file.txt</code> 作为一个源文件之一与 <code>main.cpp</code> 一起使用，构建一个名为 <code>MyApp</code> 的可执行文件。</p>
-</li>
-<li>
-<p>声明生成文件的依赖关系：
-使用 <code>add_dependencies</code> 命令将自定义命令与其他目标关联起来。</p>
-<pre><code>add_custom_command(
-    OUTPUT generated_file.txt
-    COMMAND generate_file.py
-    DEPENDS generate_file.py
-)
+# 四、自动化测试
 
-add_executable(MyApp main.cpp)
-add_dependencies(MyApp generated_file.txt)
-</code></pre>
-<p>在这个例子中，我们在自定义命令与目标之间建立了依赖关系。通过 <code>add_dependencies</code> 命令，<code>MyApp</code> 目标将在构建之前先构建 <code>generated_file.txt</code>。</p>
-</li>
-</ol>
-<p>使用 <code>add_custom_command</code>，您可以执行各种自定义的命令或操作，并将其与构建目标进行关联。这使得您可以在构建过程中执行额外的操作，例如生成代码、复制文件、预处理资源等。根据自己的项目需求，您可以根据需要实现适合的自定义命令，并根据构建逻辑设置相关的依赖关系。</p>
-<h2 id="34-配置文件">3.4 配置文件</h2>
-<p>configure_file命令是CMake提供的一个常用命令，用于在构建过程中根据模板文件生成配置文件</p>
-<h1 id="四自动化测试">四、自动化测试</h1>
-<p>当使用CTest来运行测试时，通常需要按照以下步骤进行配置和执行：</p>
-<ol>
-<li>
-<p>创建测试目录：在项目中创建一个用于存放测试脚本和测试数据的目录。可以将该目录命名为<code>tests</code>或者其他合适的名称。</p>
-</li>
-<li>
-<p>编写测试脚本：在测试目录中创建一个或多个测试脚本文件，用于描述测试用例和测试步骤。测试脚本可以使用CTest的命令和语法来定义测试行为、验证结果等。以下是一个简单的示例：</p>
-<pre><code># tests/mytest.cmake
+当使用CTest来运行测试时，通常需要按照以下步骤进行配置和执行：
 
-# 定义一个测试用例
-add_test(NAME MyTest COMMAND my_program input_data.txt output_data.txt)
+1. 创建测试目录：在项目中创建一个用于存放测试脚本和测试数据的目录。可以将该目录命名为`tests`或者其他合适的名称。
 
-# 验证测试结果
-set_tests_properties(MyTest PROPERTIES PASS_REGULAR_EXPRESSION &quot;Expected output&quot;)
-</code></pre>
-</li>
-<li>
-<p>创建CTest配置文件：在项目的根目录中创建一个名为<code>CTestTestfile.cmake</code>的配置文件，用于配置测试设置、测试套件和测试驱动程序等细节。该文件会被CTest自动加载。以下是一个简单的示例：</p>
-<pre><code># CTestTestfile.cmake
+2. 编写测试脚本：在测试目录中创建一个或多个测试脚本文件，用于描述测试用例和测试步骤。测试脚本可以使用CTest的命令和语法来定义测试行为、验证结果等。以下是一个简单的示例：
 
-# 添加测试目录
-add_subdirectory(tests)
-</code></pre>
-</li>
-<li>
-<p>构建项目：使用CMake构建项目，此时确保CTest被启用并已成功集成到项目中。</p>
-</li>
-<li>
-<p>运行CTest：在项目构建完成后，在构建目录中运行<code>ctest</code>命令来执行测试。可以使用<code>ctest --verbose</code>来显示详细的测试输出。</p>
-<pre><code>$ ctest
-</code></pre>
-<p>或者使用图形界面工具来运行CTest，例如运行<code>ccmake</code>或<code>cmake-gui</code>命令来查看和运行CTest。</p>
-</li>
-<li>
-<p>查看测试结果：CTest将测试结果输出到终端或CTest的GUI前端。你将看到每个测试的状态（通过、失败、跳过等），以及相关的错误消息和日志文件。</p>
-</li>
-</ol>
-<p>这只是一个简单的CTest使用示例，你可以根据项目的特定需求和测试要求自定义和扩展CTest的功能。参阅CTest文档以获取更多详细信息和更高级的CTest配置选项。</p>
-<p>记住，在编写测试脚本时，应该尽可能涵盖项目的各方面，并验证预期的行为和结果。测试是质量保证过程的重要组成部分，能够提供反馈以确保项目的正确性和可靠性。</p>
-<h1 id="五安装">五、安装</h1>
-<h2 id="51-linux的rpath机制">5.1 Linux的rpath机制</h2>
-<p>在 CMake 中，可以通过使用 <code>CMAKE_INSTALL_RPATH</code> 或者 <code>CMAKE_BUILD_RPATH</code> 属性来设置可执行文件的 rpath。</p>
-<ol>
-<li><code>CMAKE_INSTALL_RPATH</code>：用于指定在安装过程中可执行文件的 rpath。可执行文件会被安装到目标目录，同时 rpath 会被设置为 <code>CMAKE_INSTALL_RPATH</code> 指定的路径。可以通过在 CMakeLists.txt 文件中设置该属性来达到目的。</li>
-</ol>
-<pre><code>set(CMAKE_INSTALL_RPATH &lt;path&gt;)
-</code></pre>
-<p>其中 <code>&lt;path&gt;</code> 是要设置的 rpath 的路径。</p>
-<ol>
-<li><code>CMAKE_BUILD_RPATH</code>：用于指定在构建过程中可执行文件的 rpath。可执行文件在构建过程中会被放置在构建目录，同时 rpath 会被设置为 <code>CMAKE_BUILD_RPATH</code> 指定的路径。可以通过在 CMakeLists.txt 文件中设置该属性来达到目的。</li>
-</ol>
-<pre><code>set(CMAKE_BUILD_RPATH &lt;path&gt;)
-</code></pre>
-<p>同样，<code>&lt;path&gt;</code> 是要设置的 rpath 的路径。</p>
-<p>注意：</p>
-<ul>
-<li><code>&lt;path&gt;</code> 可以是多个路径的列表。可以使用 <code>;</code> 分隔路径。</li>
-<li>在设置 <code>CMAKE_INSTALL_RPATH</code> 和 <code>CMAKE_BUILD_RPATH</code> 时，可以使用 CMake 的 generator expressions，以便根据不同的配置和平台展开不同的路径。</li>
-<li><code>CMAKE_INSTALL_RPATH</code> 和 <code>CMAKE_BUILD_RPATH</code> 可以同时设置，并且它们的优先级会根据具体的情况决定。</li>
-</ul>
-<p>设置 <code>CMAKE_INSTALL_RPATH</code> 或 <code>CMAKE_BUILD_RPATH</code> 后，重新运行 CMake 构建过程，可执行文件的 rpath 会被相应地设置。这样，在运行时可执行文件会使用 rpath 指定的路径来查找动态库，从而确保动态库能够正确加载。</p>
-<p>需要注意的是，rpath 机制在不同的操作系统上有所不同，具体的设置和行为可能会有所差异。确保根据目标平台和操作系统的要求进行适当的配置和测试。</p>
-<h2 id="52-cmake_install_rpath的使用案例">5.2 <code>CMAKE_INSTALL_RPATH</code>的使用案例</h2>
-<p>以下是一个使用 <code>CMAKE_INSTALL_RPATH</code> 的简单示例：</p>
-<pre><code>cmake_minimum_required(VERSION 3.12)
+   ```
+   # tests/mytest.cmake
+   
+   # 定义一个测试用例
+   add_test(NAME MyTest COMMAND my_program input_data.txt output_data.txt)
+   
+   # 验证测试结果
+   set_tests_properties(MyTest PROPERTIES PASS_REGULAR_EXPRESSION &quot;Expected output&quot;)
+   ```
+
+   
+
+3. 创建CTest配置文件：在项目的根目录中创建一个名为`CTestTestfile.cmake`的配置文件，用于配置测试设置、测试套件和测试驱动程序等细节。该文件会被CTest自动加载。以下是一个简单的示例：
+
+   ```
+   # CTestTestfile.cmake
+   
+   # 添加测试目录
+   add_subdirectory(tests)
+   ```
+
+   
+
+4. 构建项目：使用CMake构建项目，此时确保CTest被启用并已成功集成到项目中。
+
+5. 运行CTest：在项目构建完成后，在构建目录中运行`ctest`命令来执行测试。可以使用`ctest --verbose`来显示详细的测试输出。
+
+   ```
+   $ ctest
+   ```
+
+   
+
+   或者使用图形界面工具来运行CTest，例如运行`ccmake`或`cmake-gui`命令来查看和运行CTest。
+
+6. 查看测试结果：CTest将测试结果输出到终端或CTest的GUI前端。你将看到每个测试的状态（通过、失败、跳过等），以及相关的错误消息和日志文件。
+
+这只是一个简单的CTest使用示例，你可以根据项目的特定需求和测试要求自定义和扩展CTest的功能。参阅CTest文档以获取更多详细信息和更高级的CTest配置选项。
+
+记住，在编写测试脚本时，应该尽可能涵盖项目的各方面，并验证预期的行为和结果。测试是质量保证过程的重要组成部分，能够提供反馈以确保项目的正确性和可靠性。
+
+# 五、安装
+
+## 5.1 Linux的rpath机制
+
+在 CMake 中，可以通过使用 `CMAKE_INSTALL_RPATH` 或者 `CMAKE_BUILD_RPATH` 属性来设置可执行文件的 rpath。
+
+1. `CMAKE_INSTALL_RPATH`：用于指定在安装过程中可执行文件的 rpath。可执行文件会被安装到目标目录，同时 rpath 会被设置为 `CMAKE_INSTALL_RPATH` 指定的路径。可以通过在 CMakeLists.txt 文件中设置该属性来达到目的。
+
+```
+set(CMAKE_INSTALL_RPATH &lt;path&gt;)
+```
+
+其中 `&lt;path&gt;` 是要设置的 rpath 的路径。
+
+1. `CMAKE_BUILD_RPATH`：用于指定在构建过程中可执行文件的 rpath。可执行文件在构建过程中会被放置在构建目录，同时 rpath 会被设置为 `CMAKE_BUILD_RPATH` 指定的路径。可以通过在 CMakeLists.txt 文件中设置该属性来达到目的。
+
+```
+set(CMAKE_BUILD_RPATH &lt;path&gt;)
+```
+
+同样，`&lt;path&gt;` 是要设置的 rpath 的路径。
+
+注意：
+
+- `&lt;path&gt;` 可以是多个路径的列表。可以使用 `;` 分隔路径。
+- 在设置 `CMAKE_INSTALL_RPATH` 和 `CMAKE_BUILD_RPATH` 时，可以使用 CMake 的 generator expressions，以便根据不同的配置和平台展开不同的路径。
+- `CMAKE_INSTALL_RPATH` 和 `CMAKE_BUILD_RPATH` 可以同时设置，并且它们的优先级会根据具体的情况决定。
+
+设置 `CMAKE_INSTALL_RPATH` 或 `CMAKE_BUILD_RPATH` 后，重新运行 CMake 构建过程，可执行文件的 rpath 会被相应地设置。这样，在运行时可执行文件会使用 rpath 指定的路径来查找动态库，从而确保动态库能够正确加载。
+
+需要注意的是，rpath 机制在不同的操作系统上有所不同，具体的设置和行为可能会有所差异。确保根据目标平台和操作系统的要求进行适当的配置和测试。
+
+## 5.2 `CMAKE_INSTALL_RPATH`的使用案例
+
+以下是一个使用 `CMAKE_INSTALL_RPATH` 的简单示例：
+
+```
+cmake_minimum_required(VERSION 3.12)
 project(MyApp)
 
 # 设置可执行文件的源文件
@@ -1173,26 +1191,37 @@ install(TARGETS myapp
     # 设置 rpath 为 CMAKE_INSTALL_RPATH 变量的值
     INSTALL_RPATH &quot;${CMAKE_INSTALL_RPATH}&quot;
 )
-</code></pre>
-<p>在这个示例中，假设项目目录结构如下：</p>
-<pre><code>.
+```
+
+在这个示例中，假设项目目录结构如下：
+
+```
+.
 ├── CMakeLists.txt
 ├── main.cpp
 └── lib
     └── mylib.so
-</code></pre>
-<ul>
-<li><code>main.cpp</code> 是可执行文件的源文件。</li>
-<li><code>lib</code> 目录下包含一个名为 <code>mylib.so</code> 的动态库文件。</li>
-</ul>
-<p>在 CMakeLists.txt 中，我们首先定义了可执行文件的源文件，并通过 <code>add_executable()</code> 命令添加了一个名为 <code>myapp</code> 的可执行目标。</p>
-<p>接下来，我们通过 <code>set()</code> 命令设置了 <code>CMAKE_INSTALL_RPATH</code> 的值为 <code>$ORIGIN/lib</code>。这里使用了 <code>$ORIGIN</code> 变量，它表示可执行文件所在的目录。</p>
-<p>最后，在安装规则中，我们使用 <code>install()</code> 命令将可执行文件安装到指定的目录，并通过 <code>INSTALL_RPATH</code> 属性将 <code>CMAKE_INSTALL_RPATH</code> 的值传递给 rpath。</p>
-<p>在构建并运行项目时，可执行文件 <code>myapp</code> 将被安装到目标目录（例如安装到 <code>/usr/local/bin</code>），同时 rpath 将被设置为 <code>/usr/local/bin/lib</code>。这样在运行时，可执行文件就能够找到并加载位于 <code>lib</code> 目录下的动态库文件。</p>
-<p>请注意，实际的 rpath 设置可能因操作系统、CMake 版本和项目结构而有所不同，上述示例仅为了说明如何使用 <code>CMAKE_INSTALL_RPATH</code>。根据具体的需求和情况，可能需要进行适当的调整。</p>
-<h2 id="53-cmake_build_rpath的使用案例">5.3 <code>CMAKE_BUILD_RPATH</code>的使用案例</h2>
-<p>以下是一个使用 <code>CMAKE_BUILD_RPATH</code> 的简单示例：</p>
-<pre><code>cmake_minimum_required(VERSION 3.12)
+```
+
+- `main.cpp` 是可执行文件的源文件。
+- `lib` 目录下包含一个名为 `mylib.so` 的动态库文件。
+
+在 CMakeLists.txt 中，我们首先定义了可执行文件的源文件，并通过 `add_executable()` 命令添加了一个名为 `myapp` 的可执行目标。
+
+接下来，我们通过 `set()` 命令设置了 `CMAKE_INSTALL_RPATH` 的值为 `$ORIGIN/lib`。这里使用了 `$ORIGIN` 变量，它表示可执行文件所在的目录。
+
+最后，在安装规则中，我们使用 `install()` 命令将可执行文件安装到指定的目录，并通过 `INSTALL_RPATH` 属性将 `CMAKE_INSTALL_RPATH` 的值传递给 rpath。
+
+在构建并运行项目时，可执行文件 `myapp` 将被安装到目标目录（例如安装到 `/usr/local/bin`），同时 rpath 将被设置为 `/usr/local/bin/lib`。这样在运行时，可执行文件就能够找到并加载位于 `lib` 目录下的动态库文件。
+
+请注意，实际的 rpath 设置可能因操作系统、CMake 版本和项目结构而有所不同，上述示例仅为了说明如何使用 `CMAKE_INSTALL_RPATH`。根据具体的需求和情况，可能需要进行适当的调整。
+
+## 5.3 `CMAKE_BUILD_RPATH`的使用案例
+
+以下是一个使用 `CMAKE_BUILD_RPATH` 的简单示例：
+
+```
+cmake_minimum_required(VERSION 3.12)
 project(MyApp)
 
 # 设置可执行文件的源文件
@@ -1209,25 +1238,35 @@ set_target_properties(myapp PROPERTIES
     # 设置 rpath 为 CMAKE_BUILD_RPATH 变量的值
     BUILD_RPATH &quot;${CMAKE_BUILD_RPATH}&quot;
 )
-</code></pre>
-<p>在这个示例中，假设项目目录结构如下：</p>
-<pre><code>.
+```
+
+在这个示例中，假设项目目录结构如下：
+
+```
+.
 ├── CMakeLists.txt
 ├── main.cpp
 └── lib
     └── mylib.so
-</code></pre>
-<ul>
-<li><code>main.cpp</code> 是可执行文件的源文件。</li>
-<li><code>lib</code> 目录下包含一个名为 <code>mylib.so</code> 的动态库文件。</li>
-</ul>
-<p>在 CMakeLists.txt 中，我们首先定义了可执行文件的源文件，并通过 <code>add_executable()</code> 命令添加一个名为 <code>myapp</code> 的可执行目标。</p>
-<p>接下来，我们通过 <code>set()</code> 命令设置了 <code>CMAKE_BUILD_RPATH</code> 的值为 <code>$ORIGIN/lib</code>。这里使用了 <code>$ORIGIN</code> 变量，它表示构建目录。</p>
-<p>最后，使用 <code>set_target_properties()</code> 命令，将 <code>BUILD_RPATH</code> 属性设置为 <code>CMAKE_BUILD_RPATH</code> 的值。这样，在构建过程中，可执行文件 <code>myapp</code> 的 rpath 将被设置为构建目录下的 <code>lib</code> 目录。</p>
-<p>在构建项目时，生成的可执行文件 <code>myapp</code> 将具有指定的 rpath，以便在运行时正确加载位于构建目录下的动态库文件。</p>
-<p>请注意，实际的 rpath 设置可能因操作系统、CMake 版本和项目结构而有所不同，上述示例仅为了说明如何使用 <code>CMAKE_BUILD_RPATH</code>。根据具体的需求和情况，可能需要进行适当的调整。</p>
-<h1 id="六闭源包引用">六、闭源包引用</h1>
-<pre><code>#glfw
+```
+
+- `main.cpp` 是可执行文件的源文件。
+- `lib` 目录下包含一个名为 `mylib.so` 的动态库文件。
+
+在 CMakeLists.txt 中，我们首先定义了可执行文件的源文件，并通过 `add_executable()` 命令添加一个名为 `myapp` 的可执行目标。
+
+接下来，我们通过 `set()` 命令设置了 `CMAKE_BUILD_RPATH` 的值为 `$ORIGIN/lib`。这里使用了 `$ORIGIN` 变量，它表示构建目录。
+
+最后，使用 `set_target_properties()` 命令，将 `BUILD_RPATH` 属性设置为 `CMAKE_BUILD_RPATH` 的值。这样，在构建过程中，可执行文件 `myapp` 的 rpath 将被设置为构建目录下的 `lib` 目录。
+
+在构建项目时，生成的可执行文件 `myapp` 将具有指定的 rpath，以便在运行时正确加载位于构建目录下的动态库文件。
+
+请注意，实际的 rpath 设置可能因操作系统、CMake 版本和项目结构而有所不同，上述示例仅为了说明如何使用 `CMAKE_BUILD_RPATH`。根据具体的需求和情况，可能需要进行适当的调整。
+
+# 六、闭源包引用
+
+```
+#glfw
 add_library(glfw STATIC IMPORTED)
 set_property(TARGET glfw PROPERTY IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/extern/glfw/lib-vc2019/glfw3.lib)
 target_include_directories(glfw INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/extern/glfw/include)
@@ -1235,104 +1274,109 @@ target_include_directories(glfw INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/extern/glf
 
 #引用
 target_link_libraries(main glfw)
-</code></pre>
-<h1 id="七vcpkg包管理">七、vcpkg包管理</h1>
-<h2 id="61-安装">6.1 安装</h2>
-<p><a href="https://github.com/microsoft/vcpkg/blob/master/README_zh_CN.md">官方链接</a></p>
-<ol>
-<li>
-<p>打开终端。</p>
-</li>
-<li>
-<p>克隆 Vcpkg 存储库：</p>
-<pre><code>git clone https://github.com/microsoft/vcpkg.git
-</code></pre>
-</li>
-<li>
-<p>进入 Vcpkg 目录：</p>
-<pre><code>cd vcpkg
-</code></pre>
-</li>
-<li>
-<p>运行 <code>bootstrap-vcpkg.sh</code> 脚本以初始化和构建 Vcpkg：</p>
-<pre><code>./bootstrap-vcpkg.sh
+```
 
-sudo ln -s $HOME/vcpkg/vcpkg /usr/bin
+# 七、vcpkg包管理
 
-cat &quot;EXPORT VCPKG_ROOT=/home/chao/vcpkg&quot; &amp;&gt;&gt; ~/.bashrc
-</code></pre>
-</li>
-<li>
-<p>运行以下命令将 Vcpkg 安装到系统目录 <code>/usr/local</code>：</p>
-<pre><code>sudo ./vcpkg integrate install
-</code></pre>
-<p>输入您的密码以进行身份验证。</p>
-</li>
-<li>
-<p>现在，Vcpkg 已成功安装到您的 Ubuntu 系统上。</p>
-</li>
-<li>
-<p>使用 Vcpkg 安装和管理库。</p>
-<ul>
-<li>
-<p>在终端中，使用以下命令安装所需的库：</p>
-<pre><code>./vcpkg install &lt;library-name&gt;
-</code></pre>
-<p>将 <code>&lt;library-name&gt;</code> 替换为您要安装的库的名称。</p>
-</li>
-<li>
-<p>安装完成后，您可以在代码中使用 Vcpkg 安装的库来进行开发和构建。</p>
-</li>
-</ul>
-</li>
-</ol>
-<p>请注意，使用 Vcpkg 在 Ubuntu 上安装库可能需要满足一些依赖项和构建工具的要求。在某些情况下，您可能需要在 Ubuntu 上预先安装一些依赖项，以便成功安装和使用特定的库</p>
-<h2 id="62-vcpkgjson">6.2 vcpkg.json</h2>
-<ol>
-<li>
-<p>在项目的根目录下创建一个名为 vcpkg.json 的文件。</p>
-</li>
-<li>
-<p>打开 vcpkg.json 并编辑文件，按照 JSON 格式的语法来定义您的库和其设置。下面是一个示例：</p>
-<pre><code class="language-json">{
-  &quot;name&quot;: &quot;myproject&quot;,
-  &quot;version&quot;: &quot;0.1&quot;,
-  &quot;dependencies&quot;: [
-    {
-      &quot;name&quot;: &quot;library1&quot;,
-      &quot;version&quot;: &quot;1.2&quot;
-    },
-    {
-      &quot;name&quot;: &quot;library2&quot;,
-      &quot;version&quot;: &quot;2.0&quot;
-    }
-  ]
-}
-</code></pre>
-<p>上述示例中，“name” 指定项目名称，“version” 指定项目版本，“dependencies” 下列出了项目所依赖的库。</p>
-</li>
-<li>
-<p>定义库的依赖项。每个依赖项都需要指定名称 (“name”) 和版本 (“version”)。此外，您还可以指定特定的库功能（如果有）。</p>
-</li>
-<li>
-<p>保存 vcpkg.json 文件。</p>
-</li>
-<li>
-<p>在终端中，导航到项目的根目录。</p>
-</li>
-<li>
-<p>运行以下命令，使用 Vcpkg 安装项目依赖项：</p>
-<pre><code>vcpkg install
-</code></pre>
-<p>Vcpkg 将根据 vcpkg.json 文件中定义的库和版本信息，自动下载、安装和构建所需的库。</p>
-</li>
-<li>
-<p>安装完成后，您可以在项目中使用已安装的库进行开发和构建。</p>
-</li>
-</ol>
-<p>vcpkg.json 是一个方便的方法，可以在项目级别上配置 Vcpkg。通过使用该文件，可以轻松地与其他人共享项目依赖项和配置，并确保每个人都能够使用相同的库版本。</p>
-<h2 id="63-多包管理器共存">6.3 多包管理器共存</h2>
-<pre><code class="language-cmake">if(USE_VCPKG)
+## 6.1 安装
+
+[官方链接](https://github.com/microsoft/vcpkg/blob/master/README_zh_CN.md)
+
+1. 打开终端。
+
+2. 克隆 Vcpkg 存储库：
+
+   ```
+   git clone https://github.com/microsoft/vcpkg.git
+   ```
+
+3. 进入 Vcpkg 目录：
+
+   ```
+   cd vcpkg
+   ```
+
+4. 运行 `bootstrap-vcpkg.sh` 脚本以初始化和构建 Vcpkg：
+
+   ```
+   ./bootstrap-vcpkg.sh
+   
+   sudo ln -s $HOME/vcpkg/vcpkg /usr/bin
+   
+   cat &quot;EXPORT VCPKG_ROOT=/home/chao/vcpkg&quot; &amp;&gt;&gt; ~/.bashrc
+   ```
+
+5. 运行以下命令将 Vcpkg 安装到系统目录 `/usr/local`：
+
+   ```
+   sudo ./vcpkg integrate install
+   ```
+
+   输入您的密码以进行身份验证。
+
+6. 现在，Vcpkg 已成功安装到您的 Ubuntu 系统上。
+
+7. 使用 Vcpkg 安装和管理库。
+
+   - 在终端中，使用以下命令安装所需的库：
+
+     ```
+     ./vcpkg install &lt;library-name&gt;
+     ```
+
+     将 `&lt;library-name&gt;` 替换为您要安装的库的名称。
+
+   - 安装完成后，您可以在代码中使用 Vcpkg 安装的库来进行开发和构建。
+
+请注意，使用 Vcpkg 在 Ubuntu 上安装库可能需要满足一些依赖项和构建工具的要求。在某些情况下，您可能需要在 Ubuntu 上预先安装一些依赖项，以便成功安装和使用特定的库
+
+## 6.2 vcpkg.json
+
+1. 在项目的根目录下创建一个名为 vcpkg.json 的文件。
+
+2. 打开 vcpkg.json 并编辑文件，按照 JSON 格式的语法来定义您的库和其设置。下面是一个示例：
+
+   ```json
+   {
+     &quot;name&quot;: &quot;myproject&quot;,
+     &quot;version&quot;: &quot;0.1&quot;,
+     &quot;dependencies&quot;: [
+       {
+         &quot;name&quot;: &quot;library1&quot;,
+         &quot;version&quot;: &quot;1.2&quot;
+       },
+       {
+         &quot;name&quot;: &quot;library2&quot;,
+         &quot;version&quot;: &quot;2.0&quot;
+       }
+     ]
+   }
+   ```
+
+   上述示例中，“name” 指定项目名称，“version” 指定项目版本，“dependencies” 下列出了项目所依赖的库。
+
+3. 定义库的依赖项。每个依赖项都需要指定名称 (“name”) 和版本 (“version”)。此外，您还可以指定特定的库功能（如果有）。
+
+4. 保存 vcpkg.json 文件。
+
+5. 在终端中，导航到项目的根目录。
+
+6. 运行以下命令，使用 Vcpkg 安装项目依赖项：
+
+   ```
+   vcpkg install
+   ```
+
+   Vcpkg 将根据 vcpkg.json 文件中定义的库和版本信息，自动下载、安装和构建所需的库。
+
+7. 安装完成后，您可以在项目中使用已安装的库进行开发和构建。
+
+vcpkg.json 是一个方便的方法，可以在项目级别上配置 Vcpkg。通过使用该文件，可以轻松地与其他人共享项目依赖项和配置，并确保每个人都能够使用相同的库版本。
+
+## 6.3 多包管理器共存
+
+~~~cmake
+if(USE_VCPKG)
     find_package(&lt;VCPKG_PACKAGE&gt; REQUIRED)
     include_directories(${&lt;VCPKG_PACKAGE&gt;_INCLUDE_DIRS})
     target_link_libraries(MyProject ${&lt;VCPKG_PACKAGE&gt;_LIBRARIES})

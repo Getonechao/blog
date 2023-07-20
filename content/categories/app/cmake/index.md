@@ -202,8 +202,9 @@ target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
 find_package(PkgConfig REQUIRED)
 
 pkg_check_modules(LIBRARY_NAME REQUIRED libname)#变量 libname.pc
-target_include_directories(${TARGET_NAME}  ${LIBRARY_NAME_INCLUDE_DIRS})
-target_link_libraries(${TARGET_NAME} ${LIBRARY_NAME_LIBRARIES})
+target_include_directories(${TARGET_NAME}  ${LIBRARY_NAME_INCLUDE_DIRS})#头文件目录
+target_link_directories(${PROJECT_NAME} PRIVATE ${LIBRARY_NAME_INCLUDE_DIRS})#链接目录
+target_link_libraries(${TARGET_NAME} ${LIBRARY_NAME_LIBRARIES})#链接库
 ~~~
 闭源库
 
@@ -498,7 +499,7 @@ add_custom_target 命令不会生成实际的构建产物（如可执行文件�
 
 使用案例
 
-​~~~cmake
+~~~cmake
 add_custom_target(RunTests
     COMMAND run_tests.sh
     DEPENDS test_files
@@ -590,7 +591,7 @@ add_dependencies(RunTests MyApp)
 
 **add_custom_command：自定义编译命令**
 
-~~~cmake
+​~~~cmake
 add_custom_command(OUTPUT output1 [output2 ...]
                    COMMAND command1 [ARGS] [args1...]
                    [COMMAND command2 [ARGS] [args2...] ...]
