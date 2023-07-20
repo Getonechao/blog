@@ -60,8 +60,11 @@ set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]])
 set(CMAKE_BUILD_PARALLEL_LEVEL 4)#编译处理器数量
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)#clang
 set(CMAKE_GENERATOR "Unix Makefiles")#“Ninja”、“Unix Makefiles”、“Visual Studio”
-#set(CMAKE_TOOLCHAIN_FILE )
 #add_compile_options()#等同CMAKE_CXXFLAGS_RELESE,前者可以对所有的编译器设置，后者只能是C++编译器
+
+########## vcpkg #######
+#set(CMAKE_TOOLCHAIN_FILE  $ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake)
+#set(ENV{PKG_CONFIG_PATH}  "$ENV{PKG_CONFIG_PATH};${CMAKE_SOURCE_DIR}/vcpkg_installed/x64-linux/lib/pkgconfig")
 
 
 #lib&&bin输出目录
@@ -188,9 +191,19 @@ vcpkg
                                            
 #########  VCPKG #########
 set(CMAKE_TOOLCHAIN_FILE $ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake)
+
+#增加*.cmake的寻找路径
+#list(APPEND CMAKE_PREFIX_PATH ${CMAKE_SOURCE_DIR}/vcpkg_installed/x64-linux/share/gtest)
 find_package(Boost REQUIRED)
 include_directories(${Boost_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
+
+####### 清单pkgconfig模式 ###
+find_package(PkgConfig REQUIRED)
+
+pkg_check_modules(LIBRARY_NAME REQUIRED libname)#变量 libname.pc
+target_include_directories(${TARGET_NAME}  ${LIBRARY_NAME_INCLUDE_DIRS})
+target_link_libraries(${TARGET_NAME} ${LIBRARY_NAME_LIBRARIES})
 ~~~
 闭源库
 
@@ -449,7 +462,7 @@ endif()
 
 **add_custom_target：自定义构建目标**
 
-​~~~cmake
+~~~cmake
 add_custom_target(Name [ALL] [command1 [args1...]]
                   [COMMAND command2 [args2...] ...]
                   …
@@ -485,7 +498,7 @@ add_custom_target 命令不会生成实际的构建产物（如可执行文件�
 
 使用案例
 
-~~~cmake
+​~~~cmake
 add_custom_target(RunTests
     COMMAND run_tests.sh
     DEPENDS test_files

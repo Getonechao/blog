@@ -39,7 +39,7 @@
 <meta itemprop="name" content="cmake：c/c&#43;&#43;的工程构建工具">
 <meta itemprop="description" content="cmake模板"><meta itemprop="datePublished" content="2022-04-19T15:57:41+08:00" />
 <meta itemprop="dateModified" content="2022-04-19T15:57:41+08:00" />
-<meta itemprop="wordCount" content="8561">
+<meta itemprop="wordCount" content="8644">
 <meta itemprop="keywords" content=" project,cmake," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="cmake：c/c&#43;&#43;的工程构建工具"/>
 <meta name="twitter:description" content="cmake模板"/>
@@ -533,7 +533,7 @@ function tagCloud(where, min, max) {
 			<span id="busuanzi_value_page_pv">0</span>
 		</span>
 	</span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 8561字</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 8644字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 18分 </span>
       </div>
     </div>
@@ -572,8 +572,11 @@ set(CMAKE_BUILD_TYPE Debug#[[Release | Debug| RelWithDebInfo |MinSizeRel]])
 set(CMAKE_BUILD_PARALLEL_LEVEL 4)#编译处理器数量
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)#clang
 set(CMAKE_GENERATOR &quot;Unix Makefiles&quot;)#“Ninja”、“Unix Makefiles”、“Visual Studio”
-#set(CMAKE_TOOLCHAIN_FILE )
 #add_compile_options()#等同CMAKE_CXXFLAGS_RELESE,前者可以对所有的编译器设置，后者只能是C++编译器
+
+########## vcpkg #######
+#set(CMAKE_TOOLCHAIN_FILE  $ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake)
+#set(ENV{PKG_CONFIG_PATH}  &quot;$ENV{PKG_CONFIG_PATH};${CMAKE_SOURCE_DIR}/vcpkg_installed/x64-linux/lib/pkgconfig&quot;)
 
 
 #lib&amp;&amp;bin输出目录
@@ -691,9 +694,19 @@ target_compile_definitions(${PROJECT_NAME} PRIVATE
 <pre><code class="language-cmake">                                           
 #########  VCPKG #########
 set(CMAKE_TOOLCHAIN_FILE $ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake)
+
+#增加*.cmake的寻找路径
+#list(APPEND CMAKE_PREFIX_PATH ${CMAKE_SOURCE_DIR}/vcpkg_installed/x64-linux/share/gtest)
 find_package(Boost REQUIRED)
 include_directories(${Boost_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
+
+####### 清单pkgconfig模式 ###
+find_package(PkgConfig REQUIRED)
+
+pkg_check_modules(LIBRARY_NAME REQUIRED libname)#变量 libname.pc
+target_include_directories(${TARGET_NAME}  ${LIBRARY_NAME_INCLUDE_DIRS})
+target_link_libraries(${TARGET_NAME} ${LIBRARY_NAME_LIBRARIES})
 </code></pre>
 <p>闭源库</p>
 <pre><code class="language-cmake">######### 闭源库 ##########
@@ -883,106 +896,130 @@ endif()
 </ol>
 <p>总结来说，add_custom_command用于定义构建过程中的自定义命令，而add_custom_target用于定义自定义构建目标。两者可以结合使用，以实现更复杂的构建逻辑。</p>
 <p><strong>add_custom_target：自定义构建目标</strong></p>
-<p>​~~~cmake
-add_custom_target(Name [ALL] [command1 [args1&hellip;]]
-[COMMAND command2 [args2&hellip;] &hellip;]
-…
-)</p>
-<h1 id="name定义的target的名字">Name：定义的target的名字</h1>
-<h1 id="command该target要执行的命令">COMMAND：该target要执行的命令</h1>
-<p>add_custom_target(
-target_name
-[COMMAND command1 [ARGS] [args1&hellip;]]
-[COMMAND command2 [ARGS] [args2&hellip;] &hellip;]
-[DEPENDS [depend1&hellip;]]
-[WORKING_DIRECTORY dir]
-[COMMENT comment]
-[VERBATIM]
-[USES_TERMINAL]
-)</p>
-<p>其中，常用的参数和选项包括：</p>
-<p>target_name：自定义构建目标的名称。
+<pre><code class="language-cmake">add_custom_target(Name [ALL] [command1 [args1...]]
+                  [COMMAND command2 [args2...] ...]
+                  …
+)
+# Name：定义的target的名字
+# COMMAND：该target要执行的命令
+
+add_custom_target(
+    target_name
+    [COMMAND command1 [ARGS] [args1...]]
+    [COMMAND command2 [ARGS] [args2...] ...]
+    [DEPENDS [depend1...]]
+    [WORKING_DIRECTORY dir]
+    [COMMENT comment]
+    [VERBATIM]
+    [USES_TERMINAL]
+)
+
+其中，常用的参数和选项包括：
+
+target_name：自定义构建目标的名称。
 COMMAND：指定要执行的命令。
 DEPENDS：指定自定义目标所依赖的其他目标或文件。
 WORKING_DIRECTORY：设置命令的工作目录。
 COMMENT：添加对命令或目标的注释。
 VERBATIM：保留命令中的转义字符，确保按原样传递给底层的构建工具。
-USES_TERMINAL：指示命令是否会使用终端。</p>
-<p>通过使用 add_custom_target，可以在构建过程中定义各种自定义的构建目标，例如运行测试、生成文档、执行代码检查等。这些目标可以依赖其他目标或文件，并根据需要执行自定义的命令或操作</p>
-<p>add_custom_target 命令不会生成实际的构建产物（如可执行文件或库），它只是定义了一个自定义的构建目标。您可以通过 add_dependencies 命令将这个自定义目标与其他目标关联起来，以确保在构建过程中执行相关的自定义操作。</p>
+USES_TERMINAL：指示命令是否会使用终端。
+
+通过使用 add_custom_target，可以在构建过程中定义各种自定义的构建目标，例如运行测试、生成文档、执行代码检查等。这些目标可以依赖其他目标或文件，并根据需要执行自定义的命令或操作
+
+add_custom_target 命令不会生成实际的构建产物（如可执行文件或库），它只是定义了一个自定义的构建目标。您可以通过 add_dependencies 命令将这个自定义目标与其他目标关联起来，以确保在构建过程中执行相关的自定义操作。
+</code></pre>
+<p>使用案例</p>
+<p>​~~~cmake
+add_custom_target(RunTests
+COMMAND run_tests.sh
+DEPENDS test_files
+WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+COMMENT &ldquo;Running tests&hellip;&rdquo;
+)</p>
+<p>add_dependencies(RunTests MyApp)</p>
+<p>在这个示例中，RunTests 是一个自定义目标，通过执行 run_tests.sh 脚本来运行测试。它依赖于 test_files 目标（或文件），并在 ${CMAKE_BINARY_DIR} 目录下执行。通过 COMMENT 可以添加注释，说明正在运行的操作。最后，通过 add_dependencies 将 RunTests 目标与 MyApp 目标关联起来，以确保在构建 RunTests 目标时先构建 MyApp 目标。</p>
 <pre><code>
-使用案例
+使用教程
+
+1. 创建自定义目标：
+   首先，使用 `add_custom_target` 命令创建一个自定义构建目标并指定它的名称。
+
+   ```
+   add_custom_target(MyTarget)
+   ```
+
+   
+
+   在上述示例中，我们创建了一个名为 `MyTarget` 的自定义目标，这个目标还没有定义任何操作。
+
+2. 添加命令：
+   使用 `COMMAND` 选项来添加要执行的命令或操作。
+
+   ```
+   add_custom_target(MyTarget
+       COMMAND echo &quot;Hello, World!&quot;
+   )
+   ```
+
+   
+
+   在这个例子中，我们在 `MyTarget` 目标中添加了一个命令，即输出 “Hello, World!”。您可以根据实际需求添加更多的命令或操作。
+
+3. 添加依赖项：
+   使用 `DEPENDS` 选项来指定 `MyTarget` 目标所依赖的其他目标或文件。
+
+   ```
+   add_custom_target(MyTarget
+       COMMAND echo &quot;Hello, World!&quot;
+       DEPENDS other_target file.txt
+   )
+   ```
+
+   
+
+   在上述示例中，我们将 `MyTarget` 目标设置为依赖于 `other_target` 目标和 `file.txt` 文件。这意味着在构建 `MyTarget` 之前，CMake 将确保先构建 `other_target` 目标和检查 `file.txt` 文件的更新。
+
+4. 设置工作目录和注释：
+   使用其他选项如 `WORKING_DIRECTORY` 和 `COMMENT` 来设置工作目录和添加注释。
+
+   ```
+   add_custom_target(MyTarget
+       COMMAND echo &quot;Hello, World!&quot;
+       DEPENDS other_target file.txt
+       WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+       COMMENT &quot;Running custom commands...&quot;
+   )
+   ```
+
+   
+
+   在上述示例中，我们设置了 `MyTarget` 的工作目录为 `${CMAKE_BINARY_DIR}`，并添加了一个注释以描述正在执行的操作。
+
+5. 添加到其他目标的依赖项：
+   使用 `add_dependencies` 命令将自定义目标与其他目标关联起来。
+
+   ```
+   add_executable(MyApp main.cpp)
+   add_custom_target(MyTarget
+       COMMAND echo &quot;Hello, World!&quot;
+       DEPENDS other_target file.txt
+       WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+       COMMENT &quot;Running custom commands...&quot;
+   )
+   
+   add_dependencies(MyApp MyTarget)
+   ```
+
+   
+
+   在这个例子中，我们将自定义目标 `MyTarget` 添加为可执行文件 `MyApp` 的依赖项。这意味着在构建 `MyApp` 时，CMake 将确保先构建 `MyTarget`。
+
+
+
+**add_custom_command：自定义编译命令**
 
 ~~~cmake
-add_custom_target(RunTests
-    COMMAND run_tests.sh
-    DEPENDS test_files
-    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-    COMMENT &quot;Running tests...&quot;
-)
-
-add_dependencies(RunTests MyApp)
-
-在这个示例中，RunTests 是一个自定义目标，通过执行 run_tests.sh 脚本来运行测试。它依赖于 test_files 目标（或文件），并在 ${CMAKE_BINARY_DIR} 目录下执行。通过 COMMENT 可以添加注释，说明正在运行的操作。最后，通过 add_dependencies 将 RunTests 目标与 MyApp 目标关联起来，以确保在构建 RunTests 目标时先构建 MyApp 目标。
-</code></pre>
-<p>使用教程</p>
-<ol>
-<li>
-<p>创建自定义目标：
-首先，使用 <code>add_custom_target</code> 命令创建一个自定义构建目标并指定它的名称。</p>
-<pre><code>add_custom_target(MyTarget)
-</code></pre>
-<p>在上述示例中，我们创建了一个名为 <code>MyTarget</code> 的自定义目标，这个目标还没有定义任何操作。</p>
-</li>
-<li>
-<p>添加命令：
-使用 <code>COMMAND</code> 选项来添加要执行的命令或操作。</p>
-<pre><code>add_custom_target(MyTarget
-    COMMAND echo &quot;Hello, World!&quot;
-)
-</code></pre>
-<p>在这个例子中，我们在 <code>MyTarget</code> 目标中添加了一个命令，即输出 “Hello, World!”。您可以根据实际需求添加更多的命令或操作。</p>
-</li>
-<li>
-<p>添加依赖项：
-使用 <code>DEPENDS</code> 选项来指定 <code>MyTarget</code> 目标所依赖的其他目标或文件。</p>
-<pre><code>add_custom_target(MyTarget
-    COMMAND echo &quot;Hello, World!&quot;
-    DEPENDS other_target file.txt
-)
-</code></pre>
-<p>在上述示例中，我们将 <code>MyTarget</code> 目标设置为依赖于 <code>other_target</code> 目标和 <code>file.txt</code> 文件。这意味着在构建 <code>MyTarget</code> 之前，CMake 将确保先构建 <code>other_target</code> 目标和检查 <code>file.txt</code> 文件的更新。</p>
-</li>
-<li>
-<p>设置工作目录和注释：
-使用其他选项如 <code>WORKING_DIRECTORY</code> 和 <code>COMMENT</code> 来设置工作目录和添加注释。</p>
-<pre><code>add_custom_target(MyTarget
-    COMMAND echo &quot;Hello, World!&quot;
-    DEPENDS other_target file.txt
-    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-    COMMENT &quot;Running custom commands...&quot;
-)
-</code></pre>
-<p>在上述示例中，我们设置了 <code>MyTarget</code> 的工作目录为 <code>${CMAKE_BINARY_DIR}</code>，并添加了一个注释以描述正在执行的操作。</p>
-</li>
-<li>
-<p>添加到其他目标的依赖项：
-使用 <code>add_dependencies</code> 命令将自定义目标与其他目标关联起来。</p>
-<pre><code>add_executable(MyApp main.cpp)
-add_custom_target(MyTarget
-    COMMAND echo &quot;Hello, World!&quot;
-    DEPENDS other_target file.txt
-    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-    COMMENT &quot;Running custom commands...&quot;
-)
-
-add_dependencies(MyApp MyTarget)
-</code></pre>
-<p>在这个例子中，我们将自定义目标 <code>MyTarget</code> 添加为可执行文件 <code>MyApp</code> 的依赖项。这意味着在构建 <code>MyApp</code> 时，CMake 将确保先构建 <code>MyTarget</code>。</p>
-</li>
-</ol>
-<p><strong>add_custom_command：自定义编译命令</strong></p>
-<pre><code class="language-cmake">add_custom_command(OUTPUT output1 [output2 ...]
+add_custom_command(OUTPUT output1 [output2 ...]
                    COMMAND command1 [ARGS] [args1...]
                    [COMMAND command2 [ARGS] [args2...] ...]
                    [MAIN_DEPENDENCY depend]
