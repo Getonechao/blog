@@ -272,3 +272,5 @@
 2023/10/11 周三  8:38:54.92 upload Blog failed! 
 2023/10/18 周三  3:00:16.04 upload Blog over! 
 2023/10/18 周三  3:14:33.47 upload Blog failed! 
+2023/10/20 周五  3:01:19.05 upload Blog over! 
+2023/10/20 周五  3:21:54.88 upload Blog failed! 
