@@ -320,3 +320,5 @@
 2023/12/29 周五 12:55:38.00 upload Blog failed! 
 2024/01/03 周三  3:00:11.51 upload Blog over! 
 2024/01/03 周三  3:01:59.51 upload Blog failed! 
+2024/01/04 周四  3:00:03.51 upload Blog over! 
+2024/01/04 周四  3:02:05.01 upload Blog failed! 
