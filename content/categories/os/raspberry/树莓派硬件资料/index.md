@@ -15,7 +15,7 @@ tags=  ["raspberry "]
 # 树莓派硬件资料
 
 # 40pin
-
+![img](https://img2023.cnblogs.com/blog/1908118/202403/1908118-20240314114419357-296151626.png)
 
 
 ![img](images/rpi-pins-40-0.png)

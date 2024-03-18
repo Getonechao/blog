@@ -6,7 +6,7 @@
     <description>Recent content in command on Getone超</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
-    <lastBuildDate>Sat, 30 Apr 2022 13:21:57 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 15 Apr 2022 10:36:38 +0800</lastBuildDate>
     
         <atom:link href="https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/tags/command/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,15 +27,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/%E6%A0%91%E8%8E%93%E6%B4%BE%E7%A1%AC%E4%BB%B6%E8%B5%84%E6%96%99/</guid>
       <description>树莓派硬件资料 40pin SDA.0、SDA.1：I2C数据传输口 SCL.0、SCL.1：I2C的时钟信号 GPIO.x（x = 0,1,2,3,4,5,6</description>
-    </item>
-    
-    <item>
-      <title>Raspberry：系统初始配置操作</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/raspberry%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</link>
-      <pubDate>Sat, 30 Apr 2022 13:21:57 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/raspberry%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</guid>
-      <description>Raspberry系统初始配置操作 note: Raspberry Pi OS从bullseye(2022-04-04 debaian 11)以后不在设置默认用户pi和密码raspberry</description>
     </item>
     
     <item>
@@ -63,15 +54,6 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/linux%E4%B8%B2%E5%8F%A3%E7%BC%96%E7%A8%8B/</guid>
       <description>LINUX串口编程&amp;ndash;raw 参考blog [ linux-串口应用编程_邻居家的小南瓜的博客-CSDN博客](https://blog</description>
-    </item>
-    
-    <item>
-      <title>ubuntu系统初始化常用一些指令</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ubuntu/ubuntu%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</link>
-      <pubDate>Sat, 23 Apr 2022 15:19:00 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ubuntu/ubuntu%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</guid>
-      <description>ubuntu系统初始化常用一些指令 换源 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak sudo nano /etc/apt/sources.list 清华源 # 清华源 18.04 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse deb-src</description>
     </item>
     
     <item>
@@ -189,6 +171,24 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/math/probability/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%851/</guid>
       <description>概率论与数理统计 古典概型 试验中所有可能出现的基本事件只有有限个 试验中每个基本事件出现的可能性相等。 具有以上两个特点的概率模型是大量存在的，这</description>
+    </item>
+    
+    <item>
+      <title>ROS的使用</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Fri, 01 Apr 2022 13:25:02 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>ROS的使用 一、安装ros 脚本安装 wget http://fishros.com/install -O fishros &amp;amp;&amp;amp; sudo bash fishros 原文章链接：鱼香ros rosdep 安装 note: 注意安装ros过程中，可以不安装rosdep，它不是ros系</description>
+    </item>
+    
+    <item>
+      <title>eth wifi 网络配置</title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/etc/eth_wifi%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 01 Apr 2022 13:11:10 +0800</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/etc/eth_wifi%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</guid>
+      <description>网络配置 ubuntu18.04配置IP 使用ip addr 只限于以太网配置(临时) ip addr add 192.168.8.30/24 dev eth0 /etc/netplan/*配置文件 服务器中是50-cl</description>
     </item>
     
   </channel>

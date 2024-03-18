@@ -20,7 +20,7 @@ tags=  [
 
 ## 1.开启windows相关功能
 
-![image-20230412101652516](images/image-20230412101652516.png)
+<img src="images/image-20230412101652516.png" alt="image-20230412101652516" style="zoom:25%;" />
 
 ## 2.安装Windows升级软件
 

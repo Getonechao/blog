@@ -11,24 +11,6 @@
     
     
     <item>
-      <title>ROS的使用</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
-      <pubDate>Fri, 01 Apr 2022 13:25:02 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/ros%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
-      <description>ROS的使用 一、安装ros 脚本安装 wget http://fishros.com/install -O fishros &amp;amp;&amp;amp; sudo bash fishros 原文章链接：鱼香ros rosdep 安装 note: 注意安装ros过程中，可以不安装rosdep，它不是ros系</description>
-    </item>
-    
-    <item>
-      <title>eth wifi 网络配置</title>
-      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/etc/eth_wifi%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Fri, 01 Apr 2022 13:11:10 +0800</pubDate>
-      
-      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/linux/etc/eth_wifi%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/</guid>
-      <description>网络配置 ubuntu18.04配置IP 使用ip addr 只限于以太网配置(临时) ip addr add 192.168.8.30/24 dev eth0 /etc/netplan/*配置文件 服务器中是50-cl</description>
-    </item>
-    
-    <item>
       <title>slam的相关资料：一</title>
       <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/robot/slam%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/</link>
       <pubDate>Sun, 27 Mar 2022 19:03:06 +0800</pubDate>
@@ -89,6 +71,24 @@
       
       <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/lang/c/cppeffective/1/</guid>
       <description>条款05： C++默认编写并调用那些函数 默认创建 class Base { public： defualt构造函数 copy构造函数 copy assignment操作符 析构函数</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/raspberry%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/raspberry/raspberry%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</guid>
+      <description>Raspberry系统初始配置操作 note: Raspberry Pi OS从bullseye(2022-04-04 debaian 11)以后不在设置默认用户pi和密码raspberry</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ubuntu/ubuntu%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog-0g8860131649bb29-1304987963.tcloudbaseapp.com/categories/os/ubuntu/ubuntu%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE%E6%93%8D%E4%BD%9C/</guid>
+      <description>ubuntu系统初始化常用一些指令 换源 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak sudo nano /etc/apt/sources.list 清华源 # 清华源 18.04 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse deb-src</description>
     </item>
     
   </channel>

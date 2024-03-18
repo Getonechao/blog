@@ -1,20 +1,4 @@
-+++
-title= "Raspberry：系统初始配置操作"
-description= "Raspberry系统初始配置操作"
-date= 2022-04-30T13:21:57+08:00
-author= "chao"
-draft= false
-image= "" 
-math= true
-categories= [
-    "os"
-]
 
-tags=  [
-    "command","raspberry"
-]
-
-+++
 
 # Raspberry系统初始配置操作
 

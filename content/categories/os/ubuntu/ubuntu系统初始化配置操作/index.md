@@ -1,20 +1,3 @@
-+++
-title= "ubuntu系统初始化常用一些指令"
-description= "个人对ubuntu系统初始化常用个性化操作"
-date= 2022-04-23T15:19:00+08:00
-author= "chao"
-draft= false
-image= "" 
-math= true
-categories= [
-    "os"
-]
-
-tags=  [
-    " ubuntu","command"
-]
-
-+++
 
 # ubuntu系统初始化常用一些指令
 

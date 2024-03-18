@@ -58,13 +58,12 @@ OK
 gpio -v
 ~~~
 
-![image-20220504133157293](images/image-20220504133157293.png)
-
+![img](https://img2023.cnblogs.com/blog/1908118/202403/1908118-20240314123334076-1247222859.png)
 ~~~shell
 gpio readall
 ~~~
 
-![image-20220504133213020](images/image-20220504133213020.png)
+![image-20220504133213020](https://img2023.cnblogs.com/blog/1908118/202403/1908118-20240314123429056-1957084155.png)
 
 ## wiringpi API
 
